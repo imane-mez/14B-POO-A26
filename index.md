@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
+  name: "420-14B-FX"
+  text: "Programmation orientée object"
   tagline: My great project tagline
   actions:
     - theme: brand
