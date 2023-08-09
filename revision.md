@@ -428,7 +428,7 @@ do
 
 ```
 ** Différence entre While et doWhile
-![Screen shot of home page with hero text](./img/default1-heroimage.png)
+
 
 ```js{4}
 export default {
