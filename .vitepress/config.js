@@ -15,7 +15,7 @@ export default defineConfig({
       {
         text: 'Bloc 1',
         items: [
-          { text: 'révision', link: 'bloc1/revision' },
+          { text: 'révision', link: '/revision' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
