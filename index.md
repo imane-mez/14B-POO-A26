@@ -16,7 +16,7 @@ hero:
 
 features:
   - title: Bloc 1
-    link: /bloc1/markdown-examples
+    link: /revision
     details: Introduction à la progammation orientée objet
   - title: Bloc 2
     link: /markdown-examples
