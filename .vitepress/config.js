@@ -2,20 +2,19 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "Techniques de l'information - Cégep Garneau",
+  description: "Introduction à la programmation orientée objet en C#",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Accueil', link: '/' },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Bloc 1',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'révision', link: 'bloc1/revision' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
@@ -23,9 +22,6 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ],
-
-   
-  },
-  base : '/docs/'
+    ]
+  }
 })
