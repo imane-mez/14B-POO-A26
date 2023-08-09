@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "420-14B-FX"
-  text: "Programmation orientée object"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+  name: "420-14B-FX Programmation orientée objet"
+  text: ""
+  tagline: 
+#  actions:
+#    - theme: brand
+#      text: Markdown Examples
+#      link: /markdown-examples
+#    - theme: alt
+#      text: API Examples
+#      link: /api-examples 
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Bloc 1
+    link: /bloc1/markdown-examples
+    details: Introduction à la progammation orientée objet
+  - title: Bloc 2
+    link: /markdown-examples
+    details: Application en WPF
+  - title: Bloc 3
+    link: /markdown-examples
+    details: Application WPF utilisant une base de données
 ---
 
