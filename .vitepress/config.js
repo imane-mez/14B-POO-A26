@@ -2,6 +2,11 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  server: {
+    fsServe: {
+      root: ['../']
+    }
+  },
   title: "Techniques de l'information - Cégep Garneau",
   description: "Introduction à la programmation orientée objet en C#",
   themeConfig: {
