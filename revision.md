@@ -651,7 +651,7 @@ decimal montant = 3000.5m;
 montant = 400.75M;
 ````
 
-## Cpnversions
+## Conversions
 
 - **Conversion implicite (étendue)** : vers un type ayant une plus grande plage de valeurs.  
 ````c# 
@@ -680,7 +680,7 @@ int entier2;
 bool valide = Int32.TryParse(intChaine, out entier2);
 ````
 
-** Questions?
+**Questions?**
 
 - Pour chaque énoncé ci-dessous, donnez le type le plus approprié si on désire utilisez le moins d’octets possible pour représenter la donnée :
 ::: details Lorsque la compagnie TrucEnVrac fait une commande à un fournisseur, elle doit spécifier la quantité de chaque article désiré; cette quantité ne doit pas être nulle et ne doit jamais dépasser 50 000.
@@ -702,6 +702,14 @@ Réponse : byte
 ::: details Dans la ligue nationale de Hockey, on veut représenter la statistique +/- d'un joueur.  Il est à tout fin pratique impossible que cette valeur soit inférieure à -300 ou bien supérieure à +300.
 Réponse : short
 :::
+
+## Exercice
+::: tip [S1E1 - Révision](./exercices/S1E1/S1E1-Revision.zip)
+
+[S1E1 - Révision - Solution](./exercices/S1E1/S1E1-Revision-Solution.zip)
+:::
+
+
 
 
 
