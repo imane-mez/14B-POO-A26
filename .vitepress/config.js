@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/docs/',
-  title: "Techniques de l'information - Cégep Garneau",
+  title: "Techniques de l'informatique",
   description: "Introduction à la programmation orientée objet en C#",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
