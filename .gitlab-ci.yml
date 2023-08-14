@@ -7,7 +7,7 @@ pages:
     - npm install
     - npm run docs:build
   after_script:
-    - mkdir public
+    - mkdir publicgt
     - cp -r .vitepress/dist/* public
     - ls public/assets
   artifacts:
