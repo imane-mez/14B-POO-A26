@@ -7,6 +7,9 @@ export default defineConfig({
   description: "Introduction à la programmation orientée objet en C#",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'Accueil', link: '/' },
     ],
