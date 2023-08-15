@@ -303,7 +303,7 @@ else
 ````
 ## Instructions conditionnelles
 
-**SI ... ALORS**
+###**SI ... ALORS**
 ````c#
 if ( uneCondition )
 {
@@ -311,7 +311,7 @@ if ( uneCondition )
 }
 ````
 
-**SI ... ALORS ... SINON**
+### **SI ... ALORS ... SINON**
 ````c#
 if ( uneCondition )
 {
@@ -323,7 +323,7 @@ else{
 
 ````
 
-**SI imbriqués**
+### **SI imbriqués**
 ````c#
 //Première forme
 if (condition1)
@@ -359,7 +359,7 @@ else
 
 
 ````
-**SELON LE CAS**
+### **SELON LE CAS**
 
 ```c#
 
@@ -393,7 +393,7 @@ Console.WriteLine( note >= 60 ? "Réussite" : "Échec" ) ;
 ```
 ## Structures itératives
 
-**POUR ... FAIRE**
+### POUR ... FAIRE
 
 ```c#
 int somme = 0;
@@ -404,7 +404,7 @@ for ( int i = 1 ; i <= 25 ; i ++)
 }
 ```
 
-**TANT QUE**
+### TANT QUE
 
 ```c#
 int nb = 0;         //variable de contrôle
@@ -419,7 +419,7 @@ while (nb >= 0 )	// boucle cesse lorsque nb devient égal à -1
   Le while doit comporter une instruction qui modifie la valeur de la variable de contrôle
 :::
 
-**FAIRE TANT QUE**
+### FAIRE TANT QUE
 
 ```c#
 do 
@@ -703,13 +703,44 @@ Réponse : byte
 Réponse : short
 :::
 
-## Exercice
-::: tip [S1E1 - Révision](./exercices/S1E1/S1E1-Revision.zip)
+## Exercices
+::: tip S1E1 - Révision
+### Exercice 1 - Palindrome
 
-[S1E1 - Révision - Solution](./exercices/S1E1/S1E1-Revision-Solution.zip)
+Écrivez un programme principal (application console) qui demande une phrase (sans accent) à l’utilisateur et qui vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire.
+
+### Exercice 2 - "Todo list"
+
+Vous devez concevoir un projet C# (application console) qui va permettre de gérer une liste de tâches à faire (To do list).
+Cette application doit permettre à l'utilisateur de : 
+- Consulter une liste de tâche non complétée contenues dans un fichier nommé "**taches.csv**" et situé à dans le dossier "**C:\data-420-14B-FX\taches.csv**". Vous pouvez copier le fichier fourni avec la solution de départ à cet endroit.
+- Ajouter une nouvelle tâche
+- Indiquer qu’une tâche a été complétée (**OPTIONNEL!**)
+- Enregistrer les modifications dans le même fichier.
+- Quitter l'application.
+
+Premièrement, télécharger la **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%201/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**. Ne soyez surpris s'il y a des erreurs; c'est normal :smiley:.
+
+Deuxièmement, vous devez créer une structure (Struct) nommée Tache ayant les propriétés suivantes :
+- Titre
+- Description
+- Completee (indique si la tache est complétée ou non (vrai ou faux)).
+
+Une fois la structure Tache complétée, vous ne devriez plus avoir d'erreur dans le code.
+
+Finalement, vous devez compléter le code manquant pour faire fonctionner l'application. Prenez soins de lire les commentaires des fonctions et du code contenu dans les fichiers **FonctionUtiles.cs** et **Program.cs**. 
+
+Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez également naviguer à travers le code à réaliser en parcourant la liste des commentaires de type "**//TODO :**" de Visual Studio. Pour ce faire, vous n'avez qu'à cliquer dans le menu Affichage et sélectionner **Tâche suivante** ou **Tâche précédente**. Cela devrait afficher la liste des tâches que vous devez réaliser pour faire fonctionner le programme. **Attention**, celles-ci ne sont pas inscrite en ordre de réalisation dans cette liste. C'est à vous de décider l'ordre dans lequel vous allez compléter le code manquant. 
+
+Solutions : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%201/S1E1-Revision-Solution.zip?ref_type=heads)
+
+<!--
+
+[S1E1 - Révision - Solution](./exercices/S1E1/S1E1-Revision-Solution.zip)-->
+
 :::
 
 
-![test](./exercices/S1E1/S1E1-Revision.zip/)
+
 
 
