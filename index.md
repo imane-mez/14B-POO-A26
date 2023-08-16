@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "420-14B-FX Programmation orientée objet"
-  text: ""
+  name: "420-14B-FX "
+  text: "Programmation orientée objet"
   tagline: 
 #  actions:
 #    - theme: brand

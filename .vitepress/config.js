@@ -19,7 +19,7 @@ export default defineConfig({
         text: 'Bloc 1',
         items: [
           { text: 'révision', link: '/revision' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'résolution de problèmes', link: '/resolution_problemes' }
         ]
       }
     ],

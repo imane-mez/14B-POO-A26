@@ -734,9 +734,7 @@ Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez �
 
 Solutions : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%201/S1E1-Revision-Solution.zip?ref_type=heads)
 
-<!--
 
-[S1E1 - Révision - Solution](./exercices/S1E1/S1E1-Revision-Solution.zip)-->
 
 :::
 
