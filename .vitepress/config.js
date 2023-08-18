@@ -16,7 +16,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Bloc 1',
+        text: 'Bloc 1 - Semaines 1 à 6',
         items: [
           { text: 'révision', link: '/revision' },
           { text: 'résolution de problèmes', link: '/resolution_problemes' }

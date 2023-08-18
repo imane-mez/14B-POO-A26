@@ -151,7 +151,7 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 - Additionner la rémunération des heures normales et supplémentaires
 - Afficher le résultat
 
-**2) Identifier les entité ainsi que leur caractéristiques et comportements**
+**2) Identifier les entités ainsi que leur caractéristiques et comportements**
 
 - Employe :
     - Caractéristiques :
@@ -186,9 +186,9 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 |NB_HEURES_NORMAL                   |	byte            |
 
 
-**4) Idenifier les fonctions ainsi que leurs entréeet sortie.
+**4) Idenifier les fonctions ainsi que leurs entréeet sortie.**
 
-|Fonctions                            |Entrée                 |Sortie                 |
+|Fonctions                          |Entrée(s)                 |Sortie                 |
 |:----------                        |:-----------           |:-----------           |
 |CalculerNbHeuresNormale            |	nbHeuresTravaillees | nbHeuresNormales      |
 |CalculerNbHeuresSupp               |	nbHeuresTravaillees | nbHeuresSupp          |
@@ -208,7 +208,7 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 Un restaurateur vous demande de créer une application console qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer et afficher le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre. Gardez en tête qu'il se peut que l'on désire concerver chaque facture créée en mémoire.
 
 1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.
-2) Identifier les entité ainsi que leur caractéristiques et comportements
+2) Identifier les entités ainsi que leur caractéristiques et comportements
 2) Identifier les variables en entrée et en sortie et les constantes qui seront nécesssaires
 3) Idenifier les fonctions ainsi que leurs entréeet sortie.
 4) Programmer la solution.
