@@ -719,7 +719,7 @@ Cette application doit permettre à l'utilisateur de :
 - Enregistrer les modifications dans le même fichier.
 - Quitter l'application.
 
-Premièrement, télécharger la **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%201/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**. Ne soyez surpris s'il y a des erreurs; c'est normal :smiley:.
+Premièrement, télécharger la **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**. Ne soyez pas surpris s'il y a des erreurs; c'est normal :smiley:.
 
 Deuxièmement, vous devez créer une structure (Struct) nommée Tache ayant les propriétés suivantes :
 - Titre
@@ -732,7 +732,7 @@ Finalement, vous devez compléter le code manquant pour faire fonctionner l'appl
 
 Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez également naviguer à travers le code à réaliser en parcourant la liste des commentaires de type "**//TODO :**" de Visual Studio. Pour ce faire, vous n'avez qu'à cliquer dans le menu Affichage et sélectionner **Tâche suivante** ou **Tâche précédente**. Cela devrait afficher la liste des tâches que vous devez réaliser pour faire fonctionner le programme. **Attention**, celles-ci ne sont pas inscrite en ordre de réalisation dans cette liste. C'est à vous de décider l'ordre dans lequel vous allez compléter le code manquant. 
 
-Solutions : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%201/S1E1-Revision-Solution.zip?ref_type=heads)
+**Solutions** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads)
 
 
 

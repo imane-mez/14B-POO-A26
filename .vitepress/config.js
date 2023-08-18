@@ -21,11 +21,18 @@ export default defineConfig({
           { text: 'révision', link: '/revision' },
           //{ text: 'résolution de problèmes', link: '/resolution_problemes' }
         ]
-      }
+      },
+      {
+        text: 'Programmation Orientée objet',
+        items: [
+          { text: 'introduction', link: '/poo_intro' },
+          //{ text: 'résolution de problèmes', link: '/resolution_problemes' }
+        ]
+      },
     ],
 
-    socialLinks: [
+   /* socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ]*/
   }
 })
