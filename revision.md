@@ -719,7 +719,7 @@ Cette application doit permettre à l'utilisateur de :
 - Enregistrer les modifications dans le même fichier.
 - Quitter l'application.
 
-Premièrement, télécharger la **[solution de départ]https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%201/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**. Ne soyez surpris s'il y a des erreurs; c'est normal :smiley:.
+Premièrement, télécharger la **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%201/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**. Ne soyez surpris s'il y a des erreurs; c'est normal :smiley:.
 
 Deuxièmement, vous devez créer une structure (Struct) nommée Tache ayant les propriétés suivantes :
 - Titre
