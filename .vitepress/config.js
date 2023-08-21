@@ -22,13 +22,13 @@ export default defineConfig({
           //{ text: 'résolution de problèmes', link: '/resolution_problemes' }
         ]
       },
-      {
+      /*{
         text: 'Programmation Orientée objet',
         items: [
           { text: 'introduction', link: '/poo_intro' },
           //{ text: 'résolution de problèmes', link: '/resolution_problemes' }
         ]
-      },
+      },*/
     ],
 
    /* socialLinks: [
