@@ -222,9 +222,9 @@ En bref, l'ordinateur choisit le mot et le joueur essaie de deviner les lettres 
 
 De plus, un utilisateur ne peut pas saisir deux fois la même lettre. 
 
-L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier mots.txt et indique au joeur le nombre de lettres constituant le mot (_).
+L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier  [mot.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) et indique au joueur le nombre de lettres constituant le mot (_).
 
-Notez que **mots.txt** contient des mots **anglais** dont toutes les lettres sont en minuscules.
+Notez que mots.txt contient des mots **anglais** dont toutes les lettres sont en minuscules.
 
 Vous pouvez réutiliser les fonctions de lectures et d'écritures du fichier **FonctionUtiles.cs** fournies dans l'exercice **S1E1 - Révision**.
 
