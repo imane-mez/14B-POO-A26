@@ -205,7 +205,7 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 
 ### Problème 1 - Restaurant
 
-Un restaurateur vous demande de créer une application console qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer et afficher le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre. Gardez en tête qu'il se peut que l'on désire concerver chaque facture créée en mémoire.
+Un restaurateur vous demande de créer une application console qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer et afficher le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre. Gardez en tête qu'il se peut que l'on désire conserver chaque facture créée en mémoire.
 
 1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.
 2) Identifier les entités ainsi que leur caractéristiques et comportements
@@ -264,4 +264,8 @@ Nombre d'essais restant : 5
 Veuillez saisir une lettre :
 ```
 
+
+### Solution de l'exercice 
+
+ [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes-Solution.zip?ref_type=heads)
 :::

@@ -25,10 +25,13 @@ Il y a plusieurs avantages à utiliser une approche orientée objet dont :
 Pour définir un type d’objet, on doit créer une classe. Une classe est comme un modèle ou un plan pour créer des objets. Elle définit les attributs et les méthodes que les objets créés à partir de cette classe auront. 
 
 ```c#
+/// <summary>
+/// Classe représentant un rectangle
+/// </summary>
 public class Rectangle
 {
-    public uint hauteur;
-    public uint largeur;
+    public float hauteur;
+    public float largeur;
     public string couleur;		
 }
 
@@ -53,14 +56,362 @@ Pour donner des valeurs à chacun des attributs de notre objet, on doit indiquer
 - l’attribut à modifier
 
 La syntaxe à utiliser est la suivante :
-	{nom_Objet}**.**{attribut_a_modifier} = uneValeur
+	{nom_Objet}.{attribut_a_modifier} = uneValeur
 
 
 Par exemple, on peut affecter les valeurs suivantes à notre rectangle rect1 mentionné précédemment :
 
 ```c#
+Rectangle rect1 = new Rectangle();
+
 rect1.hauteur = 10;
 rect1.largeur = 20;
 rect1.couleur = "Rouge";
 
 ```
+
+Pour lire les valeurs d'un objet, on utilise la même synthaxe : 
+
+```c#
+Console.WriteLine($"Couleur de rect1" : {rect1.couleur});
+
+```
+
+## Les méthodes avec des objets
+
+On peut également créer des méthodes sur les objets qui permettront de décrire le comportement d'un objet face à une instruction demandée. Par exemple, on pourrait créer une méthode qui nous permettrait de calculer le périmètre d'un rectangle. Celle-ci nous permettra de travailler de façon plus générique. Nous n'aurons plus besoin de faire le calcul à chaque fois que nous avons besoin d'obtenir cette information, c'est la méthode de calcul propre à notre objet qui s'en occupera.
+
+On définit les méthodes d'objet de la même façon que les fonctions que nous avons créées jusqu'à maintenant.
+
+
+```c#
+/// <summary>
+/// Classe représentant un rectangle
+/// </summary>
+public class Rectangle
+{
+    public float hauteur;
+    public float largeur;
+    public string couleur;		
+
+    public float CalculerPerimetre()              // [!code focus]
+    {                                           // [!code focus]
+        return (hauteur * 2) + (largeur * 2);   // [!code focus]
+    }                                           // [!code focus]
+
+}
+
+```
+Ensuite, pour l'utiliser, nous utiliserons la même technique que pour les attributs:
+
+	{nom_Objet}.{méthode_a_utiliser}
+
+```c#
+Rectangle rect1 = new Rectangle();
+
+rect1.hauteur = 10;
+rect1.largeur = 20;
+rect1.couleur = "Rouge";
+
+Console.WriteLine("Le périmètre de rect1 est : " + rect1.CalculerPerimetre()); // [!code focus]
+```
+Nous n'avons plus besoin d'écrire la formule pour calculer le périmètre d'un rectangle puisque la **CalculerPerimetre** s'en occupe!
+
+### Exemple de classe
+
+```c#
+/// <summary>
+/// Classe représentant un rectangle
+/// </summary>
+class Rectangle
+{   
+    /// <summary>
+    /// Hauteur en cm du rectangle
+    /// </summary>
+    public float hauteur;
+
+    /// <summary>
+    /// Largeur en cm du rectangle
+    /// </summary>
+    public float largeur;
+
+    /// <summary>
+    /// Couleur du rectangle
+    /// </summary>
+    public string couleur;
+
+    /// <summary>
+    /// Calcul le périmètre d'un rectangle à partir de sa hauteur et sa largeur.
+    /// </summary>
+    /// <returns>Périmètre du rectangle</returns>
+    public float CalculerPerimetre()
+    {
+        return (hauteur * 2) + (largeur * 2);
+    }
+}
+```
+
+::: danger Attention!
+Vous devez toujours bien commenter la classe, ses attributs ainsi que ses méthodes de la classe!
+
+:::
+
+## Les Constructeurs
+
+Les constructeurs **ne sont pas des méthodes**, mais leur traitement est relativement semblable.  Ils portent le **même nom que la classe** à laquelle ils appartiennent. Ils sont automatiquement exécutés lors de la création d'un objet. 
+
+
+Dans la section **"Instancier un objet"** nous avons dit que pour créer un objet, on utilisait la syntaxe suivante (pour un objet de type Rectangle):
+
+```c#
+Rectangle rect1 = new Rectangle();
+```
+Ce qui revient à créer un objet rect1, de type Rectangle. On utilise le mot **new** pour spécifier que l'on veut un nouvel objet.  Mais pourquoi réécrit-on le mot Rectangle() ensuite?  Il s'agit en fait ici de spécifier quel est le constructeur de l'objet, c'est-à-dire de spécifier comment l'objet sera créé ou quelle est la méthode constructrice de la classe, utilisée pour créer l’objet. 
+
+Jusqu'à maintenant, nous avons utilisé le **constructeur par défaut**, car nous n'avons pas défini nous-mêmes le constructeur de la classe Rectangle. De cette façon, comme nous l'avons dit auparavant, l'objet est initialisé aux valeurs par défaut prévu dans le langage C#.
+
+Pour spécifier les valeurs que doit prendre l'objet lors de sa création, on doit alors définir notre propre constructeur. Nous aurons donc à définir celui-ci un peu comme une méthode en nous rappelant bien que le constructeur doit porter le **même nom que la classe** (en n’oubliant pas que le C# tient compte des minuscules et des majuscules!).
+
+Pour la classe Rectangle, nous pourrions alors avoir le constructeur:
+
+```c#
+/// <summary>
+/// Classe représentant un rectangle
+/// </summary>
+class Rectangle
+{   
+    /// <summary>
+    /// Hauteur en cm du rectangle
+    /// </summary>
+    public float hauteur;
+
+    /// <summary>
+    /// Largeur en cm du rectangle
+    /// </summary>
+    public float largeur;
+
+    /// <summary>
+    /// Couleur du rectangle
+    /// </summary>
+    public string couleur;
+
+
+    public Rectangle() // [!code focus]
+    {   // [!code focus]
+            hauteur = 1;    // [!code focus]
+            largeur = 2;    // [!code focus]
+            couleur = "Blanc";  // [!code focus]
+    } // [!code focus]
+
+    /// <summary>
+    /// Calcul le périmètre d'un rectangle à partir de sa hauteur et sa largeur.
+    /// </summary>
+    /// <returns>Périmètre du rectangle</returns>
+    public float CalculerPerimetre()
+    {
+        return (hauteur * 2) + (largeur * 2);
+    }
+}
+```
+
+Il sera alors possible de créer des objets de type Rectangle ayant comme valeurs d'attibuts celle spécifiées dans notre propre constructeur. Ainsi, lorsque nous désirons créer un objet, nous utilisons la même syntaxe qu'auparavant:
+
+```c#
+Rectangle rect1 = new Rectangle();
+```
+
+Ici, on se trouve donc à créer un objet pour lequel on a spécifié nos propres valeurs initiales. 
+
+Le problème, c'est qu'ensuite on doit spécifier les valeurs propres à cet objet pour qu'il contienne l'information qui lui est propre:
+
+
+```c#
+rect1.hauteur = 10;
+rect1.largeur = 20;
+rect1.couleur = "Rouge";
+```
+Et on doit faire de même pour chaque objet!!! C'est un peu long! Évidemment, il y a un moyen pour effectuer les deux opérations (création et affectation des valeurs à l'objet) en même temps. Il faut tout simplement se rappeler que le constructeur est comme une méthode et qu'on peut passer des paramètres à une méthode. On peut donc faire la même chose avec le constructeur! Voici comment on pourrait le faire pour la classe Rectangle:
+
+
+
+```c#
+/// <summary>
+/// Classe représentant un rectangle
+/// </summary>
+class Rectangle
+{   
+    /// <summary>
+    /// Hauteur en cm du rectangle
+    /// </summary>
+    public float hauteur;
+
+    /// <summary>
+    /// Largeur en cm du rectangle
+    /// </summary>
+    public float largeur;
+
+    /// <summary>
+    /// Couleur du rectangle
+    /// </summary>
+    public string couleur;
+
+
+
+    public Rectangle(float hauteur, float largeur, string couleur)// [!code focus]
+    {// [!code focus]
+            this.hauteur = hauteur;// [!code focus]
+            this.largeur = largeur;// [!code focus]
+            this.couleur = couleur;// [!code focus]
+    }// [!code focus]
+
+
+    /// <summary>
+    /// Calcul le périmètre d'un rectangle à partir de sa hauteur et sa largeur.
+    /// </summary>
+    /// <returns>Périmètre du rectangle</returns>
+    public float CalculerPerimetre()
+    {
+        return (hauteur * 2) + (largeur * 2);
+    }
+}
+```
+
+Vous remarquerez que le nom des paramètres du constructeur sont identiques à ceux des attributs de la classe. C'est pour cette raison que nous devons utiliser le mot clé **this.** Celui-ci fait référence à **l'instance de la classe**. Il nous permet donc d'affecter la valeur d'un paramètre du constructeur à son attribut correspondant. 
+
+Maintenant, nous pourrons créer des objets Rectangle en leur passant en paramètre les valeurs initiales qui leur sont propres, ce qui est beaucoup plus efficace que de créer un objet par défaut et ensuite affecter ses attributs…
+
+Pour utiliser le constructeur, on utilise la syntaxe suivante:
+
+```c#
+Rectangle rect1 = new Voiture(10,20,"Rouge");
+```
+
+
+
+### Exemple de classe avec constructeur
+
+```c#
+/// <summary>
+/// Classe représentant un rectangle
+/// </summary>
+class Rectangle
+{   
+    /// <summary>
+    /// Hauteur en cm du rectangle
+    /// </summary>
+    public float hauteur;
+
+    /// <summary>
+    /// Largeur en cm du rectangle
+    /// </summary>
+    public float largeur;
+
+    /// <summary>
+    /// Couleur du rectangle
+    /// </summary>
+    public string couleur;
+
+
+    /// <summary>
+    /// Constructeur paramétré d'un rectangle
+    /// </summary>
+    /// <param name="hauteur">Hauteur en cm du rectangle</param>
+    /// <param name="largeur">Largeur en cm du rectangle</param>
+    /// <param name="couleur">Couleur en cm du rectangle</param>
+    public Rectangle(float hauteur, float largeur, string couleur)
+    {
+        this.hauteur = hauteur;
+        this.largeur = largeur;
+        this.couleur = couleur;
+    }
+
+    /// <summary>
+    /// Calcul le périmètre d'un rectangle à partir de sa hauteur et sa largeur.
+    /// </summary>
+    /// <returns>Périmètre du rectangle</returns>
+    public float CalculerPerimetre()
+    {
+        return (hauteur * 2) + (largeur * 2);
+    }
+}
+```
+::: danger Attention! 
+
+Vous devez toujours bien commenter la **classe**,  ses **attributs**, ses **constructeurs** ainsi que ses **méthodes**!
+
+:::
+
+## Exercices
+
+::: tip S2E1 - Création de classe
+
+### Objectifs 
+
+- Utiliser la méthode de résolution de problèmes pour résoudre des problèmes.
+- Compléter une classe Objet.
+- Créer une application utilisant des objets.
+
+### Problème 1 - Voiture
+
+Une voiture possède les caractéristiques suivantes :
+- Marque
+- Modèle
+- Couleur
+- Année
+- Kilométrage
+- Vitesse
+
+Peu importe le type de voiture, une voiture ne peut pas dépasser la vitesse de 200 km/h. Une voiture peut accélérer ou ralentir. Lors d'une accélération, la vitesse augmente de 5 km/h et diminue de cette même valeur lors d'un ralentissement. 
+
+1) Vous devez écrire le code de la classe Voiture.  Celle-ci doit posséder les attributs spécifiés ci-dessus ainsi qu'un constructeur paramétré permettant de créer un objet en spécifiant les valeurs des attributs à l'exception de la vitesse qui est à 0 lors de la 
+création. De plus, vous devez écrire le code des fonctions accélérer et ralentir.
+
+2) Finalement, vous devez écrire un programme permettant de tester votre classe (création, modification des attributs, utilisation des fonctions):
+    - Créer une voiture
+    - Afficher la voiture
+    - La faire relentir et l'afficher.
+    - La faire accélérer et l'afficher.
+    - La faire accélérer jusqu'à la vitesse maximale et l'afficher.
+    - La faire accélérer à nouveau et l'afficher.
+
+###  Problème 2 - Restaurant
+
+Un restaurateur vous demande de créer calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre.
+
+1)	Vous devez écrire le code de la classe Facture.  Celle-ci doit posséder les attributs spécifiés ci-dessus ainsi qu'un constructeur paramétré permettant de créer un objet en spécifiant les valeurs des attributs. De plus, vous devez écrire le code des fonctions suivantes :
+- CalculerSousTotal
+- CalculerPourboire
+- CalculerTaxe
+- CalculerTotal
+
+Le taux du pourboire ainsi que le taux de la taxe doivent faire partie de la classe.
+
+2)	Finalement, vous devez écrire un programme permettant de tester votre classe en créant une facture d'un client et en affichant la facture avec le prix de chaque item, le sous-total, montant des taxes et du pourboire ainsi que le total.
+
+
+### Problème 3 - Jeu de dé
+Vous devez concevoir une application qui va permettre de simuler une partie de dés entre deux joueurs.
+
+1) Concevez la classe « Joueur » qui permet de représenter un joueur pour un jeu de dés à 6 faces (valeurs de 1 à 6, inclusivement).  Cette classe possède les attributs suivants :
+•	Le nom du joueur.
+•	Un tableau de 5 entiers représentant la valeur de 5 dés une fois qu’ils ont été lancés.
+•	Nombre de manches gagnées.
+•	Générateur de nombres aléatoire.
+
+    Ajoutez un constructeur qui n’accepte que le nom du joueur ; cependant, ce constructeur doit créer le tableau d’entiers pour les dés et instancier le générateur de nombre aléatoire.  
+
+    Ajoutez une fonction qui permet de faire lancer tous les dés que le joueur possède ; pour ce faire, il suffit de générer une valeur aléatoire entre 1 et 6 pour chaque dé. 
+
+    Ajoutez une autre fonction qui permet d’obtenir pour chaque valeur possible de 1 à 6, le nombre de fois que cette valeur a été obtenue pour l’ensemble des dés ; cette méthode retourne un tableau d’entiers.  
+
+2) Deuxièmement, écrivez un programme principal qui permettra de simuler une partie de dés entre deux joueurs dont les noms doivent être saisis dans la console.  Un joueur gagne la partie dès qu’il gagne 5 manches.  À chaque manche, on demande aux deux joueurs de lancer tous leurs dés et par la suite on détermine qui est le gagnant avec l’algorithme suivant :
+
+- Le joueur qui a obtenu le plus de fois la valeur 6 pour l’ensemble de ses dés gagne la manche.  Si les deux joueurs ont obtenu le même nombre de 6, on recommence avec la valeur 5 et ainsi de suite jusqu’à la valeur 1 si nécessaire.  En cas d’égalité pour toutes les valeurs, la manche est nulle.
+
+Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
+
+
+
+
+
+:::

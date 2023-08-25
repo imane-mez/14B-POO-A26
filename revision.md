@@ -386,9 +386,8 @@ switch ( uneVariable )
 ```
 **Opérateur conditionnel ternaire**
 ```c#
-//uneVariable =  Condition ? ValeurSiVrai : ValeurSiFaux  ;
-bool majeur =  age >= 18 ? true : false ;
-Console.WriteLine( note >= 60 ? "Réussite" : "Échec" ) ;
+//uneVariable   = Condition ? ValeurSiVrai : ValeurSiFaux  ;
+string résultat = note >= 60 ? "Réussite" : "Échec"
 
 ```
 ## Structures itératives

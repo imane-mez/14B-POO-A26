@@ -9,7 +9,7 @@ pages:
   after_script:
     - mkdir public
     - cp -r .vitepress/dist/* public
-    - ls public/assets
+
   artifacts:
     paths:
       - public

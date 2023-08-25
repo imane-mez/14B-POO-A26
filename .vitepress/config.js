@@ -18,10 +18,22 @@ export default defineConfig({
       {
         text: 'Bloc 1 - Semaines 1 à 6',
         items: [
-          { text: 'révision', link: '/revision' },
-          { text: 'résolution de problèmes', link: '/resolution_problemes' }
+          { text: 'Révision', link: '/revision' },
+          { text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          { text: 'Programmation Orientée Objet', 
+            items:[
+              {text: 'Classe', link: '/poo_intro' },
+             //{text: 'Encapsulation', link: '/encapsulation' }
+            ],
+          },
         ]
       },
+     /* {
+        text: 'En vrac',
+        items: [
+          { text: 'Convention de nommage', link: '/convention' },
+        ]
+      },*/
       /*{
         text: 'Programmation Orientée objet',
         items: [
