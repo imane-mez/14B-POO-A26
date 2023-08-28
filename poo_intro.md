@@ -379,10 +379,10 @@ création. De plus, vous devez écrire le code des fonctions accélérer et rale
 Un restaurateur vous demande de créer calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre.
 
 1)	Vous devez écrire le code de la classe Facture.  Celle-ci doit posséder les attributs spécifiés ci-dessus ainsi qu'un constructeur paramétré permettant de créer un objet en spécifiant les valeurs des attributs. De plus, vous devez écrire le code des fonctions suivantes :
-- CalculerSousTotal
-- CalculerPourboire
-- CalculerTaxe
-- CalculerTotal
+    - CalculerSousTotal
+    - CalculerPourboire
+    - CalculerTaxe
+    - CalculerTotal
 
 Le taux du pourboire ainsi que le taux de la taxe doivent faire partie de la classe.
 
@@ -393,10 +393,10 @@ Le taux du pourboire ainsi que le taux de la taxe doivent faire partie de la cla
 Vous devez concevoir une application qui va permettre de simuler une partie de dés entre deux joueurs.
 
 1) Concevez la classe « Joueur » qui permet de représenter un joueur pour un jeu de dés à 6 faces (valeurs de 1 à 6, inclusivement).  Cette classe possède les attributs suivants :
-•	Le nom du joueur.
-•	Un tableau de 5 entiers représentant la valeur de 5 dés une fois qu’ils ont été lancés.
-•	Nombre de manches gagnées.
-•	Générateur de nombres aléatoire.
+    - Le nom du joueur.
+    - Un tableau de 5 entiers représentant la valeur de 5 dés une fois qu’ils ont été lancés.
+    - Nombre de manches gagnées.
+    - Générateur de nombres aléatoire.
 
     Ajoutez un constructeur qui n’accepte que le nom du joueur ; cependant, ce constructeur doit créer le tableau d’entiers pour les dés et instancier le générateur de nombre aléatoire.  
 
@@ -406,7 +406,7 @@ Vous devez concevoir une application qui va permettre de simuler une partie de d
 
 2) Deuxièmement, écrivez un programme principal qui permettra de simuler une partie de dés entre deux joueurs dont les noms doivent être saisis dans la console.  Un joueur gagne la partie dès qu’il gagne 5 manches.  À chaque manche, on demande aux deux joueurs de lancer tous leurs dés et par la suite on détermine qui est le gagnant avec l’algorithme suivant :
 
-- Le joueur qui a obtenu le plus de fois la valeur 6 pour l’ensemble de ses dés gagne la manche.  Si les deux joueurs ont obtenu le même nombre de 6, on recommence avec la valeur 5 et ainsi de suite jusqu’à la valeur 1 si nécessaire.  En cas d’égalité pour toutes les valeurs, la manche est nulle.
+    - Le joueur qui a obtenu le plus de fois la valeur 6 pour l’ensemble de ses dés gagne la manche.  Si les deux joueurs ont obtenu le même nombre de 6, on recommence avec la valeur 5 et ainsi de suite jusqu’à la valeur 1 si nécessaire.  En cas d’égalité pour toutes les valeurs, la manche est nulle.
 
 Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
 
