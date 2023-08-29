@@ -96,7 +96,7 @@ C'est donc par le biais de celles-ci que l'on va effectuer les opérations sur l
 
 En effet, étant donné que les fonctions qui permettront de modifier les attributs seront codées par le programmeur propriétaire de la classe en question, il pourra veiller à ce que son code protège les attributs et ainsi garder les objets cohérents. Ces fonctions spéciales s'appellent des propriétés. 
 
-### Propriété
+## Propriété
 
 Une propriété est un type de fonction spécial qui permet la lecture ou la modification d'un attribut privé. Celle-ci est composée de ce qu'on appelle des accesseurs pour obtenir de l'information sur un attribut ou pour modifier sa valeur. Il existe deux types d'accesseurs :
 - **get {}** : utilisé pour retourner la valeur de la propriété.
@@ -143,5 +143,359 @@ Dans l'exemple ci-dessus, **la valeur 10 sera affectée au paramètre implicite 
 
 Les propriétés peuvent être marqués comme **public** ou **private** . Ces spécificateurs d'accès définissent comment les utilisateurs de la classe peuvent accéder à la propriété. **Les accesseurs get et set pour la même propriété peuvent avoir des spécificateurs d'accès différents.**
 
-Par exemple, le get peut être public pour autoriser un accès en lecture seule depuis l'extérieur de la classe, et le set peut être private.
+Par exemple, le **get** peut être **public** pour autoriser un accès en **lecture seule** depuis l'extérieur de la classe, et le **set** peut être **private**.
 
+### Validation
+
+Maintenant voici un exemple d'utilisation des propriétés :
+
+```c#
+Rectangle rect1 = new Rectangle(5, 15, "Vert");
+rec1.Hauteur = -10;
+Console.WriteLine("Hauteur : " + rect1.Hauteur);
+
+```
+
+Dans cet exemple, nous voyons encore une lacune, c'est-à-dire qu'on a encore un problème de cohérence de l'objet. **La hauteur d'un rectangle ne devrait pas être négative**. 
+
+Pour contrer ce problème, nous devrons donc ajouter une validation qui permettra de valider les valeurs que l'on veut assigner à la propriété. Si la valeur est valide, on peut donc l'assigner à l'attribut, sinon on ne l'assigne pas.
+
+Dans notre exemple, nous devons valider plusieurs attributs de plusieurs natures.  Voici donc un exemple de valeurs qui pourraient être considérées comme de bonnes bornes pour juger le paramètre (value) cohérent:
+
+| Attrbuts          |      Valeurs possibles            |  Valeur par défaut |
+| :-------------:     | :-----------:                     | :----: |
+| hauteur           | Entre 1 et 50                     | 1 |
+| largeur           | Entre 1 et 50                     | 2 |
+| courleur          | Un mot entre 4 et 25 caractères   | Aucune  |
+
+Nous supposons donc ici que la création d'un rectangle avec le constructeur par défaut créera un rectangle sans couleur avec une hauteur de 1 cm et une largeur de 2 cm. 
+
+Nous avons donc les valeurs par défaut suivantes:
+
+
+```c#
+public const float HAUTEUR_DEFAUT = 1f;
+public const float HAUTEUR_MIN = 1f;
+public const float HAUTER_MAX = 50f;
+public const float LARGEUR_DEFAUT = 2f;
+public const float LARGEUR_MIN = 1f;
+public const float LARGEUR_MAX = 50f;
+public const string COULEUR_DEFAUT = "";
+public const byte COULEUR_NB_CARACTERES_MIN = 3;
+public const byte COULEUR_NB_CARACTERES_MAX = 25;
+```
+
+Par la suite, nous ferons référence à ces valeurs par défaut pour les validations.
+
+Voici un exemple pour la validation de la hauteur : 
+
+```c#
+public float Hauteur
+{
+     get { return hauteur; }
+     set {
+            //validation de la hauteur selon les valeures des constantes
+            if (value >= HAUTEUR_MIN && value <= HAUTER_MAX)
+                hauteur = value;
+        }
+}
+```
+La raison pour laquelle nous validons est due au fait que dans l'accesseur set on s'est rendu compte que l'on pouvait assigner des valeurs incohérentes à nos attributs.  Afin d'éviter de commettre des erreurs et de rendre nos objets incohérents. Nous nous assurerons que seuls les accesseurs peuvent modifier nos attributs. Il faudra donc inclure des validations dans nos accesseurs set.
+
+Tel que mentionné précédemment, l'accesseur **get** permet également de retourne le résultat d'un calcul à condition que ce résultat soit tu même type que la propriété. Ainsi, il nous est possible **changer l'accesseur des méthodes CalculerPerimetre() et CalculerAire pour private** et de **créer des propriétés Perimètre et Air qui appellent les méthodes correspondante**. 
+
+
+```c#
+public float Perimetre  //lecture seule
+{
+     get { 
+               return  CalculerPerimetre();            
+	}      	
+	//Aucun set!
+}
+
+public float Aire   //lecture seule
+{
+     get
+     {
+            return CalculerAire();
+      }
+    //Aucun set!
+}
+
+//...
+
+private float CalculerPerimetre()
+{
+    return (this.hauteur * 2) + (this.largeur * 2);
+}
+
+private float CalculerAire()
+{
+    return this.hauteur * this.largeur;
+}
+
+```
+
+::: warning Remarque
+Vous remarquerez que les propriétés **Perimetre** et **Aire** **n'ont pas d'accesseur Set**. C'est normal, car il n'existe aucun attribut correspondant
+:::
+
+Maintenant, peut-on affirmer que nos objets seront toujours cohérents? Pas encore… En effet, observons la ligne suivante :
+
+```c#
+Rectangle rect1 = new Rectangle(-5, 15, "");
+```
+
+**Celle-ci permet d'instancier un objet de type Rectangle cohérent**.  Il faudra donc, lors du processus de création d'un objet, s'assurer que celui-ci sera cohérent. On devra donc modifier notre constructeur paramétré qu'il affecte des valeurs valides à nos attributs. Pour ce faire, nous devrons utiliser les propriétés et non pas les attributs directement. 
+
+Voici donc un exemple de constructeur qui instanciera un objet valide:
+
+```c#
+public Rectangle(float hauteur, float largeur, string couleur)
+{
+       Hauteur = hauteur;
+       Largeur = largeur;
+       Couleur = couleur;
+}
+
+```
+
+Finalement, vous remarquez qu'il est facile de se mêler entre le nom d'un attribut hauteur, d'une propriété Hauteur et le nom d'un paramètre hauteur utilisé dans le constructeur paramétré. Afin de minimiser les risques d'erreur, voici quelques règles à appliquer :
+ - •	Un attribut doit toujours commencer par le caractère "_" suivi d'une lettre minuscule. 
+        Exemple :
+
+```c#
+float _hauteur;
+
+```
+
+Une propriété doit toujours commencer par une lettre majuscule et doit porter le même nom que l'attribut correspondant. 
+Exemple : 
+
+```c#
+public float Hauteur
+{
+     get { return _hauteur; }
+     set {  _hauteur = value;}
+}
+```
+
+Règle à respecter
+- Utilisation des propriétés (set/get) dans tous les constructeurs et toutes les méthodes.
+- Utilisation des attributs, seulement dans les propriétés.
+- Ajout du préfixe "_" pour les attributs (permet de mieux distinguer des propriétés).
+- Un seul constructeur avec paramètres par défaut.
+
+### Quand utiliser une propriété ou une méthode?
+
+La décision d'utiliser une propriété ou une méthode dépend de la sémantique que vous souhaitez transmettre et de la convention ou du style que vous suivez. Cependant, il y a quelques lignes directrices générales qui peuvent vous aider à décider :
+
+1) **Nature de l'Opération**:
+
+    - **Propriétés** : Utilisez-les lorsque vous souhaitez représenter un attribut ou une caractéristique d'un objet, même si cet attribut est calculé. Par exemple, Aire pour un rectangle.
+    - **Méthodes** : Utilisez-les lorsque vous effectuez une action ou une opération, surtout si cette opération prend un certain temps, a des effets secondaires, ou nécessite des paramètres supplémentaires.
+
+2) **Temps d'Exécution**:
+
+    - **Propriétés** : Elles devraient généralement être rapides à exécuter. Si une propriété prend un temps significatif à s'exécuter, cela peut être déroutant pour les utilisateurs de la classe.
+    - **Méthodes** : Elles sont attendues pour des opérations potentiellement longues.
+
+3) **Effets Secondaires**:
+
+    - **Propriétés** : Idéalement, obtenir une propriété ne devrait pas avoir d'effets secondaires observables. Elle devrait simplement retourner une valeur sans modifier l'état interne de l'objet.
+    - **Méthodes** : Elles peuvent avoir des effets secondaires. Par exemple, une méthode Enregistrer sur un objet Document pourrait provoquer une écriture sur le disque.
+
+4) **Paramètres**:
+
+    - **Propriétés** : Elles ne prennent pas de paramètres (à part this pour les propriétés d'instance).
+    - **Méthodes** : Elles peuvent prendre des paramètres.
+
+5) **Conventions .NET** : Dans le monde de .NET et C#, il existe certaines conventions :
+
+    - Les propriétés utilisent la notation PascalCase et ressemblent à des noms de variables, par exemple DateNaissance.
+    - Les noms de méthode sont aussi en PascalCase, mais sont souvent verbaux ou représentent une action, par exemple CalculerSalaire().
+
+6) **Intuition** :
+
+    - Si cela "sent" comme un attribut de l'objet, même s'il est calculé, alors c'est probablement une propriété. Par exemple, même si le calcul de l'aire d'un rectangle nécessite une multiplication, il s'agit intrinsèquement d'un attribut du rectangle, donc Aire serait une propriété appropriée.
+    - Si cela ressemble plus à une action ou à une opération que l'objet peut exécuter, alors c'est probablement une méthode.
+
+7) **Extensibilité** : 
+
+    - Si vous pensez que l'opération pourrait éventuellement nécessiter des paramètres à l'avenir, il est préférable de l'implémenter en tant que méthode dès le départ pour éviter de casser l'API plus tard.
+
+## Surcharge de méthode
+
+La surcharge de méthodes est un concept en programmation orientée objet qui permet à une classe d'avoir plusieurs méthodes ayant le même nom, mais avec des listes de paramètres différentes. Les méthodes sont distinguées par le nombre et/ou le type de leurs paramètres.
+
+La surcharge de méthodes est utile car elle permet à un programmeur de définir une méthode pour traiter **différents types de données** ou **différents nombres d'arguments**, tout en offrant une interface cohérente aux utilisateurs de la classe.
+
+Voici un exemple de surcharge de fonctions :
+
+```c#
+public int Additionner(int a, int b)	//Additionne 2 nombres entiers
+{
+    return a + b;
+}
+
+public int Additionner(int a, int b, int c)  	//Additionne 3 nombres entiers
+{
+    return a + b;
+}
+
+public float Additionner(float a, float b)	 //Additionne 2 nombres réels
+{
+    return a + b;
+}
+
+```
+Dans l'exemple ci-dessus, nous avons **trois méthodes Additionner**. La première prend deux entiers, la deuxième prend trois entiers, et la troisième prend deux nombres réels. Grâce à la surcharge, nous pouvons utiliser la méthode Additionner pour différents types et nombres d'arguments. Le compilateur peut donc différencier ces trois fonctions, car elles ne prennent pas le même nombre de paramètres (1 et 2) ou encore les paramètres sont de types différents (1 et 3)
+
+Cette technique est effective pour toutes les **méthodes** et pour le **constructeur**.
+
+Reprenons maintenant les constructeurs de la classe Rectangle 
+
+
+```c#
+
+public Rectangle()
+{
+    
+    Hauteur = HAUTEUR_DEFAUT;
+    Largeur = LARGEUR_DEFAUT;
+    Couleur = COULEUR_DEFAUT;
+}
+
+public Rectangle(float hauteur, float largeur, string couleur)
+{
+
+    Hauteur = hauteur;
+    Largeur = largeur;
+    Couleur = couleur;
+}
+
+```
+
+On voit ici que le code de notre constructeur sans paramètre et celui de notre constructeur avec paramètres est **pratiquement identique** à l'exception des valeurs qui sont affectées aux attributs. Il serait donc préférable d'**éviter la duplication de code** en surchargeant notre constructeur.  
+
+Voici maintenant comment on pourrait faire la surcharge de notre constructeur dans notre exemple de Rectangle 
+
+```c#
+public Rectangle() : this(HAUTEUR_DEFAUT, LARGEUR_DEFAUT, COULEUR_DEFAUT)
+{
+
+    //Il est possible d'ajouter des instruction supplémentaires ici
+           
+}
+```
+En utilisant le mot clé **this**, il nous est possible de spécifier l'utilisation du constructeur paramétré (surcharge) et de passer en paramètres les valeurs par défaut de notre objet. Ainsi, le constructeur paramétré sera appelé et par la suite, le cas échéant, le code supplémentaire de notre constructeur sans paramètre pourrait être exécuté.
+
+### Valeurs par défaut
+
+Comme vous le savez, il est possible d'indiquer une valeur par défaut à un paramètre d'une fonction. Cela peut également être appliqué à un constructeur. Ainsi, au lieu d'avoir 2 constructeurs dans l'exemple précédent, il serait possible d'en avoir qu'un seul en remplaçant le constructeur paramétré par celui-ci :
+
+```c#
+public Rectangle(float hauteur = HAUTEUR_DEFAUT, float largeur = LARGEUR_DEFAUT, string couleur = COULEUR_DEFAUT)
+{
+    Hauteur = hauteur;
+    Largeur = largeur;
+    Couleur = couleur;
+ }
+ ```
+## Exercice
+::: tip S2E2 - Encapsulation
+
+### objectif
+
+L'objectif de cet exercice est de mettre en pratique les nouvelles notions que vous venez d'apprendre ou d'approfondir en ce début de session (constructeurs, propriétés, méthodes paramétrées, types et conversions).  Pour ce faire, vous devez développer une **classe** appelée "**Creature**" ainsi qu'un nouveau type **Enum** (Assurez-vous d'avoir lu la section "Type Enum") appelé "**CreatureType**". 
+
+Pour **tester** cette classe, vous devez concevoir un **programme principal** qui permettra de tester l'attaque, le vol et également si une créature est morte ou vivante. Pour ce faire, vous devez demander à l'utilisateur de choisir deux créatures et de simuler un combat. Les adversaires s'attaquent chacun leur tour tant qu'une des deux créatures n'est pas morte. La valeur d'une attaque est déterminée par un nombre aléatoire entre 1 et 15. Finalement, La créature qui gagne peut voler l'autre.
+
+Vous devez indiquer pour chaque attaque qui est l'attaquant ainsi que les statistiques de chaque créature. Finalement vous devez afficher le gagnant ainsi que la nombre de pièces d'or qu'il a gagné.
+
+Il est important de respecter les spécifications données ci-dessous et les normes habituelles de programmation en C# (entre autres, les majuscules et les minuscules).  De plus, vous devez respecter les normes de codage du cours de Programmation Orientée Objet (voir les documents distribués).
+
+### Création du projet
+
+- Créez un nouveau projet de type "Application Console".  Vous pouvez appeler votre projet "S2E2-CreaturesMythiques".
+
+### Création de l'énumération (enum) appelée "CreatureType"
+
+- Pour créer l'énumération, vous devez ajouter une nouvelle classe et par la suite remplacer le mot "class" par "enum".  Retirez aussi toutes les instructions "using".
+- Le nom du fichier doit être "**CreatureType.cs**".
+- Les valeurs de l'énumération sont :
+    - Elfe
+    - Gobelin
+    - Zombie
+
+###  Création de la classe "Creature"
+- Créez une nouvelle classe appelée "Creature".
+
+
+    **Attributs de la classe "Creature"**
+
+    | Attribut          |      Type      |  
+    | -------------     | :-----------: | 
+    | **_type** (type de la créature)                                                                                       | CreatureType  |
+    | **_vie** (nombre de points de vie)                                                                                    | sbyte         | 
+    | **_armure** (nombre de points d'armure de la créature. Ne peut pas être négatif)                                      | byte          |
+    | **_bourse** (nombre de pièces d'or que possède la créature, ne peut pas négatif, mais peut être plus grand que 255)   | ushort        |
+
+
+    **Constructeurs de la classe "Creature"**
+    - Premier constructeur : Avec **un seul paramètre** qui est le **type de la créature** à créer (CreatureType).
+    - Deuxième constructeur : Avec **aucun paramètre** → par défaut, on **crée un Elfe** en appelant le constructeur précédent.
+    - À noter qu'il n'y a pas de constructeur acceptant en paramètre tous les attributs car lors de la création d'une créature, on ne peut pas choisir soi-même la valeur des attributs vie, armure et bourse; on ne peut que choisir le type de créature (ou prendre le type par défaut).  Les valeurs des attributs vie, armure et bourse sont fixées en fonction du type de créature.
+    - Toutes les créatures ont 10 pièces d'or lors de leur création (bourse = 10).
+    - Une fois le type de créature connu, la vie et l'armure sont déterminés par le tableau suivant :
+
+    | type de créature  |      Vie      | Armure        |
+    | -------------     | :-----------: | :-----------: |
+    | Elfe              | 12            | 8             |
+    | Gobelin           | 15            | 5             |        
+    | Zombie            | 8             | 7             |
+
+    **Méthodes de la classe "Creature"**
+
+    **bool EstVivante()**
+        - Retourne un booléen indiquant si la créature est vivante (true = vivante, false = morte).
+        - Une créature est morte si sa vie est plus petite ou égale à zéro sauf pour les zombies pour lesquels la vie doit être plus petite ou égale à -5.
+
+    **bool EstMorte()**
+    - Retourne un booléen indiquant si la créature est morte (true = morte, false = vivante).
+    - Pensez à utiliser la méthode EstVivante() au lieu de recoder au complet (pas de redondance de code).
+
+    **void SeFaireAttaquer(byte forceAttaque)**
+    - Permet d'infliger (forceAttaque-armure) dommages (pas négatif) à la créature.  Les dommages infligés peuvent bien sûr être nuls.
+    - Les gobelins sont plus résistants que les autres créatures; ainsi, les dommages infligés à un gobelin sont réduits de moitié arrondi vers le haut.  Par exemple : 5 dommages est réduit à 3 dommages car 5/2 = 2,5 qui donne 3 lorsqu'on arrondi vers le haut.
+    - La vie doit être diminuée des dommages infligés.  Attention de ne pas soustraire des dommages négatifs et d'ainsi augmenter la vie.
+    - Pour tous les types de créature sauf les zombies, la vie ne doit pas être négative.  La plus petite valeur permise est zéro; ce qui signifie que la créature est morte.  Pour les zombies, la vie peut descendre dans les négatifs autant qu'on le désire (même plus bas que -5).
+
+    **ushort SeFaireVoler()**
+    - Permet de tenter de voler des pièces d'or à une créature.  Le nombre de pièces volées est retourné.
+    - Il est impossible de voler un Gobelin même s'il est mort.
+    - Un elfe dont la vie est plus petite que 5 perd la moitié de sa bourse arrondie vers le bas.
+    - Un elfe dont la vie est plus grande ou égale à 5 perd 3 pièces d'or (au maximum).
+    - Un zombie dont la vie est négative ou à zéro (<=0) perd la totalité de sa bourse.
+    - Un zombie dont la vie est plus grande que zéro, perd une pièce d'or seulement.
+
+    **Méthodes de la classe "Programme"**
+        
+    **void AfficherCreature(Creature creature)**
+    - Affiche le type de créature, sa vie, son armure et sa bourse.  Il faut aussi indiquer si la créature est vivante ou bien morte.
+
+### Notes particulières
+
+- Pensez à utiliser l'opérateur conditionnel ternaire pour les petites structures conditionnelles : 
+
+    (condition ? valeur_si_vrai : valeur_si_faux)
+
+- Pensez à utiliser l'instruction "**switch**" (même sur un type enum) au lieu de toujours utiliser des "if" imbriquées.
+- Utilisez des **constantes publiques** pour représenter les différentes valeurs constantes soient celles pour la création des créatures (6), celle pour le nombre de pièce d'or (lors de la création d'une créature) et celle pour le type de créature par défaut (donc, 8 constantes au total).
+- Créez des propriétés en **lecture publiques** et des propriétés en** écriture privés**.
+- Assurez-vous de bien **respecter les types primitifs** qu'on vous demande d'utiliser pour les attributs et les méthodes.
+
+
+
+:::

@@ -64,6 +64,15 @@ Par exemple :
 
 - Constante 
 
+## Ordre des éléments dans une classe
+
+Lors de la création d'une classe, les différents éléments devront **toujours** être dans cet ordre :
+ - constantes
+ - attributs
+ - propriétés
+ - constructeur
+ - méthodes
+
 ## Préfixe pour les noms des contrôles graphiques des formulaires
 
 - Label : lbl
