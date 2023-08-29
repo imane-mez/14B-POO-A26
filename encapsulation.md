@@ -496,6 +496,6 @@ Il est important de respecter les spécifications données ci-dessous et les nor
 - Créez des propriétés en **lecture publiques** et des propriétés en** écriture privés**.
 - Assurez-vous de bien **respecter les types primitifs** qu'on vous demande d'utiliser pour les attributs et les méthodes.
 
-
-
-:::
+**Solutions de l'exercice** :
+### Solution de l'exercice :  [S2E1 - CréationClasse - Solution](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads
+:::) 
