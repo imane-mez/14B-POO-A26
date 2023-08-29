@@ -110,6 +110,7 @@ for (int i = 0; i < vectCategories.Length; i++)
     Console.WriteLine($"{vectCategories[i]}");
 }
 
+
 ```
 
 
