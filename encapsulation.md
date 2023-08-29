@@ -341,7 +341,7 @@ public int Additionner(int a, int b)	//Additionne 2 nombres entiers
 
 public int Additionner(int a, int b, int c)  	//Additionne 3 nombres entiers
 {
-    return a + b;
+    return a + b + c;
 }
 
 public float Additionner(float a, float b)	 //Additionne 2 nombres réels
