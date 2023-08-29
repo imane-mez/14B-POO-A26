@@ -412,6 +412,8 @@ Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leur
 
 
 
+### Solution de l'exercice 
 
+ [S2E1-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads)
 
 :::
