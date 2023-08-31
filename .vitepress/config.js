@@ -23,10 +23,12 @@ export default defineConfig({
           { text: 'Programmation Orientée Objet', 
             items:[
               {text: 'Classe', link: '/poo_intro' },
-              {text: 'Encapsulation', link: '/encapsulation' }
+              {text: 'Encapsulation', link: '/encapsulation' },
+              { text: 'Relation entre les classes', link: '/composition' },
             ],
           },
           { text: 'Type Enum', link: '/enum' },
+         
         ]
       },
       {
