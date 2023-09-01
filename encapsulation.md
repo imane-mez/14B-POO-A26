@@ -498,3 +498,6 @@ Il est important de respecter les spécifications données ci-dessous et les nor
 
 
 :::
+
+## Démo - Encapsulation
+Télécharger la démonstration complète : [S2C2 - DemoEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=heads)
