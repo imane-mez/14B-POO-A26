@@ -91,7 +91,7 @@ namespace MonApplication
 Tandis qu'en utilisant le name space using, vous pouvez écrire :
 
 ```c#
-using System; // [!code  focus]
+using System; // [!code focus]
 
 namespace MonApplication
 {
@@ -99,7 +99,7 @@ namespace MonApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bonjour"); // [!code  focus]
+            Console.WriteLine("Bonjour"); // [!code focus]
         }
     }
 }
