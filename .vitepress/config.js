@@ -24,10 +24,12 @@ export default defineConfig({
             items:[
               {text: 'Classe', link: '/poo_intro' },
               {text: 'Encapsulation', link: '/encapsulation' },
-              { text: 'Relation entre les classes', link: '/composition' },
+              {text: 'Relation entre les classes', link: '/relations' },
+              {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
             ],
           },
           { text: 'Type Enum', link: '/enum' },
+          { text: 'Espace de nom', link: '/namespace' },
          
         ]
       },
