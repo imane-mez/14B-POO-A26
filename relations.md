@@ -138,8 +138,8 @@ Dans cet exemple :
 
     - Un client peut avoir plusieurs comptes.
     - Un compte appartient à un ou plusieurs clients (si l'on considère les comptes joints).
-    - La durée de vie d'un compte dépend généralement de celle de son client. Si un client ferme son compte ou quitte la banque, le compte n'existe plus. Cependant, un client peut toujours exister sans avoir de compte.
-    - Ceci est généralement représenté comme une relation de **composition** (en particulier, si on assume que la suppression d'un client entraine la suppression de tous ses comptes).
+    - La durée de vie d'un compte dépend généralement de celle de son client. Si un client ferme son compte ou quitte la banque, le compte n'existe plus. Cependant, dans ce cas-ci étant donné qu'un compte peut avoir plusieurs client alors on ne supprime le compte du client.
+    - Ceci est généralement représenté comme une relation de **aggrégation** (en particulier, si on assume que la suppression d'un client n'entraine pas la suppression de tous ses comptes).
 
 - **Banque - Compte** :
 
