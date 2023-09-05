@@ -497,6 +497,10 @@ Il est important de respecter les spécifications données ci-dessous et les nor
 - Assurez-vous de bien **respecter les types primitifs** qu'on vous demande d'utiliser pour les attributs et les méthodes.
 
 
+### Solution de l'exercice 
+
+ [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=headss)
+ 
 :::
 
 ## Démo - Encapsulation

@@ -269,4 +269,7 @@ Le professeur désire maintenant être en mesure d’utiliser votre application 
 
 :::
 
+## Démo - Relations
+Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
+
 
