@@ -37,6 +37,7 @@ export default defineConfig({
         text: 'En vrac',
         items: [
           { text: 'Convention de nommage', link: '/convention' },
+          { text: 'Norme de codage', link: '/normes' },
           { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
           { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
         ]
