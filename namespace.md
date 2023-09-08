@@ -88,7 +88,7 @@ namespace MonApplication
 
 ```
 
-Tandis qu'en utilisant le name space using, vous pouvez écrire :
+Tandis qu'en utilisant l'instruction **using**, vous pouvez écrire :
 
 ```c#
 using System; // [!code focus]
