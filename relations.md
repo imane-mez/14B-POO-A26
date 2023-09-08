@@ -267,6 +267,10 @@ Le professeur désire maintenant être en mesure d’utiliser votre application 
 - Modifier le diagramme de classe créé précédemment afin de répondre au besoin.
 - Modifier votre application afin de répondre au besoin.
 
+### Solution
+Télécharger la solution : [S3E1-ExerciceRelation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
+
+
 :::
 
 ## Démo - Relations
