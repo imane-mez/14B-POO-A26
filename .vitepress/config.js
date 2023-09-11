@@ -15,22 +15,25 @@ export default defineConfig({
     ],
 
     sidebar: [
+    
+      { text: 'Révision', link: '/revision' },
+      { text: 'Résolution de problèmes', link: '/resolution_problemes' },
+      { text: 'Programmation Orientée Objet', 
+        items:[
+          {text: 'Classe', link: '/poo_intro' },
+          {text: 'Encapsulation', link: '/encapsulation' },
+          {text: 'Relation entre les classes', link: '/relations' },
+          {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
+          {text: 'Méthode ToString()', link: '/methode_tostring' },
+        ],
+      },
+      { text: 'Type Enum', link: '/enum' },
+      { text: 'Espace de nom', link: '/namespace' },
+      { text: 'TryParse', link: '/tryparse' },
       {
-        text: 'Bloc 1 - Semaines 1 à 6',
+        text: 'WPF',
         items: [
-          { text: 'Révision', link: '/revision' },
-          { text: 'Résolution de problèmes', link: '/resolution_problemes' },
-          { text: 'Programmation Orientée Objet', 
-            items:[
-              {text: 'Classe', link: '/poo_intro' },
-              {text: 'Encapsulation', link: '/encapsulation' },
-              {text: 'Relation entre les classes', link: '/relations' },
-              {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
-            ],
-          },
-          { text: 'Type Enum', link: '/enum' },
-          { text: 'Espace de nom', link: '/namespace' },
-         
+          { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
         ]
       },
       {
