@@ -36,7 +36,7 @@ public override string ToString()
 Il est possible d'utiliser la méthode ToString() de manière **implicite** ou **explicite** : 
 
 ```c#
-public override string ToString()
+public main()
 {
    Rectangle rect = new Rectangle(10, 20);
 
