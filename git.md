@@ -33,13 +33,17 @@ Installez Git sans changer les options par défaut : http://git-scm.com/download
 
     ![Nouveau projet git la](/images/git_5.png)
 
-    ![Nouveau projet git la](/images/git_6.png)
+  
 
 3) À parti de GitLab, copiez l'URL (https) du projet.
 
- ![Nouveau projet git la](/images/git_7.png)
+![Nouveau projet git la](/images/git_6.png)
 
-4) Démarrez Visual Studio et sélectionnez "**Cloner un dépôt**"
+
+
+4) Démarrez Visual Studio et sélectionnez "**Cloner un dépôt**" et copier l'Url du projet sous **"Emplacement du dépôt"**
+
+ ![Nouveau projet git la](/images/git_7.png)
 
  ![Nouveau projet git la](/images/git_8.png)
 

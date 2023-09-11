@@ -152,3 +152,9 @@ Lors de la validation des données saisies par un utilisateur, vous devriez vali
 - Nombre de caractères minimums
 - Nombre de caractères maximums
 - Format spécifique (Ex. G1A 1A1)
+
+
+## Démo - Relations
+Télécharger les fichiers de départ de la démonstration : [S4C1-DemoValidationFormulaire-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2007?ref_type=heads)
+
+
