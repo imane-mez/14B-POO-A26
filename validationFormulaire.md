@@ -26,7 +26,7 @@ if (string.IsNullOrWhiteSpace(txtPrenom.Text))
 
 ![Liste d'employés vide](./images/validation_formulaire_2.png)
 
-Lors d'une erreur, vous devriez afficher un message suffisamment détaillé afin que l'utilisateur puisse facilement corriger son erreur. Si vous avez plusieurs validations à effectuer sur une valeur, vous devriez vous assurer que votre message permet à l'utilisateur de corriger son erreur sans commettre une autre erreur de validation. Par exemple, dans le cas de la validation de l'âge, il ne faudrait pas faire ceci :
+Lors d'une erreur, vous devriez afficher un message **suffisamment détaillé** afin que l'utilisateur puisse facilement corriger son erreur. Si vous avez plusieurs validations à effectuer sur une valeur, vous devriez vous assurer que votre message permet à l'utilisateur de corriger son erreur **sans commettre une autre erreur** de validation. Par exemple, dans le cas de la validation de l'âge, il **ne faudrait pas** faire ceci :
 
 ```c#
 byte age;
@@ -111,7 +111,7 @@ public bool ValiderEmployer()
     //S'il y des erreurs on affiche le message
     if (messageErreur != "")
     {
-        MessageBox.Show(messageErreur, "Enregistrement des modifications");
+        MessageBox.Show(messageErreur, "Enregistrement");
         return false;
     }
 
@@ -133,9 +133,7 @@ if(ValiderEmployer())
     // Rétroaction à l'utilisateur.
     MessageBox.Show(
         "Données enregistrées avec succès.",
-        "Confirmation d'enregistrement",
-        MessageBoxButtons.OK,
-        MessageBoxIcon.Information);
+        "Confirmation d'enregistrement");
 }
 
 ```
