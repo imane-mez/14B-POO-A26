@@ -113,7 +113,7 @@ for (int i = 0; i < vectCategories.Length; i++)
 
 ```
 
-## Conversion d'une valeur en énumération
+## Conversion d'une valeur numérique en énumération
 
 ```c#
 
