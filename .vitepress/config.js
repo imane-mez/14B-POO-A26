@@ -30,6 +30,7 @@ export default defineConfig({
       { text: 'Type Enum', link: '/enum' },
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },
+      { text: 'Documentation du code', link: '/commentaires' },
       {
         text: 'WPF',
         items: [

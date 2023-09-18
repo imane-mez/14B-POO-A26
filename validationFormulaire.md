@@ -155,6 +155,8 @@ Lors de la validation des données saisies par un utilisateur, vous devriez vali
 ## Démo - validation formulaire
 Télécharger les fichiers de départ de la démonstration : [S4C1-DemoValidationFormulaire-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2007?ref_type=heads)
 
+Télécharger démonstration commplète : [S4C1-DemoValidationFormulaire-Finale](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2007?ref_type=heads)
+
 
 ## Exercices
 ::: tip S1E1 - Révision
