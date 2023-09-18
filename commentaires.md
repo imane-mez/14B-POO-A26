@@ -148,5 +148,5 @@ Documenation Docfx : https://dotnet.github.io/docfx/index.html
 
 
 ## Démo - Docfx 
-Télécharger les fichiers de départ de la démonstration : [S4C1-DemoValidationFormulaire-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2007?ref_type=heads)
+Télécharger les fichiers de départ de la démonstration : [S4C1-DemoValidationFormulaire-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2009?ref_type=heads)
 
