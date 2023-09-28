@@ -159,7 +159,7 @@ Télécharger démonstration commplète : [S4C1-DemoValidationFormulaire-Finale]
 
 
 ## Exercices
-::: tip S1E1 - Révision
+::: tip S4E1 - Validation de formulaire
 ### Exercice - Validation d'un formulaire et méthode ToString()
 
 #### Objectifs
