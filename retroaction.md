@@ -67,10 +67,10 @@ Pour déterminer le type de message approprié, concentrez-vous sur l'aspect le 
 
 En règle générale,
 
- - Si un problème empêche l'utilisateur de continuer à utiliser correctement l'application, il est présenté comme une Erreur; 
- - Si l'utilisateur peut continuer à utiliser l'application, c'est un Avertissement. Élaborez l'instruction principale ou tout autre texte correspondant basé sur cette idée, puis choisissez une icône (standard ou autre) qui correspond au texte. Le texte de l'instruction principale et les icônes doivent toujours correspondre.
+ - **Si un problème empêche l'utilisateur de continuer à utiliser correctement l'application**, il est présenté comme une **Erreur**; 
+ - **Si l'utilisateur peut continuer à utiliser l'application**, c'est un **Avertissement**. Élaborez l'instruction principale ou tout autre texte correspondant basé sur cette idée, puis choisissez une icône (standard ou autre) qui correspond au texte. Le texte de l'instruction principale et les icônes doivent toujours correspondre.
 
-**La gravité**
+### La gravité
 
 Bien que la gravité ne soit pas une considération lors du choix parmi les icônes d'erreur, d'avertissement et d'information, la gravité est un facteur pour déterminer si une icône standard doit être utilisée.
 
