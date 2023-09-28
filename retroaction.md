@@ -111,7 +111,7 @@ Pour utiliser des **icônes d'avertissement sur des problèmes vraiment critique
 
 ## À quel moment donner une rétroaction utilisateur.
 
-Voici les moments où vous devriez donner une rétroaction à un utilsateur :<
+Voici les moments où vous devriez donner une rétroaction à un utilsateur :
 
 - **Soumission de Formulaire** :
     - Succès: Informer l'utilisateur que le formulaire a été soumis avec succès.
