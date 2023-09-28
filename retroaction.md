@@ -109,6 +109,24 @@ Pour utiliser des **icônes d'avertissement sur des problèmes vraiment critique
 
 - **Les utilisateurs sont-ils susceptibles de se comporter différemment en raison de l'icône d'avertissement?** Les utilisateurs sont-ils susceptibles de considérer leur décision plus soigneusement?
 
+## À quel moment donner une rétroaction utilisateur.
+
+Voici les moments où vous devriez donner une rétroaction à un utilsateur :<
+
+- **Soumission de Formulaire** :
+    - Succès: Informer l'utilisateur que le formulaire a été soumis avec succès.
+    - Échec: Expliquer pourquoi la soumission a échoué et comment résoudre le problème.
+- **Chargement et Temps d’Attente** (Dans le cas où le chargement peut être long) :
+    - Indicateur de Chargement: Fournir une indication visuelle lorsque le contenu ou une fonctionnalité est en cours de chargement.
+    - Progression: Montrer une barre de progression ou un autre indicateur pour les tâches longues.
+- **Confirmation d’Actions** :
+    - Demander confirmation pour les actions irréversibles (comme la suppression de données).
+    - Fournir un feedback de confirmation après des actions importantes (ex: sauvegarde réussie, suppression réussie).
+- **Erreurs Système** :
+    - Informer l'utilisateur en cas d'erreur système ou de problème de connexion.
+
+
+
 ## Afficher un message à l'utilisateur en WPF
 
 WPF propose plusieurs boîtes de dialogue que votre application peut utiliser, mais la plus simple est sans aucun doute la **MessageBox**. Son seul but est de montrer un message à l'utilisateur, puis de proposer à l'utilisateur une ou plusieurs façons de répondre au message.
@@ -218,21 +236,6 @@ MessageBox.Show("Désirez-vous quitter sans enregistre les modifications?",
 ```
 ![MessageBox avec option par défaut](./images/messagebox_5.png)
 
-## À quel moment donner une rétroaction utilisateur.
-
-Voici les moments où vous devriez donner une rétroaction à un utilsateur :<
-
-1) Soumission de Formulaire :
-    - Succès: Informer l'utilisateur que le formulaire a été soumis avec succès.
-    - Échec: Expliquer pourquoi la soumission a échoué et comment résoudre le problème.
-2) Chargement et Temps d’Attente (Dans le cas où le chargement peut être long):
-    - Indicateur de Chargement: Fournir une indication visuelle lorsque le contenu ou une fonctionnalité est en cours de chargement.
-    - Progression: Montrer une barre de progression ou un autre indicateur pour les tâches longues.
-3) Confirmation d’Actions:
-    - Demander confirmation pour les actions irréversibles (comme la suppression de données).
-    - Fournir un feedback de confirmation après des actions importantes (ex: sauvegarde réussie, suppression réussie).
-4) Erreurs Système:
-    - Informer l'utilisateur en cas d'erreur système ou de problème de connexion.
 
 
 
