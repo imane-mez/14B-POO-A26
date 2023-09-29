@@ -30,13 +30,13 @@ export default defineConfig({
       { text: 'Type Enum', link: '/enum' },
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },
-      { text: 'Listes génériques (List)', link: '/listes_generiques' },
+     // { text: 'Listes génériques (List)', link: '/listes_generiques' },
       { text: 'Documentation du code', link: '/commentaires' },
       {
         text: 'WPF',
         items: [
           { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
-          { text: 'Rétroaction utilsateur', link: '/retroaction' },
+          /*{ text: 'Rétroaction utilsateur', link: '/retroaction' },*/
         ]
       },
       {
