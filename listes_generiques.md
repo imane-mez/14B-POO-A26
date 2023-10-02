@@ -239,8 +239,8 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
 1)	Créer un nouveau projet WPF nommé **S7E1_ExerciceListeGenerique**.
 2)	Créer la classe **Film** répondant aux spécifications suivantes :
     - **Attributs et propriétés** :
-        - Titre
-        - Année
+        - Titre (Ne doit pas être vide)
+        - Année (Doit être inférieure ou égale à l'année courante)
     - **Constructeur**
         - Avec paramètre permettant d'initialiser le titre et l'année du film.
     - **Méthodes** :
@@ -251,8 +251,8 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - **Constructeur**
         - Sans paramètre permettant d’initialiser une liste de films vide.	
     - **Méthodes**
-        - bool AjouterFilm(Film pFilm) : Permet l’ajout du film à la liste de film. Un film ne peut pas être ajouté s’il existe déjà un film ayant le même titre et la même année dans la liste. Retourne vraie si le film a été ajouté, faux sinon.
-        - bool SupprimerFilm(Film pFilm) : Permet la suppression du film de la liste de films. Retourne vraie si le film a été trouvé et supprimé, faux sinon.
+        - **bool AjouterFilm(Film pFilm)** : Permet l’ajout du film à la liste de film. Un film ne peut pas être ajouté s’il existe déjà un film ayant le même titre et la même année dans la liste. Retourne vraie si le film a été ajouté, faux sinon.
+        - **bool SupprimerFilm(Film pFilm)** : Permet la suppression du film de la liste de films. Retourne vraie si le film a été trouvé et supprimé, faux sinon.
 
 4)	Créer l'interface suivante
  
@@ -265,10 +265,8 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - D'ajouter un nouveau film valide à la liste des films contenus dans votre attribut **_gestionFilms**. N'oubliez pas de donner une rétroaction à l'utilisateur si l'ajout a fonctionné ou non. Vous devez mettre à jour le ListBox.
 	- D'afficher la listes des films contenus dans l'attribut **_gestionFilms**
     - De sélectionner un film dans le ListeBox et d'afficher les informations d'un film dans les champs texte. Lors d'une sélection, le bouton ajouter est désactivé et le bouton supprimé est activé.
-    -De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. N'oubliez pas de donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
+    - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas de donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - Permettre de fermer le formulaire avec le bouton quitter.
-
-N'oubliez pas d'ajouter de la rétroaction aux endroits appropriés.
 
 
 :::
