@@ -108,7 +108,7 @@ Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("
 
 listePersonnes.AddRange(vectPersonnes);
 
-listePersonnes.Remove(1); //Supprime l'élément à la position 1
+listePersonnes.RemoveAt(1); //Supprime l'élément à la position 1
 
 ```
 
