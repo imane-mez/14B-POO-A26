@@ -27,7 +27,7 @@ export default defineConfig({
           {text: 'Méthode ToString()', link: '/methode_tostring' },
         ],
       },
-      //{ text: 'Type DateTime et TimeSpan', link: '/date_time' },
+      { text: 'Type DateTime et TimeSpan', link: '/date_time' },
       { text: 'Type Enum', link: '/enum' },
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },
