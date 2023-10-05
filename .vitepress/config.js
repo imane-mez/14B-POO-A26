@@ -38,6 +38,7 @@ export default defineConfig({
         items: [
           { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
           { text: 'Rétroaction utilsateur', link: '/retroaction' },
+          { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
         ]
       },
       {
