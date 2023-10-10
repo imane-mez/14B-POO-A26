@@ -268,6 +268,9 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas de donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - Permettre de fermer le formulaire avec le bouton quitter.
 
+### Solution
+
+Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2013?ref_type=heads)
 
 :::
 
