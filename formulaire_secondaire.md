@@ -180,13 +180,13 @@ private void btnAjouterPersonne_Click(object sender, RoutedEventArgs e)
 ```
 
 
-## Exercice
+## Exercice 1
 ::: tip S7E2 - Formulaire secondaire
 
 ### Objectif 
 Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires et l'utilisation de la liste générique.
 
-### Problème
+### Problème 
 
 1)	Créer un nouveau projet WPF nommé S7E2_Formulaire secondaire.
 2)	Créer la classe Film (vous pouvez réutiliser la classe de l'exercice précédent) répondant aux spécifications suivantes :
@@ -229,5 +229,24 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
     - Fermer le formulaire lors du clique du bouton Fermer.
 
 6) Écrire le code du bouton « Afficher détails » du formulaire principal permettant d'afficher les détails d'un film sélectionné dans le formulaire FormFilm.
+
+:::
+
+## Exercice 2
+::: tip S8E1 - Application Windows multiformulaires
+
+### Objectif 
+Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires et l'utilisation de la liste générique.
+
+### Problème 
+Mettre en pratique la construction d'une application Windows multiformulaires permettant d'effectuer les opérations classiques sur des données, soient créer/ajouter (**C**reate), lire/consulter (**R**ead), mettre à jour/modifier (**U**pdate), supprimer/détruire (**D**elete).  On utilise souvent l'acronyme CRUD en anglais pour désigner cet ensemble d'opérations très courant en informatique de gestion.
+
+## Problème
+
+Complétez l'exemple [S8C1-DemoMultiFormulaireCRUD](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2015?ref_type=heads) présenté en classe en implémentant la **modification** et la **suppression** d'un employé.  
+- Pour la modification, vous devez modifier le formulaire existant afin qu'il affiche les informations d'un employé sélectionné et permette la modification.  Assurez-vous de bien modifier le titre de du formulaire ainsi que le libellé des boutons.
+- Pour la suppression, vous devez modifier le formulaire pour qu'il affiche les informations de l'employé en lecture seule seulement. Vous devez également demander la confirmation par l'utilisateur avant la suppression. Assurez-vous de bien modifier le titre de du formulaire ainsi que le libellé des boutons.
+
+À la suite d'une de ces opérations, faites-en sorte que la liste des employés soit modifiée ainsi que le ListBox présentant les employés. 
 
 :::
