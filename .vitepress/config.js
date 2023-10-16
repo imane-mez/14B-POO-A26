@@ -28,6 +28,7 @@ export default defineConfig({
         ],
       },
       { text: 'Type DateTime et TimeSpan', link: '/date_time' },
+      { text: 'Type Guid', link: '/guid' },
       { text: 'Type Enum', link: '/enum' },
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },

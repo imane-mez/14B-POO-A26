@@ -80,9 +80,33 @@ Pour ce faire, vous devez :
 
 ## Comment faire pour accepter une version modifiée de certains fichiers et les mettre sur le dépôt distant ?
 
-Important : Avant de pouvoir effectuer un « Push », vous devez avoir une copie à jour des fichiers du dépôt distant.  Ainsi, il est préférable, ***voire nécessaire, de toujours faire un « Pull » avant un « Push ».
-    - Exécutez les commandes suivantes dans cet ordre : 
-        -  À partir de l'onglet « Modification Git», saisissez le texte du "Commit" (celui-ci doit être significatif) et cliquez sur « **Valider tout et synchroniser** ».
-        -  Éventuellement, vous devrez gérer manuellement les conflits si la version locale d’un fichier est différente de celle sur le dépôt distant.
-        -  S’il n’y a aucun conflit, alors cliquez sur le lien « **Pousser** ».
+Important : Avant de pouvoir effectuer un « **Push** », vous devez avoir une copie à jour des fichiers du dépôt distant.  Ainsi, il est préférable, ***voire nécessaire, de **toujours faire un « Pull » avant un « Push »**s.
+- Exécutez les commandes suivantes dans cet ordre : 
+    -  À partir de l'onglet « Modification Git», saisissez le texte du "Commit" (celui-ci doit être significatif) et cliquez sur « **Valider tout et synchroniser** ».
+    -  Éventuellement, vous devrez gérer manuellement les conflits si la version locale d’un fichier est différente de celle sur le dépôt distant.
+    -  S’il n’y a aucun conflit, alors cliquez sur le lien « **Pousser** ».
+
+## Comment résoudre des conflits 
+
+Lorsque vous tentez de pousser vos modifications sur le dépôt distant, il se peut que le message suivant s'affiche :
+
+![Message de conflit](/images/git_13.png)
+
+Cela indique que votre version du code n'est pas à jour par rapport à celle se trouvant sur le dépôt distant. **Vous devez donc synchroniser votre code en tirant celui qui se trouve sur le dépôt distant**.
+
+
+Lors d’une synchronisation, il se peut que vous ayez des conflits à résoudre avant de pouvoir pousser votre code : 
+
+![Message de conflit](/images/git_14.png)
+
+Dans ce cas, cliquez sur le lien « **Ouvrir l'éditeur de fusion** ». La fenêtre suivante affichera les conflits :
+
+![Message de conflit](/images/git_15.png)
+
+Vous n’aurez qu’à cocher le code du côté distant ou local que vous désirez conserver et celui-ci apparaîtra dans la section du bas. Une fois terminé, cliquez sur le bouton « **Accepter la fusion** ».
+
+![Message de conflit](/images/git_16.png)
+
+À partir de la fenêtre « **Modifications Git** », saisissez le texte du "Commit" (celui-ci doit être significatif) et cliquez sur « **Valider les changements pousser**».
+
 
