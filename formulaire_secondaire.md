@@ -236,9 +236,6 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 ::: tip S8E1 - Application Windows multiformulaires
 
 ### Objectif 
-Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires et l'utilisation de la liste générique.
-
-### Problème 
 Mettre en pratique la construction d'une application Windows multiformulaires permettant d'effectuer les opérations classiques sur des données, soient créer/ajouter (**C**reate), lire/consulter (**R**ead), mettre à jour/modifier (**U**pdate), supprimer/détruire (**D**elete).  On utilise souvent l'acronyme CRUD en anglais pour désigner cet ensemble d'opérations très courant en informatique de gestion.
 
 ## Problème
