@@ -86,7 +86,7 @@ static void Main(string[] args)
 ## Membres statiques
 **Une classe non statique peut contenir des méthodes, des attributs, des propriétés ou des événements statiques**. Le membre statique peut être appelé sur une classe même quand aucune instance de la classe n’a été créée. Le membre statique est toujours accessible par le nom de la classe, et non par le nom de l’instance.
 
-**Une seule copie d’un membre statique existe, quel que soit le nombre d’instances de la classe qui ont été créées. **
+**Une seule copie d’un membre statique existe, quel que soit le nombre d’instances de la classe qui ont été créées.**
 
 **Les méthodes et les propriétés statiques ne peuvent pas accéder à des champs et des événements non statiques** dans leur type conteneur, et elles ne peuvent pas accéder à une variable d’instance de n’importe quel objet, sauf si elle est explicitement passée dans un paramètre de la méthode.
 
