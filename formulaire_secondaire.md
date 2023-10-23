@@ -238,7 +238,7 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 ### Objectif 
 Mettre en pratique la construction d'une application Windows multiformulaires permettant d'effectuer les opérations classiques sur des données, soient créer/ajouter (**C**reate), lire/consulter (**R**ead), mettre à jour/modifier (**U**pdate), supprimer/détruire (**D**elete).  On utilise souvent l'acronyme CRUD en anglais pour désigner cet ensemble d'opérations très courant en informatique de gestion.
 
-## Problème
+### Problème
 
 Complétez l'exemple [S8C1-DemoMultiFormulaireCRUD](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2015?ref_type=heads) présenté en classe en implémentant la **modification** et la **suppression** d'un employé.  
 - Pour la modification, vous devez modifier le formulaire existant afin qu'il affiche les informations d'un employé sélectionné et permette la modification.  Assurez-vous de bien modifier le titre de du formulaire ainsi que le libellé des boutons.
