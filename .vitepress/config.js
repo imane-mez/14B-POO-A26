@@ -27,6 +27,7 @@ export default defineConfig({
           {text: 'Méthode ToString()', link: '/methode_tostring' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+          {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
 
         ],
       },
@@ -37,6 +38,7 @@ export default defineConfig({
       { text: 'TryParse', link: '/tryparse' },
       { text: 'Listes génériques (List)', link: '/listes_generiques' },
       { text: 'Documentation du code', link: '/commentaires' },
+      //{ text: 'Tests unitaires', link: '/tests_unitaires' },
       {
         text: 'WPF',
         items: [
