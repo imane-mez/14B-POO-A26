@@ -240,4 +240,9 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
 
 3)	Écrire le code du programme permettant de tester les différentes méthodes de votre classe.
 
+### Solution
+
+Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-ClasseStatique-Solution.zip?ref_type=heads)
+
+
 :::

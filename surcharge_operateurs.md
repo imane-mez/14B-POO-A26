@@ -70,5 +70,8 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 
 9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats.
 
+### Solution
+
+Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-SurchargeOperateurs.zip?ref_type=heads)
 
 :::
