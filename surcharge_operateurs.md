@@ -56,13 +56,19 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 
 1) Créez une classe Matrice avec un attribut qui est une matrice bidimensionnelle (un tableau 2D) pour stocker les éléments de la matrice ainsi que deux propriétés en lecture seule permettant d'obtenir le nombre de lignes et de colonnes de la matrice.
 
-2) Surchargez les opérateurs + et - pour permettre l'addition et la soustraction de matrices. Les opérations devraient créer une nouvelle matrice résultante avec les éléments corrects. Si les deux matrices n'ont pas le même nombre de lignes et de colonnes la valeur null est retournée.
+3) Créez une méthode publique permettant d'obtenir une valeure de la matrice selon une ligne et une colonne reçue en paramètres.
 
-3) Surchargez l'opérateur * pour permettre la multiplication d'une matrice par un scalaire. L'opération devrait créer une nouvelle matrice résultante avec tous les éléments multipliés par le scalaire donné. Si les deux matrices n'ont pas le même nombre de lignes et de colonnes la valeur null est retournée.
+4) Créer une méthode publique permettant de modifier une valeur de la matrice à une position à partir de la ligne, de la colonne et de la valeur reçues en paramètres.
 
-4) Créer la méthode ToString() permettant de retourner la représentation sous forme de chaîne de caratères d'une matrice.
+5) Surchargez les opérateurs + et - pour permettre l'addition et la soustraction de matrices. Les opérations devraient créer une nouvelle matrice résultante avec les éléments corrects. So l'une des deux matrices est null, alors la valeur null est retournée. Si les deux matrices n'ont pas le même nombre de lignes et de colonnes la valeur null est retournée.
 
-4) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats.
+6) Surchargez l'opérateur * pour permettre la multiplication d'une matrice par un scalaire. L'opération devrait créer une nouvelle matrice résultante avec tous les éléments multipliés par le scalaire donné. Si la matrice est null alors la valeur null est retournée.
+
+7) Surchargez l'opérateur * pour permettre la multiplication d'un scalaire par une matrice. L'opération devrait créer une nouvelle matrice résultante avec tous les éléments multipliés par le scalaire donné. Si la matrice est null alors la valeur null est retournée.
+
+8) Créer la méthode ToString() permettant de retourner la représentation sous forme de chaîne de caratères d'une matrice.
+
+9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats.
 
 
 :::
