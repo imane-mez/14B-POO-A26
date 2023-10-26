@@ -113,6 +113,18 @@ for (int i = 0; i < vectCategories.Length; i++)
 
 ```
 
+## Vérifier si la valeur existe dans l'énumération
+
+```c#
+//Affectation d'une valeur d'énumération inexistant
+Categories cat = (Categories)(20);
+
+if (!Enum.IsDefined(typeof(Categories), cat))
+    Console.WriteLine("La valeur de l'énumération n'est pas définie");
+
+```
+
+
 ## Conversion d'une valeur numérique en énumération
 
 ```c#
