@@ -274,3 +274,6 @@ Par la suite, vous devez à partir de l'explorateur de tests, sélectionner le t
 ![Exécution d'un test unitaire](images/tests_unitaires_8.png)
 
 Il est également possible de mettre un point d'arrêt directement dans votre code.
+
+## Démonstration
+Télécharger le fichier suivant pour la démonstration : [S9C2-DemoTestsUnitaires](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2018/S9C2-DemoTestsUnitaires.zip?ref_type=heads)
