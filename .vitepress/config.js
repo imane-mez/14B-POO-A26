@@ -37,8 +37,9 @@ export default defineConfig({
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },
       { text: 'Listes génériques (List)', link: '/listes_generiques' },
+      { text: 'Algorithmes de tri', link: '/tri' },
       { text: 'Documentation du code', link: '/commentaires' },
-      //{ text: 'Tests unitaires', link: '/tests_unitaires' },
+      { text: 'Tests unitaires', link: '/tests_unitaires' },
       {
         text: 'WPF',
         items: [
