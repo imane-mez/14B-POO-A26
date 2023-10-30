@@ -59,7 +59,7 @@ Voici les différents cas de test pour le scénario "Vérifier la fonctionnalit�
 7)	Vérifiez le comportement du système lorsque « Se souvenir de moi » est coché
 
 
-Voici un exemple : [Exemple de cas de test](Exemple%20cas%20de%20test.pdf)
+Voici un exemple : [Exemple de cas de test](/images/Exemple%20cas%20de%20test.pdf)
 
 ## Pourquoi écrire des cas de test
 
@@ -82,6 +82,6 @@ Voici quelques raisons importantes pour créer un cas de test
 
 ## Modèle
 
-Voici un modèle pour rédiger vos cas de tests : [Modèle de cas de test](CasTestModele.docx)
+Voici un modèle pour rédiger vos cas de tests : [Modèle de cas de test](/images/CasTestModele.docx)
 
 
