@@ -4,7 +4,7 @@ Il arrive régulièrement en programmation que nous ayons besoin de trier une li
 
 - Tri par Fusion (Merge Sort)
 - Tri Rapide (Quick Sort)
-- **Tri par Sélection (Selection Sort)**h
+- **Tri par Sélection (Selection Sort)**
 - **Tri à Bulles (Bubble Sort)**
 - etc.
 
@@ -104,7 +104,7 @@ Ici, resultat sera un nombre positif car "Pomme" vient après "Banane" dans l'or
 
     Cela permet de comparer les chaînes de caractères d'une manière qui est insensible à la casse, ce qui est souvent souhaitable pour assurer que les chaînes de caractères sont considérées comme égales même si elles diffèrent en casse.
 
-**IgnoreNonSpace** :
+- **IgnoreNonSpace** :
 
     Cela permet de comparer les chaînes de caractères en ignorant les différences qui ne sont pas liées aux caractères d'espacement, ce qui peut être utile pour assurer l'égalité des chaînes de caractères qui peuvent avoir des variations non significatives dans l'espacement ou d'autres caractères non espacés.
 
@@ -153,7 +153,7 @@ int resultat = etudiant1.CompareTo(etudiant2);
 
 **Utilisation pratique:**
 
-CompareTo est très utile pour trier des collections, par exemple, en utilisant la méthode **Sort** d'une liste ou d'un tableau. L'algorithme de tri utilisé à la méthde Sort est le tri Rapide (Quick Sort) qui est beaucoup plus performant que le tri par sélection (selection sort) ou le tri à bulle (bubble sort).
+CompareTo est très utile pour trier des collections, par exemple, en utilisant la méthode **Sort** d'une **liste** ou d'un **tableau**. L'algorithme de tri utilisé par la méthode Sort est le tri Rapide (Quick Sort) qui est beaucoup plus performant que le tri par sélection (selection sort) ou le tri à bulle (bubble sort).
 
 ## Démonstration
 Télécharger le fichier suivant pour la démonstration : [S9C2-DemoCompareTo](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2018/S9C2-DemoCompareTo.zip?ref_type=heads)
