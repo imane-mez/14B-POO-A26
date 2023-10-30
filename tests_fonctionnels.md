@@ -59,7 +59,7 @@ Voici les différents cas de test pour le scénario "Vérifier la fonctionnalit�
 7)	Vérifiez le comportement du système lorsque « Se souvenir de moi » est coché
 
 
-Voici un exemple : [Exemple de cas de test](/images/Exemple%20cas%20de%20test.pdf)
+Voici un exemple : [Exemple de cas de test](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2019/Exemple%20cas%20de%20test.pdf?ref_type=heads)
 
 ## Pourquoi écrire des cas de test
 
@@ -82,6 +82,6 @@ Voici quelques raisons importantes pour créer un cas de test
 
 ## Modèle
 
-Voici un modèle pour rédiger vos cas de tests : [Modèle de cas de test](/images/CasTestModele.docx)
+Voici un modèle pour rédiger vos cas de tests : [Modèle de cas de test](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2019/CasTestModele.docx?ref_type=heads)
 
 
