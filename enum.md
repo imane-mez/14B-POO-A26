@@ -138,6 +138,19 @@ categorie = (Categorie)(0);  //catégorie sera égale à l'énumération dont la
 ```
 
 
+## Conversion d'une chaîne de caractère en numérique en énumération
+
+```c#
+
+Categories categorie;
+
+//Conversion d'une châine de caractères en enumération:
+categorie = (Categories)Enum.Parse(typeof(Categories),"Film")  //Film converti en énumération 
+
+
+```
+
+
 
 ## Démo - Enum
 Télécharger la démonstration complète : [S2C2 - DemoEnum.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=heads)
