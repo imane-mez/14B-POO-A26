@@ -167,7 +167,7 @@ Mettre en pratique la surcharge des opérateurs et les différentes méthodes de
 ### Problème 1
 Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui reçoit en paramètre un tableau d’entier et le tri en ordre croissant (voir : https://www.youtube.com/watch?v=EdUWyka7kpI pour l’algorithme).
 
-##  Problème 2
+###  Problème 2
 
 À partir de l'exercice S9E1, vous devez maintenant modifier le code de la classe Employe.cs afin de permettre le tri d’une liste d’employés selon les critères suivant :
 

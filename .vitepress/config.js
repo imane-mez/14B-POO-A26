@@ -40,7 +40,7 @@ export default defineConfig({
       { text: 'Algorithmes de tri', link: '/tri' },
       { text: 'Documentation du code', link: '/commentaires' },
       { text: 'Tests unitaires', link: '/tests_unitaires' },
-      { text: 'Scénarios de test', link: '/tests_fonctionnels' },
+      //{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
       {
         text: 'WPF',
         items: [
