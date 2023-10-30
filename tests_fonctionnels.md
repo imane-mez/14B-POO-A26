@@ -80,5 +80,9 @@ Voici quelques raisons importantes pour créer un cas de test
 - Ne présumez jamais des fonctionnalités et des caractéristiques de votre application logicielle lors de la préparation d'un cas de test.
 - Les cas de test doivent être facilement identifiables.
 
+## Modèle
+
+Voici un modèle pour rédiger vos cas de tests : [Modèle de cas de test](/documents/CasTestModele.docx)
+
 
 
