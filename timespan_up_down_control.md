@@ -50,3 +50,6 @@ TimeSpan temps = (TimeSpan) tsTemps.Value;
         ShowSeconds="False"/>
 
 ```
+## Demonstration
+
+**Télécharger la démonstration** : [ExempleDatePickerTimeSpanUpDown](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2014/ExempleDatePickerTimeSpanUpDown.zip?ref_type=heads)

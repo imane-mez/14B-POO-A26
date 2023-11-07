@@ -37,7 +37,7 @@ export default defineConfig({
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },
       { text: 'Listes génériques (List)', link: '/listes_generiques' },
-      { text: 'Algorithmes de tri', link: '/tri' },
+      { text: 'Algorithmes de tri', link: '/algo_tri' },
       { text: 'Documentation du code', link: '/commentaires' },
       { text: 'Tests unitaires', link: '/tests_unitaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
