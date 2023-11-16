@@ -28,13 +28,34 @@ Un fichier **app.config** typique ressemble à ceci :
 Pour lire ces paramètres dans votre application WPF, vous utiliseriez le code suivant :
 
 ```c#
-//Pour lire un paramètre de configuration
-string setting1 = ConfigurationManager.AppSettings["Cle1"];
+//Pour lire un paramètre de configuration. 
+string valeur1 = ConfigurationManager.AppSettings["Cle1"]; //retournera : valeur 1
+
 
 //Pour lire une châine de connexion
 string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
 
 ```
+## Écriture de Paramètres
+
+```c#
+
+Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+// Ajouter ou modifier une clé
+config.AppSettings.Settings["MaCle"].Value = "MaValeur";
+
+// Ou si la clé n'existe pas
+config.AppSettings.Settings.Add("NouvelleCle", "NouvelleValeur");
+
+// Enregistrer les modifications
+config.Save(ConfigurationSaveMode.Modified);
+
+// Rafraîchir la section appSettings
+ConfigurationManager.RefreshSection("appSettings");
+
+```
+
 ## Exemples d'Utilisation
 
 - Paramètres d'Application : Stocker des valeurs telles que le chemin d'accès à un fichier ou des préférences utilisateur.
