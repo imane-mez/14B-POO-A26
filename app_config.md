@@ -23,7 +23,7 @@ Un fichier **app.config** typique ressemble à ceci :
 </configuration>
 ```
 
-## Lecture de Paramètres
+## Lecture de paramètres
 
 Pour lire ces paramètres dans votre application WPF, vous utiliseriez le code suivant :
 
@@ -36,7 +36,7 @@ string valeur1 = ConfigurationManager.AppSettings["Cle1"]; //retournera : valeur
 string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
 
 ```
-## Écriture de Paramètres
+## Écriture de paramètres
 
 ```c#
 
