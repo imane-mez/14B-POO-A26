@@ -286,13 +286,10 @@ Cette balise doit se trouver à l'intérieur de la balise "**\<configuration\>**
 
 ```c#
 <configuration>
-
     <connectionStrings>
     <add name="DefaultConnectionString" connectionString="Server=localhost;Database=demo_db;Uid=admin;Pwd=Qwerty123;"" />
-
-    </configuration>
-
-     //Autres balises de configuration ici…
+</configuration>
+//Autres balises de configuration ici…
      
 ```
 
