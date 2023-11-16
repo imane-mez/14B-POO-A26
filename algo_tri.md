@@ -158,6 +158,8 @@ CompareTo est très utile pour trier des collections, par exemple, en utilisant 
 ## Démonstration
 Télécharger le fichier suivant pour la démonstration : [S9C2-DemoCompareTo](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2018/S9C2-DemoCompareTo.zip?ref_type=heads)
 
+
+
 ## Exercice 1
 ::: tip S9E1 - Algorithmes de tri
 

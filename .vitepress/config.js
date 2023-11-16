@@ -28,6 +28,8 @@ export default defineConfig({
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+          //{text: 'Indexeur', link: '/indexeur' },
+          
 
         ],
       },
@@ -41,6 +43,8 @@ export default defineConfig({
       { text: 'Documentation du code', link: '/commentaires' },
       { text: 'Tests unitaires', link: '/tests_unitaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
+      { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
+     // { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
       {
         text: 'WPF',
         items: [
@@ -48,7 +52,9 @@ export default defineConfig({
           { text: 'Rétroaction utilsateur', link: '/retroaction' },
           { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
           { text: 'Affichage du temps en WPF', link: '/timespan_up_down_control' },
-
+          { text: 'Fichier de configuration App.config', link: '/app_config' },
+          //{ text: 'Liaison de données', link: '/binding' },
+         // { text: 'Gestion de fichiers', link: '/file_dialog' },
         ]
       },
       {
