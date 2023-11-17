@@ -34,24 +34,8 @@ Voici un exemple :
 **Troisième recherche**
 ![valeur trouvée](/images/recherche_dicho4.png)
 
-## Exercice
-::: tip S13E1 - Exercices sur l'utilisation les indexeurs
 
-### Objectifs
-Mettre en pratique la recherche dichotomique
-
-### Préparation
-1) Créer un projet console nommé "**S14E1-RechercheDichotomique**"
-
-### Problème
-
-1) Créez une méthode méthode suivante permettant de retourner la position d'une valeure recherchée dans un vecteur. Si la valeur n'est pas trouvé alors la méthode retourne -1 :
-    int RechercheDicho(int valeur, int[] vecteur) 
-
-2) Testez votre méthode
-
-
-### Solution
-Téléchargez la solution : [S12E2-CompositionObjets-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours23/S12E2-CompositionObjets%20-%20Solution.zip?ref_type=heads)
+### Démonstration
+Téléchargez la solution : [S14C1-ExempleOptimisationRechDicho](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2027/S14C1-ExempleOptimisationRechDicho.zip)
 
 :::
