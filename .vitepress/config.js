@@ -54,8 +54,9 @@ export default defineConfig({
           { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
           { text: 'Affichage du temps en WPF', link: '/timespan_up_down_control' },
           { text: 'Fichier de configuration App.config', link: '/app_config' },
-          //{ text: 'Liaison de données', link: '/binding' },
-         // { text: 'Gestion de fichiers', link: '/file_dialog' },
+          { text: 'Liaison de données', link: '/binding' },
+          { text: 'Gestion de fichiers', link: '/file_dialog' },
+          //{ text: 'Contrôles dynamiques', link: '/controles_dynamiques' },
         ]
       },
       {
