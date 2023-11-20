@@ -87,3 +87,7 @@ Effectue des opérations sur des instances de String qui contiennent des informa
 
 - **string? GetExtension (string? cheminFichier)** : Retourne l’extension (y compris le point ".") du fichier contenu dans la chaîne de caractère reçue en paramètre.
 
+## Démonstration
+
+Téléchez la démonstration :  [S12C2-DemoBindingImage](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-DemoBindingImage.zip)
+
