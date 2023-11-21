@@ -134,6 +134,10 @@ public class Etudiant : IComparable<Etudiant>
 
     public int CompareTo(Etudiant autre)
     {
+        //Si l'objet comparer est null alors celui-ci vient avant l'objet courant.
+        if(autre is null)
+            return 1;       
+            
         //Tri basé sur le nom
         return String.Compare(Nom, autre.Nom, 
             CultureInfo.InvariantCulture, 
