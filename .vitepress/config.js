@@ -28,13 +28,13 @@ export default defineConfig({
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
-          //{text: 'Indexeur', link: '/indexeur' },
+          {text: 'Indexeur', link: '/indexeur' },
           
 
         ],
       },
       { text: 'Type DateTime et TimeSpan', link: '/date_time' },
-     // { text: 'Type TimeOnly', link: '/time_only' },
+      { text: 'Type TimeOnly', link: '/time_only' },
       { text: 'Type Guid', link: '/guid' },
       { text: 'Type Enum', link: '/enum' },
       { text: 'Espace de nom', link: '/namespace' },
@@ -45,7 +45,7 @@ export default defineConfig({
       { text: 'Tests unitaires', link: '/tests_unitaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
       { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
-     // { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
+      { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
       {
         text: 'WPF',
         items: [
