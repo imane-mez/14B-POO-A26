@@ -141,3 +141,7 @@ public partial class MainWindow : Window
 - L'objet Personne est stocké dans la propriété **Tag** de l'image. **Tous les contrôles WPF possède cette propriété.**
 - Un gestionnaire d'événements **Image_Click** est attaché à chaque image. 
 - Lorsqu'une image est cliquée, le gestionnaire d'événements extrait l'objet Personne du Tag et affiche son nom.
+
+## Démonstration
+
+Téléchargez la démonstraton : [DemoControlesDynamique.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2025/DemoControlesDynamique.zip)
