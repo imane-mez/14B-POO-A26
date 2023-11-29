@@ -238,10 +238,7 @@ List<Employes> lstEmployes = new List<Employes>();
 while (dr.Read())
 {
     //Création d'un employé.
-    Employe employe = new Employe();
-    employe.Id  = dr.GetIn64(0);
-    employe.Nom  = dr.GetString(1);
-    employe.Prenom = dr.GetString(2);
+    Employe employe = new Employe(dr.GetIn64(0),dr.GetString(1),dr.GetString(2));
 
    //Ajout de l'employé à la liste.
     lstEmployes .Add(employe);
