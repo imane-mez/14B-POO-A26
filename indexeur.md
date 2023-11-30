@@ -149,6 +149,10 @@ public Type this[Type param1, … ,Type paramN ]
 }
 ```
 
+## Démonstration
+
+Téléchargez la démonstration : [Exemple - indexeurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2026/ExempleIndexeurs.zip)
+
 ## Exercice
 ::: tip S13E1 - Exercices sur l'utilisation les indexeurs
 
