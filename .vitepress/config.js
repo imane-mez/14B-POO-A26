@@ -16,7 +16,12 @@ export default defineConfig({
 
     sidebar: [
     
-      { text: 'Révision', link: '/revision' },
+      { text: 'Bloc 1', 
+        items : [
+          { text: 'Révision', link: '/revision' },
+        ]
+      },
+      /*{ text: 'Révision', link: '/revision' },
       { text: 'Résolution de problèmes', link: '/resolution_problemes' },
       { text: 'Programmation Orientée Objet', 
         items:[
@@ -69,6 +74,7 @@ export default defineConfig({
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },
         ]
       },
+      */
       /*{
         text: 'Programmation Orientée objet',
         items: [
