@@ -19,10 +19,21 @@ export default defineConfig({
       { text: 'Bloc 1', 
         items : [
           { text: 'Révision', link: '/revision' },
+          { text: 'Types', 
+            collapsed: true,
+            items : [
+              { text: 'String', link: '/string' },
+              { text: 'DateTime', link: '/datetime' },
+              { text: 'TimeSpan', link: '/timespan' },
+              { text: 'DateOnly', link: '/dateonly' },
+              { text: 'TimeOnly', link: '/timeonly' },
+            ]
+          },
+
           { text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
-      /*{ text: 'Révision', link: '/revision' },*/
+      /*
       { text: 'Résolution de problèmes', link: '/resolution_problemes' },
       { text: 'Programmation Orientée Objet', 
         items:[
@@ -76,7 +87,7 @@ export default defineConfig({
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },
         ]
       },
-      
+      */
       /*{
         text: 'Programmation Orientée objet',
         items: [

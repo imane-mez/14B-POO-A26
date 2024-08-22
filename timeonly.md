@@ -3,7 +3,7 @@ outline: deep
 ---
 
 
-# Type TimeOnly
+# Le type TimeOnly
 
 Le type **TimeOnly** en C# est une nouveauté introduite dans .NET 6 pour représenter un moment de la journée, indépendamment d'une date. Avant .NET 6, la gestion du temps sans la date était souvent gérée avec DateTime, mais cela pouvait être source de confusion et d'erreurs, car DateTime inclut toujours une composante de date.
 
@@ -84,4 +84,33 @@ string formatPersonnalise = heure.ToString("hh 'heures' mm 'minutes' tt"); // "0
 var heureAvecSecondes = new TimeOnly(14, 45, 30, 500); // 14:45:30.500
 var formatAvecMillisecondes = heureAvecSecondes.ToString("HH:mm:ss.fff"); // "14:45:30.500"
 
+```
+## Comparaison avec les opérateurs de comparaison
+
+Les instances de TimeOnly peuvent être comparées directement avec les opérateurs standards :
+
+```c#
+TimeOnly time1 = new TimeOnly(14, 30);  // 14h30
+TimeOnly time2 = new TimeOnly(16, 45);  // 16h45
+
+// Comparaison avec <
+if (time1 < time2)
+{
+    Console.WriteLine($"{time1} est avant {time2}"); 
+    // Affichera "14:30 est avant 16:45"
+}
+
+// Comparaison avec >
+if (time2 > time1)
+{
+    Console.WriteLine($"{time2} est après {time1}");  // Affichera ceci
+     // Affichera "16:45 est après 14:30"
+}
+
+// Comparaison avec ==
+if (time1 == new TimeOnly(14, 30))
+{
+    Console.WriteLine("Les heures sont identiques");  // Affichera ceci
+    // Affichera "Les heures sont identiques"
+}
 ```

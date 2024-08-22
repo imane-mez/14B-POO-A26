@@ -196,76 +196,10 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 |CalculerPayeSupp                   |	nbHeuresSupp        | montantHeuresSupp     |
 |CalculerTotal                      |	montantHeuresNormales, montantHeuresSupp | montantTotal            |
 
+**5) Programmer la solution.**
+<!--
 **5) Écrire l'algorithme et coder la solution**
 
 ![Algorithme paye](./images/algo_paye.png)
+-->
 
-## Exercices
-::: tip S1E2 - Résolution de problème
-
-### Problème 1 - Restaurant
-
-Un restaurateur vous demande de créer une application console qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer et afficher le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre. Gardez en tête qu'il se peut que l'on désire conserver chaque facture créée en mémoire.
-
-1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.
-2) Identifier les entités ainsi que leur caractéristiques et comportements
-2) Identifier les variables en entrée et en sortie et les constantes qui seront nécesssaires
-3) Idenifier les fonctions ainsi que leurs entréeet sortie.
-4) Programmer la solution.
-
-### Problème 2 - Jeu du pendu
-
-Vous devez créer une application qui permettra à l'utilisateur de jouer au pendu contre l'ordinateur ( [https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)](https://fr.wikipedia.org/wiki/Le_Pendu_(jeu))).
-
-
-En bref, l'ordinateur choisit le mot et le joueur essaie de deviner les lettres dans le mot. Vous n'avez pas à dessiner le pendu vous n'avez qu'à indiquer le nombre de tentatives restantes. 
-
-De plus, un utilisateur ne peut pas saisir deux fois la même lettre. 
-
-L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier  [mot.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) et indique au joueur le nombre de lettres constituant le mot (_).
-
-Notez que mots.txt contient des mots **anglais** dont toutes les lettres sont en minuscules.
-
-Vous pouvez réutiliser les fonctions de lectures et d'écritures du fichier **FonctionUtiles.cs** fournies dans l'exercice **S1E1 - Révision**.
-
-Vous aurez besoin d'obtenir un nombre aléatoire afin de choir un mot. Voici un exemple pour obtenir un nombre aléatoire entre 0 et 10 :
-```C#
-Random aleatoire = new Random();
-
-//Génère un entier aléatoire positif. La borne supérieure est exclue du résultat.
-int entier = aleatoire.Next(0,11); 
-```
-
-
-Voici un exemple du résultat attendu : 
-
-```tex
-Le mot à découvrir est : _ _ _ _ _ _ _
-
-Lettres utilisées:
-Nombre d'essais restant : 6
-
-Veuillez saisir une lettre : i
-
--------------------------------------------------
-Le mot à découvrir est : _ _ _ _ _ _ _
-
-Lettres utilisées: i
-Nombre d'essais restant : 5
-
-Veuillez saisir une lettre : a
-
-------------------------------------------------
-Le mot à découvrir est : _ _ _ _ a _ _
-
-Lettres utilisées: ia
-Nombre d'essais restant : 5
-
-Veuillez saisir une lettre :
-```
-
-
-### Solution de l'exercice 
-
- [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes-Solution.zip?ref_type=heads)
-:::
