@@ -287,8 +287,8 @@ return  nb > 15 ;
 // revient à la même chose que d'écrire
 if ( nb > 15 )
     return true ;
-else
-    return false ;
+
+return false ;
 
 // Écrire ce qui suit
 return  note >= 60  &&  note < 80;
@@ -296,8 +296,8 @@ return  note >= 60  &&  note < 80;
 // revient à la même chose que d'écrire
 if ( note >= 60 && note < 80 )
     return true ;
-else
-    return false 
+
+return false 
 
 
 ````
