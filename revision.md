@@ -680,7 +680,6 @@ int nombre = Convert.ToInt32(chaine);
 String intChaine = "456";
 int entier1 = Int32.Parse(intChaine);
 int entier2;
-bool valide = Int32.TryParse(intChaine, out entier2);
 ````
 
 **Questions?**
