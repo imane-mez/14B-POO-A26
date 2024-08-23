@@ -89,3 +89,7 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+a {
+  text-decoration: underline;
+  color :rgba(25, 199, 129, 0.08)
+}
