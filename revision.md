@@ -149,7 +149,7 @@ Console.WriteLine("La valeur de nombre est : {0}", nombre) ;
 **Un message avec 2 valeurs**
 
 ````c#
-string age = 20;
+int age = 20;
 int poids = 140;
 Console.WriteLine("Âge : {0} et Poids : {1} ", age, poids) ;
 ````

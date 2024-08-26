@@ -141,7 +141,7 @@ Une fois l'entité identifié, ses caractéristique générales et ses comportem
 ### Problème
 La rémunération hebdomadaire d'un employé dépend du taux de rémunération et du nombre d'heures travaillées par semaine. Les employés travaillent au moins une heure par semaine et au maximum 60. Un employé qui travaille plus de 40 heures est payé 1,5 fois son taux de rémunération pour toutes les heures travaillées au-delà de 40. Le salaire minimum est de 15$ par heure. Un programme est nécessaire pour calculer et produire la paie hebdomadaire de tout employé.
 
-**1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.**
+::: details **1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.**
 
 - Connaître le nombre d'heures travaillées
 - Connaître combien de ces heures doivent être payées au taux normal
@@ -150,8 +150,9 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 - Calculer le salaire des heures supplémentaires
 - Additionner la rémunération des heures normales et supplémentaires
 - Afficher le résultat
+:::
 
-**2) Identifier les entités ainsi que leur caractéristiques et comportements**
+::: details **2) Identifier les entités ainsi que leur caractéristiques et comportements**
 
 - Employe :
     - Caractéristiques :
@@ -161,8 +162,9 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
     - Comportement :
         - Aucun
 
+:::
 
-**3) Identifier les variables en entrée et en sortie et les constantes qui seront nécesssaires**
+::: details **3) Identifier les variables en entrée et en sortie et les constantes qui seront nécesssaires**
 
 |Variable                           |Type de données    |Entrée/Sortie  |
 |:----------                        |:-----------       |:-----------   |
@@ -185,8 +187,9 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 |NB_HEURES_MIN                      |	byte	        |
 |NB_HEURES_NORMAL                   |	byte            |
 
+::
 
-**4) Idenifier les fonctions ainsi que leurs entréeet sortie.**
+::: details **4) Idenifier les fonctions ainsi que leurs entréeet sortie.**
 
 |Fonctions                          |Entrée(s)                 |Sortie                 |
 |:----------                        |:-----------           |:-----------           |
@@ -196,7 +199,10 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
 |CalculerPayeSupp                   |	nbHeuresSupp        | montantHeuresSupp     |
 |CalculerTotal                      |	montantHeuresNormales, montantHeuresSupp | montantTotal            |
 
-**5) Programmer la solution.**
+:::
+
+::: info **4) Programmer la solution.**
+:::
 <!--
 **5) Écrire l'algorithme et coder la solution**
 
