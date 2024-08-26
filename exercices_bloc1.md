@@ -13,17 +13,17 @@ outline: deep
 
 ### Tâches à faire
 
-Vous devez concevoir un projet C# (application console) qui va permettre de gérer une liste de tâches à faire (To do list).
+Premièrement, télécharger :  **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**.
+
+Vous devez compléter le projet C# (application console) qui va permettre de gérer une liste de tâches à faire (To do list).
 Cette application doit permettre à l'utilisateur de : 
-- Consulter une liste de tâche non complétée contenues dans un fichier nommé "**taches.csv**" et situé à dans le dossier "**C:\data-420-14B-FX\taches.csv**". Vous pouvez copier le fichier fourni avec la solution de départ à cet endroit.
+- Consulter une liste de tâche non complétée contenues dans un fichier nommé "**taches.csv**" et situé à dans le dossier "**C:\data-420-14B-FX\taches.csv**". **Vous devez copier le fichier fourni avec la solution de départ à cet endroit.**
 - Ajouter une nouvelle tâche
 - Indiquer qu’une tâche a été complétée (**OPTIONNEL!**)
 - Enregistrer les modifications dans le même fichier.
 - Quitter l'application.
 
-Premièrement, télécharger :  **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**.
- 
-Ne soyez pas surpris s'il y a des erreurs; c'est normal :smiley:.
+Ne soyez pas surpris s'il y a des erreurs; c'est normal :smiley:. Celles-ci diparaîtront une fois que vous aurez créé la Struct nommée Tache.
 
 Deuxièmement, vous devez créer une structure (Struct) nommée Tache ayant les propriétés suivantes :
 - Titre
