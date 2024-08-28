@@ -66,20 +66,26 @@ En bref, l'ordinateur choisit le mot et le joueur essaie de deviner les lettres 
 
 De plus, un utilisateur ne peut pas saisir deux fois la même lettre. 
 
-L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier suivant :   [mots.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) 
-
-et indique au joueur le nombre de lettres constituant le mot (_).
+1) L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier suivant :   [mots.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) 
 
 Notez que mots.txt contient des mots **anglais** dont toutes les lettres sont en minuscules.
 
+2) L'ordinateur indique au joueur le nombre de lettres constituant le mot (_).
+
+3) L'ordinateur affiche les lettres trouvées dans le mot ainsi que les lettres utilisées et le nombre d'essais restant.
+
+
 Vous pouvez réutiliser les fonctions de lectures et d'écritures du fichier **FonctionUtiles.cs** fournies dans l'exercice **Semaine 1 - Exercice 1 - Tâches à faire**.
 
-Vous aurez besoin d'obtenir un nombre aléatoire afin de choir un mot. Voici un exemple pour obtenir un nombre aléatoire entre 0 et 10 :
-```C#
+Vous aurez besoin d'obtenir un nombre aléatoire afin de choir un mot au hasard. Voici un exemple pour obtenir un nombre aléatoire entre 0 et 10 :
+
+```c#
 Random aleatoire = new Random();
 
 //Génère un entier aléatoire positif. La borne supérieure est exclue du résultat.
 int entier = aleatoire.Next(0,11); 
+```
+
 
 1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.
 2) Identifier les entités ainsi que leur caractéristiques et comportements
@@ -88,12 +94,10 @@ int entier = aleatoire.Next(0,11);
 4) Programmer la solution.
 
 
-```
-
-
 Voici un exemple du résultat attendu : 
 
-```tex
+```
+
 Le mot à découvrir est : _ _ _ _ _ _ _
 
 Lettres utilisées:
