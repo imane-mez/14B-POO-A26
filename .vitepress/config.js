@@ -29,12 +29,12 @@ export default defineConfig({
               { text: 'TimeOnly', link: '/timeonly' },
             ]
           },
-
+          { text: 'Résolution de problèmes', link: '/resolution_problemes' },
           { text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
       /*
-      { text: 'Résolution de problèmes', link: '/resolution_problemes' },
+     
       { text: 'Programmation Orientée Objet', 
         items:[
           {text: 'Classe', link: '/poo_intro' },

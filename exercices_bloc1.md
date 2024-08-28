@@ -9,7 +9,9 @@ outline: deep
 
 ### Palindrome
 
-Écrivez un programme principal (application console) qui demande une phrase (sans accent) à l’utilisateur et qui vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire et qu'il soit le plus efficace possible. 
+Écrivez un programme principal (application console) qui demande une phrase (sans accent, n'y caractères spéciaux) à l’utilisateur et qui vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire et qu'il soit le plus efficace possible. 
+
+Voici quelques exemples pour tester votre solution : https://fr.wikipedia.org/wiki/Palindrome#Quelques_exemples
 
 ### Tâches à faire
 
@@ -42,7 +44,7 @@ Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez �
 :::
 
 
-<!--
+
 ::: details S1E2 - Résolution de problème
 
 ### Restaurant
@@ -64,7 +66,9 @@ En bref, l'ordinateur choisit le mot et le joueur essaie de deviner les lettres 
 
 De plus, un utilisateur ne peut pas saisir deux fois la même lettre. 
 
-L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier  [mots.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) et indique au joueur le nombre de lettres constituant le mot (_).
+L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier suivant :   [mots.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) 
+
+et indique au joueur le nombre de lettres constituant le mot (_).
 
 Notez que mots.txt contient des mots **anglais** dont toutes les lettres sont en minuscules.
 
@@ -114,13 +118,13 @@ Nombre d'essais restant : 5
 Veuillez saisir une lettre :
 ```
 
-
+<!--
 ### Solution de l'exercice 
 
  [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes-Solution.zip?ref_type=heads)
 
- 
+ -->
 :::
 
 
--->
+

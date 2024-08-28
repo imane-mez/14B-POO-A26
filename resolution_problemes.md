@@ -57,7 +57,7 @@ Une fois que nous avons décomposé un problème complexe, cela aide à examiner
 
 Imaginez que nous voulons dessiner une série de chats.
 
-Tous les chats partagent des caractéristiques communes. Entre autres, ils ont tous des yeux, des queues et de la fourrure. Ils aiment aussi manger du poisson et émettre des miaulements.
+Tous les chats partagent des caractéristiques communes. Entre autres, ils ont tous des yeux, une queue et de la fourrure. Ils aiment aussi manger du poisson et émettre des miaulements.
 
 Parce que nous savons que tous les chats ont des yeux, une queue et une fourrure, nous pouvons faire une bonne tentative pour dessiner un chat, simplement en incluant ces caractéristiques communes.
 
