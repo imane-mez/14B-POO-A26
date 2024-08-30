@@ -30,6 +30,7 @@ export default defineConfig({
             ]
           },
           { text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          {text: 'Classe', link: '/poo_intro' },
           { text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },

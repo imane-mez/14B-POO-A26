@@ -172,7 +172,7 @@ Jusqu'à maintenant, nous avons utilisé le **constructeur par défaut**, car no
 
 Pour spécifier les valeurs que doit prendre l'objet lors de sa création, on doit alors définir notre propre constructeur. Nous aurons donc à définir celui-ci un peu comme une méthode en nous rappelant bien que le constructeur doit porter le **même nom que la classe** (en n’oubliant pas que le C# tient compte des minuscules et des majuscules!).
 
-Pour la classe Rectangle, nous pourrions alors avoir le constructeur:
+Pour la classe Rectangle, nous pourrions alors avoir le constructeurn suivant :
 
 ```c#
 /// <summary>
@@ -195,7 +195,9 @@ class Rectangle
     /// </summary>
     public string couleur;
 
-
+    /// <summary>
+    /// Constructeur par défaut
+    /// </summary>
     public Rectangle() // [!code focus]
     {   // [!code focus]
             hauteur = 1;    // [!code focus]
@@ -341,79 +343,3 @@ Vous devez toujours bien commenter la **classe**,  ses **attributs**, ses **cons
 
 :::
 
-## Exercices
-
-::: tip S2E1 - Création de classe
-
-### Objectifs 
-
-- Utiliser la méthode de résolution de problèmes pour résoudre des problèmes.
-- Compléter une classe Objet.
-- Créer une application utilisant des objets.
-
-### Problème 1 - Voiture
-
-Une voiture possède les caractéristiques suivantes :
-- Marque
-- Modèle
-- Couleur
-- Année
-- Kilométrage
-- Vitesse
-
-Peu importe le type de voiture, une voiture ne peut pas dépasser la vitesse de 200 km/h. Une voiture peut accélérer ou ralentir. Lors d'une accélération, la vitesse augmente de 5 km/h et diminue de cette même valeur lors d'un ralentissement. 
-
-1) Vous devez écrire le code de la classe Voiture.  Celle-ci doit posséder les attributs spécifiés ci-dessus ainsi qu'un constructeur paramétré permettant de créer un objet en spécifiant les valeurs des attributs à l'exception de la vitesse qui est à 0 lors de la 
-création. De plus, vous devez écrire le code des fonctions accélérer et ralentir.
-
-2) Finalement, vous devez écrire un programme permettant de tester votre classe (création, modification des attributs, utilisation des fonctions):
-    - Créer une voiture
-    - Afficher la voiture
-    - La faire relentir et l'afficher.
-    - La faire accélérer et l'afficher.
-    - La faire accélérer jusqu'à la vitesse maximale et l'afficher.
-    - La faire accélérer à nouveau et l'afficher.
-
-###  Problème 2 - Restaurant
-
-Un restaurateur vous demande de créer calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre.
-
-1)	Vous devez écrire le code de la classe Facture.  Celle-ci doit posséder les attributs spécifiés ci-dessus ainsi qu'un constructeur paramétré permettant de créer un objet en spécifiant les valeurs des attributs. De plus, vous devez écrire le code des fonctions suivantes :
-    - CalculerSousTotal
-    - CalculerPourboire
-    - CalculerTaxe
-    - CalculerTotal
-
-Le taux du pourboire ainsi que le taux de la taxe doivent faire partie de la classe.
-
-2)	Finalement, vous devez écrire un programme permettant de tester votre classe en créant une facture d'un client et en affichant la facture avec le prix de chaque item, le sous-total, montant des taxes et du pourboire ainsi que le total.
-
-
-### Problème 3 - Jeu de dé
-Vous devez concevoir une application qui va permettre de simuler une partie de dés entre deux joueurs.
-
-1) Concevez la classe « Joueur » qui permet de représenter un joueur pour un jeu de dés à 6 faces (valeurs de 1 à 6, inclusivement).  Cette classe possède les attributs suivants :
-    - Le nom du joueur.
-    - Un tableau de 5 entiers représentant la valeur de 5 dés une fois qu’ils ont été lancés.
-    - Nombre de manches gagnées.
-    - Générateur de nombres aléatoire.
-
-    Ajoutez un constructeur qui n’accepte que le nom du joueur ; cependant, ce constructeur doit créer le tableau d’entiers pour les dés et instancier le générateur de nombre aléatoire.  
-
-    Ajoutez une fonction qui permet de faire lancer tous les dés que le joueur possède ; pour ce faire, il suffit de générer une valeur aléatoire entre 1 et 6 pour chaque dé. 
-
-    Ajoutez une autre fonction qui permet d’obtenir pour chaque valeur possible de 1 à 6, le nombre de fois que cette valeur a été obtenue pour l’ensemble des dés ; cette méthode retourne un tableau d’entiers.  
-
-2) Deuxièmement, écrivez un programme principal qui permettra de simuler une partie de dés entre deux joueurs dont les noms doivent être saisis dans la console.  Un joueur gagne la partie dès qu’il gagne 5 manches.  À chaque manche, on demande aux deux joueurs de lancer tous leurs dés et par la suite on détermine qui est le gagnant avec l’algorithme suivant :
-
-    - Le joueur qui a obtenu le plus de fois la valeur 6 pour l’ensemble de ses dés gagne la manche.  Si les deux joueurs ont obtenu le même nombre de 6, on recommence avec la valeur 5 et ainsi de suite jusqu’à la valeur 1 si nécessaire.  En cas d’égalité pour toutes les valeurs, la manche est nulle.
-
-Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
-
-
-
-### Solution de l'exercice 
-
- [S2E1-CreationClasse-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads)
-
-:::
