@@ -27,11 +27,24 @@ export default defineConfig({
               { text: 'TimeSpan', link: '/timespan' },
               { text: 'DateOnly', link: '/dateonly' },
               { text: 'TimeOnly', link: '/timeonly' },
+              { text: 'Type Enum', link: '/enum' },
             ]
           },
           { text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
-          { text: 'Exercices', link: '/exercices_bloc1' },
+          {text: 'Encapsulation', link: '/encapsulation' },
+          {text: 'Exercices', link: '/exercices_bloc1' },
+         
+        ]
+      },
+      {
+        text: 'En vrac',
+        items: [
+          { text: 'Convention de nommage', link: '/convention' },
+          { text: 'Norme de codage', link: '/normes' },
+         /* { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
+          { text: 'Configuration GitLab avec VS 2022', link: '/git' },*/
         ]
       },
       /*
@@ -39,7 +52,7 @@ export default defineConfig({
       { text: 'Programmation Orientée Objet', 
         items:[
           {text: 'Classe', link: '/poo_intro' },
-          {text: 'Encapsulation', link: '/encapsulation' },
+         
           {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
           {text: 'Méthode ToString()', link: '/methode_tostring' },
@@ -55,7 +68,6 @@ export default defineConfig({
       { text: 'Type DateTime et TimeSpan', link: '/date_time' },
       { text: 'Type TimeOnly', link: '/time_only' },
       { text: 'Type Guid', link: '/guid' },
-      { text: 'Type Enum', link: '/enum' },
       { text: 'Espace de nom', link: '/namespace' },
       { text: 'TryParse', link: '/tryparse' },
       { text: 'Listes génériques (List)', link: '/listes_generiques' },
