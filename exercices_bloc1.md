@@ -159,9 +159,9 @@ création. De plus, vous devez écrire le code des fonctions accélérer et rale
 
 2) Finalement, vous devez écrire un programme permettant de tester votre classe (création, modification des attributs, utilisation des fonctions):
     - Créer une voiture
-    - Afficher la voiture
-    - La faire relentir et l'afficher.
+    - Afficher la voiture    
     - La faire accélérer et l'afficher.
+    - La faire relentir et l'afficher.
     - La faire accélérer jusqu'à la vitesse maximale et l'afficher.
     - La faire accélérer à nouveau et l'afficher.
 
