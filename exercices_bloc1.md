@@ -122,12 +122,11 @@ Nombre d'essais restant : 5
 Veuillez saisir une lettre :
 ```
 
-<!--
 ### Solution de l'exercice 
 
  [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes-Solution.zip?ref_type=heads)
 
- -->
+
 :::
 
 
