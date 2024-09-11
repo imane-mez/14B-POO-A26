@@ -32,10 +32,10 @@ Jusqu'à présent, nous avons créé des applications qui utilisaient une seule 
 L'association est une relation de type **"a un"** ou **"a plusieurs"** entre les objets. Nous pouvons définir une relation **un-à-un**, **un-à-plusieurs**, **plusieurs-à-un** et **plusieurs-à-plusieurs** entre les objets. Celle-ci signifie qu'un objet "**utilise**" un autre objet.
 
 Par exemple :
-•	Un client **a un** compte de banque
-•	Un livre **a plusieurs** auteurs
-•	Un gestionnaire **a plusieurs** employés
-•	Un employé **a un** seul gestionnaire.
+- Un client **a un** compte de banque
+- Un livre **a plusieurs** auteurs
+- Un gestionnaire **a plusieurs** employés
+- Un employé **a un** seul gestionnaire.
 
 Reprenons l'exemple du compte bancaire :
 

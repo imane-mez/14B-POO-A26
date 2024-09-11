@@ -34,6 +34,8 @@ export default defineConfig({
           {text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
           {text: 'Exercices', link: '/exercices_bloc1' },
+          {text: 'Relation entre les classes', link: '/relations' },
+          {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
          
         ]
       },
@@ -53,8 +55,8 @@ export default defineConfig({
         items:[
           {text: 'Classe', link: '/poo_intro' },
          
-          {text: 'Relation entre les classes', link: '/relations' },
-          {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
+
+         
           {text: 'Méthode ToString()', link: '/methode_tostring' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
