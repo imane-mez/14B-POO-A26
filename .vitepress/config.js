@@ -36,7 +36,8 @@ export default defineConfig({
           {text: 'Exercices', link: '/exercices_bloc1' },
           {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
-         
+          {text: 'Composition d\'objets', link: '/composition_objets' },
+          { text: 'Espace de nom', link: '/namespace' },
         ]
       },
       {
@@ -70,7 +71,7 @@ export default defineConfig({
       { text: 'Type DateTime et TimeSpan', link: '/date_time' },
       { text: 'Type TimeOnly', link: '/time_only' },
       { text: 'Type Guid', link: '/guid' },
-      { text: 'Espace de nom', link: '/namespace' },
+
       { text: 'TryParse', link: '/tryparse' },
       { text: 'Listes génériques (List)', link: '/listes_generiques' },
       { text: 'Algorithmes de tri', link: '/algo_tri' },
