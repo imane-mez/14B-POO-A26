@@ -220,58 +220,24 @@ Console.WriteLine("Le nom du client trouvé est :" + unClient.Nom);
 
 ```
 
-## Exercice 
+## Outils pour créer des diagrammes de classes
 
-::: tip S3E1 - Relation entre classes
+Il exite plusieurs logiciels permettant la création de diagrammes de classes. Dans le cadre du cours, nous utiliseron le logiciel gratuit Draw.io. 
 
-### Problème 1
+Téléchargement du logiciel : https://github.com/jgraph/drawio-desktop/releases/tag/v24.7.8
 
-Un professeur aimerait être en mesure d'utiliser une application lui permettant de saisir les étudiants faisant partie d'un cours qu'il donne et être en mesure de saisir pour chaque étudiant le résultat de leurs évaluations. Par la suite, il devrait être en mesure d'obtenir la moyenne du groupe pour une évaluation, la moyenne finale du groupe et finalement la moyenne et la note finale d'un étudiant.
+Afin de facilité le design de vos diagrammes, j'ai créé un librairie contenant déjà les différentes formes à utiliser. 
 
-Un cours est caractérisé par :
+1) Télécharger la librairie : [modèle](https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false) 
 
- - Un code (5 lettres en majuscule).
- - Un titre.
- - Un nombre de crédits (maximum 5).
- - Le nom et prénom du professeur qui donnne le cour.
- - Liste des étudiants inscrits. Il n'y a que 5 places disponibles dans un cours. Cependant, ce nombre pourrait varier.
+2) Pour installer la librairie : 
 
-Un étudiant est caractérisé par :
- - Un numéro de DA (7 chiffres), 
- - Un nom
- - Un prénom
- - une moyenne
- - Une note finale. 
- 
- Durant la session, les étudiants auront 4 évaluations par défaut. Cependant, ce nombre pourrait varier. Chaque évaluation est sur un total de 100 points et chaque évaluation vaut pour 25 points de la note finale.
-
- 1) Créer le diagramme de classes permettant de répondre au besoin du professeur.
-
-Vous devez utiliser l'application draw.io pour créer votre diagramme :  [https://app.diagrams.net/](https://app.diagrams.net/)  et utiliser le [modèle](https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false)  de classe fourni par le professeur.
-
-Une fois terminé, vous devez exporter le diagramme en format PDF.
-
-2) Vous devez maintenant coder les différentes classes de l'application et écrire le code du programme vous permettant de tester :
-
-- La création d'un cours.
-- L'ajout d'étudiants inscrits à un cours.
-- La saisie des évaluations pour chaque étudiant inscrit à un cours.
-- Obtenir la moyenne du groupe pour une évaluation.
-- Obtenir la moyenne finale du groupe.
-- Obtenir la note finale d'un étudiant.
-- Obtenir la moyenne d'un étudiant.
-
-### Problème 2
-Le professeur désire maintenant être en mesure d’utiliser votre application pour gérer plusieurs cours. Celui-ci désire donc être en mesure de créer plusieurs cours avec des étudiants et de conserver les informations de tous les cours. Il désire également être en mesure de rechercher un cours à partir de son code.
-
-- Modifier le diagramme de classe créé précédemment afin de répondre au besoin.
-- Modifier votre application afin de répondre au besoin.
-
-### Solution
-Télécharger la solution : [S3E1-ExerciceRelation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
+    - Dans l'application draw.io, cliquer sur le menu `Fichier --> Ouvrire une librairie`
+    - Sélectionner le fichier que vous avez téléchargez(Bloc-notes.xml)
 
 
-:::
+
+
 
 ## Démo - Relations
 Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
