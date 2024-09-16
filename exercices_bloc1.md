@@ -201,11 +201,11 @@ Vous devez concevoir une application qui va permettre de simuler une partie de d
 Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
 
 
-<!--
+
 ### Solution de l'exercice 
 
  [S2E1-CreationClasse-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads)
--->
+
 :::
 
 
@@ -301,11 +301,11 @@ Il est important de respecter les spécifications données ci-dessous et les [no
 - Créez des propriétés en **lecture publiques** et des propriétés en** écriture privés**.
 - Assurez-vous de bien **respecter les types primitifs** qu'on vous demande d'utiliser pour les attributs et les méthodes.
 
-<!--
+
 ### Solution de l'exercice 
 
  [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=headss)
- -->
+
 :::
 
 ## Semaine 3 
