@@ -68,7 +68,7 @@ public static void Carre(int num) {
 
 public static void main(String[] args) {
     int a = 5;
-    modifyValue(a);
+    int b = Carre(a);
    Console.WriteLine("Valeur après appel de la fonction: " + a);
    Console.WriteLine("Valeur de b: " + b);
 }

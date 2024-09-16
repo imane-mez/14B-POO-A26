@@ -8,9 +8,9 @@ La validation des données saisies par l’utilisateur dans un formulaire utilis
 ![Liste d'employés vide](./images/validation_formulaire_1.png)
 
 Dans ce cas-ci, nous devrions nous assurer que les données saisies par l'utilisateur lors d'une modification sont :
-    - Obligatoires
-    - Du bon type
-    - Cohérentes
+- Obligatoires
+- Du bon type
+- Cohérentes
 
 Voici comment s'assurer que le prénom est saisi :
 
