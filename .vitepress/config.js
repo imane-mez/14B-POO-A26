@@ -83,7 +83,7 @@ export default defineConfig({
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
       { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
       { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
-      */{
+      {
         text: 'WPF',
         items: [
           { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
@@ -93,16 +93,16 @@ export default defineConfig({
           { text: 'Fichier de configuration App.config', link: '/app_config' },
           { text: 'Liaison de données', link: '/binding' },
           { text: 'Gestion de fichiers', link: '/file_dialog' },
-          { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },*/
+          { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },
         ]
-      },
+      },*/
       {
         text: 'En vrac',
         items: [
           { text: 'Convention de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
-          { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
+          /*{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },*/
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },
         ]
       },
