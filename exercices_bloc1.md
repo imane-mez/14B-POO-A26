@@ -364,3 +364,28 @@ Télécharger la solution : [S3E1-ExerciceRelation.zip](https://gitlab.com/420-1
 
 
 :::
+
+
+## Semaine 4
+::: details S4E1 - Validation de formulaire
+
+#### Objectifs
+Mettre en pratique l'utilisation de la méthode ToStrin() et la validation des données saisies par l’utilisateur ainsi que les messages de rétroaction.
+
+#### Problème
+
+À partir de la solution de départ [ S4E1-ExerciceValidation-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2007?ref_type=heads) vous devez :
+
+1) Compléter les méthodes des classes Films.cs et GestionFilms.cs (voir commentaire todo: ).
+2) Écrire le code de l'interface permettant :
+    - D'initialiser le formulaire en effaçant le contenu des champs et en affichant la liste des films dans le ListBox. Un film dans la liste doit s'afficher de la manière suivante : Nom (année).
+    - De réinitialiser le formulaire lorsque l’utilisateur clique sur le bouton « Nouveau ».
+    - D’ajouter un film à la liste lorsque l’utilisateur clique sur le bouton « Ajouter »
+    - De modifier un film sélectionné dans la liste lorsque l’utilisateur clique sur le bouton « modifier ». Si aucun film n’est sélectionné dans la liste, vous devez avertir l’utilisateur.
+    - Quitter l’application 
+3) Ajouter la validation pour la l'ajout et la modification d’un nouveau film sachant que : 
+    - Tous les champs sont obligatoires.
+    - Le titre du film doit contenir au moins 3 caractères.
+    - L’année doit être comprise entre l'année 1500 et l’année courante (utiliser **DateTime.Now.Year** pour obtenir l'année courante). Assurez-vous que votre validation fonctionne si l'on change d’année sans devoir modifier votre code.
+
+:::

@@ -82,7 +82,7 @@ export default defineConfig({
       { text: 'Tests unitaires', link: '/tests_unitaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
       { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
-      { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
+      { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },*/
       {
         text: 'WPF',
         items: [
@@ -93,9 +93,9 @@ export default defineConfig({
           { text: 'Fichier de configuration App.config', link: '/app_config' },
           { text: 'Liaison de données', link: '/binding' },
           { text: 'Gestion de fichiers', link: '/file_dialog' },
-          { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },
+          { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },*/
         ]
-      },*/
+      },
       {
         text: 'En vrac',
         items: [

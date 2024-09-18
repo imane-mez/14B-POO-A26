@@ -144,7 +144,7 @@ Ce commit ajoute la fonctionnalité d'authentification de base, permettant aux u
 
 - **Clarté et concision** : Soyez clair sur ce que vous avez fait et pourquoi. Un bon titre de commit doit être compréhensible sans avoir besoin de consulter le code lui-même.
 
-- **Des messages courts pour le titre **: Limitez le titre à 50 caractères pour qu'il reste lisible. Utilisez la description pour des détails supplémentaires si nécessaire.
+- **Des messages courts pour le titre** : Limitez le titre à 50 caractères pour qu'il reste lisible. Utilisez la description pour des détails supplémentaires si nécessaire.
 
 - **Séparer les commits logiquement** : Un commit doit correspondre à un seul changement logique. Ne mélangez pas plusieurs modifications sans lien dans un seul commit.
 
