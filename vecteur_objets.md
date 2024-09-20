@@ -60,7 +60,7 @@ Lorsqu'un argument est passé par valeur, une copie de la valeur est créée et 
 
 ```c#
 public static void Carre(int num) {
-    num = num * num;
+    num *= num;
     Console.WriteLine("Valeur dans la fonction: " + num);
 
     return num;
@@ -99,7 +99,7 @@ public static void ModifierRectangle(Rectangle rect)
 
 public static void Main(string[] args)
 {
-    Rectangle rect1 = new Rectangle { Width = 10, Height = 10 };
+    Rectangle rect1 = new Rectangle(5, 10)
     Console.WriteLine($"Avant la méthode: Largeur: {rect1.Largeur}, Hauteur: {rect1.Hauteur}");
     ModifierRectangle(rect1);
     Console.WriteLine($"Après la méthode: Largeur: {rect1.Largeur}, Hauteur: {rect1.Hauteur}"); 
@@ -109,7 +109,7 @@ public static void Main(string[] args)
 Résultat :
 
 ```c#
-Avant la méthode: Largeur: 10, Hauteur: 10
+Avant la méthode: Largeur: 5, Hauteur: 10
 Dans la méthode: Largeur: 20, Hauteur: 40
 Après la méthode: Largeur: 20, Hauteur: 40
 
@@ -134,7 +134,7 @@ public static void ModifierVecteur(int[] vect)
 
 public static void Main(string[] args)
 {
-    int[] vectNombres = { 1, 2, 3, 4, 5 };
+    int[] vectNombres = { 1, 2, 3, 4, 5 }; //Initialise un vecteur avec des valeurs
     Console.WriteLine($"Avant la méthode: {AFficherVecteur(vectNombres)}");
     ModifierVecteur(vectNombres);
     Console.WriteLine($"Après la méthode: {AFficherVecteur(vectNombres)}");
