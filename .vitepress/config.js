@@ -87,6 +87,7 @@ export default defineConfig({
         text: 'WPF',
         items: [
           { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
+          { text: 'Contrôle DatePicker', link: '/date_picker' },
           /*{ text: 'Rétroaction utilsateur', link: '/retroaction' },
           { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
           { text: 'Affichage du temps en WPF', link: '/timespan_up_down_control' },
