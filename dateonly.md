@@ -79,3 +79,14 @@ Console.WriteLine(date);  // Affiche "25/12/2024"
 ```
 `DateOnly` est utile pour les scénarios où le temps n'a pas d'importance. Il est simple à utiliser et permet de gérer efficacement les dates sans se préoccuper des complications liées aux heures et aux fuseaux horaires.
 
+## Conversion d'une DateTime en DateOnly
+
+``` c#
+
+DateTime dateTime = new DateTime(2024, 10, 2, 14, 30, 45); // Date et heure : 2 octobre 2024 à 14h30 et 45 secondes
+
+// Conversion en DateOnly en utilisant la méthode FromDateTime
+DateOnly dateOnly = DateOnly.FromDateTime(dateTime);
+Console.WriteLine($"Conversion en DateOnly : {dateOnly}"); // Affiche : Conversion en DateOnly : 2024-10-02
+
+```
