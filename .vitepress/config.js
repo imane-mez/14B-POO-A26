@@ -17,6 +17,7 @@ export default defineConfig({
     sidebar: [
     
       { text: 'Bloc 1', 
+        collapsed: true,
         items : [
           { text: 'Révision', link: '/revision' },
           { text: 'Types', 
@@ -33,13 +34,19 @@ export default defineConfig({
           { text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
-          {text: 'Exercices', link: '/exercices_bloc1' },
           {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
           {text: 'Composition d\'objets', link: '/composition_objets' },
           {text: 'Espace de nom', link: '/namespace' },
           {text: 'Méthode ToString()', link: '/methode_tostring' },
           {text: 'TryParse', link: '/tryparse' },
+          {text: 'Exercices', link: '/exercices_bloc1' },
+        ]
+      },
+      { text: 'Bloc 2', 
+        items : [
+          { text: 'Listes génériques (List)', link: '/listes_generiques' },
+          {text: 'Exercices', link: '/exercices_bloc2' },
         ]
       },
        /*{
@@ -76,7 +83,7 @@ export default defineConfig({
       { text: 'Type Guid', link: '/guid' },
 
     
-      { text: 'Listes génériques (List)', link: '/listes_generiques' },
+      
       { text: 'Algorithmes de tri', link: '/algo_tri' },
       { text: 'Documentation du code', link: '/commentaires' },
       { text: 'Tests unitaires', link: '/tests_unitaires' },
@@ -88,8 +95,8 @@ export default defineConfig({
         items: [
           { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
           { text: 'Contrôle DatePicker', link: '/date_picker' },
-          /*{ text: 'Rétroaction utilsateur', link: '/retroaction' },
-          { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
+          { text: 'Rétroaction utilsateur', link: '/retroaction' },
+          /*{ text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
           { text: 'Affichage du temps en WPF', link: '/timespan_up_down_control' },
           { text: 'Fichier de configuration App.config', link: '/app_config' },
           { text: 'Liaison de données', link: '/binding' },

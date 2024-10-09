@@ -19,7 +19,7 @@ hero:
 
 features:
   - title: Cours en ligne
-    link: /revision
+    link: /listes_generiques
     details: 
   - title: Équipe Gr. 1
     icon: 

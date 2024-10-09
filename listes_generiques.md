@@ -232,7 +232,7 @@ foreach(Peronne p in listePersonnes){
 
 Lorsqu'il s'agit de parcourir une générique en C#, le choix entre foreach et for dépend de plusieurs facteurs, notamment de vos besoins spécifiques et du contexte de votre application. Voici quelques points à considérer :
 
-*Simplicité et Lisibilité*
+**Simplicité et Lisibilité**
 
 foreach est généralement plus simple à lire et à écrire, surtout si vous avez simplement besoin d'accéder à chaque élément de la liste sans vous soucier de son index.
 
@@ -243,7 +243,7 @@ Pour les listes très grandes, for peut être légèrement plus rapide, car il n
 
 **Modification pendant l'itération**
 
-Si vous devez modifier la liste (ajouter, supprimer des éléments) pendant que vous la parcourez, for est souvent un meilleur choix. Avec foreach, modifier la collection pendant son itération peut provoquer une InvalidOperationException.
+Si vous devez modifier la liste (ajouter, supprimer des éléments) pendant que vous la parcourez, for est souvent un meilleur choix. Avec foreach, modifier la collection pendant son itération peut provoquer une `InvalidOperationException`.
 for vous permet de gérer l'index actuel et d'ajuster la boucle en conséquence.
 
 **Accès aux Indices**
