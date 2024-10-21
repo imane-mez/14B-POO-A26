@@ -42,12 +42,14 @@ TimeSpan temps = (TimeSpan) tsTemps.Value;
 
 ```
 
-6) Pour n'afficher que les heures et les secondes, vous pouvez ajouter les attributs suivant au contrôle.
+6) Pour n'afficher que les heures et les secondes et ne pas avoir de valeur négative, vous pouvez ajouter les attributs suivant au contrôle.
 
 ```html
 <xlt:TimeSpanUpDown x:Name="tsHeure" Width="100" Height="25" 
         ShowDays="False" 
-        ShowSeconds="False"/>
+        ShowSeconds="False"
+        Minimum="0"
+        />
 
 ```
 ## Demonstration
