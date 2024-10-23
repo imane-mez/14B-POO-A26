@@ -31,7 +31,7 @@ export default defineConfig({
               { text: 'Type Enum', link: '/enum' },
             ]
           },
-          { text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          {text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
           {text: 'Relation entre les classes', link: '/relations' },
@@ -45,8 +45,10 @@ export default defineConfig({
       },
       { text: 'Bloc 2', 
         items : [
-          { text: 'Listes génériques (List)', link: '/listes_generiques' },
+          {text: 'Listes génériques (List)', link: '/listes_generiques' },
           {text: 'Exercices', link: '/exercices_bloc2' },
+          { text: 'Type Guid', link: '/guid' },
+          //{text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
         ]
       },
        /*{
@@ -70,7 +72,7 @@ export default defineConfig({
          
          
           {text: 'Classes et membres statiques', link: '/classe_statique' },
-          {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+          
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Indexeur', link: '/indexeur' },
           
@@ -80,7 +82,7 @@ export default defineConfig({
       { text: 'Manipulation de chaîne de caractère', link: '/string' },
       { text: 'Type DateTime et TimeSpan', link: '/date_time' },
       { text: 'Type TimeOnly', link: '/time_only' },
-      { text: 'Type Guid', link: '/guid' },
+     
 
     
       
