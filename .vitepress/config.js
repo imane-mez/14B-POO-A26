@@ -46,9 +46,10 @@ export default defineConfig({
       { text: 'Bloc 2', 
         items : [
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
-          {text: 'Exercices', link: '/exercices_bloc2' },
           { text: 'Type Guid', link: '/guid' },
-          //{text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+          {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+          {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+          {text: 'Exercices', link: '/exercices_bloc2' },
         ]
       },
        /*{
@@ -73,7 +74,7 @@ export default defineConfig({
          
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           
-          {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+         
           {text: 'Indexeur', link: '/indexeur' },
           
 

@@ -121,6 +121,7 @@ public string Titre
 |**FileNotFoundException**             |Exception levée lors d'une tentative d'accès à un fichier qui n'existe pas sur le disque échoue.
 |StackOverflowException                |Exception levée lorsque la capacité de la pile d'exécution est dépassée en raison d'un trop grand nombre d'appels à la méthode imbriquée.
 
+<!--
 ## Démonstration
 Télécharger le fichier suivant pour la démonstration : [S9C1 - DemoExceptionsTryCatchFinally](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2017/S9C1%20-%20DemoExceptionsTryCatchFinally.zip?ref_type=heads)
 
@@ -142,3 +143,5 @@ Vous devez lancer le bon type d'exception selon le type d'erreur.
 2) Vous devez également modifier votre code dans les formulaires d'ajout et de modification pour ajouter la validation des données saisies par l'utilisateur selon les contraintes de la classes employés et également gérer les cas où des exceptions non prévues pourraient se produire en utilisant l'instruction **try..cath**
 
 :::
+
+-->
