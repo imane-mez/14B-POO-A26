@@ -46,9 +46,10 @@ export default defineConfig({
       { text: 'Bloc 2', 
         items : [
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
-          { text: 'Type Guid', link: '/guid' },
+          {text: 'Type Guid', link: '/guid' },
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+          {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Exercices', link: '/exercices_bloc2' },
         ]
       },
@@ -68,22 +69,12 @@ export default defineConfig({
       { text: 'Programmation Orientée Objet', 
         items:[
           {text: 'Classe', link: '/poo_intro' },
-         
-
-         
-         
-          {text: 'Classes et membres statiques', link: '/classe_statique' },
-          
-         
           {text: 'Indexeur', link: '/indexeur' },
           
 
         ],
       },
-      { text: 'Manipulation de chaîne de caractère', link: '/string' },
-      { text: 'Type DateTime et TimeSpan', link: '/date_time' },
-      { text: 'Type TimeOnly', link: '/time_only' },
-     
+      
 
     
       
