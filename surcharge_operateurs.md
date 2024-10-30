@@ -45,33 +45,3 @@ public static Fraction operator + (Fraction fractionGauche, Fraction fractionDro
 **Les opérateurs de comparaison, s'ils sont surchargés, doivent l'être en paires**.  En conséquence, si == est surchargé, != doit l'être également; dans ce cas, la méthode « Equals » doit être aussi surchargée.  L'inverse est également vrai, comme pour < et > et pour <= et >=.
 
 
-## Exercice
-::: tip S8E2 - Surcharge d'opérateurs
-
-### Objectif 
-Mettre en pratique la surcharge des opérateurs.e.
-
-### Problème 
-Vous devez créer une classe Matrice qui représente une matrice bidimensionnelle. Ensuite, vous devez surcharger les opérateurs + et - pour permettre l'addition et la soustraction de matrices. De plus, vous devez surcharger l'opérateur * pour permettre la multiplication d'une matrice par un nombre.
-
-1) Créez une classe Matrice avec un attribut qui est une matrice bidimensionnelle (un tableau 2D) pour stocker les éléments de la matrice ainsi que deux propriétés en lecture seule permettant d'obtenir le nombre de lignes et de colonnes de la matrice.
-
-3) Créez une méthode publique permettant d'obtenir une valeure de la matrice selon une ligne et une colonne reçue en paramètres.
-
-4) Créer une méthode publique permettant de modifier une valeur de la matrice à une position à partir de la ligne, de la colonne et de la valeur reçues en paramètres.
-
-5) Surchargez les opérateurs + et - pour permettre l'addition et la soustraction de matrices. Les opérations devraient créer une nouvelle matrice résultante avec les éléments corrects. So l'une des deux matrices est null, alors la valeur null est retournée. Si les deux matrices n'ont pas le même nombre de lignes et de colonnes la valeur null est retournée.
-
-6) Surchargez l'opérateur * pour permettre la multiplication d'une matrice par un scalaire. L'opération devrait créer une nouvelle matrice résultante avec tous les éléments multipliés par le scalaire donné. Si la matrice est null alors la valeur null est retournée.
-
-7) Surchargez l'opérateur * pour permettre la multiplication d'un scalaire par une matrice. L'opération devrait créer une nouvelle matrice résultante avec tous les éléments multipliés par le scalaire donné. Si la matrice est null alors la valeur null est retournée.
-
-8) Créer la méthode ToString() permettant de retourner la représentation sous forme de chaîne de caratères d'une matrice.
-
-9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats.
-
-### Solution
-
-Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-SurchargeOperateurs.zip?ref_type=heads)
-
-:::

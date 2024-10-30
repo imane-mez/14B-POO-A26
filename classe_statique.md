@@ -148,7 +148,7 @@ Il y a 2 Chat(s) adopté(s).
 
 Un constructeur peut également être statique. Il est utilisé pour initialiser des membres statiques de la classe, des valeurs par défaut, ou effectuer d'autres tâches liées à la classe elle-même plutôt qu'à une instance particulière de la classe. 
 
-**Celui-ci doit être privé afin d'empêcher la classe d'être instanciée**.
+Celui-ci est **toujours privé de manière implicite**, même si vous ne spécifiez pas explicitement le modificateur d'accès. Il n’est pas nécessaire (ni possible) de définir un constructeur statique comme `private` car le compilateur le rend automatiquement privé.
 
 Les constructeurs statiques sont appelés automatiquement lorsque la classe est chargée en mémoire, avant même que vous ne créiez une instance de la classe.
 
