@@ -131,6 +131,8 @@ Complétez l'exemple [S8C1-DemoMultiFormulaireCRUD](https://gitlab.com/420-14b-f
 ## Semaine 9
 ::: details Surcharge d'opérateurs
 
+### Surcharge d'opérateurs
+
 ### Objectif 
 Mettre en pratique la surcharge des opérateurs.e.
 
@@ -157,5 +159,60 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 ### Solution
 
 Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-SurchargeOperateurs.zip?ref_type=heads)
+!-->
+:::
 
-:::-->
+
+
+::: details Classe statiques
+### Classe statique
+
+#### Objectifs
+Utiliser les classes et les membres statiques à l'intérieur d'un programme.
+
+#### Problème
+
+1) À partir de Visual Studio, créer une "Nouvelle solution" vide nommée "S9E2-ClasseStatique"
+
+2)	Ajouter un projet de type "Application console" nommé "S9E2-Calculatrice" à votre solution.
+
+3)	Créer une classe statique nommée "Calculatrice" permettant d'exécuter les opérations suivantes :
+    - Additionner
+    - Soustraire
+    - Multiplier
+    - Diviser
+
+4) Écrire le code du programme permettant de tester les différentes méthodes de votre classe.
+:::
+
+
+::: details Membre statiques
+### Membres statiques
+
+#### Objectifs
+Utiliser les classes et les membres statiques à l'intérieur d'un programme.
+
+#### Problème
+
+1)	Ajouter un projet de type "Application console" nommé "S9E2-Inventaire" à votre solution.
+
+2)	Créer la classe nommée "Produit" avec les membres suivants :
+    - Propriété **Nom**
+    - Propriété **Prix**
+    - Propriété **Quantite**
+    - Variable statique privée **_nbProduits** qui contiendra le nombre d'instances de produits créés.
+    - Variable statique privée **_valeurInventaire** qui contiendra la valeur totale des actifs en inventaire selon le nombre d'instances de produits créés.
+    - Constructeur paramétré avec toutes les propriétés.
+    - Méthode statique public **NombreDeProduits** permettant d'obtenir le nombre de produits instancié.
+    - Méthode statique public **ValeurEnInventaire** permettant d'obtenir la valeur totale en inventaire.
+
+3)	Écrire le code du programme permettant de tester les différentes méthodes de votre classe.
+
+<!--
+### Solution
+
+
+Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-ClasseStatique-Solution.zip?ref_type=heads)
+
+-->
+:::
