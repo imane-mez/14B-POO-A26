@@ -25,9 +25,8 @@ float pouces = ConvertisseurUnites.CentimetresEnPources(centimetres);
 
 ```
 
-Une classe statique permet d'utiliser un ensemble de méthodes utilisant seulement des paramètres d'entrée et qui n'ont pas besoin d'obtenir ou de définir des champs d'instances internes. Par exemple, la classe System.Math en est un bon exemple. Cette classe permet d'effectuer des opérations mathématiques de toutes sortes.
+Une classe statique permet d'utiliser un ensemble de méthodes utilisant seulement des paramètres d'entrée et qui n'ont pas besoin d'obtenir ou de définir des champs d'instances internes. Par exemple, la classe `System.Math` en est un bon exemple. Cette classe permet d'effectuer des opérations mathématiques de toutes sortes.
 
-Le constructeur statique de la classe statique est appelé une seule fois et une classe statique reste en mémoire pendant la durée de vie de l'exécution de votre programme.
 
 Voici quelques spécifications sur les classes statiques :
 - Elle contient uniquement des membres statiques.
@@ -35,7 +34,7 @@ Voici quelques spécifications sur les classes statiques :
 - Elle ne peut pas être héritée et ne peut pas hériter d'aucune classe.
 - Elle ne peut pas contenir de constructeurs d’instances.
 
-La classe statique peut contenir un constructeur statique. Celui-ci doit être privé afin d'empêcher la classe d'être instanciée.
+
 Voici un exemple de classe statique :
 
 ```c#
@@ -88,9 +87,10 @@ static void Main(string[] args)
 
 **Une seule copie d’un membre statique existe, quel que soit le nombre d’instances de la classe qui ont été créées.**
 
-**Les méthodes et les propriétés statiques ne peuvent pas accéder à des champs et des événements non statiques** dans leur type conteneur, et elles ne peuvent pas accéder à une variable d’instance de n’importe quel objet, sauf si elle est explicitement passée dans un paramètre de la méthode.
+**Les méthodes et les propriétés statiques ne peuvent pas accéder aux attributs, méthodes et événements non statiques** 
 
 Il est plus courant de déclarer une classe non statique avec certains membres statiques que de déclarer une classe entière comme statique. 
+
 Deux utilisations courantes des champs statiques consistent à :
  - Conserver un décompte du nombre d’objets qui ont été instanciés
  - Stocker une valeur qui doit être partagée entre toutes les instances.
@@ -147,6 +147,8 @@ Il y a 2 Chat(s) adopté(s).
 ## Constructeur statique
 
 Un constructeur peut également être statique. Il est utilisé pour initialiser des membres statiques de la classe, des valeurs par défaut, ou effectuer d'autres tâches liées à la classe elle-même plutôt qu'à une instance particulière de la classe. 
+
+**Celui-ci doit être privé afin d'empêcher la classe d'être instanciée**.
 
 Les constructeurs statiques sont appelés automatiquement lorsque la classe est chargée en mémoire, avant même que vous ne créiez une instance de la classe.
 
