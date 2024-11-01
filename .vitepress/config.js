@@ -50,7 +50,9 @@ export default defineConfig({
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
+          {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           {text: 'Exercices', link: '/exercices_bloc2' },
+
         ]
       },
        /*{
@@ -103,8 +105,8 @@ export default defineConfig({
         items: [
           { text: 'Convention de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
-          /*{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },*/
+          { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },*/
           { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
         ]
       },
