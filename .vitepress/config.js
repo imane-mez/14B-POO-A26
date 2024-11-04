@@ -51,6 +51,8 @@ export default defineConfig({
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Classes UtilEnum', link: '/classe_utilenum' },
+          {text: 'Algorithmes de tri', link: '/algo_tri' },
+          {text: 'Tests unitaires', link: '/tests_unitaires' },
           {text: 'Exercices', link: '/exercices_bloc2' },
 
         ]
@@ -80,9 +82,8 @@ export default defineConfig({
 
     
       
-      { text: 'Algorithmes de tri', link: '/algo_tri' },
+   
       { text: 'Documentation du code', link: '/commentaires' },
-      { text: 'Tests unitaires', link: '/tests_unitaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
       { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
       { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },*/

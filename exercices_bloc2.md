@@ -216,3 +216,25 @@ Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-f
 
 -->
 :::
+
+## Semaine 10
+::: details Algorithmes de tri
+### Algorithmes de tri
+### Objectif 
+Mettre en pratique la surcharge des opérateurs et les différentes méthodes de tri.
+
+### Problème 1
+Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui reçoit en paramètre un tableau d’entier et le tri en ordre croissant (voir : https://www.youtube.com/watch?v=EdUWyka7kpI pour l’algorithme).
+
+###  Problème 2
+
+À partir de l'exercice S9E1, vous devez maintenant modifier le code de la classe Employe.cs afin de permettre le tri d’une liste d’employés selon les critères suivant :
+
+1) Les employés sont triés en ordre de salaire décroissant.
+2) Si deux employés ont le même salaire, alors ceux-ci sont triés en ordre croissant de nom.
+
+Pour ce faire, vous devez implémenter la méthode CompareTo de l’interface **IComparable**.
+Testez votre méthode appelant la méthode **Sort** de la liste d’employé avant son affichage dans le **listbox**. 
+
+
+
