@@ -276,4 +276,4 @@ Par la suite, vous devez à partir de l'explorateur de tests, sélectionner le t
 Il est également possible de mettre un point d'arrêt directement dans votre code.
 
 ## Démonstration
-Télécharger le fichier suivant pour la démonstration : [DemoTestsUnitaires](hhttps://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2018/DemoTestsUnitaires.zip?ref_type=heads)
+Télécharger le fichier suivant pour la démonstration : [DemoTestsUnitaires](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2018/DemoTestsUnitaires.zip?ref_type=heads)
