@@ -26,22 +26,31 @@ En travaillant avec des bases de données, les concepts suivants sont communs à
 Étant donné que C# permet l'utilisation de différent type de base de données. La première chose à faire est d'installer les outils nécessaires selon le type de la base de données choisie. Dans notre cas, nous utiliserons une base de données MySQL. 
 
 ## Importation des librairies
-Afin de faciliter l'utilisation de librairies externe dans notre projet, .Net offre un outil nommé **" gestionnaire de package NuGet"**. Cet outil permet l'installation de librairie. Dans notre cas, nous aurons besoin de la libraire MySQL.Data pour utiliser une base de données MySQL.
+Afin de faciliter l'utilisation de librairies externe dans notre projet, .Net offre un outil nommé **" gestionnaire de package NuGet"**. Cet outil permet l'installation de librairie. Dans notre cas, nous aurons besoin de la libraire `MySQlConnector` pour utiliser une base de données `MariaDB`.
 
+1) Ouvrir le gestionnaire de package NuGet en sélectionnant le menu **Projet -> Gérer les packages NuGet ...**.
+2) Cliquer sur le lien **Parcourir** et inscrire **MySqlConnector** dans le champ de recherche. 
+3) Sélectionner `MySqlConnector`. 
+4) Cliquer sur le bouton `Installer`.
+
+![Installation du package MySQlConnectgor](/images/base_donnees2.png)
+
+<!--
 1) Ouvrir le gestionnaire de package NuGet en sélectionnant le menu **Outils->Gestionnaire de package NuGet -> Gérer les packages NuGet pour la solution**.
 2) Cliquer sur le lien **Parcourir** et inscrire **MySql.Data** dans le champ de recherche. 
 3) Sélectionner **MySql.Data**, sélectionner le projet sur lequel vous désirez faire l'installation et cliquer sur le bouton Installer.
 
 ![Installation du package MySQL.Data](/images/base_donnees1.png)
-
+-->
 Voyons maintenant comment utiliser les différents objets C# nécessaires pour effectuer ces opérations.
 
 ## Établir une connexion (MySqlConnection)
 
-L'objet MySqlConnection permet de se connecter à la base de données. Pour se connecter, il faut tout d'abord définir la chaîne de connexion spécifiant **le nom ou l'adresse IP du serveur** où se trouve la base de données, **le nom de la base de données**, le nom de l'**utilisateur** et le **mot de passe**.  
+L'objet MySqlConnection permet de se connecter à la base de données. Pour se connecter, il faut tout d'abord définir la chaîne de connexion spécifiant **le nom ou l'adresse IP du serveur** où se trouve la base de données, **port** de connection (MySQl=3307, MariaDB=3307),  **le nom de la base de données**, le nom de l'**utilisateur** et le **mot de passe**.  
+
 
 ```c#
-string connectionString = "Server=localhost;Database=demo_db;Uid=admin;Pwd=Qwerty123;"
+string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=admin;Pwd=Qwerty123;"
 ```
 
 Par la suite, nous pourrons instancier l'objet en lui passant en paramètre la chaîne de connexion :
@@ -65,7 +74,7 @@ MySqlConnection cn = null;
 try
 {
     //Chaîne de connexion
-    string connectionString = "Server=localhost;Database=demo_db;Uid=admin;Pwd=qwerty123;"
+    string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=admin;Pwd=qwerty123;"
 
     //Instanciation de la connexion
     cn = new MySqlConnection(connectionString);
@@ -86,7 +95,7 @@ finally
     if (cn != null && cn.State == System.Data.ConnectionState.Open)
    {
         cn.Close();
-         cn.Dispose();
+        cn.Dispose();
    }
 }
 ```
@@ -264,79 +273,60 @@ Télécharger le projet de départ pour la démonstration : [S12C1-ExempleBD](ht
 
 Pour faciliter la modification d'une chaîne de connexion, il est recommandé de ne pas la mettre directement dans notre code, mais plutôt de la mettre d'un fichier de configuration. Ainsi, il sera facile de la modifier si notre base de données change de serveur ou que le nom d'utilisateur et le mode de passe sont modifiés sans devoir modifier le code de l'application. 
 
-C'est là qu'intervient le fichier **app.config**. Il s'agit d'un fichier XML qui contient la configuration de notre application. C'est donc à cet endroit que nous définirons la chaîne de connexion à une base de données.
+C'est là qu'intervient le fichier **appsettings.json**. Il s'agit d'un fichier JSON qui contient la configuration de notre application. C'est donc à cet endroit que nous définirons la chaîne de connexion à une base de données.
 
-### Ajout du fichier App.config au projet.
-À partir de votre projet, vous devez ajouter un nouvel élément de type "**Fichier de configuration d'application**".
+### Ajout du fichier appsettings.json au projet.
+À partir de votre projet, vous devez ajouter un nouvel élément de type "**Fichier config JSON JavaScript**".
+
 
 ### Configuration du fichier 
 
-Vous devez ajouter la balise XML "**\<connectionStrings\>**" suivante au fichier **app.config** : 
+Afin que le fichier soit copier dans le répertoire source, vous devez modifier la manière dont il est compilé :
+
+1) Cliquer avec le bouton de droite de la souris sur le fichier et sélectionner `Propriétés`.
+2) Pour l'option `Action de génération`, sélectionner `Contenu`.
+2) Pour l'Option `Copier dans le répertoire de sortie`, sélectionner `Copier si plus récent`
+
+
+![Configuration du fichier appsettings.json](/images/appsettings1.png)
+
+### Contenu du fichier
+
+Vous devez ajouter le code suivant au fichier **appconfig.json** : 
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;port=3307;Database=demo_db;Uid=root;Pwd=;"
+  }
+}
+
+```
+
+
+
+### Lecture du fichier
+
+Pour lire les éléments contenu dans le fichier `appsettings.json` vous devez installer les `packages NuGet` suivants dans votre projet : 
+
+1) Microsoft.Extensions.Configuration
+2) Microsoft.Extensions.Configuration.Json
+
 
 ```c#
- <connectionStrings>
-    <add name="Myconnectionstring" connectionString="Server=localhost;Database=demo_db;Uid=admin;Pwd=Qwerty123;"" />
-  </connectionStrings>
+
+using Microsoft.Extensions.Configuration;
+
+//...
+
+private const string APPSETTINGS_FILE = "appsettings.json"; 
+private const string CONNECTION_STRING_NAME = "DefaultConnection";
+
+//Chargement des configurations du appsettings.json
+ IConfiguration config = new ConfigurationBuilder().AddJsonFile(APPSETTINGS_FILE, false, true).Build();
+
+ //Lecture de la chaîne de connexion dans le appsettings.json
+ string connectionString = config.GetConnectionString(CONNECTION_STRING_NAME);
+           
 ```
 
-Cette balise doit se trouver à l'intérieur de la balise "**\<configuration\>**":
-
-```c#
-<configuration>
-    <connectionStrings>
-    <add name="DefaultConnectionString" connectionString="Server=localhost;Database=demo_db;Uid=admin;Pwd=Qwerty123;"" />
-</configuration>
-//Autres balises de configuration ici…
-     
-```
-
-Pour lire la chaine de connexion dans le fichier **app.config** :
-
-```c
-//Lecture de la chaîne de connexion dans le app.config
-string connectionString = ConfigurationManager.ConnectionStrings[="DefaultConnectionString" ].ConnectionString;
-```
-
-## Exercice
-::: tip S12E1 - Exercices sur l'utilisation d'une base de données
-
-### Exercice 1
-#### Objectifs
-Mettre en pratique l’utilisation d’une base de données en C#.
-
-#### Préparation
-1) Téléchez le projet de départ : [S12E1-BD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E1-BD.zip)
-2) Importez dans pypMyAdmin - MySql le fichier **livres_bd.sql** se trouvant dans le projet de départ.
-
-#### Problème
-
-1) Créer une nouvelle classe nommée "**DAL.cs**" (Data Access Layer). Celle-ci doit contenir les méthodes permettant la gestion des livres (**CRUD**) contenus dans la base de données "**livres_bd**". 
-4) Tester les différentes méthodes de votre classe "**DAL.cs**" afin de tester l’affichage de la liste des livres, l’ajout, la modification et la suppression d’un livre.
-
-#### Solution
-Téléchargez la solution : [S12E1-BD-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E1-BD%20-%20Solution.zip)
-
-### Exercice 2
-#### Objectifs
-Mettre en pratique l’utilisation d’une base de données et la composition d'objet. Dans cet exercices, un livres possèdes un ou plusieurs auteurs.
-
-#### Préparation
-1) Téléchez le projet de départ : [S12E2-CompositionObjets](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets.zip)
-2) Importez dans pypMyAdmin - MySql le fichier **livres_auteurs_bd.sql** se trouvant dans le projet de départ.
-3) La base de données contient déjà une liste d'auteurs.
-
-#### Problème
-Vous devez modifier l'application afin de permettre à un utilisatuer d'ajouter un livre, d'afficher la liste des livres ainsi que les détails d'un livre sélectionné.
-
-1) Compléter la classe "**DAL.cs**" (Data Access Layer). Celle-ci doit contenir les méthodes permettant d'obtenir la liste des livres sans leurs auteurs, d'ajouter un livre avec ses auteurs et d'obtenir un livre avec ses auteurs.
-
-2) Compléter les méthodes du formulaire permettant l'ajout d'un livre. Vous n'avez pas à faire la validation du formulaire. Assurez-vous seulement qu'un livre doit avoir au moins un auteur et qu'il ne peut pas y avoir 2 fois le même auteurs dans la liste des auteurs.
-
-3) Compléter les méthodes du formulaire permettant l'affichage de la liste des livres.
-
-4) Compléter les méthode du formulaire permettant l'affichage des détails d'un livre sélectionné dans la liste. Lors de l'affichage des détails d'un livre, vous devez obtenir le livre à partir de la base de données.
-
-#### Solution
-Téléchargez la solution : [S12E2-CompositionObjets-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets%20-%20Solution.zip)
-
-:::

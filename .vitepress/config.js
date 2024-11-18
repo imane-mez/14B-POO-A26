@@ -44,6 +44,7 @@ export default defineConfig({
         ]
       },
       { text: 'Bloc 2', 
+        collapsed: true,
         items : [
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
           {text: 'Type Guid', link: '/guid' },
@@ -55,6 +56,13 @@ export default defineConfig({
           {text: 'Tests unitaires', link: '/tests_unitaires' },
           {text: 'Exercices', link: '/exercices_bloc2' },
 
+        ]
+      },
+      {
+        text : 'Bloc 3',
+        items : [
+          { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
+          {text: 'Exercices', link: '/exercices_bloc3' },
         ]
       },
        /*{
@@ -85,7 +93,7 @@ export default defineConfig({
    
       { text: 'Documentation du code', link: '/commentaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
-      { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
+  
       { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },*/
       {
         text: 'WPF',
