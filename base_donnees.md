@@ -266,7 +266,7 @@ Int id = (uint)cmd.LastInsertedId;
 
 ```
 ## Démonstration
-Télécharger le projet de départ pour la démonstration : [S12C1-ExempleBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12C1-ExempleBD.zip)
+Télécharger le projet de départ pour la démonstration : [S12C1-DemoBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12C1-DemoBD.zip?ref_type=heads)
 
 
 ## Configurer la chaîne de connexion
