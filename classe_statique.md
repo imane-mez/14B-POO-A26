@@ -165,7 +165,7 @@ class Chat
     /// Constructeur statique pour initialiser le compteur
     /// </summary>
     /// <remarks>Augment le nombre d'instance de la classe</remarks>
-    public static Chat()
+    static Chat()
     {
        nbInstances = 0;
     }

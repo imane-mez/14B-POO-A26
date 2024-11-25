@@ -6,7 +6,7 @@ outline: deep
 
 # La génération de contrôle dynamiques
 
-La génération de contrôle dynamique en WPF est un concept important pour les étudiants en informatique, car elle permet de créer des interfaces utilisateur flexibles et réactives. Cela permet de créer des ccontrôles (boutons, textes, listes, etc.) pendant l'exécution du programme plutôt qu'à la conception.
+La génération de contrôle dynamique en WPF permet de créer des interfaces utilisateur flexibles et réactives. Cela permet de créer des ccontrôles (boutons, textes, listes, etc.) pendant l'exécution du programme plutôt qu'à la conception.
 
 ## Exemple : Création Dynamique d'un Bouton
 
@@ -105,7 +105,7 @@ public partial class MainWindow : Window
             img.Width = 125;
             img.Height = 125;
 
-            //On l'objet personne dans le contrôle.
+            //On metl'objet personne dans le contrôle.
             img.Tag = personne;
 
             //Ajout de l'événement click sur l'image
@@ -135,12 +135,10 @@ public partial class MainWindow : Window
 
 ```
 
-**Explications :**
-
-- Pour chaque objet Personne, une image est créée à partir de la propriété Image
-- L'objet Personne est stocké dans la propriété **Tag** de l'image. **Tous les contrôles WPF possède cette propriété.**
-- Un gestionnaire d'événements **Image_Click** est attaché à chaque image. 
-- Lorsqu'une image est cliquée, le gestionnaire d'événements extrait l'objet Personne du Tag et affiche son nom.
+1) Pour chaque objet Personne, une image est créée à partir de la propriété Image
+2) L'objet Personne est stocké dans la propriété **Tag** de l'image. **Tous les contrôles WPF possède cette propriété.**
+3) Un gestionnaire d'événements **Image_Click** est attaché à chaque image. 
+4) Lorsqu'une image est cliquée, le gestionnaire d'événements extrait l'objet Personne du Tag et affiche son nom.
 
 ## Démonstration
 

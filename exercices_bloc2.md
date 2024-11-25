@@ -221,6 +221,7 @@ Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-f
 ::: details Algorithmes de tri
 ### Algorithmes de tri
 ### Objectif 
+
 Mettre en pratique la surcharge des opérateurs et les différentes méthodes de tri.
 
 ### Problème 1

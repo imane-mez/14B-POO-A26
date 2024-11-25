@@ -106,7 +106,7 @@ export default defineConfig({
           { text: 'Fichier de configuration appsettings.json', link: '/appsettings' },
           { text: 'Liaison de données', link: '/binding' },
           { text: 'Gestion de fichiers', link: '/file_dialog' },
-          /*{ text: 'Contrôles dynamiques', link: '/controles_dynamiques' },*/
+          { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },
         ]
       },
       {
