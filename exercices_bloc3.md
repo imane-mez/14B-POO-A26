@@ -1,4 +1,6 @@
-
+---
+outline: deep
+---
 
 # Exercices bloc 3
 
@@ -24,7 +26,7 @@ Téléchargez la solution : [S12E1-BD-Solution](https://gitlab.com/420-14b-fx/co
 
 :::
 
-<!--
+
 ::: details Utilisation d'une base de données avec des objets composés.
 
 ### Utilisation d'une base de données avec des objets composés.
@@ -33,7 +35,7 @@ Mettre en pratique l’utilisation d’une base de données et la composition d'
 
 #### Préparation
 
-1) Téléchez le projet de départ : [S12E2-CompositionObjets](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets.zip)
+1) Téléchez le projet de départ : [S12E2-CompositionObjets](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets.zip?ref_type=heads)
 2) Importez dans pypMyAdmin - MySql le fichier **livres_auteurs_bd.sql** se trouvant dans le projet de départ.
 3) La base de données contient déjà une liste d'auteurs.
 
@@ -47,10 +49,55 @@ Vous devez modifier l'application afin de permettre à un utilisatuer d'ajouter 
 3) Compléter les méthodes du formulaire permettant l'affichage de la liste des livres.
 
 4) Compléter les méthode du formulaire permettant l'affichage des détails d'un livre sélectionné dans la liste. Lors de l'affichage des détails d'un livre, vous devez obtenir le livre à partir de la base de données.
-
+<!--
 #### Solution
 Téléchargez la solution : [S12E2-CompositionObjets-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets%20-%20Solution.zip)
-
+-->
 :::
 
--->
+
+
+## Semaine 13
+::: details Exercices sur l'utilisation les indexeurs
+
+### Exercices sur l'utilisation les indexeurs
+
+#### Objectifs
+Mettre en pratique la création et l'utilisation d'indexeur en c#
+
+#### Préparation
+1) Créer un projet console nommé "**S13E1-Indexeurs**"
+
+#### Problème
+
+1) Créer une classe Employe ayant les propriétés et méthodes suivantes :
+
+**Propriétés publiques**:
+- (string) Nom
+- (string) Prénom
+- (string) NAS
+
+**Méthodes publiques**
+- Constructeur paramétré permettant d'initialiser toutes les propriétés
+- ToString() : Afficher l’information de l’employé 
+
+2) Créer une classe nommée **ListeEmployes** ayant les propriétés et les méthodes suivantes :
+
+**Attribut privé**:
+- (List\<Employe\>) _employes : Contient la liste des employés
+
+**Propriété public**
+- (int) NbEmployes : Retourne le nombre d’employés dans la liste
+- [int index] : Obtient ou Défini un employé à partir d’une position dans la liste d’employés. L’index ne doit pas être à l’extérieure des plages de valeurs possibles pour la liste d’employés.
+- [string nas] : Obtient un employé dans la liste d’employés à partir de son NAS. Le NAS ne peut pas être vide ou nul. Si l’employé n’existe pas, alors on retourne nul.
+
+**Constructeur**
+- Sans paramètre : Initialise la liste des employés.
+
+**Méthodes publiques :**
+- Void Ajouter(Employe pEmploye) : Permet d’ajouter un employé à la liste. L’employé ne doit pas être nul.
+- Bool Supprimer(Employe pEmploye) : Permet de supprimer un employé de la liste. L’employé ne doit pas être nul. Retourne vrai si la suppression a fonctionné. Faux sinon.
+
+3) Tester l'ajout, la modification et la suppression d'employés dans une liste d'employés (LiseEmploye).
+
+:::

@@ -62,6 +62,7 @@ export default defineConfig({
         text : 'Bloc 3',
         items : [
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
+          {text: 'Indexeur', link: '/indexeur' },
           {text: 'Exercices', link: '/exercices_bloc3' },
         ]
       },
@@ -81,7 +82,7 @@ export default defineConfig({
       { text: 'Programmation Orientée Objet', 
         items:[
           {text: 'Classe', link: '/poo_intro' },
-          {text: 'Indexeur', link: '/indexeur' },
+          
           
 
         ],

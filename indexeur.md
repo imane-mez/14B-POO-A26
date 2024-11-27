@@ -151,51 +151,5 @@ public Type this[Type param1, … ,Type paramN ]
 
 ## Démonstration
 
-Téléchargez la démonstration : [Exemple - indexeurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2026/ExempleIndexeurs.zip)
+Téléchargez la démonstration : [Démo - indexeurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2026/DemoIndexeurs.zip?ref_type=heads)
 
-## Exercice
-::: tip S13E1 - Exercices sur l'utilisation les indexeurs
-
-### Objectifs
-Mettre en pratique la création et l'utilisation d'indexeur en c#
-
-### Préparation
-1) Créer un projet console nommé "**S13E1-Indexeurs**"
-
-### Problème
-
-1) Créer une classe Employe ayant les propriétés et méthodes suivantes :
-
-**Propriétés publiques**:
-- (string) Nom
-- (string) Prénom
-- (string) NAS
-
-**Méthodes publiques**
-- Constructeur paramétré permettant d'initialiser toutes les propriétés
-- ToString() : Afficher l’information de l’employé 
-
-2) Créer une classe nommée **ListeEmployes** ayant les propriétés et les méthodes suivantes :
-
-**Attribut privé**:
-- (List\<Employe\>) _employes : Contient la liste des employés
-
-**Propriété public**
-- (int) NbEmployes : Retourne le nombre d’employés dans la liste
-- [int index] : Obtient ou Défini un employé à partir d’une position dans la liste d’employés. L’index ne doit pas être à l’extérieure des plages de valeurs possibles pour la liste d’employés.
-- [string nas] : Obtient un employé dans la liste d’employés à partir de son NAS. Le NAS ne peut pas être vide ou nul. Si l’employé n’existe pas, alors on retourne nul.
-
-**Constructeur**
-- Sans paramètre : Initialise la liste des employés.
-
-**Méthodes publiques :**
-- Void Ajouter(Employe pEmploye) : Permet d’ajouter un employé à la liste. L’employé ne doit pas être nul.
-- Bool Supprimer(Employe pEmploye) : Permet de supprimer un employé de la liste. L’employé ne doit pas être nul. Retourne vrai si la suppression a fonctionné. Faux sinon.
-
-3) Tester l'ajout, la modification et la suppression d'employés dans une liste d'employés (LiseEmploye).
-
-
-### Solution
-Téléchargez la solution : [S12E2-CompositionObjets-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours23/S12E2-CompositionObjets%20-%20Solution.zip?ref_type=heads)
-
-:::
