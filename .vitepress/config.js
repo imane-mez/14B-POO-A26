@@ -63,7 +63,9 @@ export default defineConfig({
         items : [
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
           {text: 'Indexeur', link: '/indexeur' },
+          { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
           {text: 'Exercices', link: '/exercices_bloc3' },
+
         ]
       },
        /*{
@@ -95,7 +97,7 @@ export default defineConfig({
       { text: 'Documentation du code', link: '/commentaires' },
       { text: 'Scénarios de test', link: '/tests_fonctionnels' },
   
-      { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },*/
+      ,*/
       {
         text: 'WPF',
         items: [
