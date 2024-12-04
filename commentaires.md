@@ -58,24 +58,51 @@ public static int Additionner(int a, int b)
 ```
 ## value
 
-La balise **value** est similaire à la balise **returns**, excepté que vous l’utilisez pour les propriétés. Pour la plupart, les balises **summary** d'une propriété indiqueront généralement **"Obtient ou définit une valeur ..."** , tandis que les balises de **value** indiqueront généralement les valeurs attendues, y compris la valeur par défaut. En supposant que la classe Math a une propriété statique appelée PI :
+La balise **value** est similaire à la balise **returns**, excepté que vous l’utilisez pour les propriétés. Pour la plupart, les balises **summary** d'une propriété indiqueront généralement **"Obtient ou définit une valeur ..."** , tandis que la balise **value** est utilisée pour fournir une description spécifique de la valeur retournée ou définie par une propriété. Elle est particulièrement utile pour définir : 
+
+- **Description du contenu de la propriété** : Pour expliquer la signification ou le rôle de la valeur stockée ou retournée par une propriété.
+
+- **Contexte métier ou logique** : Si la valeur de la propriété a une importance particulière dans le domaine métier ou si elle suit des règles spécifiques.
+
+- **Validation ou contraintes de la valeur** : Vous pouvez mentionner les limites ou les validations que la valeur doit respecter.
+
+- **Cas ambigus** : Si le rôle ou la signification de la valeur n'est pas immédiatement évident d'après le nom de la propriété.
+
+En supposant que la classe CompteBancaire a une propriété Solde :
 
 
 ```c#
-/// <summary>
-/// Cette classe permet d'effectuer des opérations mathématiques
-/// <remark>Permet d'additionner et de soustraire des nombres entiers </remark>
-/// </summary>
-public class Math
+public class CompteBancaire
 {
-	
-    /// <summary>Obtient la valeur de PI.</summary>
-    /// <value>Retourne la valeur 3.1416.</value>
-    public static double PI 
-    { 
-        get{ return 3.1416 ;}
+    private decimal _solde;
+
+    /// <summary>
+    /// Obtient ou définit le solde actuel du compte bancaire.
+    /// </summary>
+    /// <value>
+    /// Un montant en dollars représentant le solde disponible dans le compte. 
+    /// Cette valeur est toujours supérieure ou égale à 0, car un compte ne peut pas avoir un solde négatif.
+    /// </value>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// Si une tentative est faite pour définir un solde négatif.
+    /// </exception>
+    public decimal Solde
+    {
+        get
+        {
+            return _solde;
+        }
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Le solde ne peut pas être négatif.");
+            }
+            _solde = value;
+        }
     }
 
+ // ... 
 }
 ```
 ## param
@@ -148,5 +175,5 @@ Documenation Docfx : https://dotnet.github.io/docfx/index.html
 
 
 ## Démo - Docfx 
-Télécharger les fichiers de départ de la démonstration : [S4C1-DemoValidationFormulaire-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2009?ref_type=heads)
+Télécharger les fichiers de départ de la démonstration : [Démo - DocFx](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2009/DemoDocFx.zip?ref_type=heads)
 
