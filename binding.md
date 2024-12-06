@@ -102,7 +102,7 @@ Code du formulaire :
  }
 
 ```
-Dans cet exemple, le binding de chaque contrôle est spécifié dans l'attribut **Text** en utilisant la valeur **{Binding NomPropriete}**. Ainsi, les valeurs des propriétés Nom, Prenom et Age de l'objet associé au DataContext du formulaire seront affiché.
+Dans cet exemple, Le `DataContext` du formulaire est lié à l'objet `Personne`. Ainis, le binding de chaque contrôle est spécifié dans l'attribut **Text** en utilisant la valeur **{Binding NomPropriete}**. `Binding` faire référence à l'objet spécifié dans le `DataContext` et `NomPropriété` fait référence aux valeurs des propriétés Nom, Prenom et Age de l'objet associé au DataContext du formulaire seront affiché.
 
 ### Type de binding
 
