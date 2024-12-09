@@ -217,7 +217,7 @@ L'objet **MySqlDataReader** permet de parcourir les données reçues lors de l'e
 
 **Propriétés** :
 - **FieldCount** : Retourne le nombre de colonnes dans la ligne courante
-- **HasRow** : Indique si le MySqlDataReader contient une ou plusieurs lignes
+- **HasRow** : Booléen indiquant si le MySqlDataReader contient une ou plusieurs lignes
 
 Méthode :
 
