@@ -50,10 +50,31 @@ outline: deep
 
 Voici quelques exemples pour tester votre solution : https://fr.wikipedia.org/wiki/Palindrome#Quelques_exemples
 
-<!--
+
 ### Question 7
 
+Créer un mini-gestionnaire de **produits** avec un **tableau** de Produit (pas de List<>).
 
+Format d’entrée produits.csv :
+
+```cmd
+Nom;Quantite;Prix
+Pomme;10;0,99
+Banane;25;0,59
+Lait;5;2,49
+```
+
+Le programme doit :
+
+1) Charger les produits depuis le CSV (ignorer l’en-tête),
+
+2) Afficher la liste (Nom, Quantité, Prix),
+
+3) Demander à l'utilisateur s'il désire ajouter un produit. Si oui, ajouter un produit saisi au clavier (en redimensionnant le tableau sans utiliser Array.Resize),
+
+4) Sauvegarder vers produits.csv.
+
+<!--
 ### Tâches à faire
 
 Premièrement, télécharger :  **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**.
