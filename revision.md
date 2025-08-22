@@ -201,24 +201,24 @@ String.Format("{0,12}\t{1,-30}\t{2,9:c0}", param1, param2, param3) ;
 
 **ET**
 
-````c#
+```c#
 nb > 12 && nb < 25;	  // nb entre 12 et 25 (exclusivement) 
 ````
 
 **OU**
 
-````c#
+```c#
 nb < 30 || nb > 50; 	// nb < 30 ou plus grand que 50 
-````
+```
 
 **NON**
 
-````c#
+```c#
 bool erreur = true;
 !erreur 	// Inverse le résultat, renvoie False si le résultat est vrai
-````
+```
 
-````c#
+```c#
 bool succes = true ;
 string message =  ""  ;
 
@@ -230,7 +230,7 @@ if ( succes )
 if ( succes == true )
     message = "Bravo!";
 
-````
+```
 
 ::: danger ATTENTION! Ne jamais écrire
 Il n'y a aucun avantage à ajouter une comparaison superflue comme ceci :
@@ -303,7 +303,7 @@ return false
 ````
 ## Instructions conditionnelles
 
-###**SI ... ALORS**
+### **SI ... ALORS**
 ````c#
 if ( uneCondition )
 {

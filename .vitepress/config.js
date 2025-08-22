@@ -23,15 +23,18 @@ export default defineConfig({
           { text: 'Types', 
             collapsed: true,
             items : [
+              { text: 'Type nullable', link: '/type_nullable' },
               { text: 'String', link: '/string' },
-              { text: 'DateTime', link: '/datetime' },
+              /*{ text: 'DateTime', link: '/datetime' },
               { text: 'TimeSpan', link: '/timespan' },
               { text: 'DateOnly', link: '/dateonly' },
               { text: 'TimeOnly', link: '/timeonly' },
-              { text: 'Type Enum', link: '/enum' },
+              { text: 'Type Enum', link: '/enum' },*/
+             
+
             ]
           },
-          {text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          /*{text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
           {text: 'Relation entre les classes', link: '/relations' },
@@ -40,10 +43,10 @@ export default defineConfig({
           {text: 'Espace de nom', link: '/namespace' },
           {text: 'Méthode ToString()', link: '/methode_tostring' },
           {text: 'TryParse', link: '/tryparse' },
-          {text: 'Exercices', link: '/exercices_bloc1' },
+          {text: 'Exercices', link: '/exercices_bloc1' },*/
         ]
       },
-      { text: 'Bloc 2', 
+     /* { text: 'Bloc 2', 
         collapsed: true,
         items : [
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
@@ -69,7 +72,7 @@ export default defineConfig({
           { text: 'Exercices', link: '/exercices_bloc3' },
 
         ]
-      },
+      },*/
        /*{
         text: 'En vrac',
         items: [
@@ -99,7 +102,7 @@ export default defineConfig({
       
   
       ,*/
-      {
+      /*{
         text: 'WPF',
         items: [
           { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
@@ -119,7 +122,7 @@ export default defineConfig({
           { text: 'Convention de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
           { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },*/
+          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
         ]
       },

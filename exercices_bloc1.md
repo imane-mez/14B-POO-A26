@@ -7,12 +7,53 @@ outline: deep
 ## Semaine 1
 ::: details S1E1 - Révision
 
-### Palindrome
+### Question 1
 
-Écrivez un programme principal (application console) qui demande une phrase (sans accent, n'y caractères spéciaux) à l’utilisateur et qui vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire et qu'il soit le plus efficace possible. 
+Écrire un programme qui :
+
+1) Demande le **prénom** (string), l’**âge** (int) et la **taille** en mètres (double),
+
+2) Affiche : « Bonjour Marc, vous avez 20 ans et mesurez 1,75 m. » (Utilisez l'interpolation),
+
+3) Calcule et affiche la **taille en centimètres** avec 2 décimales.
+
+
+### Question 2 
+Écrire un programme qui lit un **entier** et affiche :
+
+1) « Positif », « Négatif » ou « Zéro » ;
+
+2) « Pair » ou « Impair » ;
+
+3) une **catégorie** avec **if/else** : Petit (entre 1 et 10), Moyen (entre 11 et 100), Grand (> 100), sinon « Hors catégorie (≤ 0) ».
+
+
+### Question 3
+
+Écrire un programme qui li  **10 entiers ≥ 0**, calculer la **somme**, la **moyenne** et afficher le **plus grand** nombre saisi. **L'utilisateur ne doit pas pouvoir saisir un nombre négatif**. 
+
+
+### Question 4
+Écrire un permettant de lire **5 notes (entre 0 et 100)**, les ajoutes dans un **tableau**, affiche la **moyenne**, la note **minimale** et la note **maximale**. **L'utilisateur ne doit pas pouvoir saisir une note que n'est pas entre 0 et 100.**
+
+### Question 5
+
+Écrire un programme permettant de : 
+1) Créer une structure Livre avec **Titre** (string), **Auteur** (string) et **Prix** (decimal).
+2) Lire 3 livres, afficher le **plus cher**.
+
+### Question 6
+
+Écrire un programme qui 
+1) demande une phrase (sans accent, n'y caractères spéciaux) à l’utilisateur 
+2) qui vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire et qu'il soit le plus efficace possible. 
 
 Voici quelques exemples pour tester votre solution : https://fr.wikipedia.org/wiki/Palindrome#Quelques_exemples
 
+
+### Question 7
+
+<!--
 ### Tâches à faire
 
 Premièrement, télécharger :  **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**.
@@ -40,11 +81,11 @@ Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez �
 
 
  **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads)
-
+-->
 :::
 
 
-
+<!--
 ::: details S1E2 - Résolution de problème
 
 ### Restaurant
@@ -389,3 +430,4 @@ Mettre en pratique l'utilisation de la méthode ToStrin() et la validation des d
     - L’année doit être comprise entre l'année 1500 et l’année courante (utiliser **DateTime.Now.Year** pour obtenir l'année courante). Assurez-vous que votre validation fonctionne si l'on change d’année sans devoir modifier votre code.
 
 :::
+-->
