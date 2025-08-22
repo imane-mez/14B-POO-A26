@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Plan de cours
-      link: https://gitlab.com/420-14b-fx/contenu/-/blob/main/420-14B-FX%20-%20A24%20-%20MarVez.pdf?ref_type=heads
+      link: https://gitlab.com/420-14b-fx/contenu/-/blob/main/420-14B-FX%20-%20A25%20-%20MarVez.pdf?ref_type=heads
 
     - theme: alt
       text: Notes de cours
