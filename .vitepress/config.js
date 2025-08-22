@@ -42,8 +42,8 @@ export default defineConfig({
           {text: 'Composition d\'objets', link: '/composition_objets' },
           {text: 'Espace de nom', link: '/namespace' },
           {text: 'Méthode ToString()', link: '/methode_tostring' },
-          {text: 'TryParse', link: '/tryparse' },
-          {text: 'Exercices', link: '/exercices_bloc1' },*/
+          {text: 'TryParse', link: '/tryparse' },*/
+          {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
      /* { text: 'Bloc 2', 
