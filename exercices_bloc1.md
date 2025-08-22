@@ -11,7 +11,7 @@ outline: deep
 
 Écrire un programme qui :
 
-1) Demande le **prénom** (string), l’**âge** (int) et la **taille** en mètres (double),
+1) Demande le **prénom**, l’**âge** et la **taille** en mètres,
 
 2) Affiche : « Bonjour Marc, vous avez 20 ans et mesurez 1,75 m. » (Utilisez l'interpolation),
 
