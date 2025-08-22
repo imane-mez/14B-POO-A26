@@ -50,10 +50,10 @@ outline: deep
 
 Voici quelques exemples pour tester votre solution : https://fr.wikipedia.org/wiki/Palindrome#Quelques_exemples
 
-
+<!--
 ### Question 7
 
-<!--
+
 ### Tâches à faire
 
 Premièrement, télécharger :  **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**.
