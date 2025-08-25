@@ -433,12 +433,12 @@ do
 
 ![Différence entre while et dowhile](./images/WhileVsDoWhile.jpg)
 
-## Vecteurs
+## tableaus
 
-Un vecteur est un regroupement ordonné de divers éléments de même type (entier, réel, chaîne de caractères, etc.) et de même sémantique (note, nom, item, etc.).
-- Pour désigner un élément d'un vecteur, on utilise un **nombre entier** qu'on appelle **indice**.
-- Le premier indice d'un vecteur est **0** et le dernier est **(N-1)** où N est la taille du vecteur; on dit que les indices d'un vecteur sont en **base 0**.
-- L'indice doit être placé entre crochets après le nom de la variable de type « vecteur de quelque chose » : **nomVect[indice]**.
+Un tableau est un regroupement ordonné de divers éléments de même type (entier, réel, chaîne de caractères, etc.) et de même sémantique (note, nom, item, etc.).
+- Pour désigner un élément d'un tableau, on utilise un **nombre entier** qu'on appelle **indice**.
+- Le premier indice d'un tableau est **0** et le dernier est **(N-1)** où N est la taille du tableau; on dit que les indices d'un tableau sont en **base 0**.
+- L'indice doit être placé entre crochets après le nom de la variable de type « tableau de quelque chose » : **nomVect[indice]**.
 
 ![Différence entre while et dowhile](./images/vecteur.png)
 

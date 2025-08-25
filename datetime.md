@@ -72,8 +72,8 @@ DateTime demain = aujourdhui.AddDays(1);
 Console.WriteLine("Demain  : " + demain.ToShortDateString());
 
 //Obtenir le nombre de jours entre deux dates
-int nombreJours = moiProchain.Subtract(aujourdhui).Days;
-Console.WriteLine($"Nombre de jours entre {moiProchain.ToShortDateString()} et {aujourdhui.ToShortDateString()} : {nombreJours} jours");
+int nombreJours = moisProchain.Subtract(aujourdhui).Days;
+Console.WriteLine($"Nombre de jours entre {moisProchain.ToShortDateString()} et {aujourdhui.ToShortDateString()} : {nombreJours} jours");
 
 ```
 

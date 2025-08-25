@@ -34,8 +34,8 @@ export default defineConfig({
 
             ]
           },
-          /*{text: 'Résolution de problèmes', link: '/resolution_problemes' },
-          {text: 'Classe', link: '/poo_intro' },
+          {text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          /*{text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
           {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
