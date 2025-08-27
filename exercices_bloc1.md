@@ -99,10 +99,10 @@ Une fois la structure Tache complétée, vous ne devriez plus avoir d'erreur dan
 Finalement, vous devez compléter le code manquant pour faire fonctionner l'application. Prenez soins de lire les commentaires des fonctions et du code contenu dans les fichiers **FonctionUtiles.cs** et **Program.cs**. 
 
 Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez également naviguer à travers le code à réaliser en parcourant la liste des commentaires de type "**//TODO :**" de Visual Studio. Pour ce faire, vous n'avez qu'à cliquer dans le menu Affichage et sélectionner **Tâche suivante** ou **Tâche précédente**. Cela devrait afficher la liste des tâches que vous devez réaliser pour faire fonctionner le programme. **Attention**, celles-ci ne sont pas inscrite en ordre de réalisation dans cette liste. C'est à vous de décider l'ordre dans lequel vous allez compléter le code manquant. 
-
+-->
 
  **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads)
--->
+
 :::
 
 
