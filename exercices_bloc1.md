@@ -191,7 +191,7 @@ Veuillez saisir une lettre :
 
 :::
 
-<!--
+
 
 ## Semaine 2
 
@@ -263,14 +263,14 @@ Vous devez concevoir une application qui va permettre de simuler une partie de d
 Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
 
 
-
+<!--
 ### Solution de l'exercice 
 
  [S2E1-CreationClasse-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads)
-
+-->
 :::
 
-
+<!--
 ::: details S2E2 - Encapsulation
 
 ### objectif

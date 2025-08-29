@@ -232,7 +232,7 @@ rect1.hauteur = 10;
 rect1.largeur = 20;
 rect1.couleur = "Rouge";
 ```
-Et on doit faire de même pour chaque objet!!! C'est un peu long! Évidemment, il y a un moyen pour effectuer les deux opérations (création et affectation des valeurs à l'objet) en même temps. Il faut tout simplement se rappeler que le constructeur est comme une méthode et qu'on peut passer des paramètres à une méthode. On peut donc faire la même chose avec le constructeur! Voici comment on pourrait le faire pour la classe Rectangle:
+Et on doit faire de même pour chaque objet!!! C'est un peu long! Évidemment, il y a un moyen pour effectuer les deux opérations (création et affectation des valeurs à l'objet) en même temps. Il faut tout simplement se rappeler que **le constructeur est comme une méthode et qu'on peut passer des paramètres** à une méthode. On peut donc faire la même chose avec le constructeur! Voici comment on pourrait le faire pour la classe Rectangle:
 
 
 
@@ -261,9 +261,9 @@ class Rectangle
 
     public Rectangle(float hauteur, float largeur, string couleur)// [!code focus]
     {// [!code focus]
-            this.hauteur = hauteur;// [!code focus]
-            this.largeur = largeur;// [!code focus]
-            this.couleur = couleur;// [!code focus]
+            hauteur = hauteur;// [!code focus]
+            largeur = largeur;// [!code focus]
+            couleur = couleur;// [!code focus]
     }// [!code focus]
 
 
@@ -278,7 +278,49 @@ class Rectangle
 }
 ```
 
-Vous remarquerez que le nom des paramètres du constructeur sont identiques à ceux des attributs de la classe. C'est pour cette raison que nous devons utiliser le mot clé **this.** Celui-ci fait référence à **l'instance de la classe**. Il nous permet donc d'affecter la valeur d'un paramètre du constructeur à son attribut correspondant. 
+Vous remarquerez que le nom des paramètres du constructeur sont identiques à ceux des attributs de la classe. Ce qui porte à confusion et pourrais entraîner des erreurs. 
+
+Pour éviter cela, il est possible de : 
+
+1) utiliser le mot clé **this.** Celui-ci fait référence à **l'instance de la classe**. Il nous permet donc d'affecter la valeur d'un paramètre du constructeur à son attribut correspondant. 
+
+```c#
+public Rectangle(float hauteur, float largeur, string couleur)
+{
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+    this.couleur = couleur; 
+}
+```
+
+2) Renommer les attributs afin qu'ils commencent par le caractère "_" suivi d'une lettre minuscule.
+
+```c#
+/// <summary>
+/// Hauteur en cm du rectangle
+/// </summary>
+public float _hauteur;
+
+/// <summary>
+/// Largeur en cm du rectangle
+/// </summary>
+public float _largeur;
+
+/// <summary>
+/// Couleur du rectangle
+/// </summary>
+public string _couleur;
+
+public Rectangle(float hauteur, float largeur, string couleur)
+{
+    _hauteur = hauteur;
+    _largeur = largeur;
+    _couleur = couleur; 
+}
+```
+
+L'utilisation de *this* est plus verbeuse alors que la l'utilisation de **_camelCase** est la convention la plus propre et la plus répandue en C# moderne.
+
 
 Maintenant, nous pourrons créer des objets Rectangle en leur passant en paramètre les valeurs initiales qui leur sont propres, ce qui est beaucoup plus efficace que de créer un objet par défaut et ensuite affecter ses attributs…
 
@@ -301,17 +343,17 @@ class Rectangle
     /// <summary>
     /// Hauteur en cm du rectangle
     /// </summary>
-    public float hauteur;
+    public float _hauteur;
 
     /// <summary>
     /// Largeur en cm du rectangle
     /// </summary>
-    public float largeur;
+    public float _largeur;
 
     /// <summary>
     /// Couleur du rectangle
     /// </summary>
-    public string couleur;
+    public string _couleur;
 
 
     /// <summary>
@@ -322,9 +364,9 @@ class Rectangle
     /// <param name="couleur">Couleur en cm du rectangle</param>
     public Rectangle(float hauteur, float largeur, string couleur)
     {
-        this.hauteur = hauteur;
-        this.largeur = largeur;
-        this.couleur = couleur;
+        _hauteur = hauteur;
+        _largeur = largeur;
+        _couleur = couleur;
     }
 
     /// <summary>
@@ -333,7 +375,7 @@ class Rectangle
     /// <returns>Périmètre du rectangle</returns>
     public float CalculerPerimetre()
     {
-        return (hauteur * 2) + (largeur * 2);
+        return (_hauteur * 2) + (_largeur * 2);
     }
 }
 ```

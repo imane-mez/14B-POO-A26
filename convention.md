@@ -44,7 +44,7 @@ Exemple :
 - Espace de noms
 - Interface
 
-# Identificateur avec le casse mixte (lowerCamelCase)
+## Identificateur avec le casse mixte (lowerCamelCase)
 
 - Paramètre d'une méthode
 - Attribut privé d'une classe 
