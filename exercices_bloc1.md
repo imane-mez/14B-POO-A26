@@ -183,11 +183,11 @@ Nombre d'essais restant : 5
 
 Veuillez saisir une lettre :
 ```
-<!--
+
 ### Solution de l'exercice 
 
- [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes-Solution.zip?ref_type=heads)
--->
+ [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes.zip)
+
 
 :::
 
@@ -270,14 +270,14 @@ Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leur
 -->
 :::
 
-<!--
+
 ::: details S2E2 - Encapsulation
 
 ### objectif
 
 L'objectif de cet exercice est de mettre en pratique les nouvelles notions que vous venez d'apprendre ou d'approfondir en ce début de session (constructeurs, propriétés, méthodes paramétrées, types et conversions).  Pour ce faire, vous devez développer une **classe** appelée "**Creature**" ainsi qu'un nouveau type **Enum** (Assurez-vous d'avoir lu la section : [Type-Enum](https://420-14b-fx.gitlab.io/docs/enum.html)) appelé "**CreatureType**". 
 
-Pour **tester** cette classe, vous devez concevoir un **programme principal** qui permettra de tester l'attaque, le vol et également si une créature est morte ou vivante. Pour ce faire, vous devez demander à l'utilisateur de choisir deux créatures et de simuler un combat. Les adversaires s'attaquent chacun leur tour tant qu'une des deux créatures n'est pas morte. La valeur d'une attaque est déterminée par un nombre aléatoire entre 1 et 15. Finalement, La créature qui gagne peut voler l'autre.
+Pour **tester** cette classe, vous devez concevoir un **programme principal** qui simule un combat entre deux créatures choisies par l’utilisateur. Les adversaires s'attaquent chacun leur tour tant qu'une des deux créatures n'est pas morte. La valeur d'une attaque est déterminée par un nombre aléatoire entre 1 et 15. Finalement, La créature qui gagne vole le contenu de la bourse du perdant.
 
 Vous devez indiquer pour chaque attaque qui est l'attaquant ainsi que les statistiques de chaque créature. Finalement vous devez afficher le gagnant ainsi que la nombre de pièces d'or qu'il a gagné.
 
@@ -288,8 +288,6 @@ Il est important de respecter les spécifications données ci-dessous et les [no
 - Créez un nouveau projet de type "Application Console".  Vous pouvez appeler votre projet "S2E2-CreaturesMythiques".
 
 ### Création de l'énumération (enum) appelée "CreatureType"
-
-- Pour créer l'énumération, vous devez ajouter une nouvelle classe et par la suite remplacer le mot "class" par "enum".  Retirez aussi toutes les instructions "using".
 - Le nom du fichier doit être "**CreatureType.cs**".
 - Les valeurs de l'énumération sont :
     - Elfe
@@ -299,23 +297,22 @@ Il est important de respecter les spécifications données ci-dessous et les [no
 ###  Création de la classe "Creature"
 - Créez une nouvelle classe appelée "Creature".
 
-
     **Attributs de la classe "Creature"**
 
-    | Attribut          |      Type      |  
-    | -------------     | :-----------: | 
-    | **_type** (type de la créature)                                                                                       | CreatureType  |
-    | **_vie** (nombre de points de vie)                                                                                    | sbyte         | 
-    | **_armure** (nombre de points d'armure de la créature. Ne peut pas être négatif)                                      | byte          |
-    | **_bourse** (nombre de pièces d'or que possède la créature, ne peut pas négatif, mais peut être plus grand que 255)   | ushort        |
+    | Attribut          |      Type     |  Description
+    | -------------     | :-----------: | :-----------:
+    | **_type**         | CreatureType  | Type de créature
+    | **_vie**          | byte          | Points de vie
+    | **_armure**       | byte          | Points d’armure 
+    | **_bourse**       | ushort        | Nombre de pièces d’or (>=0 et <= 100)
 
 
     **Constructeurs de la classe "Creature"**
-    - Premier constructeur : Avec **un seul paramètre** qui est le **type de la créature** à créer (CreatureType).
-    - Deuxième constructeur : Avec **aucun paramètre** → par défaut, on **crée un Elfe** en appelant le constructeur précédent.
-    - À noter qu'il n'y a pas de constructeur acceptant en paramètre tous les attributs car lors de la création d'une créature, on ne peut pas choisir soi-même la valeur des attributs vie, armure et bourse; on ne peut que choisir le type de créature (ou prendre le type par défaut).  Les valeurs des attributs vie, armure et bourse sont fixées en fonction du type de créature.
+
+    - Constructeur avec paramètre : reçoit un **CreatureType** et initialise la** vie/armure/bourse** selon le type.
+    - Constructeur par défaut : crée un **Elfe**.
     - Toutes les créatures ont 10 pièces d'or lors de leur création (bourse = 10).
-    - Une fois le type de créature connu, la vie et l'armure sont déterminés par le tableau suivant :
+
 
     | type de créature  |      Vie      | Armure        |
     | -------------     | :-----------: | :-----------: |
@@ -326,50 +323,95 @@ Il est important de respecter les spécifications données ci-dessous et les [no
     **Méthodes de la classe "Creature"**
 
     **bool EstVivante()**
-        - Retourne un booléen indiquant si la créature est vivante (true = vivante, false = morte).
-        - Une créature est morte si sa vie est plus petite ou égale à zéro sauf pour les zombies pour lesquels la vie doit être plus petite ou égale à -5.
-
-    **bool EstMorte()**
-    - Retourne un booléen indiquant si la créature est morte (true = morte, false = vivante).
-    - Pensez à utiliser la méthode EstVivante() au lieu de recoder au complet (pas de redondance de code).
+    - Retourne un booléen indiquant si la créature est vivante (true = vivante, false = morte).
+    - Une créature est morte si sa vie est plus petite ou égale à zéro.
 
     **void SeFaireAttaquer(byte forceAttaque)**
-    - Permet d'infliger (forceAttaque-armure) dommages (pas négatif) à la créature.  Les dommages infligés peuvent bien sûr être nuls.
-    - Les gobelins sont plus résistants que les autres créatures; ainsi, les dommages infligés à un gobelin sont réduits de moitié arrondi vers le haut.  Par exemple : 5 dommages est réduit à 3 dommages car 5/2 = 2,5 qui donne 3 lorsqu'on arrondi vers le haut.
-    - La vie doit être diminuée des dommages infligés.  Attention de ne pas soustraire des dommages négatifs et d'ainsi augmenter la vie.
-    - Pour tous les types de créature sauf les zombies, la vie ne doit pas être négative.  La plus petite valeur permise est zéro; ce qui signifie que la créature est morte.  Pour les zombies, la vie peut descendre dans les négatifs autant qu'on le désire (même plus bas que -5).
+    - Permet d'infliger des dommages(forceAttaque-armure) à la créature.  Les dommages infligés peuvent bien sûr être nuls.
+    - La vie doit être diminuée des dommages infligés.  
+    - Pour tous les types de créature la vie ne doit pas être négative.  La plus petite valeur permise est zéro; ce qui signifie que la créature est morte.
 
     **ushort SeFaireVoler()**
-    - Permet de tenter de voler des pièces d'or à une créature.  Le nombre de pièces volées est retourné.
-    - Il est impossible de voler un Gobelin même s'il est mort.
-    - Un elfe dont la vie est plus petite que 5 perd la moitié de sa bourse arrondie vers le bas.
-    - Un elfe dont la vie est plus grande ou égale à 5 perd 3 pièces d'or (au maximum).
-    - Un zombie dont la vie est négative ou à zéro (<=0) perd la totalité de sa bourse.
-    - Un zombie dont la vie est plus grande que zéro, perd une pièce d'or seulement.
+   - Si la créature est morte, elle perd tout son or (retourner la bourse et la remettre à 0). Sinon, aucune perte (retourne 0)
 
-    **Méthodes de la classe "Programme"**
-        
-    **void AfficherCreature(Creature creature)**
-    - Affiche le type de créature, sa vie, son armure et sa bourse.  Il faut aussi indiquer si la créature est vivante ou bien morte.
+    **Programme principal**
 
-### Notes particulières
+    - Demander à l’utilisateur de choisir deux créatures (par leur type).
+    - Les deux créatures s’attaquent chacun leur tour avec une attaque aléatoire entre 1 et 15. La créature qui attaque en premier est déterminée de manière aléatoire. 
+    - Après chaque attaque, afficher les informations de chaque créature.
+    - Quand une créature meurt, l’autre la vole.
+    - Afficher le gagnant et le nombre de pièces d’or qu’il possède.
 
-- Pensez à utiliser l'opérateur conditionnel ternaire pour les petites structures conditionnelles : 
+    Exemple de sortie attendue :
 
-    (condition ? valeur_si_vrai : valeur_si_faux)
+    ```cmd
+    ==================
+    Créature Mythiques
+    ==================
+    ======================================================
+    Choix d'une créature
+    ======================================================
+    1) Elf
+    2) Goblin
+    3) zombie
+    ======================================================
 
-- Pensez à utiliser l'instruction "**switch**" (même sur un type enum) au lieu de toujours utiliser des "if" imbriquées.
-- Utilisez des **constantes publiques** pour représenter les différentes valeurs constantes soient celles pour la création des créatures (6), celle pour le nombre de pièce d'or (lors de la création d'une créature) et celle pour le type de créature par défaut (donc, 8 constantes au total).
-- Créez des propriétés en **lecture publiques** et des propriétés en** écriture privés**.
-- Assurez-vous de bien **respecter les types primitifs** qu'on vous demande d'utiliser pour les attributs et les méthodes.
+    Saisir votre choix ? 1
+
+    Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 10)
+
+    ======================================================
+    Choix d'une créature
+    ======================================================
+    1) Elf
+    2) Goblin
+    3) zombie
+    ======================================================
+
+    Saisir votre choix ? 3
+
+    Créature de type  Zombie (Vie = 8, Armure = 5, Bourse = 10)
+
+    Vous vous faites attaquer par le Zombie de 4 pts.
+
+    ========================
+    Résultat de l'attaque :
+
+    Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 10)
+
+    Créature de type  Zombie (Vie = 8, Armure = 5, Bourse = 10)
+
+    ========================
+
+    Appuyez sur une touche continuer le combat.
+
+    Vous attaquer le Zombie de 15 pts.
+
+    ========================
+    Résultat de l'attaque :
+
+    Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 10)
+
+    Créature de type  Zombie (Vie = 0, Armure = 5, Bourse = 10)
 
 
+    ========================
+    Appuyez sur une touche continuer le combat.
+
+    Vous avez gagné le combat!
+
+    Vous avez réussi à voler 10 pièces d'or au Zombie
+
+    Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 20)
+    ```
+<!--
 ### Solution de l'exercice 
 
  [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2004/S2E2%20-%20ExercicesEncapsulation.zip?ref_type=heads)
+ -->
 
 :::
-
+<!--
 ## Semaine 3 
 
 ::: details S3E1 - Relation entre classes

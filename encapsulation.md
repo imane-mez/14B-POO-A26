@@ -262,7 +262,8 @@ public Rectangle(float hauteur, float largeur, string couleur)
 ```
 
 Finalement, vous remarquez qu'il est facile de se mêler entre le nom d'un attribut hauteur, d'une propriété Hauteur et le nom d'un paramètre hauteur utilisé dans le constructeur paramétré. Afin de minimiser les risques d'erreur, voici quelques règles à appliquer :
- - •	Un attribut doit toujours commencer par le caractère "_" suivi d'une lettre minuscule. 
+
+- Un attribut doit toujours commencer par le caractère "_" suivi d'une lettre minuscule. 
         Exemple :
 
 ```c#

@@ -19,10 +19,10 @@
 
 Note : Les commentaires XML sont surtout utiles lorsque les classes que vous concevez sont utilisées par d’autres programmeurs; ils ne voient pas le code de la classe directement (encapsulation).
 
-7) À l'intérieur des méthodes, constructeurs et propriétés, le code doit aussi être commenté de manière appropriée si le code effectu quelque chose de complexe. 
+7) À l'intérieur des méthodes, le code doit aussi être commenté **seulement** si le code effectu quelque chose de complexe. 
 Note : Ce type de commentaires est surtout utile lorsque les classes que vous concevez sont modifiées par d’autres programmeurs.
 
-8) On ne doit **jamais utiliser de break** à l'intérieur des **structures itératives** (for, while, do..while). Vous pouvez utiliser un return à l'intérieur d'une structure itérative seulement si celle-ci se trouve in l'intérieur d'une méthode et pour laquelle il n'y aucun code après. 
+8) On ne doit **jamais utiliser les instruction break ou continu** à l'intérieur des **structures itératives** (for, while, do..while). Vous pouvez utiliser un return à l'intérieur d'une structure itérative seulement si celle-ci se trouve in l'intérieur d'une méthode et pour laquelle il n'y aucun code après. 
     - Par exemple, dans le cas d'une méthode qui effectue une recherche et retourne l'élément trouvé.
 
 8) Lorsqu'on ajoute des objets à des contrôles graphiques tels des ListBox, il ne faut pas appeler la méthode ToString() des objets; il faut ajouter l'objet directement.

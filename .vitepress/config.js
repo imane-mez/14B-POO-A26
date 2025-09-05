@@ -28,16 +28,16 @@ export default defineConfig({
               /*{ text: 'DateTime', link: '/datetime' },
               { text: 'TimeSpan', link: '/timespan' },
               { text: 'DateOnly', link: '/dateonly' },
-              { text: 'TimeOnly', link: '/timeonly' },
-              { text: 'Type Enum', link: '/enum' },*/
+              { text: 'TimeOnly', link: '/timeonly' },*/
+              { text: 'Type Enum', link: '/enum' },
              
 
             ]
           },
           {text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
-          /*{text: 'Encapsulation', link: '/encapsulation' },
-          {text: 'Relation entre les classes', link: '/relations' },
+          {text: 'Encapsulation', link: '/encapsulation' },
+          /*{text: 'Relation entre les classes', link: '/relations' },
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
           {text: 'Composition d\'objets', link: '/composition_objets' },
           {text: 'Espace de nom', link: '/namespace' },
@@ -77,10 +77,10 @@ export default defineConfig({
         text: 'En vrac',
         items: [
           { text: 'Convention de nommage', link: '/convention' },
-          /*{ text: 'Norme de codage', link: '/normes' },
+          { text: 'Norme de codage', link: '/normes' },
           
          { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
+          /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },*/
         ]
       },
