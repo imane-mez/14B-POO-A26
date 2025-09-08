@@ -224,7 +224,7 @@ Console.WriteLine("Le nom du client trouvé est :" + unClient.Nom);
 
 Il exite plusieurs logiciels permettant la création de diagrammes de classes. Dans le cadre du cours, nous utiliseron le logiciel gratuit Draw.io. 
 
-Téléchargement du logiciel : https://github.com/jgraph/drawio-desktop/releases/tag/v24.7.8
+Téléchargement du logiciel : https://github.com/jgraph/drawio-desktop/releases/download/v28.1.2/draw.io-28.1.2-windows-installer.exe
 
 Afin de facilité le design de vos diagrammes, j'ai créé un librairie contenant déjà les différentes formes à utiliser. 
 
