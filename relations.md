@@ -240,6 +240,9 @@ Afin de facilité le design de vos diagrammes, j'ai créé un librairie contenan
 
 
 ## Démo - Relations
-Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
+Télécharger la démonstration de départ : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
+
+<!--
+Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)-->
 
 
