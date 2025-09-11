@@ -404,11 +404,11 @@ Il est important de respecter les spécifications données ci-dessous et les [no
 
     Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 20)
     ```
-<!--
+
 ### Solution de l'exercice 
 
- [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2004/S2E2%20-%20ExercicesEncapsulation.zip?ref_type=heads)
- -->
+ [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2004/S2E2-ExerciceEncapsulation.zip)
+ 
 
 :::
 
