@@ -25,10 +25,10 @@ export default defineConfig({
             items : [
               { text: 'Type nullable', link: '/type_nullable' },
               { text: 'String', link: '/string' },
-              /*{ text: 'DateTime', link: '/datetime' },
+              { text: 'DateTime', link: '/datetime' },
               { text: 'TimeSpan', link: '/timespan' },
               { text: 'DateOnly', link: '/dateonly' },
-              { text: 'TimeOnly', link: '/timeonly' },*/
+              { text: 'TimeOnly', link: '/timeonly' },
               { text: 'Type Enum', link: '/enum' },
              
 
@@ -39,8 +39,8 @@ export default defineConfig({
           {text: 'Encapsulation', link: '/encapsulation' },
           {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
-          /*{text: 'Composition d\'objets', link: '/composition_objets' },
-          {text: 'Espace de nom', link: '/namespace' },
+          {text: 'Composition d\'objets', link: '/composition_objets' },
+         /*{text: 'Espace de nom', link: '/namespace' },
           {text: 'Méthode ToString()', link: '/methode_tostring' },
           {text: 'TryParse', link: '/tryparse' },*/
           {text: 'Exercices', link: '/exercices_bloc1' },
