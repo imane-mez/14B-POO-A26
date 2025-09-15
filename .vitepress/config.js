@@ -41,8 +41,8 @@ export default defineConfig({
           {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
           {text: 'Composition d\'objets', link: '/composition_objets' },
           {text: 'Espace de nom', link: '/namespace' },
-           /*{text: 'Méthode ToString()', link: '/methode_tostring' },
-          {text: 'TryParse', link: '/tryparse' },*/
+          {text: 'Méthode ToString()', link: '/methode_tostring' },
+           /*{text: 'TryParse', link: '/tryparse' },*/
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
@@ -78,8 +78,8 @@ export default defineConfig({
         items: [
           { text: 'Convention de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
-          
-         { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
           /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },*/
         ]
