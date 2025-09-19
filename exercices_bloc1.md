@@ -469,7 +469,7 @@ Télécharger la solution : [S3E1-ExerciceRelation.zip](https://gitlab.com/420-1
 
 :::
 
-<!--
+
 ## Semaine 4
 ::: details S4E1 - Validation de formulaire
 
@@ -493,4 +493,3 @@ Mettre en pratique l'utilisation de la méthode ToStrin() et la validation des d
     - L’année doit être comprise entre l'année 1500 et l’année courante (utiliser **DateTime.Now.Year** pour obtenir l'année courante). Assurez-vous que votre validation fonctionne si l'on change d’année sans devoir modifier votre code.
 
 :::
--->

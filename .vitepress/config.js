@@ -42,7 +42,9 @@ export default defineConfig({
           {text: 'Composition d\'objets', link: '/composition_objets' },
           {text: 'Espace de nom', link: '/namespace' },
           {text: 'Méthode ToString()', link: '/methode_tostring' },
-           /*{text: 'TryParse', link: '/tryparse' },*/
+          {text: 'TryParse', link: '/tryparse' },
+          { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
+          { text: 'Contrôle DatePicker', link: '/date_picker' },
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
@@ -105,8 +107,7 @@ export default defineConfig({
       /*{
         text: 'WPF',
         items: [
-          { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
-          { text: 'Contrôle DatePicker', link: '/date_picker' },
+         
           { text: 'Rétroaction utilsateur', link: '/retroaction' },
           { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
           { text: 'Affichage du temps en WPF', link: '/timespan_up_down_control' },
