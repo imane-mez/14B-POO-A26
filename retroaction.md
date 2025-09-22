@@ -4,127 +4,85 @@ outline: deep
 
 # Rétroaction utilisateur
 
-## Les messages d'erreurs
+## Principes généraux
 
-- **Ne donnez pas de messages d'erreur lorsque les utilisateurs ne sont pas susceptibles d'effectuer une action ou de modifier leur comportement à la suite du message**. S'il n'y a aucune action que les utilisateurs peuvent entreprendre, ou si le problème n'est pas significatif, supprimez le message d'erreur.
+- **Afficher un message seulement si l’utilisateur peut agir**
+Pas de message si aucune action n’est possible ou si l’incident est insignifiant.
+Exemple : une reconnexion automatique réussie ne nécessite pas de message.
 
-- **Dans la mesure du possible, proposez une solution afin que les utilisateurs puissent résoudre le problème**. Cependant, assurez-vous que la solution proposée est susceptible de résoudre le problème. Ne perdez pas de temps aux utilisateurs en suggérant une solution possible, mais improbable.
+- **Proposer une solution réaliste**
+Indiquer comment corriger le problème, uniquement si la solution est crédible.
+Exemple : « Impossible de se connecter au serveur. Vérifiez votre connexion Internet ».
 
-- **Soyez spécifique**. Évitez les mots vagues, tels que « une erreur s'est produite ». Fournissez des noms, des lieux, et les valeurs des objets impliqués.
+- **Être précis**
+Préciser l’objet, la valeur ou l’opération en cause.
+Exemple : « Le fichier config.json est introuvable dans le dossier Documents ».
 
-- **N'utilisez pas de formulation qui blâme l'utilisateur ou implique une erreur de l'utilisateur**. Évitez d'utiliser le mot « vous » et « votre », dans la formulation de la phrase. Utilisez la voix passive lorsque l'utilisateur est le sujet et pourrait se sentir blâmé pour l'erreur si la voix active était utilisée.
+- **Formulation neutre, sans blâme**
+    - Éviter « vous », « votre ».
+    - Privilégier la voix passive si l’utilisateur est impliqué.
+        <br>Mauvais : « Vous avez saisi un mot de passe incorrect. »
+        <br>Bon : « Le mot de passe saisi est incorrect. »
 
+- **Vocabulaire à utiliser**
 
-- N'utilisez pas les mots suivants:
-    - Erreur, échec (utilisez plutôt problème)
-    - Échec de (utilisez à la place impossible)
-    - Illégal, invalide, mauvais (utilisation incorrecte ou non valide à la place)
-    - Abandonner, tuer, terminer (utilisez plutôt arrêter)
-    - Catastrophique, mortel (utilisez plutôt grave)
+    - Préférer **problème** à erreur ou échec
+    - Utiliser **non valide** plutôt que illégal ou mauvais
+    - Utiliser **arrêter** plutôt que abandonner ou tuer
+    - Préférer **grave** à catastrophique ou fatal
 
-- **N'accompagnez pas les messages d'erreur d'effets sonores**. Cela est choquant et inutile.
+- **Pas d’effets sonores**
+Les sons d’alerte sont perçus comme agressifs et rarement utiles.
 
-## Les icônes pour les messages
+## Icônes dans un MessageBox WPF
 
 ![MessageBox îcones](./images/messagebox_icons.png)
 
-Les icônes standard ont ces significations:
+| Icône | Usage | Exemple concret |
+|-------|-------|-----------------|
+| **Error** (`MessageBoxImage.Error`) | Problème empêchant l’action | « La base de données locale est corrompue. » |
+| **Warning** (`MessageBoxImage.Warning`) | Situation pouvant causer un problème futur | « Le certificat du serveur expirera bientôt. » |
+| **Information** (`MessageBoxImage.Information`) | Information utile ou confirmation | « Sauvegarde terminée avec succès. » |
+| **Question** (`MessageBoxImage.Question`) | Demande de confirmation ou d’action | « Voulez-vous vraiment supprimer ce document ? » |
 
-- Icône d'erreur : L'interface utilisateur (UI) présente une erreur ou un problème qui s'est produit.
-- Icône d'avertissement : L'interface utilisateur présente une condition qui pourrait causer un problème à l'avenir.
-- Icône d'information : L'interface utilisateur présente des informations utiles.
-- Icône de point d'interrogation : L'interface utilisateur indique un point d'entrée d'aide où une demande à l'utilisateur qui n'est pas une erreur ou un avertissement.
+**Bonnes pratiques**
 
-### Utilisation
-
-Il y a plusieurs facteurs dans le choix de l'icône standard appropriée qui explique en partie pourquoi ils sont souvent mal utilisés. **Les erreurs les plus courantes** sont:
-
-- **Utilisation d'une icône d'avertissement pour les erreurs mineures**. Les avertissements ne sont pas des erreurs "adoucies".
-- Utiliser une icône standard lorsqu'il est préférable de ne pas utiliser d'icône du tout. **Tous les messages n'ont pas besoin d'une icône**.
-- Alerter les utilisateurs en donnant des **avertissements pour des problèmes mineurs ou en présentant des questions de routine comme des avertissements**. Ce faisant, rends les programmes susceptibles de présenter des risques et évite les problèmes véritablement importants.
-
-Choisissez des icônes standard en fonction du type de message et non de la gravité du problème sous-jacent. Les types de messages sont:
-
-- **Erreur** : Une erreur ou un problème qui se sont produits.
-- **Avertissement** : Une condition qui pourrait causer un problème à l'avenir.
-- **Information**. Informations utiles.
-
-Par conséquent, **un message d'erreur peut prendre une icône d'erreur, mais jamais une icône d'avertissement**. N'utilisez pas d'icônes d'avertissement comme un moyen d'adoucir les erreurs mineures. Ainsi, malgré leur différence de gravité, "Taille de police incorrecte" est une erreur, alors que « Continuer cette opération mettra le feu à votre maison » est un avertissement.
-
-## Déterminer le bon type de message 
-
-Certains problèmes peuvent être présentés comme une erreur, un avertissement ou une information, en fonction de l'emphase et de la formulation.
-
-Par exemple, supposons qu'une page Web ne puisse pas charger un contrôle ActiveX non signé basé sur la version du navigateur utilisé :
-
-- Erreur. "Cette page ne peut pas charger un contrôle ActiveX non signé." (Formulé comme un problème existant.).
-
-- Avertissement. "Cette page peut ne pas se comporter comme prévu, car votre navigateur n'est pas configuré pour charger les contrôles ActiveX non signés. " ou "Autoriser cette page à installer un contrôle ActiveX non signé? Faire cela à partir des sources non fiables peut endommager votre ordinateur.". (Ces deux termes sont des conditions susceptibles de causer des problèmes futurs.).
-
-- Information. "Vous avez configuré votre navigateur pour bloquer les contrôles ActiveX non signés." (Formulé comme une déclaration de fait.).
-
-Pour déterminer le type de message approprié, concentrez-vous sur l'aspect le plus important du problème que les utilisateurs doivent savoir ou agir sur. 
-
-En règle générale,
-
- - **Si un problème empêche l'utilisateur de continuer à utiliser correctement l'application**, il est présenté comme une **Erreur**; 
- - **Si l'utilisateur peut continuer à utiliser l'application**, c'est un **Avertissement**. Élaborez l'instruction principale ou tout autre texte correspondant basé sur cette idée, puis choisissez une icône (standard ou autre) qui correspond au texte. Le texte de l'instruction principale et les icônes doivent toujours correspondre.
-
-### La gravité
-
-Bien que la gravité ne soit pas une considération lors du choix parmi les icônes d'erreur, d'avertissement et d'information, la gravité est un facteur pour déterminer si une icône standard doit être utilisée.
-
-Les icônes fonctionnent mieux lorsqu'elles sont utilisées pour communiquer visuellement. Les utilisateurs doivent pouvoir dire en un coup d'œil la nature des informations et les conséquences de leur réponse, il faut donc différencier erreurs critiques et avertissements de leurs homologues ordinaires. 
-
-Les erreurs et avertissements critiques ont ces caractéristiques:
-
-- Ils impliquent la perte potentielle d'un ou de plusieurs des éléments suivants:
-    - Un atout précieux, comme une perte de données ou une perte financière.
-    - Accès au système ou intégrité.
-    - Confidentialité ou contrôle des informations confidentielles.
-    - Temps de l'utilisateur (une quantité importante, par exemple 30 secondes ou plus).
-- Ils ont des conséquences inattendues ou involontaires.
-- Ils nécessitent une manipulation correcte maintenant, car les erreurs ne peuvent pas être facilement corrigées et peuvent même être irréversibles.
-
-Pour distinguer les erreurs et avertissements non critiques des erreurs critiques :
-
- - Les messages non critiques sont généralement affichés **sans icône**. Cela attire l'attention sur les messages critiques, rend les messages critiques et non critiques visuellement distincts, et est cohérent avec le ton de Windows. 
-
-**Tous les messages n'ont pas besoin d'une icône. Les icônes ne sont pas un moyen de décorer les messages.**
+- Choisir l’icône en fonction du type de message, pas seulement de la gravité.
+- Ne pas utiliser d’icône si le problème est mineur ou déjà corrigé par l’application.
 
 
-## Évitez de suravertir.
+## Déterminer le type de message
 
-Dans une interface utilisateur classique, la plupart des erreurs sont liées à des erreurs de saisie utilisateur. La plupart des erreurs de saisie utilisateur ne sont pas critiques, car facilement corrigées, et les utilisateurs doivent les corriger avant de continuer. Aussi, attirer trop l'attention sur les erreurs mineures de l'utilisateur est contraire au ton de Windows. **Par conséquent, des erreurs de saisie par un utilisateur sont généralement affichées sans icône d'erreur.**
+| Type | Quand l’utiliser | Exemple WPF |
+|------|------------------|------------|
+| **Erreur** | Le problème bloque l’action en cours | « Impossible de charger le profil utilisateur. » |
+| **Avertissement** | L’action peut continuer mais comporte un risque | « L’espace disque est presque plein. » |
+| **Information** | Simple notification ou état du système | « Mise à jour terminée. » |
 
-Nous avons tendance à suravertir dans les programmes Windows. Le programme Windows typique a des icônes d'avertissement apparemment partout, avertissant sur des choses qui ont peu d'importance. 
 
-Dans certains programmes, presque chaque question est présentée comme un avertissement. La suralerte donne l'impression que l'utilisation d'un programme est une activité dangereuse et nous distrait de problèmes importants.
+## Gravité et hiérarchisation
 
-**Le simple potentiel de perte de données à lui seul est insuffisant pour utiliser une icône d'avertissement**. IL doit être accompagné de résultats indésirables qui devraient être inattendus ou involontaires et qui ne sont pas facilement corrigibles. Sinon, à peu près toute question répondue de façon incorrecte peut être interprétée comme entraînant une perte de données quelconque et mériter une icône d'avertissement.
+- **Erreurs / avertissements critiques**
+    - Risque de perte de données, d’accès ou de confidentialité.
+    - Conséquences inattendues ou difficiles à corriger.
+    - Nécessitent une action immédiate.
+    <br>Exemple : « Impossible d’ouvrir le fichier de configuration. L’application doit fermer. »
 
-Pour utiliser des **icônes d'avertissement sur des problèmes vraiment critiques**:
+- **Messages non critiques**
+    - Souvent sans icône.
+    - Exemple : un champ obligatoire laissé vide dans un formulaire.
 
-- **Assurez-vous que le problème justifie une attention accrue de l'utilisateur**. Les confirmations et questions de routine ne devraient pas avoir des icônes d'avertissement.
+- **Éviter la suralerte**
+    - Trop d’avertissements banalisent les vrais problèmes et fatiguent l’utilisateur.
 
-- **Les utilisateurs sont-ils susceptibles de se comporter différemment en raison de l'icône d'avertissement?** Les utilisateurs sont-ils susceptibles de considérer leur décision plus soigneusement?
+## Moments clés pour fournir une rétroaction
 
-## À quel moment donner une rétroaction utilisateur.
-
-Voici les moments où vous devriez donner une rétroaction à un utilsateur :
-
-- **Soumission de Formulaire** :
-    - Succès: Informer l'utilisateur que le formulaire a été soumis avec succès.
-    - Échec: Expliquer pourquoi la soumission a échoué et comment résoudre le problème.
-- **Chargement et Temps d’Attente** (Dans le cas où le chargement peut être long) :
-    - Indicateur de Chargement: Fournir une indication visuelle lorsque le contenu ou une fonctionnalité est en cours de chargement.
-    - Progression: Montrer une barre de progression ou un autre indicateur pour les tâches longues.
-- **Confirmation d’Actions** :
-    - Demander confirmation pour les actions irréversibles (comme la suppression de données).
-    - Fournir un feedback de confirmation après des actions importantes (ex: sauvegarde réussie, suppression réussie).
-- **Erreurs Système** :
-    - Informer l'utilisateur en cas d'erreur système ou de problème de connexion.
-
+| Situation | Bonnes pratiques | Exemple WPF |
+|-----------|------------------|------------|
+| **Soumission d’un formulaire** | Afficher un message de succès ou expliquer l’échec | « Enregistrement réussi. » / « Adresse courriel non valide. » |
+| **Chargement ou attente longue** | Indiquer la progression (ProgressBar, spinner) | « Téléchargement en cours (45 %). » |
+| **Confirmation d’actions irréversibles** | Demander confirmation | `MessageBox.Show("Supprimer cet utilisateur ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question)` |
+| **Erreurs système** | Informer de la nature du problème et suggérer une action | « Connexion perdue. Tentative de reconnexion… » |
 
 
 ## Afficher un message à l'utilisateur en WPF
