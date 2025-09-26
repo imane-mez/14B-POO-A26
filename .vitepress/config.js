@@ -50,6 +50,7 @@ export default defineConfig({
               { text: 'Rétroaction utilsateur', link: '/retroaction' }
             ]
           },
+          { text: 'Documentation du code', link: '/commentaires' },
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
@@ -74,7 +75,7 @@ export default defineConfig({
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
           { text: 'Indexeur', link: '/indexeur' },
           { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
-          { text: 'Documentation du code', link: '/commentaires' },
+         ,
           { text: 'Scénarios de test', link: '/tests_fonctionnels' },
           { text: 'Exercices', link: '/exercices_bloc3' },
 
