@@ -16,10 +16,11 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
 1)	Créer un nouveau projet WPF nommé **S7E1_ExerciceListeGenerique**.
 2)	Créer la classe **Film** répondant aux spécifications suivantes :
     - **Attributs et propriétés** :
+        - Id (Identifiant unique)
         - Titre (Ne doit pas être vide)
         - Année (Doit être inférieure ou égale à l'année courante)
     - **Constructeur**
-        - Avec paramètre permettant d'initialiser le titre et l'année du film.
+        - Avec paramètre permettant d'initialiser l'id, le titre et l'année du film.
     - **Méthodes** :
         - ToString() : Retourne le titre du film avec l'année entre parenthèses. 
 3)	Créer une classe nommée GestionFilms permettant la gestion d’une liste de film.
@@ -42,16 +43,17 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - D'ajouter un nouveau film valide à la liste des films contenus dans votre attribut **_gestionFilms**. N'oubliez pas de donner une rétroaction à l'utilisateur si l'ajout a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - D'afficher la listes des films contenus dans l'attribut **_gestionFilms**
     - De sélectionner un film dans le ListeBox et d'afficher les informations d'un film dans les champs texte. Lors d'une sélection, le bouton ajouter est désactivé et le bouton supprimé est activé.
-    - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas de donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
+    - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas d<!---->e donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - Permettre de fermer le formulaire avec le bouton quitter.
 
-<!--#### Solution
+<!--
+#### Solution
 
-Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2013?ref_type=heads)!-->
-
+Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2013?ref_type=heads)
+-->
 :::
 
-
+<!--
 ::: details Formulaire secondaire
 
 ### Formulaire secondaire
@@ -104,13 +106,13 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 6) Écrire le code du bouton « Afficher détails » du formulaire principal permettant d'afficher les détails d'un film sélectionné dans le formulaire FormFilm.
 
 
-<#### Solution
+#### Solution
 
 Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads)
 
 :::
 
-<!--
+
 ## Semaine 8
 ::: details S8E1 - Application Windows multiformulaires
 
@@ -125,7 +127,7 @@ Complétez l'exemple [S8C1-DemoMultiFormulaireCRUD](https://gitlab.com/420-14b-f
 
 À la suite d'une de ces opérations, faites-en sorte que la liste des employés soit modifiée ainsi que le ListBox présentant les employés. 
 
-:::-->
+:::
 
 
 ## Semaine 9
@@ -155,11 +157,11 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 
 9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats.
 
-<!--
+
 ### Solution
 
 Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-SurchargeOperateurs.zip?ref_type=heads)
-!-->
+
 :::
 
 
@@ -208,13 +210,13 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
 
 3)	Écrire le code du programme permettant de tester les différentes méthodes de votre classe.
 
-<!--
+
 ### Solution
 
 
 Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-ClasseStatique-Solution.zip?ref_type=heads)
 
--->
+
 :::
 
 ## Semaine 10
@@ -237,5 +239,4 @@ Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui re
 Pour ce faire, vous devez implémenter la méthode CompareTo de l’interface **IComparable**.
 Testez votre méthode appelant la méthode **Sort** de la liste d’employé avant son affichage dans le **listbox**. 
 
-
-
+-->

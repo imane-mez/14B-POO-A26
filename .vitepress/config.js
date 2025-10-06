@@ -54,22 +54,23 @@ export default defineConfig({
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
-     /* { text: 'Bloc 2', 
-        collapsed: true,
+      { text: 'Bloc 2', 
+        collapsed: false,
         items : [
-          {text: 'Listes génériques (List)', link: '/listes_generiques' },
-          {text: 'Type Guid', link: '/guid' },
-          {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+         {text: 'Listes génériques (List)', link: '/listes_generiques' },
+         {text: 'Type Guid', link: '/guid' },
+          /* {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
-          {text: 'Classes UtilEnum', link: '/classe_utilenum' },
+         
           {text: 'Algorithmes de tri', link: '/algo_tri' },
           {text: 'Tests unitaires', link: '/tests_unitaires' },
-          {text: 'Exercices', link: '/exercices_bloc2' },
+          */
+         {text: 'Exercices', link: '/exercices_bloc2' },
 
         ]
       },
-      {
+      /*{
         text : 'Bloc 3',
         items : [
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
@@ -86,7 +87,8 @@ export default defineConfig({
         items: [
           { text: 'Convention de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
-          { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          //{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
           /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },*/
