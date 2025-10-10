@@ -53,7 +53,7 @@ Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://git
 -->
 :::
 
-<!--
+
 ::: details Formulaire secondaire
 
 ### Formulaire secondaire
@@ -107,11 +107,11 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 
 
 #### Solution
-
+<!--
 Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads)
-
+-->
 :::
-
+<!--
 
 ## Semaine 8
 ::: details S8E1 - Application Windows multiformulaires
