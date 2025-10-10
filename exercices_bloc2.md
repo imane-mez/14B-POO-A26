@@ -65,14 +65,14 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 
 1)	Créer un nouveau projet WPF nommé S7E2_Formulaire secondaire.
 2)	Créer la classe Film (vous pouvez réutiliser la classe de l'exercice précédent) répondant aux spécifications suivantes :
-        - **Attributs et propriétés** :
-            - Titre (ne peut pas être vide)
-            - Année (doit être entre 1500 et l'année courante)
-            - Acteurs (liste de chaîne de caractères)
-        - **Constructeur**
-            - Avec paramètre permettant d'initialiser le titre et l'année du film ainsi qu'une liste d'acteur vide.
-        - **Méthodes** :
-            - ToString() : Retourne le titre du film avec l'année entre parenthèses. 
+    - **Attributs et propriétés** :
+        - Titre (ne peut pas être vide)
+        - Année (doit être entre 1500 et l'année courante)
+        - Acteurs (liste de chaîne de caractères)
+    - **Constructeur**
+        - Avec paramètre permettant d'initialiser le titre et l'année du film ainsi qu'une liste d'acteur vide.
+    - **Méthodes** :
+        - ToString() : Retourne le titre du film avec l'année entre parenthèses. 
 
 3) Créer une classe nommée GestionFilms permettant la gestion d’une liste de film. (Vous pouvez réutiliser celle créer dans l'exercice précédent)
 
