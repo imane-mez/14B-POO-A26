@@ -95,12 +95,16 @@ public partial class FormSecondaire : Window
     public Personne Personne
     {
         get { return _personne; }
-        set { _personne = value; }
+        private set { _personne = value; }
     }
 
-    public FormSecondaire()
+    public FormSecondaire(Personne personne)
     {
         InitializeComponent();
+
+        //Affectation de la valeur du paramètre du constructeur 
+        // à la propriété correspondante
+        Personne = personne;
     }
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -117,13 +121,15 @@ Voici comment afficher une personne à partir de ce formulaire
 MainWindow.cs
 
 ```c#
-//Instanciation d'un objet du type du formulaire secondaire.
- FormSecondaire frmSecondaire = new FormSecondaire();
+
 
  Personne p = new Personne(txtPrenom.Text, txtNom.Text);
 
- //Affectation de l'objet personne à la proprité Personne du formulaire secondaire
- frmSecondaire.Personne = p;
+ //Instanciation d'un objet du type du formulaire secondare
+ //en passant l'objet personne à afficher comme paramètre du constructeur.
+ FormSecondaire frmSecondaire = new FormSecondaire(p);
+
+ //Affichage du formulaire
  frmSecondaire.ShowDialog();
 ```
 
@@ -146,7 +152,7 @@ FormAjoutPersonne.cs
 ```c#
   private void btnAjouter_Click(object sender, RoutedEventArgs e)
   {
-//Création de l'objet personne et affectation à la propriété correspondante du formulaire
+    //Création de l'objet personne et affectation à la propriété correspondante du formulaire
  	Personne  = new Personne(txtPrenom.Text.Trim(), txtNom.Text.Trim());   
 
  	//Indique que l'utilisateur a cliqué sur Ajouter et ferme le formulaire
