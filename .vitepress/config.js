@@ -57,8 +57,9 @@ export default defineConfig({
       { text: 'Bloc 2', 
         collapsed: false,
         items : [
-         {text: 'Listes génériques (List)', link: '/listes_generiques' },
-         {text: 'Type Guid', link: '/guid' },
+          {text: 'Type Guid', link: '/guid' },
+          {text: 'Listes génériques (List)', link: '/listes_generiques' },
+          { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
           /* {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
@@ -117,7 +118,7 @@ export default defineConfig({
         items: [
          
          
-          { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
+        
           { text: 'Affichage du temps en WPF', link: '/timespan_up_down_control' },
           { text: 'Fichier de configuration appsettings.json', link: '/appsettings' },
           { text: 'Liaison de données', link: '/binding' },

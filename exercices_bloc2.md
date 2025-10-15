@@ -4,7 +4,7 @@ outline: deep
 # Exercices bloc 2
 
 
-## Semaine 8
+## Semaine 7
 ::: details Liste génériques
 
 ### Liste génériques
@@ -46,11 +46,11 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas d<!---->e donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - Permettre de fermer le formulaire avec le bouton quitter.
 
-<!--
+
 #### Solution
 
-Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2013?ref_type=heads)
--->
+Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2013/S7E1-ListeGenerique%20-%20Solution.zip?ref_type=heads)
+
 :::
 
 

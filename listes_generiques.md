@@ -252,7 +252,9 @@ Si vous avez besoin de l'index de l'élément pendant l'itération, for est la v
 foreach ne fournit pas directement l'index de l'élément en cours.
 
 
+#### Démonstration
 
+Télécharger la démonstration commplète : [DemoListeGenerique](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2013/DemoListeGenerique.zip?ref_type=heads)
 
 
 
