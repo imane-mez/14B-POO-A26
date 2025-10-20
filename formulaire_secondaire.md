@@ -186,3 +186,7 @@ private void btnAjouterPersonne_Click(object sender, RoutedEventArgs e)
 ```
 
 
+## Démonstration
+
+ Télécharger le projet de départ de la démonstration : [S8C1-DemoCRUD - Départ.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20D%C3%A9part.zip)
+

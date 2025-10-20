@@ -111,7 +111,7 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads)
 -->
 :::
-<!--
+
 
 ## Semaine 8
 ::: details S8E1 - Application Windows multiformulaires
@@ -129,7 +129,7 @@ Complétez l'exemple [S8C1-DemoMultiFormulaireCRUD](https://gitlab.com/420-14b-f
 
 :::
 
-
+<!--
 ## Semaine 9
 ::: details Surcharge d'opérateurs
 
