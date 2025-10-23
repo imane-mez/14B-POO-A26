@@ -190,3 +190,5 @@ private void btnAjouterPersonne_Click(object sender, RoutedEventArgs e)
 
  Télécharger le projet de départ de la démonstration : [S8C1-DemoCRUD - Départ.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20D%C3%A9part.zip)
 
+Télécharger la démonstration complétée pour la création d'un employé : [S8C1-DemoCRUD - Create.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20Create.zip?ref_type=heads)
+
