@@ -18,7 +18,7 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - **Attributs et propriétés** :
         - Id (Identifiant unique)
         - Titre (Ne doit pas être vide)
-        - Année (Doit être inférieure ou égale à l'année courante)
+        - Année (Doit être supérieur à 1888 et inférieure ou égale à l'année courante)
     - **Constructeur**
         - Avec paramètre permettant d'initialiser l'id, le titre et l'année du film.
     - **Méthodes** :
@@ -39,7 +39,7 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
 - Ajouter un attribut de type GestionFilm nommé **_gestionFilms** dans votre formulaire. Celui-ci vous permettra de gérer les films.
 - Écrire le code du formulaire permettant :
     - D'initialiser le formulaire en cliquant sur le bouton Nouveau. L'initialisation doit supprimer le contenu des champs, désactiver le bouton supprimer et activer le bouton ajouter.
-    - De valider le formulaire. Tous les champs sont obligatoires. L'année doit être une valeur comprise entre 1500 et la date du jour. Vous pouvez utiliser DateTime.Now.Year pour obtenir l'année courante. Vous devez afficher toutes les erreurs à l'utilisateur si le formulaire n'est pas valide. 
+    - De valider le formulaire. Tous les champs sont obligatoires. L'année doit être inférieure à la date du jour. Vous pouvez utiliser DateTime.Now.Year pour obtenir l'année courante. Vous devez afficher toutes les erreurs à l'utilisateur si le formulaire n'est pas valide. 
     - D'ajouter un nouveau film valide à la liste des films contenus dans votre attribut **_gestionFilms**. N'oubliez pas de donner une rétroaction à l'utilisateur si l'ajout a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - D'afficher la listes des films contenus dans l'attribut **_gestionFilms**
     - De sélectionner un film dans le ListeBox et d'afficher les informations d'un film dans les champs texte. Lors d'une sélection, le bouton ajouter est désactivé et le bouton supprimé est activé.
@@ -66,8 +66,8 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 1)	Créer un nouveau projet WPF nommé S7E2_Formulaire secondaire.
 2)	Créer la classe Film (vous pouvez réutiliser la classe de l'exercice précédent) répondant aux spécifications suivantes :
     - **Attributs et propriétés** :
-        - Titre (ne peut pas être vide)
-        - Année (doit être entre 1500 et l'année courante)
+        - Titre : Ne peut pas être vide. Si tel est la cas, alors la valeur est "Non fourni".
+        - Année : Doit être entre 1888 et l'année courante. Si est invérieur à 1888 alors la valeur est 1888 et si est supérieur à l'année courante alors la valeur est l'année courante.
         - Acteurs (liste de chaîne de caractères)
     - **Constructeur**
         - Avec paramètre permettant d'initialiser le titre et l'année du film ainsi qu'une liste d'acteur vide.
@@ -107,9 +107,9 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 
 
 #### Solution
-<!--
-Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads)
--->
+
+Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads)
+
 :::
 
 
