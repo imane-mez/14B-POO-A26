@@ -121,7 +121,7 @@ Mettre en pratique la construction d'une application Windows multiformulaires pe
 
 ### Problème
 
-Complétez l'exemple [S8C1-DemoMultiFormulaireCRUD](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc2/cours%2015?ref_type=heads) présenté en classe en implémentant la **modification** et la **suppression** d'un employé.  
+Complétez l'exemple [S8C1-DemoCRUD](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20Create.zip?ref_type=heads) présenté en classe en implémentant la **modification** et la **suppression** d'un employé.  
 - Pour la modification, vous devez modifier le formulaire existant afin qu'il affiche les informations d'un employé sélectionné et permette la modification.  Assurez-vous de bien modifier le titre de du formulaire ainsi que le libellé des boutons.
 - Pour la suppression, vous devez modifier le formulaire pour qu'il affiche les informations de l'employé en lecture seule seulement. Vous devez également demander la confirmation par l'utilisateur avant la suppression. Assurez-vous de bien modifier le titre de du formulaire ainsi que le libellé des boutons.
 
