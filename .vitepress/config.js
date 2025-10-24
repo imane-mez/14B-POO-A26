@@ -60,8 +60,8 @@ export default defineConfig({
           {text: 'Type Guid', link: '/guid' },
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
           { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
-          /* {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
-          {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+          /*{text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
          
           {text: 'Algorithmes de tri', link: '/algo_tri' },

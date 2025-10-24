@@ -93,7 +93,7 @@ public string Titre
     private set 
     {
         if (string.IsNullOrWhiteSpace(value))
-            throw new ArgumentException("Titre", "Le titre ne peut pas être nul, vide ou ne contenir que des espaces");
+            throw new ArgumentException(nameof(Titre), "Le titre ne peut pas être nul, vide ou ne contenir que des espaces");
         
         //Cette ligne ne sera pas exécuté dans le cas d'une erreur.
         _titre = value.Trim(); 
@@ -121,10 +121,12 @@ public string Titre
 |**FileNotFoundException**             |Exception levée lors d'une tentative d'accès à un fichier qui n'existe pas sur le disque échoue.
 |StackOverflowException                |Exception levée lorsque la capacité de la pile d'exécution est dépassée en raison d'un trop grand nombre d'appels à la méthode imbriquée.
 
-<!--
-## Démonstration
-Télécharger le fichier suivant pour la démonstration : [S9C1 - DemoExceptionsTryCatchFinally](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2017/S9C1%20-%20DemoExceptionsTryCatchFinally.zip?ref_type=heads)
 
+## Démonstration
+Télécharger le fichier suivant pour la démonstration : [S8C2 - GestionException](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2016/S9C2-GestionExceptions.zip?ref_type=heads)
+
+
+<!--
 ## Exercice 1
 ::: tip S9E1 - Gestion des exceptions
 
