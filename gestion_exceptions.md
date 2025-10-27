@@ -29,6 +29,7 @@ Pour gérer des erreurs de ce type, un procédé très efficace consiste à util
 Utilisez des blocs **try- catch** autour du code susceptible de générer une exception et assurez-vous que votre code peut continuer son exécution à la suite à cette exception. Dans les blocs **catch**, veillez à toujours classer les exceptions de la plus dérivée à la moins dérivée. Les exceptions dérivées ne seront pas attrapées si elles sont précédées d’un bloc catch du type Exception.
 
 ```c#
+try
 {
 	//Instructions pouvant lever des exceptions.
 }
@@ -92,11 +93,16 @@ public string Titre
     get { return _titre; }
     private set 
     {
-        if (string.IsNullOrWhiteSpace(value))
-            throw new ArgumentException(nameof(Titre), "Le titre ne peut pas être nul, vide ou ne contenir que des espaces");
+        if (string.IsNull(value))
+            throw new ArgumentNullException(nameof(Titre), "Le titre ne peut pas être nul");
+
+        value = value.trim()
+
+        if(value.length == 0)
+             throw new ArgumentException("Le titre ne peut pas être vide ou contenir que des espaces", nameof(Titre));
         
         //Cette ligne ne sera pas exécuté dans le cas d'une erreur.
-        _titre = value.Trim(); 
+        _titre = value;
     }
 }
 
