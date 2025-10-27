@@ -3,7 +3,7 @@
 
 ## Classe statique (static)
 
-Une classe statique est identique à une classe non statique, à une différence près : **une classe statique ne peut pas être instanciée**. En d’autres termes, vous ne pouvez pas utiliser l’opérateur **new** pour créer une variable du type de la classe. Étant donné qu’il n’y a aucune variable d’instance, vous accédez aux membres d’une classe statique en utilisant le nom de classe.
+Une classe statique est identique à une classe non statique, à une différence près : **une classe statique ne peut pas être instanciée**. En d’autres termes, vous ne pouvez pas utiliser l’opérateur **new** pour créer une variable du type de la classe. Étant donné qu’il n’y a aucune variable d’instance, vous accédez aux membres d’une classe statique en utilisant **le nom de classe**.
 
 Par exemple, si vous avez une classe statique nommée ConvertisseurUnites qui a une méthode publique nommée :
 
