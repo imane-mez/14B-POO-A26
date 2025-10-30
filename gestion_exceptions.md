@@ -93,7 +93,7 @@ public string Titre
     get { return _titre; }
     private set 
     {
-        if (string.IsNull(value))
+        if (value is null)
             throw new ArgumentNullException(nameof(Titre), "Le titre ne peut pas être nul");
 
         value = value.trim()
