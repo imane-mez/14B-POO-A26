@@ -59,13 +59,13 @@ export default defineConfig({
         items : [
           {text: 'Type Guid', link: '/guid' },
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
-          { text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
-           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+          {text: 'Application muli-fenêtre', link: '/formulaire_secondaire' },
+          {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
-          /*{text: 'Classes et membres statiques', link: '/classe_statique' },
-         
+          {text: 'Classes et membres statiques', link: '/classe_statique' },
+          {text : 'Expression régulière', link: '/exp_reg' }, 
           {text: 'Algorithmes de tri', link: '/algo_tri' },
-          {text: 'Tests unitaires', link: '/tests_unitaires' },
+          /*{text: 'Tests unitaires', link: '/tests_unitaires' },
           */
          {text: 'Exercices', link: '/exercices_bloc2' },
 

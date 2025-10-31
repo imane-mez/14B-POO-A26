@@ -143,6 +143,118 @@ Résultat :
 Il y a 1 Chat(s) adopté(s).
 Il y a 2 Chat(s) adopté(s).
 ```
+## static readonly : **pour des valeurs dynamiques partagées**
+
+Lorsqu’une valeur doit être **fixe pendant l’exécution** mais **calculée dynamiquement au démarrage**, on peut utiliser un champ public static readonly.
+
+Différence :
+
+    - **const** : valeur connue à la compilation
+    - **static readonly** : valeur connue seulement à l’exécution, mais non modifiable ensuite
+
+Ce type de membre est souvent utile pour représenter une valeur de référence commune à toutes les instances d’une classe.
+
+Par exemple, la date du jour utilisée pour valider les dates de naissance d’employés.
+
+### Exemple : validation de la date de naissance d’un employé
+
+```c#
+/// <summary>
+/// Représente un employé.
+/// </summary>
+public class Employe
+{
+    /// <summary>
+    /// Date courante utilisée pour les validations.
+    /// Cette valeur est fixée dynamiquement au chargement de la classe
+    /// et partagée entre tous les employés.
+    /// </summary>
+    public static readonly DateTime DateCourante;
+
+    // Constructeur statique exécuté une seule fois au chargement de la classe
+    static Employe()
+    {
+        DateCourante = DateTime.Now.Date;
+    }
+
+    private DateTime _dateNaissance;
+
+    /// <summary>
+    /// Date de naissance de l’employé.
+    /// </summary>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// Lancée lorsque la date de naissance est ultérieure à la date courante.
+    /// </exception>
+    public DateTime DateNaissance
+    {
+        get => _dateNaissance;
+        set
+        {
+            if (value > DateCourante)
+                throw new ArgumentOutOfRangeException(
+                    nameof(DateNaissance),
+                    $"La date de naissance ({value:yyyy-MM-dd}) ne peut pas être ultérieure à la date courante ({DateCourante:yyyy-MM-dd})."
+                );
+
+            _dateNaissance = value;
+        }
+    }
+
+    public Employe(DateTime dateNaissance)
+    {
+        DateNaissance = dateNaissance;
+    }
+}
+
+```
+## Fonctions statiques pour la validation
+
+Les **méthodes statiques** sont souvent utilisées pour **valider des valeurs** à l’extérieur d’une classe.
+Elles permettent de centraliser la logique de validation afin d’éviter la duplication dans les formulaires.
+
+### Exemple : validation d’une adresse courriel
+
+```c#
+Utilisation à l’**intérieur de la classe** :
+public class Employe
+{
+
+    private string _courriel;
+
+    public string Courriel
+    {
+        get => _courriel;
+        set
+        {
+            if (!CourrielEstValide(value))
+                throw new ArgumentException("Le courriel est invalide.");
+            _courriel = value;
+        }
+    }
+
+    /// <summary>
+    /// Valide le format d'une adresse courriel.
+    /// </summary>
+    public static bool CourrielEstValide(string courriel)
+    {
+        return !string.IsNullOrWhiteSpace(courriel)
+            && courriel.Contains("@")
+            && courriel.Contains(".");
+    }
+
+}
+
+```
+
+Et à l’**extérieur (ex. : validation de formulaire WPF)** :
+
+```c#
+if (!Employe.CourrielEstValide(txtCourriel.Text))
+{
+    MessageBox.Show("Veuillez entrer une adresse courriel valide.");
+}
+
+```
 
 ## Constructeur statique
 
