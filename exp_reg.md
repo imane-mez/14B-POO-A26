@@ -38,9 +38,9 @@ On peut facilement les reconnaître dans un texte avec une expression régulièr
 ```c#
 string texte = "Voici les dossiers : 1234567, 7654321 et 1112223.";
 
-MatchCollection dossiers = Regex.Matches(texte, @"\b\d{7}\b");
+MatchCollection numerosDA = Regex.Matches(texte, @"\b\d{7}\b");
 
-foreach (Match m in dossiers)
+foreach (Match m in numerosDA)
 {
     Console.WriteLine($"DA trouvé : {m.Value}");
 }

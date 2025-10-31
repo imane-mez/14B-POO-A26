@@ -8,7 +8,11 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+      // Exclure toute page dont le chemin contient "tests_unitaires"
+        filter: (page) => !page.path.includes('/tests_unitaires')
+      }
     },
     nav: [
       { text: 'Accueil', link: '/' },
@@ -63,7 +67,6 @@ export default defineConfig({
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
-          {text : 'Expression régulière', link: '/exp_reg' }, 
           {text: 'Algorithmes de tri', link: '/algo_tri' },
           /*{text: 'Tests unitaires', link: '/tests_unitaires' },
           */

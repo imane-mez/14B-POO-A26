@@ -149,8 +149,8 @@ Lorsqu’une valeur doit être **fixe pendant l’exécution** mais **calculée 
 
 Différence :
 
-    - **const** : valeur connue à la compilation
-    - **static readonly** : valeur connue seulement à l’exécution, mais non modifiable ensuite
+- **const** : valeur connue à la compilation
+- **static readonly** : valeur connue seulement à l’exécution, mais non modifiable ensuite
 
 Ce type de membre est souvent utile pour représenter une valeur de référence commune à toutes les instances d’une classe.
 
