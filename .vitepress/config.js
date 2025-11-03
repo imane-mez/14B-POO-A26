@@ -67,6 +67,7 @@ export default defineConfig({
           {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
+          {text: 'Expressions régulières', link: '/exp_reg' },
           {text: 'Algorithmes de tri', link: '/algo_tri' },
           {text: 'Tests unitaires', link: '/tests_unitaires' },
           {text: 'Exercices', link: '/exercices_bloc2' },
