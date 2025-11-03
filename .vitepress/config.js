@@ -68,9 +68,8 @@ export default defineConfig({
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Algorithmes de tri', link: '/algo_tri' },
-          /*{text: 'Tests unitaires', link: '/tests_unitaires' },
-          */
-         {text: 'Exercices', link: '/exercices_bloc2' },
+          {text: 'Tests unitaires', link: '/tests_unitaires' },
+          {text: 'Exercices', link: '/exercices_bloc2' },
 
         ]
       },
