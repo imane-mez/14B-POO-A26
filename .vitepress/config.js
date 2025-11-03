@@ -11,7 +11,7 @@ export default defineConfig({
       provider: 'local',
       options: {
       // Exclure toute page dont le chemin contient "tests_unitaires"
-        filter: (page) => !page.path.includes('/tests_unitaires')
+      //  filter: (page) => !page.path.includes('/tests_unitaires')
       }
     },
     nav: [
