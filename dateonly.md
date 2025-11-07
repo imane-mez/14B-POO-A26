@@ -90,3 +90,44 @@ DateOnly dateOnly = DateOnly.FromDateTime(dateTime);
 Console.WriteLine($"Conversion en DateOnly : {dateOnly}"); // Affiche : Conversion en DateOnly : 2024-10-02
 
 ```
+
+## Propriétés MinValue et MaxValue
+
+**DateOnly.MinValue**
+
+Représente la date la plus ancienne que le type DateOnly peut contenir.
+    - Valeur fixe : 1er janvier de l’an 1 (0001-01-01)
+
+``` c#
+Console.WriteLine(DateOnly.MinValue); // Affiche 0001-01-01
+```
+
+**DateOnly.MaxValue**
+
+Représente la date la plus éloignée dans le futur que le type DateOnly peut contenir.
+
+    - Valeur fixe : 31 décembre de l’an 9999 (9999-12-31)
+
+```c#
+Console.WriteLine(DateOnly.MaxValue); // Affiche 9999-12-31
+```
+
+**Utilisation pratique**
+
+Pour vérifier si une valeur a été saisie
+```c#
+ public DateOnly DateNaissance
+    {
+        get { return _dateNaissance; }
+        set
+        {
+            // Validation : l'utilisateur doit avoir saisi une date
+            if (value == DateOnly.MinValue)
+            {
+                throw new ArgumentException("La date de début doit être saisie.");
+            }
+
+            _dateNaissance = value;
+        }
+    }
+```
