@@ -14,19 +14,20 @@ Mettre en pratique l’utilisation d’une base de données en C#.
 
 #### Préparation
 1) Téléchez le projet de départ : [S12E1-BD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E1-BD.zip)
-2) Importez dans pypMyAdmin - MySql le fichier **livres_bd.sql** se trouvant dans le projet de départ.
+2) Créer dans votre SGBD une base de données nommée **livre_db** et exécuter le script **livres_bd.sql** se trouvant dans le projet de départ pour créer les tables.
 
 #### Problème
 
-1) Créer une nouvelle classe nommée "**DAL.cs**" (Data Access Layer). Celle-ci doit contenir les méthodes permettant la gestion des livres (**CRUD**) contenus dans la base de données "**livres_bd**". 
+1) Créer une nouvelle classe nommée "**DAL.cs**" (Data Access Layer). Celle-ci doit contenir les méthodes statiques permettant la gestion des livres (**CRUD**) contenus dans la base de données "**livres_bd**". 
 4) Tester les différentes méthodes de votre classe "**DAL.cs**" afin de tester l’affichage de la liste des livres, l’ajout, la modification et la suppression d’un livre.
 
+<!--
 #### Solution
 Téléchargez la solution : [S12E1-BD-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E1-BD%20-%20Solution.zip)
-
+-->
 :::
 
-
+<!--
 ::: details Utilisation d'une base de données avec des objets composés.
 
 ### Utilisation d'une base de données avec des objets composés.
@@ -49,10 +50,10 @@ Vous devez modifier l'application afin de permettre à un utilisatuer d'ajouter 
 3) Compléter les méthodes du formulaire permettant l'affichage de la liste des livres.
 
 4) Compléter les méthode du formulaire permettant l'affichage des détails d'un livre sélectionné dans la liste. Lors de l'affichage des détails d'un livre, vous devez obtenir le livre à partir de la base de données.
-<!--
+
 #### Solution
 Téléchargez la solution : [S12E2-CompositionObjets-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets%20-%20Solution.zip)
--->
+
 :::
 
 
@@ -101,3 +102,4 @@ Mettre en pratique la création et l'utilisation d'indexeur en c#
 3) Tester l'ajout, la modification et la suppression d'employés dans une liste d'employés (LiseEmploye).
 
 :::
+-->

@@ -59,7 +59,7 @@ export default defineConfig({
         ]
       },
       { text: 'Bloc 2', 
-        collapsed: false,
+        collapsed: true,
         items : [
           {text: 'Type Guid', link: '/guid' },
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
@@ -74,18 +74,17 @@ export default defineConfig({
 
         ]
       },
-      /*{
+     {
         text : 'Bloc 3',
         items : [
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
-          { text: 'Indexeur', link: '/indexeur' },
+          /*{ text: 'Indexeur', link: '/indexeur' },
           { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
-         ,
-          { text: 'Scénarios de test', link: '/tests_fonctionnels' },
+          */{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
           { text: 'Exercices', link: '/exercices_bloc3' },
 
         ]
-      },*/
+      },
        {
         text: 'En vrac',
         items: [
