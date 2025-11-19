@@ -166,7 +166,10 @@ Dans la section **"Instancier un objet"** nous avons dit que pour créer un obje
 ```c#
 Rectangle rect1 = new Rectangle();
 ```
+
 Ce qui revient à créer un objet rect1, de type Rectangle. On utilise le mot **new** pour spécifier que l'on veut un nouvel objet.  Mais pourquoi réécrit-on le mot Rectangle() ensuite?  Il s'agit en fait ici de spécifier quel est le constructeur de l'objet, c'est-à-dire de spécifier comment l'objet sera créé ou quelle est la méthode constructrice de la classe, utilisée pour créer l’objet. 
+
+### Constructeur par défaut
 
 Jusqu'à maintenant, nous avons utilisé le **constructeur par défaut**, car nous n'avons pas défini nous-mêmes le constructeur de la classe Rectangle. De cette façon, comme nous l'avons dit auparavant, l'objet est initialisé aux valeurs par défaut prévu dans le langage C#.
 
@@ -232,7 +235,12 @@ rect1.hauteur = 10;
 rect1.largeur = 20;
 rect1.couleur = "Rouge";
 ```
-Et on doit faire de même pour chaque objet!!! C'est un peu long! Évidemment, il y a un moyen pour effectuer les deux opérations (création et affectation des valeurs à l'objet) en même temps. Il faut tout simplement se rappeler que **le constructeur est comme une méthode et qu'on peut passer des paramètres** à une méthode. On peut donc faire la même chose avec le constructeur! Voici comment on pourrait le faire pour la classe Rectangle:
+Et on doit faire de même pour chaque objet!!! C'est un peu long! Évidemment, il y a un moyen pour effectuer les deux opérations (création et affectation des valeurs à l'objet) en même temps. Il faut tout simplement se rappeler que **le constructeur est comme une méthode et qu'on peut passer des paramètres** à une méthode.
+
+
+### Constructeur avec paramètres
+
+Lorsque l’on veut créer un objet avec des valeurs différentes pour chaque instance, il est plus efficace de passer ces valeurs **directement au constructeur**, plutôt que de modifier les attributs après coup.
 
 
 
@@ -278,7 +286,10 @@ class Rectangle
 }
 ```
 
+### Nom des paramètres vs attributs
+
 Vous remarquerez que le nom des paramètres du constructeur sont identiques à ceux des attributs de la classe. Ce qui porte à confusion et pourrais entraîner des erreurs. 
+
 
 Pour éviter cela, il est possible de : 
 
@@ -378,7 +389,77 @@ class Rectangle
         return (_hauteur * 2) + (_largeur * 2);
     }
 }
+
 ```
+
+### Paramètres optionnels et arguments nommés
+
+En C#, il est possible de donner des **valeurs par défaut** aux paramètres d'un constructeur. Ces paramètres deviennent alors **optionnels** : il n’est pas obligatoire de les fournir lors de l’appel.
+
+Voici un exemple :  
+```c#
+public Rectangle(float hauteur = 10,
+                 float largeur = 20,
+                 string couleur = "blanc")
+{
+    _hauteur = hauteur;
+    _largeur = largeur;
+    _couleur = couleur;
+}
+
+```
+
+Grâce aux paramètres optionnels, on peut écrire :
+
+```c#
+var r1 = new Rectangle();                // toutes les valeurs par défaut
+var r2 = new Rectangle(50);              // hauteur = 50
+var r3 = new Rectangle(50, 100);         // hauteur = 50, largeur = 100
+
+```
+
+Mais on peut aller plus loin grâce aux **arguments nommés**.
+
+***Les arguments nommés***
+
+Les arguments nommés permettent de spécifier explicitement quel paramètre nous voulons assigner, peu importe son ordre dans la liste des paramètres.
+
+Avantages :
+
+- Permettre de fournir seulement les paramètres désirés
+- Ne pas respecter l’ordre du constructeur
+- Code plus clair et plus lisible
+
+**Exemple avec arguments nommés**
+```c#
+var r4 = new Rectangle(largeur: 100);
+
+```
+Ici :
+
+- largeur = 100
+- hauteur et couleur gardent leurs valeurs par défaut
+
+**Exemple où l’ordre n’a plus d’importance**
+```c#
+var r5 = new Rectangle(
+    couleur: "Bleu",
+    hauteur: 25
+);
+```
+
+::: warning  Attention : sans arguments nommés, l’ordre est obligatoire
+
+```c#
+var r6 = new Rectangle(10, 20, "Rouge");  // ✔ valide
+var r7 = new Rectangle("Rouge", 10, 20);  // ❌ invalide
+
+```
+:::
+
+Même si hauteur vient avant largeur dans la signature du constructeur, cela fonctionne correctement, car les paramètres sont **nommés**.
+
+
 ::: danger Attention! 
 
 Vous devez toujours bien commenter la **classe**,  ses **attributs**, ses **constructeurs** ainsi que ses **méthodes**!

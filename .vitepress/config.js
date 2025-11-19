@@ -80,8 +80,8 @@ export default defineConfig({
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
           /*{ text: 'Indexeur', link: '/indexeur' },
           { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
-          */{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
-          { text: 'Exercices', link: '/exercices_bloc3' },
+         { text: 'Scénarios de test', link: '/tests_fonctionnels' },
+           */{ text: 'Exercices', link: '/exercices_bloc3' },
 
         ]
       },
