@@ -405,6 +405,5 @@ public Rectangle(float hauteur = HAUTEUR_DEFAUT, float largeur = LARGEUR_DEFAUT,
  }
  ```
 
-
 ## Démo - Encapsulation
 Télécharger la démonstration complète : [S2C2 - DemoEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=heads)

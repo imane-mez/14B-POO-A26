@@ -330,3 +330,5 @@ private const string CONNECTION_STRING_NAME = "DefaultConnection";
            
 ```
 
+## Démonstration - composition d'objets
+Télécharger le projet de départ pour la démonstration : [S12c1-CompositionObjetsBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-CompositionObjetsBD.zip?ref_type=heads)
