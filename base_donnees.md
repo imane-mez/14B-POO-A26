@@ -140,16 +140,20 @@ Les commandes paramétrées peuvent également **améliorer les performances d'e
 Par exemple, pour spécifier une valeur de filtre pour un champ d'une table dans une clause WHERE ou pour spécifier des valeurs lors d'un INSERT:
 
 ```c#
-string requete = "SELECT Id, Nom, Prenom FROM Employes WHERE Id = @id;";
+string requete = "INSERT INTO Employes (Nom, Prenom) FROM Employes values (@nom, @prenom)";
 
 //Préparation de la commande
 MySqlCommand cmd = new MySqlCommand(requete, cn);
 
-//Ajout du paramètre Id 
-cmd.Parameters.Add("@id ", MySqlDbType.Int32);
+//Ajout du paramètre nom
+cmd.Parameters.Add("@nom ", MySqlDbType.String);
+//Affectation de la valeur Vézina au paramètre
+cmd.Parameters["@nom"].Value = 'Vézina';
 
-//Affectation de la valeur 99 au paramètre
-cmd.Parameters["@id"].Value = 99;
+//Ajout et affectation de la valeur Martin au paramètre preom
+cmd.Parameters.AddWithValue("@prenom", "Martin");
+
+cmd.ExecuteNonQuery();
 
 ```
 
@@ -323,10 +327,10 @@ private const string APPSETTINGS_FILE = "appsettings.json";
 private const string CONNECTION_STRING_NAME = "DefaultConnection";
 
 //Chargement des configurations du appsettings.json
- IConfiguration config = new ConfigurationBuilder().AddJsonFile(APPSETTINGS_FILE, false, true).Build();
+private static readonly IConfiguration _config = new ConfigurationBuilder().AddJsonFile(APPSETTINGS_FILE, false, true).Build();
 
- //Lecture de la chaîne de connexion dans le appsettings.json
- string connectionString = config.GetConnectionString(CONNECTION_STRING_NAME);
+//Lecture de la chaîne de connexion dans le appsettings.json
+string connectionString = _config.GetConnectionString(CONNECTION_STRING_NAME);
            
 ```
 
