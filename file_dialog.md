@@ -89,5 +89,5 @@ Effectue des opérations sur des instances de String qui contiennent des informa
 
 ## Démonstration
 
-Téléchez la démonstration :  [S12C2-DemoBindingImage](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-DemoImageBinding.zip?ref_type=heads)
+Téléchez la démonstration :  [S13C1-DemoBindingImage](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2025/S1C1%20-%20DemoImageBinding.zip?ref_type=heads)
 
