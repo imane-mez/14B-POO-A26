@@ -80,7 +80,7 @@ export default defineConfig({
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
           { text: 'WPF', 
             items : [
-                { text: 'Gestion de fichier dialog', link: '/file_dialog' },
+                { text: 'Gestion de fichiers', link: '/file_dialog' },
                 { text: 'ListeView', link: '/lisview' },
             
             ]
