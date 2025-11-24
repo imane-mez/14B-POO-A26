@@ -81,7 +81,7 @@ export default defineConfig({
           { text: 'WPF', 
             items : [
                 { text: 'Gestion de fichiers', link: '/file_dialog' },
-                { text: 'ListeView', link: '/lisview' },
+                { text: 'ListeView', link: '/listview' },
             
             ]
           },
