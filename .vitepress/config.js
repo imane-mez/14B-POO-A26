@@ -82,6 +82,8 @@ export default defineConfig({
             items : [
                 { text: 'Gestion de fichiers', link: '/file_dialog' },
                 { text: 'ListeView', link: '/listview' },
+                { text : 'TimeSpanUpDown Control', link: '/timespan_up_down_control' },
+                { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },  
             
             ]
           },
