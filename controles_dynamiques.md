@@ -142,4 +142,4 @@ public partial class MainWindow : Window
 
 ## Démonstration
 
-Téléchargez la démonstraton : [DemoControlesDynamique.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2025/DemoControlesDynamique.zip)
+Téléchargez la démonstraton : [DemoControlesDynamique.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2026/DemoControlesDynamique.zip)
