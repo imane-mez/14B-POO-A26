@@ -113,8 +113,8 @@ public Ami this[string telephone]
             if (ami.Telephone == telephone)
                 return ami;
         }
-
-	    throw new ArgumentNullException(nameof(telephone), "Aucun ami ne possède ce numéro de téléphone");
+        
+	    throw new KeyNotFoundException("Aucun ami ne possède ce numéro de téléphone.");
 
     }
     
