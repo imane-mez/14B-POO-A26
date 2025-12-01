@@ -78,6 +78,8 @@ export default defineConfig({
         text : 'Bloc 3',
         items : [
           { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
+          { text: 'Indexeur', link: '/indexeur' },
+          { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
           { text: 'WPF', 
             items : [
                 { text: 'Gestion de fichiers', link: '/file_dialog' },
@@ -87,9 +89,8 @@ export default defineConfig({
             
             ]
           },
-          /*{ text: 'Indexeur', link: '/indexeur' },
-          { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
-         { text: 'Scénarios de test', link: '/tests_fonctionnels' },
+        
+         /*{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
            */{ text: 'Exercices', link: '/exercices_bloc3' },
 
         ]

@@ -151,5 +151,5 @@ public Type this[Type param1, … ,Type paramN ]
 
 ## Démonstration
 
-Téléchargez la démonstration : [Démo - indexeurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2026/DemoIndexeurs.zip?ref_type=heads)
+Téléchargez la démonstration : [Démo - indexeurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2027/ExempleIndexeurs.zip?ref_type=heads)
 

@@ -36,6 +36,6 @@ Voici un exemple :
 
 
 ### Démonstration
-Téléchargez la solution : [S14C1-ExempleOptimisationRechDicho](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2027/S14C1-ExempleOptimisationRechDicho.zip)
+Téléchargez la solution : [S14C1-ExempleOptimisationRechDicho](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2027/ExempleOptimisationRechDicho.zip?ref_type=heads)
 
 :::
