@@ -2,106 +2,102 @@
 outline: deep
 ---
 
-# Fichier de configuration appsettings.json
+# Utilisation du fichier appsettings.json
 
-Dans une application C#, le fichier `appsettings.json` est utilisé pour stocker des paramètres de configuration, comme des chaînes de connexion à une base de données, des clés API, ou tout autre paramètre que vous ne voulez pas coder en dur dans votre application.
+Dans une application .NET, il est fortement recommandé de ne pas écrire directement dans le code certaines informations susceptibles de changer :
 
-C'est une bonne pratique, car cela rend votre application plus flexible et maintenable. Vous pouvez, par exemple, modifier la configuration sans avoir à recompiler l'application.
+- la chaîne de connexion à la base de données,
+- le chemin d'accès à un dossier d’images,
+- des paramètres de configuration,
+- des clés API (avec prudence),
+- ou tout autre réglage que l’on veut modifier sans recompiler l’application.
+
+C’est exactement le rôle du fichier **appsettings.json** :
+
+Un fichier de configuration externe, lisible, modifiable, et chargé automatiquement par l’application.
 
 
-## Structure de Base d'un Fichier appsettings.json
+## 1. Ajouter le fichier appsettings.json au projet
 
-Un fichier **app.config** typique ressemble à ceci :
+1. Clique droit sur votre projet
+2. Ajouter > Nouvel élément
+3. Choisis “**Fichier config JSON JavaScript**”
+4. Nom du fichier : **appsettings.json**
+
+Ensuite, configurer le fichier pour qu’il soit copié correctement dans le dossier de sortie :
+
+1. Clique droit > **Propriétés**
+2. **Action de génération** → Contenu
+3. **Copier dans le répertoire de sortie** → Copier si plus récent
+
+
+
+## 2. Structure du fichier appsettings.json
+
+Un fichier JSON est basé sur un système de sections.
+Voici un exemple contenant à la fois une chaîne de connexion et un chemin d'accès aux images :
+
 
 ```c#
 {
-  "AppSettings": {
-    "ApplicationName": "MaSuperApplication",
-    "Version": "1.0",
-    "SupportEmail": "support@monapp.com"
-  },
   "ConnectionStrings": {
-    "DefaultConnection": "Server=myServer;Database=maBD;User Id=utilisateur;Password=motDePasse;"
+    "DefaultConnection": "Server=localhost;port=3306;Database=demo_db;Uid=root;Pwd=;"
+  },
+
+  "Chemins": {
+    "DossierImages": "C:/MesImages/Produits"
   }
 }
+
 ```
+Ici, 
 
-## Lecture du fichier appsettings.json
+- **ConnectionStrings** représente une section réservée (par convention) aux chaînes de connexion.
+- **Chemins** représentente une section personnalité que vous pouvez nommer comme vous le voulez. 
+- **DossierImages** représente une clé avec sa valeur qui est le chemin d'accès aux images.
 
-1) Ajouter des packages nécessaires
+3. Installation des packages NuGet nécessaires
 
-Pour utiliser facilement `appsettings.json`, vous devez installer les packages suivants dans votre projet:
-- `Microsoft.Extensions.Configuration`
-- `Microsoft.Extensions.Configuration.Json`
+Pour lire un fichier JSON de configuration dans un projet non-web (WPF, WinForms, Console), on doit installer :
 
-2) Chargement du fichier
+- **Microsoft.Extensions.Configuration**
+- **Microsoft.Extensions.Configuration.Json**
 
-Voici un exemple pour lire une valeur spécifique à partir du fichier :
+Ces packages fournissent les classes utiles pour charger le fichier appsettings.json.
+
+## 4. Lecture des valeurs du fichier appsettings.json dans le code
+
+Voici le code standard pour configurer et lire le fichier :
 
 ```c#
-
 using Microsoft.Extensions.Configuration;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Charger la configuration
-        Iconfiguration config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            .Build();
+// Nom du fichier
+private const string APPSETTINGS_FILE = "appsettings.json";
 
-        // Lire une valeur
-        string appName = config["AppSettings:ApplicationName"];
-        string version = config["AppSettings:Version"];
-        
-        Console.WriteLine($"Nom de l'application : {appName}");
-        Console.WriteLine($"Version : {version}");
-    }
-}
+// Noms des clés
+private const string CONNECTION_STRING_NAME = "DefaultConnection";
+private const string DOSSIER_IMAGES_KEY = "Chemins:DossierImages";
 
-```
+// Chargement du fichier appsettings.json
+private static readonly IConfiguration _config =
+    new ConfigurationBuilder()
+    .AddJsonFile(APPSETTINGS_FILE, optional: false, reloadOnChange: true)
+    .Build();
 
-<!--
-## Écriture dans fichier appsettings.json
+// Lecture de la chaîne de connexion
+string connectionString = _config.GetConnectionString(CONNECTION_STRING_NAME);
 
-Le fichier `appsettings.json` n'est pas conçu pour être modifié directement par le programme (c'est un fichier de configuration !). Mais si vous souhaitez tout de même modifier son contenu, vous pouvez le faire avec du code comme suit :
-
-2) Chargement du fichier
-
-Voici un exemple pour lire une valeur spécifique à partir du fichier :
-
-```c#
-using System.IO;
-using Newtonsoft.Json.Linq;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        //Chemin d'accès au fichier appsettings.json
-        string filePath = Path.Combine(AppContext.BaseDirectory, "appsettings.json");
-
-        // Lire le contenu actuel du fichier
-        var json = JObject.Parse(File.ReadAllText(filePath));
-
-        // Modifier une valeur
-        json["AppSettings"]["ApplicationName"] = "NouvelleApplication";
-        
-        // Sauvegarder dans le fichier
-        File.WriteAllText(filePath, json.ToString());
-
-        Console.WriteLine("Configuration mise à jour !");
-    }
-}
+// Lecture du chemin d'accès au dossier des images
+string dossierImages = _config[DOSSIER_IMAGES_KEY];
 
 
 ```
 
--->
+## Pourquoi utiliser un fichier appsettings.json
 
-## Conseils de Sécurité
-
-- **Ne stockez pas d'informations sensibles** en clair dans `app.config`, surtout si l'application est distribuée.
-- **Utilisez des mécanismes de cryptage** pour les chaînes de connexion ou autres données sensibles.
-
+- **Modifiable sans recompiler** : On peut changer un paramètre sans toucher au code.
+- **Organisation centrale** : Toutes les configurations dans un seul fichier.
+- **Lisible et simple** : Format JSON facile à comprendre.
+- **Évite les valeurs “en dur”** :	Meilleures pratiques professionnelles.
+- **Peut contenir tout type de réglages** :	Pas seulement les chaînes de connexion !

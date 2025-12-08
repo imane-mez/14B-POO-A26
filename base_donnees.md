@@ -279,60 +279,7 @@ Pour faciliter la modification d'une chaîne de connexion, il est recommandé de
 
 C'est là qu'intervient le fichier **appsettings.json**. Il s'agit d'un fichier JSON qui contient la configuration de notre application. C'est donc à cet endroit que nous définirons la chaîne de connexion à une base de données.
 
-### Ajout du fichier appsettings.json au projet.
-À partir de votre projet, vous devez ajouter un nouvel élément de type "**Fichier config JSON JavaScript**".
-
-
-### Configuration du fichier 
-
-Afin que le fichier soit copier dans le répertoire source, vous devez modifier la manière dont il est compilé :
-
-1) Cliquer avec le bouton de droite de la souris sur le fichier et sélectionner `Propriétés`.
-2) Pour l'option `Action de génération`, sélectionner `Contenu`.
-2) Pour l'Option `Copier dans le répertoire de sortie`, sélectionner `Copier si plus récent`
-
-
-![Configuration du fichier appsettings.json](/images/appsettings1.png)
-
-### Contenu du fichier
-
-Vous devez ajouter le code suivant au fichier **appconfig.json** : 
-
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;port=3307;Database=demo_db;Uid=root;Pwd=;"
-  }
-}
-
-```
-
-
-
-### Lecture du fichier
-
-Pour lire les éléments contenu dans le fichier `appsettings.json` vous devez installer les `packages NuGet` suivants dans votre projet : 
-
-1) Microsoft.Extensions.Configuration
-2) Microsoft.Extensions.Configuration.Json
-
-
-```c#
-
-using Microsoft.Extensions.Configuration;
-
-//...
-
-private const string APPSETTINGS_FILE = "appsettings.json"; 
-private const string CONNECTION_STRING_NAME = "DefaultConnection";
-
-//Chargement des configurations du appsettings.json
-private static readonly IConfiguration _config = new ConfigurationBuilder().AddJsonFile(APPSETTINGS_FILE, false, true).Build();
-
-//Lecture de la chaîne de connexion dans le appsettings.json
-string connectionString = _config.GetConnectionString(CONNECTION_STRING_NAME);
-           
-```
+Voir section : [Fichier de configuration (appsettings.json)](/appsettings)
 
 ## Démonstration - composition d'objets
 Télécharger le projet de départ pour la démonstration : [S12C2-CompositionObjetsBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-CompositionObjetsBD.zip?ref_type=heads)
