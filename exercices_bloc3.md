@@ -27,7 +27,7 @@ Téléchargez la solution : [S12E1-BD-Solution](https://gitlab.com/420-14b-fx/co
 -->
 :::
 
-<!--
+
 ::: details Utilisation d'une base de données avec des objets composés.
 
 ### Utilisation d'une base de données avec des objets composés.
@@ -36,12 +36,12 @@ Mettre en pratique l’utilisation d’une base de données et la composition d'
 
 #### Préparation
 
-1) Téléchez le projet de départ : [S12E2-CompositionObjets](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets.zip?ref_type=heads)
-2) Importez dans pypMyAdmin - MySql le fichier **livres_auteurs_bd.sql** se trouvant dans le projet de départ.
+1) Téléchez le projet de départ : [S12E2-CompositionObjets](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12E2-CompositionObjets.zip?ref_type=heads)
+2) Importez dans pypMyAdmin - MySql le fichier **bibliotheque.sql** se trouvant dans le projet de départ.
 3) La base de données contient déjà une liste d'auteurs.
 
 #### Problème
-Vous devez modifier l'application afin de permettre à un utilisatuer d'ajouter un livre, d'afficher la liste des livres ainsi que les détails d'un livre sélectionné.
+Vous devez modifier l'application afin de permettre à un utilisatuer d'ajouter un livre avec ses auteurs, d'afficher la liste des livres ainsi que les détails d'un livre sélectionné.
 
 1) Compléter la classe "**DAL.cs**" (Data Access Layer). Celle-ci doit contenir les méthodes permettant d'obtenir la liste des livres sans leurs auteurs, d'ajouter un livre avec ses auteurs et d'obtenir un livre avec ses auteurs.
 
@@ -51,9 +51,10 @@ Vous devez modifier l'application afin de permettre à un utilisatuer d'ajouter 
 
 4) Compléter les méthode du formulaire permettant l'affichage des détails d'un livre sélectionné dans la liste. Lors de l'affichage des détails d'un livre, vous devez obtenir le livre à partir de la base de données.
 
+<!--
 #### Solution
 Téléchargez la solution : [S12E2-CompositionObjets-Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12E2-CompositionObjets%20-%20Solution.zip)
-
+-->
 :::
 
 
@@ -102,4 +103,3 @@ Mettre en pratique la création et l'utilisation d'indexeur en c#
 3) Tester l'ajout, la modification et la suppression d'employés dans une liste d'employés (LiseEmploye).
 
 :::
--->
