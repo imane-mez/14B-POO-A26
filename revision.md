@@ -307,7 +307,7 @@ return false
 ````c#
 if ( uneCondition )
 {
-    //Bloc d'instructions à exécuter si la condition est vraie ;
+    // Bloc d'instructions à exécuter si la condition est vraie ;
 }
 ````
 
@@ -315,10 +315,10 @@ if ( uneCondition )
 ````c#
 if ( uneCondition )
 {
-    //Bloc d'instructions à exécuter si la condition est vraie ;
+    // Bloc d'instructions à exécuter si la condition est vraie ;
 }
 else{
-      Bloc d'instructions à exécuter si la condition est fausse ;
+    // Bloc d'instructions à exécuter si la condition est fausse ;
 }
 
 ````
@@ -354,7 +354,7 @@ else if (ConditionN)
 }
 else
 {
-    //Bloc d'instructions si la toutes les conditions préalables sont   fausses ;
+    //Bloc d'instructions si toutes les conditions préalables sont fausses ;
 }
 
 

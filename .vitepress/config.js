@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/docs/',
+  base: '/14B-POO-A26/',
   title: "Techniques de l'informatique",
   description: "Introduction à la programmation orientée objet en C#",
   themeConfig: {
