@@ -27,83 +27,83 @@ export default defineConfig({
           { text: 'Types', 
             collapsed: true,
             items : [
-              { text: 'Type nullable', link: '/type_nullable' },
-              { text: 'String', link: '/string' },
-              { text: 'DateTime', link: '/datetime' },
-              { text: 'TimeSpan', link: '/timespan' },
-              { text: 'DateOnly', link: '/dateonly' },
-              { text: 'TimeOnly', link: '/timeonly' },
-              { text: 'Type Enum', link: '/enum' },
+              // { text: 'Type nullable', link: '/type_nullable' },
+                 { text: 'String', link: '/string' } //,
+              // { text: 'DateTime', link: '/datetime' },
+              // { text: 'TimeSpan', link: '/timespan' },
+              // { text: 'DateOnly', link: '/dateonly' },
+              // { text: 'TimeOnly', link: '/timeonly' },
+              // { text: 'Type Enum', link: '/enum' },
              
 
             ]
           },
-          {text: 'Résolution de problèmes', link: '/resolution_problemes' },
-          {text: 'Classe', link: '/poo_intro' },
-          {text: 'Encapsulation', link: '/encapsulation' },
-          {text: 'Relation entre les classes', link: '/relations' },
-          {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
-          {text: 'Composition d\'objets', link: '/composition_objets' },
-          {text: 'Espace de nom', link: '/namespace' },
-          {text: 'Méthode ToString()', link: '/methode_tostring' },
-          {text: 'TryParse', link: '/tryparse' },
-          { text: 'WPF', 
-            items : [
-              { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
-              { text: 'Contrôle DatePicker', link: '/date_picker' },
-              { text: 'Rétroaction utilsateur', link: '/retroaction' }
-            ]
-          },
-          { text: 'Documentation du code', link: '/commentaires' },
+          // {text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          // {text: 'Classe', link: '/poo_intro' },
+          // {text: 'Encapsulation', link: '/encapsulation' },
+          // {text: 'Relation entre les classes', link: '/relations' },
+          // {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
+          // {text: 'Composition d\'objets', link: '/composition_objets' },
+          // {text: 'Espace de nom', link: '/namespace' },
+          // {text: 'Méthode ToString()', link: '/methode_tostring' },
+          // {text: 'TryParse', link: '/tryparse' },
+          // { text: 'WPF', 
+          //   items : [
+          //     { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
+          //     { text: 'Contrôle DatePicker', link: '/date_picker' },
+          //     { text: 'Rétroaction utilsateur', link: '/retroaction' }
+          //   ]
+          // },
+          // { text: 'Documentation du code', link: '/commentaires' },
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
-      { text: 'Bloc 2', 
-        collapsed: true,
-        items : [
-          {text: 'Type Guid', link: '/guid' },
-          {text: 'Listes génériques (List)', link: '/listes_generiques' },
-          {text: 'Application multi-fenêtres', link: '/formulaire_secondaire' },
-          {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
-          {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
-          {text: 'Classes et membres statiques', link: '/classe_statique' },
-          {text: 'Expressions régulières', link: '/exp_reg' },
-          {text: 'Algorithmes de tri', link: '/algo_tri' },
-          {text: 'Tests unitaires', link: '/tests_unitaires' },
-          {text: 'Exercices', link: '/exercices_bloc2' },
+    //   { text: 'Bloc 2', 
+    //     collapsed: true,
+    //     items : [
+    //       {text: 'Type Guid', link: '/guid' },
+    //       {text: 'Listes génériques (List)', link: '/listes_generiques' },
+    //       {text: 'Application multi-fenêtres', link: '/formulaire_secondaire' },
+    //       {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+    //       {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+    //       {text: 'Classes et membres statiques', link: '/classe_statique' },
+    //       {text: 'Expressions régulières', link: '/exp_reg' },
+    //       {text: 'Algorithmes de tri', link: '/algo_tri' },
+    //       {text: 'Tests unitaires', link: '/tests_unitaires' },
+    //       {text: 'Exercices', link: '/exercices_bloc2' },
 
-        ]
-      },
-     {
-        text : 'Bloc 3',
-        items : [
-          { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
-          { text: 'Fichier de configuration', link: '/appsettings' },
-          { text: 'Indexeur', link: '/indexeur' },
-          { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
-          { text: 'WPF', 
-            items : [
-                { text: 'Gestion de fichiers', link: '/file_dialog' },
-                { text: 'ListeView', link: '/listview' },
-                { text: 'TimeSpanUpDown Control', link: '/timespan_up_down_control' },
-                { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },  
+    //     ]
+    //   },
+    //  {
+    //     text : 'Bloc 3',
+    //     items : [
+    //       { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
+    //       { text: 'Fichier de configuration', link: '/appsettings' },
+    //       { text: 'Indexeur', link: '/indexeur' },
+    //       { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
+    //       { text: 'WPF', 
+    //         items : [
+    //             { text: 'Gestion de fichiers', link: '/file_dialog' },
+    //             { text: 'ListeView', link: '/listview' },
+    //             { text: 'TimeSpanUpDown Control', link: '/timespan_up_down_control' },
+    //             { text: 'Contrôles dynamiques', link: '/controles_dynamiques' },  
             
-            ]
-          },
+    //         ]
+    //       },
         
-         /*{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
-           */{ text: 'Exercices', link: '/exercices_bloc3' },
+    //      /*{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
+    //        */{ text: 'Exercices', link: '/exercices_bloc3' },
 
-        ]
-      },
+    //     ]
+    //   },
        {
         text: 'En vrac',
         items: [
-          { text: 'Convention de nommage', link: '/convention' },
-          { text: 'Norme de codage', link: '/normes' },
+          { text: 'Conventions de nommage', link: '/convention' },
+          // { text: 'Norme de codage', link: '/normes' },
           //{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          {text: 'Classes UtilEnum', link: '/classe_utilenum' },
-          { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
+          // {text: 'Classes UtilEnum', link: '/classe_utilenum' },
+          // { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
           /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Configuration GitLab avec VS 2022', link: '/git' },*/
         ]

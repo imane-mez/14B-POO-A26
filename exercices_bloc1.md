@@ -34,7 +34,7 @@ outline: deep
 
 
 ### Question 4
-Écrire un permettant de lire **5 notes (entre 0 et 100)**, les ajoutes dans un **tableau**, affiche la **moyenne**, la note **minimale** et la note **maximale**. **L'utilisateur ne doit pas pouvoir saisir une note que n'est pas entre 0 et 100.**
+Écrire un programme permettant de lire **5 notes (entre 0 et 100)**, les ajouter dans un **tableau**, afficher la **moyenne**, la note **minimale** et la note **maximale**. **L'utilisateur ne doit pas pouvoir saisir une note que n'est pas comprise entre 0 et 100.**
 
 ### Question 5
 
@@ -44,16 +44,16 @@ outline: deep
 
 ### Question 6
 
-Écrire un programme qui 
-1) demande une phrase (sans accent, n'y caractères spéciaux) à l’utilisateur 
-2) qui vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire et qu'il soit le plus efficace possible. 
+Écrire un programme qui :
+1) demande une phrase (sans accent, ni caractères spéciaux) à l’utilisateur,
+2) vérifie si cette phrase est un palindrome (sans tenir compte des majuscules et des espaces).  Assurez-vous que votre programme fonctionne aussi bien avec une longueur de phrase paire qu’impaire et qu'il soit le plus efficace possible. 
 
 Voici quelques exemples pour tester votre solution : https://fr.wikipedia.org/wiki/Palindrome#Quelques_exemples
 
 
 ### Question 7
 
-Créer un mini-gestionnaire de **produits** avec un **tableau** de Produit (pas de List<>).
+Créer un mini-gestionnaire de **produits** avec un **tableau** de Produits (pas de List<>).
 
 Format d’entrée produits.csv :
 
@@ -74,39 +74,12 @@ Le programme doit :
 
 4) Sauvegarder vers produits.csv.
 
-<!--
-### Tâches à faire
-
-Premièrement, télécharger :  **[solution de départ](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-D%C3%A9part.zip?ref_type=heads)**.
-
-Vous devez compléter le projet C# (application console) qui va permettre de gérer une liste de tâches à faire (To do list).
-Cette application doit permettre à l'utilisateur de : 
-- Consulter une liste de tâche non complétée contenues dans un fichier nommé "**taches.csv**" et situé à dans le dossier "**C:\data-420-14B-FX\taches.csv**". **Vous devez copier le fichier fourni avec la solution de départ à cet endroit.**
-- Ajouter une nouvelle tâche
-- Indiquer qu’une tâche a été complétée (**OPTIONNEL!**)
-- Enregistrer les modifications dans le même fichier.
-- Quitter l'application.
-
-Ne soyez pas surpris s'il y a des erreurs; c'est normal :smiley:. Celles-ci diparaîtront une fois que vous aurez créé la Struct nommée Tache.
-
-Deuxièmement, vous devez créer une structure (Struct) nommée Tache ayant les propriétés suivantes :
-- Titre
-- Description
-- Completee (indique si la tache est complétée ou non (vrai ou faux)).
-
-Une fois la structure Tache complétée, vous ne devriez plus avoir d'erreur dans le code.
-
-Finalement, vous devez compléter le code manquant pour faire fonctionner l'application. Prenez soins de lire les commentaires des fonctions et du code contenu dans les fichiers **FonctionUtiles.cs** et **Program.cs**. 
-
-Ceux-ci vous donneront des spécifications sur le code à écrire. Vous pouvez également naviguer à travers le code à réaliser en parcourant la liste des commentaires de type "**//TODO :**" de Visual Studio. Pour ce faire, vous n'avez qu'à cliquer dans le menu Affichage et sélectionner **Tâche suivante** ou **Tâche précédente**. Cela devrait afficher la liste des tâches que vous devez réaliser pour faire fonctionner le programme. **Attention**, celles-ci ne sont pas inscrite en ordre de réalisation dans cette liste. C'est à vous de décider l'ordre dans lequel vous allez compléter le code manquant. 
--->
-
- **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads)
+ <!-- **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads) -->
 
 :::
 
 
-
+<!-- 
 ::: details S1E2 - Résolution de problème
 
 ### Restaurant
@@ -492,4 +465,4 @@ Mettre en pratique l'utilisation de la méthode ToStrin() et la validation des d
     - Le titre du film doit contenir au moins 3 caractères.
     - L’année doit être comprise entre l'année 1500 et l’année courante (utiliser **DateTime.Now.Year** pour obtenir l'année courante). Assurez-vous que votre validation fonctionne si l'on change d’année sans devoir modifier votre code.
 
-:::
+::: -->

@@ -433,7 +433,7 @@ do
 
 ![Différence entre while et dowhile](./images/WhileVsDoWhile.jpg)
 
-## tableaus
+## tableaux
 
 Un tableau est un regroupement ordonné de divers éléments de même type (entier, réel, chaîne de caractères, etc.) et de même sémantique (note, nom, item, etc.).
 - Pour désigner un élément d'un tableau, on utilise un **nombre entier** qu'on appelle **indice**.
