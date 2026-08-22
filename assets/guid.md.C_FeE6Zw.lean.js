@@ -1,0 +1,1 @@
+import{_ as i,c as s,o as n,ag as a}from"./chunks/framework.BtwP-r-R.js";const h=JSON.parse('{"title":"Le type Guid","description":"","frontmatter":{},"headers":[],"relativePath":"guid.md","filePath":"guid.md"}'),t={name:"guid.md"};function u(l,e,o,r,d,c){return n(),s("div",null,[...e[0]||(e[0]=[a("",17)])])}const m=i(t,[["render",u]]);export{h as __pageData,m as default};

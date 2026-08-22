@@ -1,0 +1,1 @@
+import{_ as t,c as a,o,ag as r}from"./chunks/framework.BtwP-r-R.js";const p=JSON.parse('{"title":"docs","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),i={name:"README.md"};function s(n,e,l,h,d,c){return o(),a("div",null,[...e[0]||(e[0]=[r("",45)])])}const m=t(i,[["render",s]]);export{p as __pageData,m as default};
