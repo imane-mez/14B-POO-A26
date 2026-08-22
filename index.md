@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "420-14B-FX "
   text: "Programmation orientée objet"
-  tagline: 
+  tagline: Notes de cours de Martin Vézina
   actions:
     - theme: brand
       text: Plan de cours
