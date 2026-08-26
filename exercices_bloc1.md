@@ -30,7 +30,7 @@ outline: deep
 
 ### Question 3
 
-Écrire un programme qui li  **10 entiers ≥ 0**, calculer la **somme**, la **moyenne** et afficher le **plus grand** nombre saisi. **L'utilisateur ne doit pas pouvoir saisir un nombre négatif**. 
+Écrire un programme qui lit  **10 entiers ≥ 0**, calcule la **somme**, la **moyenne** et affiche le **plus grand** nombre saisi. **L'utilisateur ne doit pas pouvoir saisir un nombre négatif**. 
 
 
 ### Question 4
@@ -74,17 +74,19 @@ Le programme doit :
 
 4) Sauvegarder vers produits.csv.
 
- <!-- **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads) -->
+ 
+
+ **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip?ref_type=heads) 
 
 :::
 
 
-<!-- 
+ 
 ::: details S1E2 - Résolution de problème
 
 ### Restaurant
 
-Un restaurateur vous demande de créer une application console qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total, une taxe de consommation de 10%, un pourboire obligatoire de 15% et afficher les détails de la facture au client. Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre. Les factures créées devoient être conservée en mémoire (Vous n'avez pas à les enregistrer dans un fichier).
+Un restaurateur vous demande de créer une application console qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une boisson.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total, une taxe de consommation de 10%, un pourboire obligatoire de 15% et afficher les détails de la facture au client. Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre. Les factures créées doivent être conservée en mémoire (Vous n'avez pas à les enregistrer dans un fichier).
 
 1) Décomposer le problème global en plusieurs problèmes plus petits et plus faciles à résoudre.
 2) Identifier les entités ainsi que leur caractéristiques et comportements
@@ -101,7 +103,7 @@ En bref, l'ordinateur choisit le mot et le joueur essaie de deviner les lettres 
 
 De plus, un utilisateur ne peut pas saisir deux fois la même lettre. 
 
-1) L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier suivant :   [mots.txt](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc1/cours%2002/mots.txt?ref_type=heads&inline=false) 
+1) L'ordinateur doit sélectionner un mot au hasard dans la liste des mots disponibles qui a se trouve dans le fichier suivant :   [mots.txt](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/e959c5dfdab5360863c1df6fcf6f69f1f4e5b27d/bloc1/cours%2002/mots.txt) 
 
 Notez que mots.txt contient des mots **anglais** dont toutes les lettres sont en minuscules.
 
@@ -110,7 +112,7 @@ Notez que mots.txt contient des mots **anglais** dont toutes les lettres sont en
 3) L'ordinateur affiche les lettres trouvées dans le mot ainsi que les lettres utilisées et le nombre d'essais restant.
 
 
-Vous pouvez réutiliser les fonctions de lectures et d'écritures du fichier **FonctionUtiles.cs** fournies dans l'exercice **Semaine 1 - Exercice 1 - Tâches à faire**.
+Vous pouvez réutiliser les fonctions de lectures et d'écritures fournies dans l'exercice **Semaine 1 - Exercice 1 - Listes de produits**.
 
 Vous aurez besoin d'obtenir un nombre aléatoire afin de choir un mot au hasard. Voici un exemple pour obtenir un nombre aléatoire entre 0 et 10 :
 
@@ -157,13 +159,14 @@ Nombre d'essais restant : 5
 Veuillez saisir une lettre :
 ```
 
-### Solution de l'exercice 
 
- [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes.zip)
+<!-- ### Solution de l'exercice 
 
+ [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes.zip) -->
 
 :::
 
+<!-- 
 
 
 ## Semaine 2
@@ -465,4 +468,5 @@ Mettre en pratique l'utilisation de la méthode ToStrin() et la validation des d
     - Le titre du film doit contenir au moins 3 caractères.
     - L’année doit être comprise entre l'année 1500 et l’année courante (utiliser **DateTime.Now.Year** pour obtenir l'année courante). Assurez-vous que votre validation fonctionne si l'on change d’année sans devoir modifier votre code.
 
-::: -->
+:::  -->
+

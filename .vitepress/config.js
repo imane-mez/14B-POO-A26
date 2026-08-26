@@ -27,7 +27,7 @@ export default defineConfig({
           { text: 'Types', 
             collapsed: true,
             items : [
-              // { text: 'Type nullable', link: '/type_nullable' },
+              { text: 'Type nullable <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/type_nullable' },
                  { text: 'String', link: '/string' } //,
               // { text: 'DateTime', link: '/datetime' },
               // { text: 'TimeSpan', link: '/timespan' },
@@ -38,7 +38,7 @@ export default defineConfig({
 
             ]
           },
-          // {text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          {text: 'Résolution de problèmes <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/resolution_problemes' },
           // {text: 'Classe', link: '/poo_intro' },
           // {text: 'Encapsulation', link: '/encapsulation' },
           // {text: 'Relation entre les classes', link: '/relations' },

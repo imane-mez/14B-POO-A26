@@ -33,7 +33,7 @@ Ici, **age** peut être soit un entier (`int`), soit la valeur `null`.
 
 **À ne pas confondre avec string** : une string peut déjà être null naturellement, car c’est un **type référence** (nous verrons ce qu'est un type références un peu plus tard). Les nullables concernent surtout les **types valeurs** (int, double, bool, DateTime, etc.).
 
-## Utilisé des types nullables
+## Utilité des types nullables
 1) **Représenter une donnée optionnelle**
 
 Exemple : une personne peut avoir ou non une date de décès.
@@ -65,14 +65,14 @@ Quand on lit un nullable, il faut vérifier s’il contient une valeur :
 int? age = null;
 
 if (age.HasValue) {
-    Console.WriteLine("L'âge est age" + age);
+    Console.WriteLine("L'âge est " + age);
 } else {
     Console.WriteLine("Âge inconnu");
 }
 
 ```
 
-Autre façon plus courte avec l’opérateur **null-coalescing** (??) :
+Autre façon plus courte avec l’opérateur de **coalescence des null** (??) :
 
 ```c#
 int? age = null;
