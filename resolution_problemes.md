@@ -159,6 +159,7 @@ La rémunération hebdomadaire d'un employé dépend du taux de rémunération e
         - Nom
         - Prénom
         - Taux horaire
+        - Nombre d'heures travaillées
     - Comportement :
         - Aucun
 
