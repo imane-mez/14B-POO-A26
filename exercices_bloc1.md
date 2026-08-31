@@ -76,7 +76,7 @@ Le programme doit :
 
  
 
- **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/e959c5dfdab5360863c1df6fcf6f69f1f4e5b27d/bloc1/cours%2001) 
+ **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/main/bloc1/cours%2001/S1E1-Revision-Solution) 
 
 :::
 
@@ -162,7 +162,7 @@ Veuillez saisir une lettre :
 
  ### Solution de l'exercice 
 
- [S1E2-ResolutionProblemes-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/e959c5dfdab5360863c1df6fcf6f69f1f4e5b27d/bloc1/cours%2002)
+ [S1E2-ResolutionProblemes-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/main/bloc1/cours%2002/S1E2-ResolutionProblem)
 
 :::
 
