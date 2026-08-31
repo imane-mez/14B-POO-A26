@@ -160,13 +160,13 @@ Veuillez saisir une lettre :
 ```
 
 
-<!-- ### Solution de l'exercice 
+ ### Solution de l'exercice 
 
- [S1E2-ResolutionProblemes-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2002/S1E2-ResolutionProblemes.zip) -->
+ [S1E2-ResolutionProblemes-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/e959c5dfdab5360863c1df6fcf6f69f1f4e5b27d/bloc1/cours%2002)
 
 :::
 
-<!-- 
+
 
 
 ## Semaine 2
@@ -204,7 +204,7 @@ création. De plus, vous devez écrire le code des fonctions accélérer et rale
 
 ###  Problème 2 - Restaurant
 
-Un restaurateur vous demande de créer calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une bouteille de vin.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre.
+Un restaurateur vous demande de créer une application qui calculera automatiquement la facture d'un client.  L'application demandera le prix d'un apéritif, d'une entrée, d'un plat principal, d'un dessert et d'une boisson.  Si un des items n'a pas été pris, sa valeur sera à 0. À partir de ces valeurs, l'application doit calculer le sous-total de la facture du client.  À ce sous-total, elle ajoute un pourboire obligatoire de 15% et une taxe de consommation de 10% et affiche ce total.  Finalement, l'application doit également servir à calculer la monnaie à rendre au client.  Il demande le montant donné par le client et affiche la monnaie à lui rendre.
 
 1)	Vous devez écrire le code de la classe Facture.  Celle-ci doit posséder les attributs spécifiés ci-dessus ainsi qu'un constructeur paramétré permettant de créer un objet en spécifiant les valeurs des attributs. De plus, vous devez écrire le code des fonctions suivantes :
     - CalculerSousTotal
@@ -238,15 +238,19 @@ Vous devez concevoir une application qui va permettre de simuler une partie de d
 
 Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
 
-
+<!-- 
 
 ### Solution de l'exercice 
 
  [S2E1-CreationClasse-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads)
 
+ -->
+
+
+
 :::
 
-
+<!-- 
 ::: details S2E2 - Encapsulation
 
 ### objectif

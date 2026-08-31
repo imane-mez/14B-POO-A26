@@ -36,42 +36,42 @@ Exemple :
 
 ## Identificateur avec le casse Pascal (UpperCamelCase)
 
-<!-- - Classe	
-- Propriété (accesseurs get et set)	 -->
+- Classe	
+- Propriété (accesseurs get et set)	
 - Fonction	
-<!-- - Interface -->
-<!-- - Type enum	
-    - Valeur d'un type enum -->
+- Interface
+- Type enum	
+    - Valeur d'un type enum
 - Espace de noms
 
 ## Identificateur avec le casse mixte (lowerCamelCase)
 
 - Paramètre d'une méthode
-<!-- - Attribut privé d'une classe  -->
+- Attribut privé d'une classe 
 - Variable locale
 - Nom d’un contrôle graphique d’un formulaire.
 
-<!-- ### Cas particulier
+### Cas particulier
 
 Pour les **attributs privés d'une classe**, on utilise la case mixte tout en ajoutant le préfixe "_" à l'identificateur.  
 
 Par exemple :
 - _nbButs
 - _age
-- _prenom -->
+- _prenom
 
 ## Identificateur en majuscule et trait de soulignement
 
 - Constante 
 
-<!-- ## Ordre des éléments dans une classe
+## Ordre des éléments dans une classe
 
 Lors de la création d'une classe, les différents éléments devront **toujours** être dans cet ordre :
  - constantes
  - attributs
  - propriétés
  - constructeur
- - méthodes -->
+ - méthodes
 
 ## Préfixe pour les noms des contrôles graphiques des formulaires
 

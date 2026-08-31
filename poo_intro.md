@@ -7,11 +7,11 @@ Jusqu'à présent, vous avez appris à programmer des procédures logiques, séq
 
 Vous avez probablement remarqué que j’ai utilisé de temps en temps le mot « objet » et que le mot clé « new » est apparu comme par magie, sans trop savoir son pourquoi. Voici maintenant l'explication 😊.
 
-La programmation orientée objet est un modèle de langage qui s'articule autour des objets. On peut voir un objet comme les objets qui nous encourent dans notre quotidien. Ceux-ci sont très divers : des personnes (définies par leurs nom, adresse, etc.), des voitures (définies par leurs puissances, la taille, la consommation, etc.), des livres, des cellulaires, des bâtiments, des recettes, etc.
+La programmation orientée objet est un modèle de langage qui s'articule autour des objets. On peut voir un objet comme les objets qui nous entourent dans notre quotidien. Ceux-ci sont très divers : des personnes (définies par leurs nom, adresse, etc.), des voitures (définies par leurs puissances, la taille, la consommation, etc.), des livres, des cellulaires, des bâtiments, des recettes, etc.
 
 Ces objets ont des caractéristiques appelées **attributs** (Ex. : nom, taille, couleur, poids, etc.) et peuvent faire des actions appelées **méthodes** (Ex. afficher, lire, accélérer, ralentir, appeler, rechercher, etc.) et peuvent également interagir entre eux (Ex. l'objet personne appelle avec l'objet téléphone).
 
-La définition d'un objet permet d'indiquer quels sont ses attributs et ses méthodes. Une fois l'objet défini, il est alors possible de l'utiliser. Par exemple, si vous avez un système de gestion de voitures, il serait intéressant de pouvoir créer différentes voitures on parle alors de plusieurs **instances d'un objet** de type voiture.
+La définition d'un objet permet d'indiquer quels sont ses attributs et ses méthodes. Une fois l'objet défini, il est alors possible de l'utiliser. Par exemple, si vous avez un système de gestion de voitures, il serait intéressant de pouvoir créer différentes voitures. On parle alors de plusieurs **instances d'un objet** de type voiture.
 
 Il y a plusieurs avantages à utiliser une approche orientée objet dont :
 - **La modularité** : Les objets forment des modules compacts regroupant des données et un ensemble d'opérations.
@@ -43,7 +43,7 @@ Maintenant que la classe a été créée, on doit pouvoir utiliser des objets de
 ```c#
 Rectangle rect1 = new Rectangle();
 ```
-Ici, on crée un objet rect1 qui sera de type Rectangle.  À ce moment, on a affecté aucune valeur à notre objet ; il existe, mais avec les valeurs par défaut : 
+Ici, on crée un objet rect1 qui sera de type Rectangle.  Jusque là, nous n'avons affecté aucune valeur à notre objet ; il existe, mais avec les valeurs par défaut : 
 
 - hauteur = 0
 - largeur = 0
@@ -152,7 +152,7 @@ class Rectangle
 ```
 
 ::: danger Attention!
-Vous devez toujours bien commenter la classe, ses attributs ainsi que ses méthodes de la classe!
+Vous devez toujours bien commenter la classe, ses attributs ainsi que ses méthodes!
 
 :::
 
@@ -167,7 +167,7 @@ Dans la section **"Instancier un objet"** nous avons dit que pour créer un obje
 Rectangle rect1 = new Rectangle();
 ```
 
-Ce qui revient à créer un objet rect1, de type Rectangle. On utilise le mot **new** pour spécifier que l'on veut un nouvel objet.  Mais pourquoi réécrit-on le mot Rectangle() ensuite?  Il s'agit en fait ici de spécifier quel est le constructeur de l'objet, c'est-à-dire de spécifier comment l'objet sera créé ou quelle est la méthode constructrice de la classe, utilisée pour créer l’objet. 
+Ce qui revient à créer un objet rect1, de type Rectangle. On utilise le mot **new** pour spécifier que l'on veut un nouvel objet.  Mais pourquoi réécrit-on le mot Rectangle() ensuite?  Il s'agit en fait ici de spécifier quel est le constructeur de l'objet, c'est-à-dire de spécifier **comment l'objet sera créé** ou quelle est la méthode constructrice de la classe, utilisée pour créer l’objet. 
 
 ### Constructeur par défaut
 
@@ -288,7 +288,7 @@ class Rectangle
 
 ### Nom des paramètres vs attributs
 
-Vous remarquerez que le nom des paramètres du constructeur sont identiques à ceux des attributs de la classe. Ce qui porte à confusion et pourrais entraîner des erreurs. 
+Vous remarquerez que le nom des paramètres du constructeur sont identiques à ceux des attributs de la classe. Ce qui porte à confusion et pourrait entraîner des erreurs. 
 
 
 Pour éviter cela, il est possible de : 

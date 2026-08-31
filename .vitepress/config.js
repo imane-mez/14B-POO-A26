@@ -27,7 +27,7 @@ export default defineConfig({
           { text: 'Types', 
             collapsed: true,
             items : [
-              { text: 'Type nullable <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/type_nullable' },
+              { text: 'Type nullable', link: '/type_nullable' },
                  { text: 'String', link: '/string' } //,
               // { text: 'DateTime', link: '/datetime' },
               // { text: 'TimeSpan', link: '/timespan' },
@@ -38,8 +38,8 @@ export default defineConfig({
 
             ]
           },
-          {text: 'Résolution de problèmes <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/resolution_problemes' },
-          // {text: 'Classe', link: '/poo_intro' },
+          {text: 'Résolution de problèmes', link: '/resolution_problemes' },
+          {text: 'Classe <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/poo_intro' },
           // {text: 'Encapsulation', link: '/encapsulation' },
           // {text: 'Relation entre les classes', link: '/relations' },
           // {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
@@ -99,8 +99,8 @@ export default defineConfig({
        {
         text: 'En vrac',
         items: [
-          { text: 'Conventions de nommage', link: '/convention' },
-          // { text: 'Norme de codage', link: '/normes' },
+          { text: 'Conventions de nommage <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/convention' },
+          { text: 'Norme de codage <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/normes' },
           //{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
           // {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           // { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
