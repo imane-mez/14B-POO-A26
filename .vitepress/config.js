@@ -28,19 +28,19 @@ export default defineConfig({
             collapsed: true,
             items : [
               { text: 'Type nullable', link: '/type_nullable' },
-                 { text: 'String', link: '/string' } //,
+                 { text: 'String', link: '/string' },
               // { text: 'DateTime', link: '/datetime' },
               // { text: 'TimeSpan', link: '/timespan' },
               // { text: 'DateOnly', link: '/dateonly' },
               // { text: 'TimeOnly', link: '/timeonly' },
-              // { text: 'Type Enum', link: '/enum' },
+              { text: 'Type Enum <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/enum' },
              
 
             ]
           },
           {text: 'Résolution de problèmes', link: '/resolution_problemes' },
-          {text: 'Classe <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/poo_intro' },
-          // {text: 'Encapsulation', link: '/encapsulation' },
+          {text: 'Classe', link: '/poo_intro' },
+          {text: 'Encapsulation <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/encapsulation' },
           // {text: 'Relation entre les classes', link: '/relations' },
           // {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
           // {text: 'Composition d\'objets', link: '/composition_objets' },

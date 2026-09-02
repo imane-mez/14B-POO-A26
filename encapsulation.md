@@ -8,7 +8,7 @@ L'encapsulation est l'une des quatre principales caractéristiques de la program
 
 l'encapsulation et l'abstration sont des fonctionnalités liées dans la programmation orientée objet. L'abstraction permet de rendre visibles les informations pertinentes et l'encapsulation permet à un programmeur d'implémenter le niveau d'abstraction souhaité.
 
-L'encapsulation est implémentée à l'aide de spécificateurs d'accès. Un spécificateur d'accès définit la portée et la visibilité d'un membre de classe (propriétés, fonctions et objets). Toutes les classes et tous les membres de classe peuvent spécifier le niveau d’accès qu’ils fournissent aux autres classes à l’aide des modificateurs d’accès.
+L'encapsulation est implémentée à l'aide de spécificateurs d'accès. **Un spécificateur d'accès** définit la portée et la visibilité d'un membre de classe (propriétés, fonctions et objets). Toutes les classes et tous les membres de classe peuvent spécifier le niveau d’accès qu’ils fournissent aux autres classes à l’aide des modificateurs d’accès.
 
 En C#, les principaux spécificateurs d'accès sont :
 
@@ -227,12 +227,12 @@ public float Aire   //lecture seule
 
 private float CalculerPerimetre()
 {
-    return (this.hauteur * 2) + (this.largeur * 2);
+    return (Hauteur * 2) + (Largeur * 2);
 }
 
 private float CalculerAire()
 {
-    return this.hauteur * this.largeur;
+    return Hauteur * Largeur;
 }
 
 ```
@@ -324,7 +324,7 @@ La décision d'utiliser une propriété ou une méthode dépend de la sémantiqu
 
 7) **Extensibilité** : 
 
-    - Si vous pensez que l'opération pourrait éventuellement nécessiter des paramètres à l'avenir, il est préférable de l'implémenter en tant que méthode dès le départ pour éviter de casser l'API plus tard.
+    - Si vous pensez que l'opération pourrait éventuellement nécessiter des paramètres à l'avenir, il est préférable de l'implémenter en tant que méthode dès le départ pour éviter de casser l'application plus tard.
 
 ## Surcharge de méthode
 
@@ -378,7 +378,8 @@ public Rectangle(float hauteur, float largeur, string couleur)
 
 ```
 
-On voit ici que le code de notre constructeur sans paramètre et celui de notre constructeur avec paramètres est **pratiquement identique** à l'exception des valeurs qui sont affectées aux attributs. Il serait donc préférable d'**éviter la duplication de code** en surchargeant notre constructeur.  
+On voit ici que le code de notre constructeur sans paramètre et celui de notre constructeur avec paramètres est **pratiquement identique** à l'exception des valeurs qui sont affectées aux attributs. 
+<!-- Il serait donc préférable d'**éviter la duplication de code** en surchargeant notre constructeur.  
 
 Voici maintenant comment on pourrait faire la surcharge de notre constructeur dans notre exemple de Rectangle 
 
@@ -390,7 +391,7 @@ public Rectangle() : this(HAUTEUR_DEFAUT, LARGEUR_DEFAUT, COULEUR_DEFAUT)
            
 }
 ```
-En utilisant le mot clé **this**, il nous est possible de spécifier l'utilisation du constructeur paramétré (surcharge) et de passer en paramètres les valeurs par défaut de notre objet. Ainsi, le constructeur paramétré sera appelé et par la suite, le cas échéant, le code supplémentaire de notre constructeur sans paramètre pourrait être exécuté.
+En utilisant le mot clé **this**, il nous est possible de spécifier l'utilisation du constructeur paramétré (surcharge) et de passer en paramètres les valeurs par défaut de notre objet. Ainsi, le constructeur paramétré sera appelé et par la suite, le cas échéant, le code supplémentaire de notre constructeur sans paramètre pourrait être exécuté. -->
 
 ### Valeurs par défaut
 
@@ -406,4 +407,4 @@ public Rectangle(float hauteur = HAUTEUR_DEFAUT, float largeur = LARGEUR_DEFAUT,
  ```
 
 ## Démo - Encapsulation
-Télécharger la démonstration complète : [S2C2 - DemoEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=heads)
+Télécharger la démonstration complète : [S2C2 - DemoEncapsulation.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/D%C3%A9mos/Cours%204/S2C1-ExempleRectangle.zip)

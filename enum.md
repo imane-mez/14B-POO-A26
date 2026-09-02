@@ -48,7 +48,7 @@ public enum Categories
     Musique = 10	//10
 }
 ```
-Une énumération peut être de n'importe quel type de donnée numérique tel que **byte, sbyte, short, ushort, int, uint, long ou ulong**. Une énumération **ne peut pas être une chaîne de caractère**.
+Une énumération peut être de n'importe quel type de donnée numérique tel que **byte, sbyte, short, ushort, int, uint, long ou ulong**. Une énumération **ne peut pas être une chaîne de caractère ni un réel**.
 
 Vous pouvez spécifier le type de l'énumération :
 
@@ -89,7 +89,7 @@ La valeur de Categorie.Film : 4
 
 ## Affectation d'une énumération.
 
-Comme n'importe quel autre type, un type enum peut être utiliser pour définir une variable. 
+Comme n'importe quel autre type, un type enum peut être utilisé pour définir une variable. 
 ```c#
 Categories categorie;
 categorie = Categories.Film;
@@ -116,7 +116,7 @@ for (int i = 0; i < vectCategories.Length; i++)
 ## Vérifier si la valeur existe dans l'énumération
 
 ```c#
-//Affectation d'une valeur d'énumération inexistant
+//Affectation d'une valeur d'énumération inexistante
 Categories cat = (Categories)(20);
 
 if (!Enum.IsDefined(typeof(Categories), cat))
@@ -138,13 +138,13 @@ categorie = (Categorie)(0);  //catégorie sera égale à l'énumération dont la
 ```
 
 
-## Conversion d'une chaîne de caractère en numérique en énumération
+## Conversion d'une chaîne de caractère en énumération
 
 ```c#
 
 Categories categorie;
 
-//Conversion d'une châine de caractères en enumération:
+//Conversion d'une chaîne de caractères en enumération:
 categorie = (Categories)Enum.Parse(typeof(Categories),"Film")  //Film converti en énumération 
 
 
@@ -153,7 +153,7 @@ categorie = (Categories)Enum.Parse(typeof(Categories),"Film")  //Film converti e
 
 
 ## Démo - Enum
-Télécharger la démonstration complète : [S2C2 - DemoEnum.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2004?ref_type=heads)
+Télécharger la démonstration complète : [S2C2 - DemoEnum.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/D%C3%A9mos/Cours%204/S2C1-DemoEnum.zip)
 
 
 

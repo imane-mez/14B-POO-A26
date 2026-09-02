@@ -9,6 +9,8 @@ dist
 #resolution_problemes.md
 #normes.md
 #convention.md
+#encapsulation.md
+#enum.md
 
 algo_tri.md
 api-examples.md
@@ -24,8 +26,8 @@ controles_dynamiques.md
 dateonly.md
 datetime.md
 date_picker.md
-encapsulation.md
-enum.md
+
+
 exercices_bloc2.md
 exercices_bloc3.md
 exp_reg.md

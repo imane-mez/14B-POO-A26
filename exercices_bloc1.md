@@ -76,7 +76,7 @@ Le programme doit :
 
  
 
- **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/main/bloc1/cours%2001/S1E1-Revision-Solution) 
+ **Solutions de l'exercice** : [S1E1 - Révision - Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/cours%2001/S1E1-Revision-Solution.zip) 
 
 :::
 
@@ -162,7 +162,7 @@ Veuillez saisir une lettre :
 
  ### Solution de l'exercice 
 
- [S1E2-ResolutionProblemes-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/main/bloc1/cours%2002/S1E2-ResolutionProblem)
+ [S1E2-ResolutionProblemes-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/cours%2002/S1E2-ResolutionProblem.zip)
 
 :::
 
@@ -250,18 +250,18 @@ Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leur
 
 :::
 
-<!-- 
+
 ::: details S2E2 - Encapsulation
 
 ### objectif
 
-L'objectif de cet exercice est de mettre en pratique les nouvelles notions que vous venez d'apprendre ou d'approfondir en ce début de session (constructeurs, propriétés, méthodes paramétrées, types et conversions).  Pour ce faire, vous devez développer une **classe** appelée "**Creature**" ainsi qu'un nouveau type **Enum** (Assurez-vous d'avoir lu la section : [Type-Enum](https://420-14b-fx.gitlab.io/docs/enum.html)) appelé "**CreatureType**". 
+L'objectif de cet exercice est de mettre en pratique les nouvelles notions que vous venez d'apprendre ou d'approfondir en ce début de session (constructeurs, propriétés, méthodes paramétrées, types et conversions).  Pour ce faire, vous devez développer une **classe** appelée "**Creature**" ainsi qu'un nouveau type **Enum** (Assurez-vous d'avoir lu la section : [Type-Enum](/enum)) appelé "**CreatureType**". 
 
 Pour **tester** cette classe, vous devez concevoir un **programme principal** qui simule un combat entre deux créatures choisies par l’utilisateur. Les adversaires s'attaquent chacun leur tour tant qu'une des deux créatures n'est pas morte. La valeur d'une attaque est déterminée par un nombre aléatoire entre 1 et 15. Finalement, La créature qui gagne vole le contenu de la bourse du perdant.
 
 Vous devez indiquer pour chaque attaque qui est l'attaquant ainsi que les statistiques de chaque créature. Finalement vous devez afficher le gagnant ainsi que la nombre de pièces d'or qu'il a gagné.
 
-Il est important de respecter les spécifications données ci-dessous et les [normes habituelles de programmation en C#](https://420-14b-fx.gitlab.io/docs/normes.html)  (entre autres, les majuscules et les minuscules).  De plus, vous devez respecter la  [convention de nommage](https://420-14b-fx.gitlab.io/docs/convention.html).
+Il est important de respecter les spécifications données ci-dessous et les [normes habituelles de programmation en C#](/normes)  (entre autres, les majuscules et les minuscules).  De plus, vous devez respecter la  [convention de nommage](/convention).
 
 ### Création du projet
 
@@ -385,12 +385,15 @@ Il est important de respecter les spécifications données ci-dessous et les [no
     Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 20)
     ```
 
+<!--
 ### Solution de l'exercice 
 
  [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2004/S2E2-ExerciceEncapsulation.zip)
- 
+-->
 
 :::
+
+<!-- 
 
 ## Semaine 3 
 
