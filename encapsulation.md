@@ -52,31 +52,31 @@ Voyons comment nous pouvons prévenir cette situation en utilisant l'encapsulati
 class Rectangle
     {   
         
-        private float hauteur;  // [!code focus]
-        private float largeur;  // [!code focus]
-        private string couleur; // [!code focus]
+        private float _hauteur;  // [!code focus]
+        private float _largeur;  // [!code focus]
+        private string _couleur; // [!code focus]
 
         public Rectangle()
         {
-            hauteur = 0;
-            largeur = 0;
-            couleur = "Aucune";
+            _hauteur = 0;
+            _largeur = 0;
+            _couleur = "Aucune";
         }
         public Rectangle(float hauteur, float largeur, string couleur)
         {
-            this.hauteur = hauteur;
-            this.largeur = largeur;
-            this.couleur = couleur;
+            _hauteur = hauteur;
+            _largeur = largeur;
+            _couleur = couleur;
         }
 
         public float CalculerPerimetre()
         {
-            return (this.hauteur * 2) + (this.largeur * 2);
+            return (_hauteur * 2) + (_largeur * 2);
         }
 
         public float CalculerAire()
         {
-            return this.hauteur * this.largeur;
+            return _hauteur * _largeur;
         }
     }
 ```
@@ -105,12 +105,12 @@ Une propriété est un type de fonction spécial qui permet la lecture ou la mod
 Ainsi, chaque attribut privé qui doit être accessible publiquement devra posséder sa propre propriété : 
 
 ```c#
-private float hauteur;	//Attribut privé
+private float _hauteur;	//Attribut privé
 
 public float Hauteur	//Propriété
 {
-    get { return hauteur; }	    //Accesseur en lecture
-    set { hauteur = value; }	//Accesseur en écriture
+    get { return _hauteur; }	    //Accesseur en lecture
+    set { _hauteur = value; }	//Accesseur en écriture
 }
 
 ```
@@ -192,17 +192,18 @@ Voici un exemple pour la validation de la hauteur :
 ```c#
 public float Hauteur
 {
-     get { return hauteur; }
+     get { return _hauteur; }
      set {
             //validation de la hauteur selon les valeures des constantes
             if (value >= HAUTEUR_MIN && value <= HAUTER_MAX)
-                hauteur = value;
+                _hauteur = value;
         }
 }
 ```
 La raison pour laquelle nous validons est due au fait que dans l'accesseur set on s'est rendu compte que l'on pouvait assigner des valeurs incohérentes à nos attributs.  Afin d'éviter de commettre des erreurs et de rendre nos objets incohérents. Nous nous assurerons que seuls les accesseurs peuvent modifier nos attributs. Il faudra donc inclure des validations dans nos accesseurs set.
 
-Tel que mentionné précédemment, l'accesseur **get** permet également de retourne le résultat d'un calcul à condition que ce résultat soit tu même type que la propriété. Ainsi, il nous est possible **changer l'accesseur des méthodes CalculerPerimetre() et CalculerAire pour private** et de **créer des propriétés Perimètre et Air qui appellent les méthodes correspondante**. 
+### Des propriétés à la place des méthodes
+Tel que mentionné précédemment, l'accesseur **get** permet également de retourne le résultat d'un calcul à condition que ce résultat soit du même type que la propriété. Ainsi, il nous est possible **changer le modificateur d'accès des méthodes CalculerPerimetre() et CalculerAire pour private** et de **créer des propriétés Perimètre et Air qui appellent les méthodes correspondante**. 
 
 
 ```c#
@@ -271,7 +272,7 @@ float _hauteur;
 
 ```
 
-Une propriété doit toujours commencer par une lettre majuscule et doit porter le même nom que l'attribut correspondant. 
+- Une propriété doit toujours commencer par une lettre majuscule et doit porter le même nom que l'attribut correspondant. 
 Exemple : 
 
 ```c#
@@ -309,7 +310,7 @@ La décision d'utiliser une propriété ou une méthode dépend de la sémantiqu
 
 4) **Paramètres**:
 
-    - **Propriétés** : Elles ne prennent pas de paramètres (à part this pour les propriétés d'instance).
+    - **Propriétés** : Elles ne prennent pas de paramètres.
     - **Méthodes** : Elles peuvent prendre des paramètres.
 
 5) **Conventions .NET** : Dans le monde de .NET et C#, il existe certaines conventions :
