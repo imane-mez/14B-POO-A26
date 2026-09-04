@@ -232,8 +232,8 @@ Afin de faciliter le design de vos diagrammes, j'ai créé une librairie contena
 
 2) Pour installer la librairie : 
 
-    - Dans l'application draw.io, cliquer sur le menu `Fichier --> Ouvrire une librairie`
-    - Sélectionner le fichier que vous avez téléchargez(Bloc-notes.xml)
+    - Dans l'application draw.io, cliquer sur le menu `Fichier --> Ouvrir une librairie`
+    - Sélectionner le fichier que vous avez téléchargé (Bloc-notes.xml)
 
 
 
@@ -241,6 +241,13 @@ Afin de faciliter le design de vos diagrammes, j'ai créé une librairie contena
 
 ## Démo - Relations
 Télécharger la démonstration de départ : [S3C1-ExempleMobilierCuisine.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/D%C3%A9mos/Cours%205/ExempleMobilierCuisine%20-%20D%C3%A9part.zip)
+
+En partant de la démo et du [diagramme de classes](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/D%C3%A9mos/Cours%205/mobilier-cuisine.pdf), écrire un programme permettant de créer un mobilier de cuisine constitué d'une table et d'un certain nombre de chaises. Le programme doit ainsi permettre de calculer le prix de vente du mobilier après avoir appliqué une réduction de 7% par rapport aux prix d'origine des articles s'ils étaient vendus séparément.
+- Coder la classe MobilierCuisine. La classe doit permettre de calculer le prix de vente, le nombre de chaises et retourner une chaise en spécifiant son indice dans le tableau de chaises.
+- Dans program.cs :
+	- Créer un mobilier constitué d'une table et de 6 chaises (4 ordinaires et 2 capitaines).
+	- Afficher les informations du mobilier telles que le prix de vente, le nombre de chaises, le modèle et le prix de la table, le modèle ainsi que le prix de vente de la chaise d'indice 3.
+
 
 <!--
 Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)-->
