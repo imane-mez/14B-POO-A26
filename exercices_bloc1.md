@@ -393,15 +393,13 @@ Il est important de respecter les spécifications données ci-dessous et les [no
 
 :::
 
-<!-- 
-
 ## Semaine 3 
 
 ::: details S3E1 - Relation entre classes
 
 ### Problème 1
 
-Un professeur aimerait être en mesure d'utiliser une application lui permettant de saisir les étudiants faisant partie d'un cours qu'il donne et être en mesure de saisir pour chaque étudiant le résultat de leurs évaluations. Par la suite, il devrait être en mesure d'obtenir la moyenne du groupe pour une évaluation, la moyenne finale du groupe et finalement la moyenne et la note finale d'un étudiant.
+Un professeur aimerait être en mesure d'utiliser une application lui permettant de saisir les étudiants faisant partie d'un cours qu'il donne et être en mesure de saisir pour chaque étudiant le résultat de ses évaluations. Par la suite, il devrait être en mesure d'obtenir la moyenne du groupe pour une évaluation, la moyenne finale du groupe et finalement la moyenne et la note finale d'un étudiant.
 
 Un cours est caractérisé par :
 
@@ -442,22 +440,24 @@ Le professeur désire maintenant être en mesure d’utiliser votre application 
 - Modifier le diagramme de classe créé précédemment afin de répondre au besoin.
 - Modifier votre application afin de répondre au besoin.
 
+<!-- 
 
 ### Solution
 Télécharger la solution : [S3E1-ExerciceRelation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
 
-
+-->
 
 
 
 :::
 
+<!-- 
 
 ## Semaine 4
 ::: details S4E1 - Validation de formulaire
 
 #### Objectifs
-Mettre en pratique l'utilisation de la méthode ToStrin() et la validation des données saisies par l’utilisateur ainsi que les messages de rétroaction.
+Mettre en pratique l'utilisation de la méthode ToString() et la validation des données saisies par l’utilisateur ainsi que les messages de rétroaction.
 
 #### Problème
 

@@ -33,16 +33,16 @@ export default defineConfig({
               // { text: 'TimeSpan', link: '/timespan' },
               // { text: 'DateOnly', link: '/dateonly' },
               // { text: 'TimeOnly', link: '/timeonly' },
-              { text: 'Type Enum <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/enum' },
+              { text: 'Type Enum', link: '/enum' },
              
 
             ]
           },
           {text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
-          {text: 'Encapsulation <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/encapsulation' },
-          // {text: 'Relation entre les classes', link: '/relations' },
-          // {text: 'Vecteur d\'objets', link: '/vecteur_objets' },
+          {text: 'Encapsulation', link: '/encapsulation' },
+          {text: 'Relation entre les classes <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/relations' },
+          {text: 'Tableau d\'objets <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/vecteur_objets' },
           // {text: 'Composition d\'objets', link: '/composition_objets' },
           // {text: 'Espace de nom', link: '/namespace' },
           // {text: 'Méthode ToString()', link: '/methode_tostring' },
@@ -99,8 +99,8 @@ export default defineConfig({
        {
         text: 'En vrac',
         items: [
-          { text: 'Conventions de nommage <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/convention' },
-          { text: 'Norme de codage <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/normes' },
+          { text: 'Conventions de nommage', link: '/convention' },
+          { text: 'Norme de codage', link: '/normes' },
           //{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
           // {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           // { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },

@@ -6,7 +6,7 @@ outline: deep
 
 ## Diagramme de classe.
 
-Le diagramme de classe est un schéma permettant de présenter les structures des classes ainsi que les différentes relations entre celles-ci. Le schéma d'un décrit les attributs, les propriétés, les constructeurs et les différentes méthodes d'une classe. Celle-ci indique également le niveau d'accessibilité (public ou private) des différents éléments qui la composent.
+Le diagramme de classe est un schéma permettant de présenter les structures des classes ainsi que les différentes relations entre celles-ci. Le schéma décrit les attributs, les propriétés, les constructeurs et les différentes méthodes d'une classe. Celle-ci indique également le niveau d'accessibilité (public ou private) des différents éléments qui la composent.
 
 Voici un exemple pour la classe CompteBancaire :
 
@@ -124,7 +124,7 @@ Ainsi :
 Pour travailler avec plusieurs classes, il est nécessaire de définir une classe principale. Cette classe vous permettra de manipuler les différents objets nécessaires pour l'application. Par Exemple, dans le cas de nos classes **CompteBancaire** et **Client**, nous pourrions avoir une classe principale nommée **Banque** permettant de manipuler des objets de ces deux types.
 
 Ainsi, cette classe pourrait par exemple :
-- Créer un vecteur de clients à partir de données contenues dans un fichier.
+- Créer un tableau de clients à partir de données contenues dans un fichier.
 - Créer un nouveau compte bancaire et lui associer un client.
 - Rechercher un client ou un compte bancaire
 
@@ -166,28 +166,28 @@ class Banque
 {
 
     //Attributs
-    private Client[] _vectClients;
-    private CompteBancaire[] _vectComptesBancaires;
+    private Client[] _tabClients;
+    private CompteBancaire[] _tabComptesBancaires;
 
     //Propriétés
-    public Client[] VectClients
+    public Client[] tabClients
     {
-        get { return _vectClients; }
-        set { _vectClients = value; }
+        get { return _tabClients; }
+        set { _tabClients = value; }
     }
 
 
-    public CompteBancaire[] VectComptesBancaires
+    public CompteBancaire[] tabComptesBancaires
     {
-        get { return _vectComptesBancaires; }
-        set { _vectComptesBancaires = value; }
+        get { return _tabComptesBancaires; }
+        set { _tabComptesBancaires = value; }
     }
 
     //Constructeur.
     public Banque()
     {
-        VectClients = ChargerClients(CHEMIN_FICHIER_CLIENT);
-        VectComptesBancaires = ChargerComptesBancaires(CHEMIN_FICHIER_CLIENT);
+        tabClients = ChargerClients(CHEMIN_FICHIER_CLIENT);
+        tabComptesBancaires = ChargerComptesBancaires(CHEMIN_FICHIER_CLIENT);
     }
 
     private Client[] ChargerClients(string cheminFichier)
@@ -224,9 +224,9 @@ Console.WriteLine("Le nom du client trouvé est :" + unClient.Nom);
 
 Il exite plusieurs logiciels permettant la création de diagrammes de classes. Dans le cadre du cours, nous utiliseron le logiciel gratuit Draw.io. 
 
-Téléchargement du logiciel : https://github.com/jgraph/drawio-desktop/releases/download/v28.1.2/draw.io-28.1.2-windows-installer.exe
+Téléchargement du logiciel : https://github.com/jgraph/drawio-desktop/releases/download/v31.3.2/draw.io-31.3.2-windows-installer.exe
 
-Afin de facilité le design de vos diagrammes, j'ai créé un librairie contenant déjà les différentes formes à utiliser. 
+Afin de faciliter le design de vos diagrammes, j'ai créé une librairie contenant déjà les différentes formes à utiliser. 
 
 1) Télécharger la librairie : [modèle](https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false) 
 
@@ -240,7 +240,7 @@ Afin de facilité le design de vos diagrammes, j'ai créé un librairie contenan
 
 
 ## Démo - Relations
-Télécharger la démonstration de départ : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
+Télécharger la démonstration de départ : [S3C1-ExempleMobilierCuisine.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/D%C3%A9mos/Cours%205/ExempleMobilierCuisine%20-%20D%C3%A9part.zip)
 
 <!--
 Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)-->

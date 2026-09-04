@@ -11,6 +11,8 @@ dist
 #convention.md
 #encapsulation.md
 #enum.md
+#relations.md
+#vecteur_objets.md
 
 algo_tri.md
 api-examples.md
@@ -48,7 +50,7 @@ namespace.md
 poo_intro.md
 README.md
 recherche_dichotomique.md
-relations.md
+
 
 retroaction.md
 
@@ -62,4 +64,3 @@ timespan_up_down_control.md
 tryparse.md
 
 validationFormulaire.md
-vecteur_objets.md

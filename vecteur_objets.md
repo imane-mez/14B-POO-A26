@@ -2,15 +2,15 @@
 outline: deep
 ---
 
-# Les vecteurs d’objets
+# Les tableaux d’objets
 
 
-## Affectation d'objet dans un vecteur
+## Affectation d'objet dans un tableau
 
 Lorsqu'on déclare un tableau de types primitifs, par exemple :
 
 ```c#
-int[] vect = new int[5];
+int[] tab = new int[5];
 
 ```
 
@@ -23,32 +23,32 @@ arr[0] = 10; // Stocke la valeur 10 directement dans la mémoire à l'emplacemen
 Quand on parle d'objets (ou d'instances de classes), la situation est un peu différente. Reprenons l'exemple d'un tableau d'objets **Rectangle** :
 
 ```c#
-Rectangle[] vectRect ;		// Déclaration du vecteur
+Rectangle[] tabRect ;		// Déclaration du tableau
 
-// vectRect ne contient toujours rien mais pourra éventuellement faire référence à un vecteur.
-vectRect = new Rectangle[6] ;	// Réservation de l'espace pour placer les références	 
+// tabRect ne contient toujours rien mais pourra éventuellement faire référence à un tableau.
+tabRect = new Rectangle[6] ;	// Réservation de l'espace pour placer les références	 
 
 // À noter que les objets de type Rectangle ne sont pas encore créés.
 
 ```
 Ici, le système alloue de la mémoire pour 5 **références** à des objets de type **Rectangle**. Notez bien le mot "référence" : le tableau ne stocke pas directement les objets, mais plutôt des adresses (ou des pointeurs) vers ces objets.
 
-![Vecteur d'objets vide](./images/vecteur_objets_vide.png)
+![Tableau d'objets vide](./images/vecteur_objets_vide.png)
 
 Lorsque vous créez un nouvel objet et l'affectez à une position dans le tableau, la mémoire est allouée pour l'objet lui-même dans une autre zone de la mémoire (souvent appelée "tas" ou "heap" en anglais). **Le tableau ne contient que la référence à cet objet** :
 
 ```c#
-// Allouer l'espace pour 6 rectangles et placer la référence à la position appropriée dans le vecteur
-vectRect[0] = new Rectangle(9,9) ;			// adresse 500 déterminée par le SE
-vectRect[1] = new Rectangle(12,76) ;		// adresse 800 déterminée par le SE
-vectRect[2] = new Rectangle(45,23) ;		// adresse 200 déterminée par le SE
-vectRect[3] = new Rectangle(7,33) ;			// adresse 300 déterminée par le SE
-vectRect[4] = new Rectangle(98,5) ;			// adresse 400 déterminée par le SE
-vectRect[5] = new Rectangle(22,98) ;		// adresse 900 déterminée par le SE
+// Allouer l'espace pour 6 rectangles et placer la référence à la position appropriée dans le tableau
+tabRect[0] = new Rectangle(9,9) ;			// adresse 500 déterminée par le SE
+tabRect[1] = new Rectangle(12,76) ;		// adresse 800 déterminée par le SE
+tabRect[2] = new Rectangle(45,23) ;		// adresse 200 déterminée par le SE
+tabRect[3] = new Rectangle(7,33) ;			// adresse 300 déterminée par le SE
+tabRect[4] = new Rectangle(98,5) ;			// adresse 400 déterminée par le SE
+tabRect[5] = new Rectangle(22,98) ;		// adresse 900 déterminée par le SE
 
 ```
 
-![Vecteur d'objets vide](./images/vecteur_objets.png)
+![Tableau d'objets vide](./images/vecteur_objets.png)
 
 Cette distinction est cruciale pour comprendre de nombreux comportements en programmation, tels que le passage de paramètres par valeur ou par référence
 
@@ -117,34 +117,34 @@ Après la méthode: Largeur: 20, Hauteur: 40
 
 Comme vous pouvez le voir, les modifications apportées à l'objet **Rectangle** à l'intérieur de la méthode **ModifierRectangle** sont bien reflétées à l'extérieur de la méthode. Ceci est dû au fait que bien que la référence à l'objet soit passée en paramètre, elle pointe toujours vers le même objet en mémoire.
 
-Notez qu'en C# **les vecteurs sont ont aussi des objets**. Qu'il s'agisse d'un tableau de types primitifs (comme int, float, etc.) ou d'objets, le tableau lui-même est stocké comme un type référence. **Lorsque vous passez un tableau à une méthode, vous passez une référence à ce tableau**, et non une copie complète du tableau. Cela signifie que toute modification apportée au tableau à l'intérieur de la méthode se reflétera à l'extérieur de la méthode.
+Notez qu'en C# **les tableaux sont ont aussi des objets**. Qu'il s'agisse d'un tableau de types primitifs (comme int, float, etc.) ou d'objets, le tableau lui-même est stocké comme un type référence. **Lorsque vous passez un tableau à une méthode, vous passez une référence à ce tableau**, et non une copie complète du tableau. Cela signifie que toute modification apportée au tableau à l'intérieur de la méthode se reflétera à l'extérieur de la méthode.
 
 
 ```c#
-public static void ModifierVecteur(int[] vect)
+public static void ModifierTableau(int[] tab)
 {
-    for (int i = 0; i < vect.Length; i++)
+    for (int i = 0; i < tab.Length; i++)
     {
-        vect[i] *= 2; // double chaque élément
+        tab[i] *= 2; // double chaque élément
     }
 
-    Console.WriteLine($"Dans la méthode: {AfficherVecteur(vect)}");
+    Console.WriteLine($"Dans la méthode: {AfficherTableau(tab)}");
 
 }
 
 public static void Main(string[] args)
 {
-    int[] vectNombres = { 1, 2, 3, 4, 5 }; //Initialise un vecteur avec des valeurs
-    Console.WriteLine($"Avant la méthode: {AFficherVecteur(vectNombres)}");
-    ModifierVecteur(vectNombres);
-    Console.WriteLine($"Après la méthode: {AFficherVecteur(vectNombres)}");
+    int[] tabNombres = { 1, 2, 3, 4, 5 }; //Initialise un tableau avec des valeurs
+    Console.WriteLine($"Avant la méthode: {AFficherTableau(tabNombres)}");
+    ModifierTableau(tabNombres);
+    Console.WriteLine($"Après la méthode: {AFficherTableau(tabNombres)}");
 }
 
-public static void AfficherVecteur(int[] vect)
+public static void AfficherTableau(int[] tab)
 {
-    for (int i = 0; i < vect.Length; i++)
+    for (int i = 0; i < tab.Length; i++)
     {
-       Console.Write($"[{vect[i]}] ");
+       Console.Write($"[{tab[i]}] ");
     }
 }
 
@@ -159,6 +159,6 @@ Après la méthode: 2, 4, 6, 8, 10
 
 ```
 
-Dans cet exemple, bien que nous ayons un tableau d'entiers, qui sont des types primitifs, toute modification apportée au tableau à l'intérieur de la méthode **ModifierVecteur** affecte le tableau original dans **Main**.
+Dans cet exemple, bien que nous ayons un tableau d'entiers, qui sont des types primitifs, toute modification apportée au tableau à l'intérieur de la méthode **ModifierTableau** affecte le tableau original dans **Main**.
 
 La raison en est que même si les entiers eux-mêmes sont des types valeur, le tableau contenant ces entiers est un type référence. Ainsi, lorsque le tableau est passé à la méthode, c'est la référence au tableau (et non une copie complète du tableau) qui est passée.
