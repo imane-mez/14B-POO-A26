@@ -25,8 +25,8 @@ commentaires.md
 composition_objets.md
 controles_dynamiques.md
 
-dateonly.md
-datetime.md
+#dateonly.md
+#datetime.md
 date_picker.md
 
 
@@ -58,8 +58,8 @@ retroaction.md
 surcharge_operateurs.md
 tests_fonctionnels.md
 tests_unitaires.md
-timeonly.md
-timespan.md
+#timeonly.md
+#timespan.md
 timespan_up_down_control.md
 tryparse.md
 
