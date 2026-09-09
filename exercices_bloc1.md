@@ -444,20 +444,20 @@ Le professeur désire maintenant être en mesure d’utiliser votre application 
 ### Problème 3
 La ville de Québec souhaite informatiser la gestion d’une bibliothèque municipale.
 Le système doit permettre :
-•	d’enregistrer des livres avec leurs informations (titre, auteur, ISBN, nombre d’exemplaires disponibles, etc.) ; Chaque exemplaire d’un même livre a le même ISBN.
-•	de gérer les membres de la bibliothèque (nom, prénom, numéro de membre, téléphone, courriel) ;
-•	de permettre aux membres d’emprunter et de retourner des livres ;
-•	un membre peut emprunter plusieurs livres en même temps, mais un livre peut être emprunté par un seul membre à la fois ;
-•	le système doit conserver une date d’emprunt et une date de retour prévue.
+- d’enregistrer des livres avec leurs informations (titre, auteur, ISBN, nombre d’exemplaires disponibles, etc.) ; Chaque exemplaire d’un même livre a le même ISBN.
+- de gérer les membres de la bibliothèque (nom, prénom, numéro de membre, téléphone, courriel) ;
+- de permettre aux membres d’emprunter et de retourner des livres ;
+- un membre peut emprunter plusieurs livres en même temps, mais un livre peut être emprunté par un seul membre à la fois ;
+- le système doit conserver une date d’emprunt et une date de retour prévue.
 
 ### Problème 4
 Une association sportive organise un tournoi de soccer amateur.
 Le système doit permettre :
-•	d’enregistrer les équipes (nom, catégorie d’âge, liste de joueurs) ;
-•	chaque joueur a un nom, un prénom, une date de naissance et un numéro de maillot ;
-•	gérer les matchs (date, heure, lieu, équipes participantes, score final) ;
-•	chaque match oppose exactement deux équipes ;
-•	une équipe peut participer à plusieurs matchs.
+- d’enregistrer les équipes (nom, catégorie d’âge, liste de joueurs) ;
+- chaque joueur a un nom, un prénom, une date de naissance et un numéro de maillot ;
+- gérer les matchs (date, heure, lieu, équipes participantes, score final) ;
+- chaque match oppose exactement deux équipes ;
+- une équipe peut participer à plusieurs matchs.
 
 <!-- 
 
