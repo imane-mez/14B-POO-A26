@@ -122,9 +122,10 @@ Pour vérifier si une valeur a été saisie
         set
         {
             // Validation : l'utilisateur doit avoir saisi une date
-            if (value == DateOnly.MinValue)
+            // si la date est manquante, elle sera égale à MinVal.
+            if (value != DateOnly.MinValue)
             {
-                throw new ArgumentException("La date de début doit être saisie.");
+                _dateNaissance = value;
             }
 
             _dateNaissance = value;

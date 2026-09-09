@@ -29,10 +29,10 @@ export default defineConfig({
             items : [
               { text: 'Type nullable', link: '/type_nullable' },
                  { text: 'String', link: '/string' },
-              // { text: 'DateTime', link: '/datetime' },
-              // { text: 'TimeSpan', link: '/timespan' },
-              // { text: 'DateOnly', link: '/dateonly' },
-              // { text: 'TimeOnly', link: '/timeonly' },
+              { text: 'DateTime <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/datetime' },
+              { text: 'TimeSpan <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/timespan' },
+              { text: 'DateOnly <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/dateonly' },
+              { text: 'TimeOnly <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/timeonly' },
               { text: 'Type Enum', link: '/enum' },
              
 
@@ -41,7 +41,7 @@ export default defineConfig({
           {text: 'Résolution de problèmes', link: '/resolution_problemes' },
           {text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
-          {text: 'Relation entre les classes <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/relations' },
+          {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Tableau d\'objets <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/vecteur_objets' },
           // {text: 'Composition d\'objets', link: '/composition_objets' },
           // {text: 'Espace de nom', link: '/namespace' },
@@ -104,8 +104,8 @@ export default defineConfig({
           //{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
           // {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           // { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
-          /*{ text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
-          { text: 'Configuration GitLab avec VS 2022', link: '/git' },*/
+          { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
+          // { text: 'Configuration GitLab avec VS 2022', link: '/git' },
         ]
       },
       /*

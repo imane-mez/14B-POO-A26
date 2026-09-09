@@ -16,7 +16,7 @@ Voici quelques exemples d'utilisation du type DateTime :
 
 ```c#
 
-// Création de la date d'aujourd'hui.
+// Création de la date et l'heure actuelles.
 DateTime aujourdhui = DateTime.Now;
 
 // Création d'une date malheureusement célèbre (le temps est mis à zéro).
