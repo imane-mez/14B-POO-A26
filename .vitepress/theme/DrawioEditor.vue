@@ -145,6 +145,7 @@ onBeforeUnmount(() => {
   flex-direction: column;
   height: calc(100vh - 170px);
   min-height: 600px;
+  width: 100%;
   margin: 0 -24px -32px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;

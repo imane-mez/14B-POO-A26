@@ -16,7 +16,6 @@ export default defineConfig({
     },
     nav: [
       { text: 'Accueil', link: '/' },
-      { text: 'Diagrammes', link: '/drawio' },
     ],
 
     sidebar: [
@@ -106,6 +105,8 @@ export default defineConfig({
           // {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           // { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
           { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
+          { text: 'Diagrammes', link: '/drawio' },
+
           // { text: 'Configuration GitLab avec VS 2022', link: '/git' },
         ]
       },
