@@ -16,6 +16,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Accueil', link: '/' },
+      { text: 'Diagrammes', link: '/drawio' },
     ],
 
     sidebar: [
