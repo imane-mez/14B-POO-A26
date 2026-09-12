@@ -249,7 +249,7 @@ En partant de la démo et du [diagramme de classes](https://github.com/imane-mez
 	- Afficher les informations du mobilier telles que le prix de vente, le nombre de chaises, le modèle et le prix de la table, le modèle ainsi que le prix de vente de la chaise d'indice 3.
 
 
-<!--
-Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)-->
+
+Télécharger la démonstration complète : [S3C1-DemoComposition.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/D%C3%A9mos/cours%205/ExempleMobilierCuisine%20-%20Solution.zip)
 
 

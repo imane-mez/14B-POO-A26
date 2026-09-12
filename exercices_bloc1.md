@@ -238,13 +238,13 @@ Vous devez concevoir une application qui va permettre de simuler une partie de d
 
 Après chaque manche, on doit afficher le nom des joueurs et les valeurs de leurs dés ainsi que le nombre de manches gagnées par chaque joueur. 
 
-<!-- 
+
 
 ### Solution de l'exercice 
 
- [S2E1-CreationClasse-Solution.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2003?ref_type=heads)
+ [S2E1-CreationClasse-Solution.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2003/S2E1-CreationClasse%20-%20Solution.zip)
 
- -->
+
 
 
 
@@ -385,11 +385,11 @@ Il est important de respecter les spécifications données ci-dessous et les [no
     Créature de type  Elfe (Vie = 12, Armure = 8, Bourse = 20)
     ```
 
-<!--
+
 ### Solution de l'exercice 
 
- [S2E2-ExerciceEncapsulation.zip](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2004/S2E2-ExerciceEncapsulation.zip)
--->
+ [S2E2-ExerciceEncapsulation.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2004/S2E2-ExerciceEncapsulation.zip)
+
 
 :::
 
@@ -459,14 +459,8 @@ Le système doit permettre :
 - chaque match oppose exactement deux équipes ;
 - une équipe peut participer à plusieurs matchs.
 
-<!-- 
-
 ### Solution
-Télécharger la solution : [S3E1-ExerciceRelation.zip](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2005?ref_type=heads)
-
--->
-
-
+Télécharger la solution : [S3E1-ExerciceRelation.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2005/S3E1-RelationsClasses.zip)
 
 :::
 
