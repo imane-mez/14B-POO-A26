@@ -1,10 +1,12 @@
 <script setup>
 import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 
+const editor = ref(null)
 const iframe = ref(null)
 const status = ref('Prêt')
 const lastXml = ref('')
 const lastSavedAt = ref('')
+const isFullscreen = ref(false)
 
 const embedOrigin = 'https://embed.diagrams.net'
 const storageKey = '14b-poo-drawio-diagram'
@@ -81,13 +83,39 @@ function requestSave() {
   status.value = 'Enregistrement en cours...'
 }
 
-function downloadDiagram() {
+async function downloadDiagram() {
   if (!lastXml.value) {
     status.value = 'Aucun diagramme à télécharger'
     return
   }
 
   const blob = new Blob([lastXml.value], { type: 'application/xml' })
+
+  if (typeof window.showSaveFilePicker === 'function') {
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: 'diagramme.drawio',
+        types: [
+          {
+            description: 'Diagramme draw.io',
+            accept: {
+              'application/xml': ['.drawio', '.xml']
+            }
+          }
+        ]
+      })
+      const writable = await handle.createWritable()
+      await writable.write(blob)
+      await writable.close()
+      status.value = 'Fichier téléchargé'
+    } catch (error) {
+      if (error?.name !== 'AbortError') {
+        status.value = 'Impossible d’enregistrer le fichier'
+      }
+    }
+    return
+  }
+
   const url = URL.createObjectURL(blob)
   const link = document.createElement('a')
   link.href = url
@@ -108,26 +136,75 @@ function newDiagram() {
   status.value = 'Nouveau diagramme'
 }
 
+function handleFullscreenChange() {
+  isFullscreen.value = document.fullscreenElement === editor.value
+  status.value = isFullscreen.value
+    ? 'Mode plein écran activé'
+    : 'Mode plein écran désactivé'
+}
+
+async function toggleFullscreen() {
+  if (!editor.value) {
+    status.value = 'Plein écran indisponible'
+    return
+  }
+
+  if (document.fullscreenElement === editor.value) {
+    if (typeof document.exitFullscreen !== 'function') {
+      status.value = 'Plein écran indisponible dans ce navigateur'
+      return
+    }
+
+    try {
+      await document.exitFullscreen()
+    } catch {
+      status.value = 'Impossible de quitter le plein écran'
+    }
+    return
+  }
+
+  if (typeof editor.value.requestFullscreen !== 'function') {
+    status.value = 'Plein écran indisponible dans ce navigateur'
+    return
+  }
+
+  try {
+    await editor.value.requestFullscreen()
+  } catch {
+    status.value = 'Plein écran refusé par le navigateur'
+  }
+}
+
 onMounted(async () => {
   window.addEventListener('message', handleMessage)
+  document.addEventListener('fullscreenchange', handleFullscreenChange)
   await nextTick()
   iframe.value?.focus()
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('message', handleMessage)
+  document.removeEventListener('fullscreenchange', handleFullscreenChange)
 })
 </script>
 
 <template>
-  <section class="drawio-editor" aria-label="Éditeur de diagrammes draw.io">
+  <section ref="editor" class="drawio-editor" aria-label="Éditeur de diagrammes draw.io">
     <div class="drawio-toolbar">
       <div class="drawio-actions">
         <button type="button" @click="newDiagram">Nouveau</button>
         <button type="button" class="primary" @click="requestSave">Enregistrer</button>
         <button type="button" @click="downloadDiagram">Télécharger (.drawio)</button>
+        <button
+          type="button"
+          :aria-label="isFullscreen ? 'Quitter le plein écran' : 'Passer en plein écran'"
+          :aria-pressed="isFullscreen"
+          @click="toggleFullscreen"
+        >
+          {{ isFullscreen ? 'Quitter le plein écran' : 'Plein écran' }}
+        </button>
       </div>
-      <span class="drawio-status" role="status">{{ status }}</span>
+      <span class="drawio-status" role="status" aria-live="polite">{{ status }}</span>
     </div>
 
     <iframe
@@ -150,6 +227,16 @@ onBeforeUnmount(() => {
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   overflow: hidden;
+  background: var(--vp-c-bg);
+}
+
+.drawio-editor:fullscreen {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
 }
 
 .drawio-toolbar {
@@ -204,13 +291,23 @@ iframe {
 @media (max-width: 640px) {
   .drawio-editor {
     height: calc(100vh - 220px);
+    min-height: 500px;
     margin-right: -16px;
     margin-left: -16px;
   }
 
   .drawio-toolbar {
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
+  }
+
+  .drawio-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .drawio-status {
+    white-space: normal;
   }
 }
 </style>
