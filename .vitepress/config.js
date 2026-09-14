@@ -43,10 +43,10 @@ export default defineConfig({
           {text: 'Classe', link: '/poo_intro' },
           {text: 'Encapsulation', link: '/encapsulation' },
           {text: 'Relation entre les classes', link: '/relations' },
-          {text: 'Tableau d\'objets <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/vecteur_objets' },
+          {text: 'Tableau d\'objets', link: '/vecteur_objets' },
           // {text: 'Composition d\'objets', link: '/composition_objets' },
-          // {text: 'Espace de nom', link: '/namespace' },
-          // {text: 'Méthode ToString()', link: '/methode_tostring' },
+          {text: 'Espace de nom <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/namespace' },
+          {text: 'Méthode ToString() <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/methode_tostring' },
           // {text: 'TryParse', link: '/tryparse' },
           // { text: 'WPF', 
           //   items : [

@@ -193,7 +193,7 @@ onBeforeUnmount(() => {
     <div class="drawio-toolbar">
       <div class="drawio-actions">
         <button type="button" @click="newDiagram">Nouveau</button>
-        <button type="button" class="primary" @click="requestSave">Enregistrer</button>
+        <!-- <button type="button" class="primary" @click="requestSave">Enregistrer</button> -->
         <button type="button" @click="downloadDiagram">Télécharger (.drawio)</button>
         <button
           type="button"

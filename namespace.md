@@ -35,6 +35,13 @@ namespace NomDeEspaceDenom
 }
 
 ```
+Ou encore :
+```c#
+namespace NomDeEspaceDenom;
+
+// Corps de l'espace de noms
+
+```
 
 Voici un exemple d'utilisation d'un espace de nom avec une classe :
 
@@ -47,6 +54,18 @@ namespace MonApplication
         {
             //
         }
+    }
+}
+
+```
+ou encore :
+```c#
+namespace MonApplication;
+class MaClasse
+{
+    public void UneMethode()
+    {
+        //
     }
 }
 

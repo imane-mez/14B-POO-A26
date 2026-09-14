@@ -43,9 +43,9 @@ Console.WriteLine($"Vous avez {age} an(s)");
 
 Cependant, si dans l'exemple précédent l'utilisateur ne saisit pas de valeur ou s'il saisit une chaîne de caractères au lieu d'une valeur numérique, cela nous donne une erreur et arrête le programme. Il nous faut donc un moyen de vérifier si le type saisi par l'utilisateur est valide. 
 
-Vous avec déjà utilise la méthode **Parse()** qui permet de convertir une chaîne de caractères en un certain type (string, char, bool, byte, short, int, long, float, double). **Si la conversion échoue alors le programme génère une erreur** et l'application s'arrête. Afin de prévenir ce comportement, il est possible d'utiliser la méthode **TryParse()**. 
+Vous avez déjà utilisé la méthode **Parse()** qui permet de convertir une chaîne de caractères en un certain type (string, char, bool, byte, short, int, long, float, double). **Si la conversion échoue alors le programme génère une erreur** et l'application s'arrête. Afin de prévenir ce comportement, il est possible d'utiliser la méthode **TryParse()**. 
 
-Cette méthode permet de tester si la conversion a fonctionné. Si la conversion échoue, alors la méthode retourne False et la valeur n'est pas convertie. Si la conversion a fonctionné, alors la méthode retourne **True** et la valeur est convertie dans le bon type. Voici comment nous pourrions nous assurer que l'âge s'agit est une valeur de type numérique positive :
+Cette méthode permet de tester si la conversion a fonctionné. Si la conversion échoue, alors la méthode retourne False et la valeur n'est pas convertie. Si la conversion a fonctionné, alors la méthode retourne **True** et la valeur est convertie dans le bon type. Voici comment nous pourrions nous assurer que l'âge est une valeur de type numérique positive :
 
 ```c#
 byte age = 0;
@@ -54,12 +54,12 @@ do
 {
     Console.Write("\nVeuillez saisir votre âge : ");
 
-    // Validation si la valeur saisie est et si elle est supérieure à 0.
-    // le paramètre out indique si si la conversion a fonctionné,
+    // Validation si la valeur saisie est de type byte et si elle est supérieure à 0.
+    // le paramètre out indique si la conversion a fonctionné,
     // alors age aura la valeur saisie à l'écran.
     if (!byte.TryParse(Console.ReadLine(),out age) || age < 1)
     {
-        Console.Write("\nL'âge doit être valeur numérique supérieur à 0.");
+        Console.Write("\nL'âge doit être une valeur numérique supérieur à 0.");
     }
     
 } while (age < 1);

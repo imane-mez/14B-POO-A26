@@ -1,5 +1,7 @@
 ---
 outline: deep
+aside: false
+---
 ---
 # Exercices bloc 1
 
@@ -434,11 +436,17 @@ Une fois terminé, vous devez exporter le diagramme en format PDF.
 - Obtenir la note finale d'un étudiant.
 - Obtenir la moyenne d'un étudiant.
 
+#### Solution
+<iframe src="public/Problème 1 - Gestion de cours.pdf"></iframe>
+
 ### Problème 2
 Le professeur désire maintenant être en mesure d’utiliser votre application pour gérer plusieurs cours. Celui-ci désire donc être en mesure de créer plusieurs cours avec des étudiants et de conserver les informations de tous les cours. Il désire également être en mesure de rechercher un cours à partir de son code.
 
 - Modifier le diagramme de classe créé précédemment afin de répondre au besoin.
 - Modifier votre application afin de répondre au besoin.
+
+#### Solution
+<iframe src="public/Problème 2 - Gestion de cours .pdf"></iframe>
 
 **_NOTE:_** Pour les deux problèmes suivants, donnez seulement le diagramme de classes.
 ### Problème 3
@@ -450,6 +458,9 @@ Le système doit permettre :
 - un membre peut emprunter plusieurs livres en même temps, mais un livre peut être emprunté par un seul membre à la fois ;
 - le système doit conserver une date d’emprunt et une date de retour prévue.
 
+#### Solution
+<iframe src="public/Problème 3 - Bibliothèque.pdf"></iframe>
+
 ### Problème 4
 Une association sportive organise un tournoi de soccer amateur.
 Le système doit permettre :
@@ -458,6 +469,9 @@ Le système doit permettre :
 - gérer les matchs (date, heure, lieu, équipes participantes, score final) ;
 - chaque match oppose exactement deux équipes ;
 - une équipe peut participer à plusieurs matchs.
+
+#### Solution
+<iframe src="public/Problème 4 - Soccer.pdf"></iframe>
 
 ### Solution
 Télécharger la solution : [S3E1-ExerciceRelation.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2005/S3E1-RelationsClasses.zip)

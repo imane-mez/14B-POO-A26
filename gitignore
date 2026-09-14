@@ -14,6 +14,9 @@ dist
 #relations.md
 #vecteur_objets.md
 
+#methode_tostring.md
+#namespace.md
+
 algo_tri.md
 api-examples.md
 appsettings.md
@@ -44,8 +47,7 @@ indexeur.md
 listes_generiques.md
 listview.md
 markdown-examples.md
-methode_tostring.md
-namespace.md
+
 
 poo_intro.md
 README.md
