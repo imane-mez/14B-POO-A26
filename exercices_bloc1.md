@@ -476,9 +476,7 @@ Le système doit permettre :
 ### Solution
 Télécharger la solution : [S3E1-ExerciceRelation.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2005/S3E1-RelationsClasses.zip)
 
-:::
-
-<!-- 
+::: 
 
 ## Semaine 4
 ::: details S4E1 - Validation de formulaire
@@ -488,7 +486,7 @@ Mettre en pratique l'utilisation de la méthode ToString() et la validation des 
 
 #### Problème
 
-À partir de la solution de départ [ S4E1-ExerciceValidation-Départ](https://gitlab.com/420-14b-fx/contenu/-/tree/main/bloc1/cours%2007?ref_type=heads) vous devez :
+À partir de la solution de départ [ S4E1-ExerciceValidation-Départ](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2008/S4E1%20-%20Exercices%20ToString()%20et%20Validation%20formulaire.zip) vous devez :
 
 1) Compléter les méthodes des classes Films.cs et GestionFilms.cs (voir commentaire todo: ).
 2) Écrire le code de l'interface permettant :
@@ -497,10 +495,10 @@ Mettre en pratique l'utilisation de la méthode ToString() et la validation des 
     - D’ajouter un film à la liste lorsque l’utilisateur clique sur le bouton « Ajouter »
     - De modifier un film sélectionné dans la liste lorsque l’utilisateur clique sur le bouton « modifier ». Si aucun film n’est sélectionné dans la liste, vous devez avertir l’utilisateur.
     - Quitter l’application 
-3) Ajouter la validation pour la l'ajout et la modification d’un nouveau film sachant que : 
+3) Ajouter la validation pour l'ajout et la modification d’un nouveau film sachant que : 
     - Tous les champs sont obligatoires.
     - Le titre du film doit contenir au moins 3 caractères.
     - L’année doit être comprise entre l'année 1500 et l’année courante (utiliser **DateTime.Now.Year** pour obtenir l'année courante). Assurez-vous que votre validation fonctionne si l'on change d’année sans devoir modifier votre code.
 
-:::  -->
+::: 
 

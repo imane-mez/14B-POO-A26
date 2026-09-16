@@ -30,13 +30,11 @@ export default defineConfig({
             items : [
               { text: 'Type nullable', link: '/type_nullable' },
                  { text: 'String', link: '/string' },
-              { text: 'DateTime <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/datetime' },
-              { text: 'TimeSpan <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/timespan' },
-              { text: 'DateOnly <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/dateonly' },
-              { text: 'TimeOnly <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/timeonly' },
+              { text: 'DateTime', link: '/datetime' },
+              { text: 'TimeSpan', link: '/timespan' },
+              { text: 'DateOnly', link: '/dateonly' },
+              { text: 'TimeOnly', link: '/timeonly' },
               { text: 'Type Enum', link: '/enum' },
-             
-
             ]
           },
           {text: 'Résolution de problèmes', link: '/resolution_problemes' },
@@ -45,16 +43,16 @@ export default defineConfig({
           {text: 'Relation entre les classes', link: '/relations' },
           {text: 'Tableau d\'objets', link: '/vecteur_objets' },
           // {text: 'Composition d\'objets', link: '/composition_objets' },
-          {text: 'Espace de nom <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/namespace' },
+          {text: 'Espace de nom', link: '/namespace' },
           {text: 'Méthode ToString() <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/methode_tostring' },
-          // {text: 'TryParse', link: '/tryparse' },
-          // { text: 'WPF', 
-          //   items : [
-          //     { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
-          //     { text: 'Contrôle DatePicker', link: '/date_picker' },
-          //     { text: 'Rétroaction utilsateur', link: '/retroaction' }
-          //   ]
-          // },
+          {text: 'TryParse <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/tryparse' },
+          { text: 'WPF <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', 
+            items : [
+              { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
+              { text: 'Contrôle DatePicker', link: '/date_picker' },
+              { text: 'Rétroaction utilsateur', link: '/retroaction' }
+            ]
+          },
           // { text: 'Documentation du code', link: '/commentaires' },
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
