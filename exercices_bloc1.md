@@ -486,7 +486,7 @@ Mettre en pratique l'utilisation de la méthode ToString() et la validation des 
 
 #### Problème
 
-À partir de la solution de départ [ S4E1-ExerciceValidation-Départ](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2008/S4E1%20-%20Exercices%20ToString()%20et%20Validation%20formulaire.zip) vous devez :
+À partir de la solution de départ [ S4E1-ExerciceValidation-Départ](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc1/Exercices/cours%2008/S4E1-ExerciceValidation-D%C3%A9part.zip) vous devez :
 
 1) Compléter les méthodes des classes Films.cs et GestionFilms.cs (voir commentaire todo: ).
 2) Écrire le code de l'interface permettant :
