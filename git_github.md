@@ -16,7 +16,7 @@ Il s'agit de modifier les configurations globales de Git sur votre Visual Studio
 
 - Renseignez le champ : `Nom de branche par défaut` avec la valeur **main**
 
-    ![Renommer la branche en main](/images/config-main.png) 
+    ![Renommer la branche en main](/images/git_config_main.png) 
 
 **Note :** Il n'est pas nécessaire de répéter cette étape à chaque fois que vous suivrez un nouveau projet avec Git.
 
