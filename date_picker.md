@@ -36,7 +36,7 @@ Code
     
      if(dpDate.SelectedDate != null)
      {
-         DateTime date = (DateTime)this.dpDate.SelectedDate;
+         DateTime date = (DateTime)dpDate.SelectedDate;
          MessageBox.Show($"date : {date.ToShortDateString()}");
      }
      else

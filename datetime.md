@@ -26,10 +26,10 @@ DateTime dateCelebre = new DateTime(2001, 09, 11);
 String dateChaine = "2022-04-01";
 DateTime dateParsee = DateTime.Parse(dateChaine);
 
-// Affichage : Format long (date seulement): 2022-10-17
+// Affichage : Format court (date seulement): 2022-10-17
 Console.WriteLine("Aujourd’hui (date au format court) : " + aujourdhui.ToShortDateString());
 
-// Affichage : Format court (date seulement) : 1 avril 2022
+// Affichage : Format long (date seulement) : 1 avril 2022
 Console.WriteLine("Poisson d'avril 2022 (date au format long) : " + dateParsee.ToLongDateString());
 
 // Affichage : Format long (heure seulement) : 09:58:14
