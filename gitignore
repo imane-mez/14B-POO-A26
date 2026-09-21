@@ -9,13 +9,31 @@ dist
 #resolution_problemes.md
 #normes.md
 #convention.md
+
+#poo_intro.md
 #encapsulation.md
+#surcharge_operateurs.md
 #enum.md
 #relations.md
 #vecteur_objets.md
 
+#dateonly.md
+#datetime.md
+#timeonly.md
+#timespan.md
+
 #methode_tostring.md
 #namespace.md
+
+
+#tryparse.md
+#validationFormulaire.md
+#date_picker.md
+#retroaction.md
+
+#git.md
+#git_github.md
+
 
 algo_tri.md
 api-examples.md
@@ -28,9 +46,7 @@ commentaires.md
 composition_objets.md
 controles_dynamiques.md
 
-#dateonly.md
-#datetime.md
-date_picker.md
+
 
 
 exercices_bloc2.md
@@ -39,8 +55,7 @@ exp_reg.md
 file_dialog.md
 formulaire_secondaire.md
 gestion_exceptions.md
-git.md
-git_github.md
+
 guid.md
 
 indexeur.md
@@ -49,20 +64,14 @@ listview.md
 markdown-examples.md
 
 
-poo_intro.md
 README.md
 recherche_dichotomique.md
 
 
-retroaction.md
 
-
-surcharge_operateurs.md
 tests_fonctionnels.md
 tests_unitaires.md
-#timeonly.md
-#timespan.md
-timespan_up_down_control.md
-tryparse.md
 
-validationFormulaire.md
+timespan_up_down_control.md
+
+

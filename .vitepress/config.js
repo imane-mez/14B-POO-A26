@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+// <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/14B-POO-A26/',
@@ -44,13 +46,13 @@ export default defineConfig({
           {text: 'Tableau d\'objets', link: '/vecteur_objets' },
           // {text: 'Composition d\'objets', link: '/composition_objets' },
           {text: 'Espace de nom', link: '/namespace' },
-          {text: 'Méthode ToString() <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/methode_tostring' },
-          {text: 'TryParse <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', link: '/tryparse' },
-          { text: 'WPF <span style="color: var(--vp-c-brand); font-weight: bold;"> ✨Nouveau</span>', 
+          {text: 'Méthode ToString()', link: '/methode_tostring' },
+          {text: 'TryParse', link: '/tryparse' },
+          { text: 'WPF ', 
             items : [
               { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
-              { text: 'Contrôle DatePicker', link: '/date_picker' },
-              { text: 'Rétroaction utilsateur', link: '/retroaction' }
+              { text: 'Contrôle DatePicker ✨', link: '/date_picker' },
+              { text: 'Rétroaction utilsateur ✨', link: '/retroaction' }
             ]
           },
           // { text: 'Documentation du code', link: '/commentaires' },
@@ -100,9 +102,9 @@ export default defineConfig({
         items: [
           { text: 'Conventions de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
-          //{ text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          // {text: 'Classes UtilEnum', link: '/classe_utilenum' },
-          // { text: 'Configuration GitHub avec VS 2022', link: '/git_github' },
+          // { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
+          {text: 'Classes UtilEnum ✨', link: '/classe_utilenum' },
+          { text: 'Configuration GitHub (travail individuel) ✨', link: '/git_github' },
           { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Diagrammes', link: '/drawio' },
 
