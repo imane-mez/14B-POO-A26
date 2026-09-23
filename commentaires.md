@@ -1,6 +1,7 @@
 # Documenter votre code avec des commentaires XML
 
-Comme vous le savez, les commentaires XML sont un genre particulier de commentaire, ajouté au-dessus de la définition d’un type ou d’un membre défini par l’utilisateur. Ils sont spéciaux, car ils peuvent être traités par le compilateur pour générer un fichier de documentation XML au moment de la compilation. Le fichier XML généré par le compilateur peut être distribué avec votre application.NET afin que Visual Studio et d’autres IDE puissent utiliser l'IntelliSense pour afficher des informations rapides sur les types ou les membres. De plus, le fichier XML peut être exécuté par l’intermédiaire d’outils tels que DocFX permettant de générer une documentation.
+Comme vous le savez, les commentaires XML sont un genre particulier de commentaire, ajouté au-dessus de la définition d’un type ou d’un membre défini par l’utilisateur. Ils sont spéciaux, car ils peuvent être traités par le compilateur pour générer un fichier de documentation XML au moment de la compilation. Le fichier XML généré par le compilateur peut être distribué avec votre application .NET afin que Visual Studio et d’autres IDE puissent utiliser l'IntelliSense pour afficher des informations rapides sur les types ou les membres. 
+<!-- De plus, le fichier XML peut être exécuté par l’intermédiaire d’outils tels que DocFX permettant de générer une documentation. -->
 
 Les commentaires de documentation XML utilisent des barres obliques triples (**///**) et le corps d’un commentaire au format XML.
 
@@ -83,9 +84,6 @@ public class CompteBancaire
     /// Un montant en dollars représentant le solde disponible dans le compte. 
     /// Cette valeur est toujours supérieure ou égale à 0, car un compte ne peut pas avoir un solde négatif.
     /// </value>
-    /// <exception cref="ArgumentOutOfRangeException">
-    /// Si une tentative est faite pour définir un solde négatif.
-    /// </exception>
     public decimal Solde
     {
         get
@@ -94,11 +92,11 @@ public class CompteBancaire
         }
         set
         {
-            if (value < 0)
+            if (value > 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(value), "Le solde ne peut pas être négatif.");
+                _solde = value;
             }
-            _solde = value;
+            
         }
     }
 
@@ -160,7 +158,7 @@ La documentation du code est recommandée pour de nombreuses raisons. Voici quel
 - Les méthodes devraients avoir les balises **summary**, **returns** s'il y a une valeur de retour et **params** s'il y a des parmètres.
 - Le texte de la documentation doit être écrit à l’aide de phrases complètes se terminant par un point.
 
-## Docfx  - Générateur de documentation
+<!-- ## Docfx  - Générateur de documentation
 
 Docfx  est un générateur de documentation pour .NET, qui prend actuellement en charge C #, VB et F #. Il génère une documentation de référence sur le code à partir de commentaires XML dans votre code source. Il vous permet également d'utiliser des fichiers Markdown pour créer des rubriques supplémentaires telles que des didacticiels et des procédures, et pour personnaliser la documentation de référence générée. 
 
@@ -175,5 +173,5 @@ Documenation Docfx : https://dotnet.github.io/docfx/index.html
 
 
 ## Démo - Docfx 
-Télécharger les fichiers de départ de la démonstration : [Démo - DocFx](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2009/DemoDocFx.zip?ref_type=heads)
+Télécharger les fichiers de départ de la démonstration : [Démo - DocFx](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc1/cours%2009/DemoDocFx.zip?ref_type=heads) -->
 

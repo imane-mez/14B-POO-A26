@@ -38,8 +38,6 @@ Il s'agit de modifier les configurations globales de Git sur votre Visual Studio
 
     4) Cliquer sur le bouton `Créer et envoyer (push)`
 
-    ![Nouveau projet github](/images/git_push.png)
-
 ## Ignorer des fichier (.gitignore)
 
 Ce fichier permet d'ignorer certains fichiers de votre solution afin qu'ils ne soient pas publiés sur le dépôt distant. Ceci évite de partager des fichiers qui risquent de créer des conflits dans le cas d'un travail collaboratif mais aussi des fichiers « inutiles » qui encombrent vos dépôts distants et ralentissent les transferts. 
@@ -68,6 +66,8 @@ Vous devez :
     ![Nouveau projet git la](/images/git_12.png)
 
     - Pour mettre à jour le dépôt distant, cliquez sur le lien « **Envoyer** ».
+
+    ![Nouveau projet github](/images/git_push.png)
 
 ## Quand faire un commit
 

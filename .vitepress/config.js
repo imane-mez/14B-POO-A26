@@ -51,11 +51,11 @@ export default defineConfig({
           { text: 'WPF ', 
             items : [
               { text: 'Validation d\'un formulaire', link: '/validationFormulaire' },
-              { text: 'Contrôle DatePicker ✨', link: '/date_picker' },
-              { text: 'Rétroaction utilsateur ✨', link: '/retroaction' }
+              { text: 'Contrôle DatePicker', link: '/date_picker' },
+              { text: 'Rétroaction utilsateur', link: '/retroaction' }
             ]
           },
-          // { text: 'Documentation du code', link: '/commentaires' },
+          { text: 'Documentation du code ✨', link: '/commentaires' },
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
@@ -103,8 +103,8 @@ export default defineConfig({
           { text: 'Conventions de nommage', link: '/convention' },
           { text: 'Norme de codage', link: '/normes' },
           // { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
-          {text: 'Classes UtilEnum ✨', link: '/classe_utilenum' },
-          { text: 'Configuration GitHub (travail individuel) ✨', link: '/git_github' },
+          {text: 'Classes UtilEnum', link: '/classe_utilenum' },
+          { text: 'Configuration GitHub (travail individuel)', link: '/git_github' },
           { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Diagrammes', link: '/drawio' },
 

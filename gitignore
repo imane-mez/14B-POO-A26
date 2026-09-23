@@ -34,6 +34,8 @@ dist
 #git.md
 #git_github.md
 
+#commentaires.md
+
 
 algo_tri.md
 api-examples.md
@@ -42,7 +44,6 @@ base_donnees.md
 binding.md
 classe_statique.md
 classe_utilenum.md
-commentaires.md
 composition_objets.md
 controles_dynamiques.md
 
