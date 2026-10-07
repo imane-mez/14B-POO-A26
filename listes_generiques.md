@@ -10,7 +10,7 @@ outline: deep
 
 - On peut placer n'importe quel type de contenu à l'intérieur d'une liste générique (types primitifs, énumérations et objets).  Toutefois, il faudra spécifier le type de contenu désiré à la création de la liste; le type étant spécifié entre chevrons « \<type\> ».
 
-- La liste générique est implémentée à l'aide d'un vecteur qui est automatiquement redimensionné (de plusieurs cases à la fois) lorsque cela devient nécessaire (suite à un manque d'espace pour l'ajout d'un nouvel élément dans la liste).  Cette gestion automatique simplifie beaucoup le travail du programmeur qui peut se concentrer sur les éléments de plus haut niveau de son application.
+- La liste générique est implémentée à l'aide d'un tableau qui est automatiquement redimensionné (de plusieurs cases à la fois) lorsque cela devient nécessaire (suite à un manque d'espace pour l'ajout d'un nouvel élément dans la liste).  Cette gestion automatique simplifie beaucoup le travail du programmeur qui peut se concentrer sur les éléments de plus haut niveau de son application.
 
 ## Synthaxe et méthodes
 
@@ -25,12 +25,13 @@ using System.Collections.Generic;
 ### Déclaration et instanciation
 
 Voici comment déclarer et initaliser une liste générique. 
-
-    List<Type> maListe = new List<Type>();
+```c#
+List<Type> maListe = new List<Type>();
+```
 
 **Type** doit être remplacé par le type d'objets utilisés dans la liste (int, string, Personne, etc.).
 
-Voici un exemple de création d'une liste contenat des objets Personne :
+Voici un exemple de création d'une liste contenant des objets de type Personne :
 
 ```c#
 List<Personne> listePersonnes = new List<Personne>(); 
@@ -38,7 +39,7 @@ List<Personne> listePersonnes = new List<Personne>();
 
 ### Accéder à un élément de la liste
 
-Pour accéder à un élément de la liste il est possible d'utilisation la notation **[]** comme pour un vecteur.
+Pour accéder à un élément de la liste il est possible d'utilisation la notation **[]** comme pour un tableau.
 
 ```c#
 Personne p = listePersonnes[0]; //Accède au 1er élément de la liste.
@@ -55,15 +56,15 @@ listePersonnes.Add(new Personne("Martin"));
 
 ```
 
-- **void AddRange(Type[] elems)** : Permet l’ajout de tous les éléments contenus dans le vecteur "**elems**" à la liste.
+- **void AddRange(Type[] elems)** : Permet l’ajout de tous les éléments contenus dans le tableau "**elems**" à la liste.
 
 
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 ```
 
@@ -73,9 +74,9 @@ listePersonnes.AddRange(vectPersonnes);
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 listePersonnes.Insert(1,new Personne("Laurent"));
 
@@ -104,15 +105,15 @@ if(succes)
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 listePersonnes.RemoveAt(1); //Supprime l'élément à la position 1
 
 ```
 
-- **bool Contains(Type elem)** : Détermine si un élément est contenu dans de la liste.
+- **bool Contains(Type elem)** : Détermine si un élément est contenu dans la liste.
 
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
@@ -135,12 +136,12 @@ if(succes)
 List<Personne> listePersonnes = new List<Personne>();
 
 Personne p1 = new Personne("Martin") ;
-Personne p2 = new Personne("Martin") ;
+Personne p2 = new Personne("Laurent") ;
 
 listePersonnes.Add(p1);
 listePersonnes.Add(p2);
 
-int position = listePersonnes.IndexOf(p);
+int position = listePersonnes.IndexOf(p1);
 
 if(position != -1)
     Console.WriteLine($"L'élément se trouve à la position {position} dans la liste".);
@@ -154,23 +155,23 @@ else
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 listePersonnes.Clear(); //vide la liste
 
 ```
 
-- **void Reverse()** : Inverse l’ordre des éléments dans de la liste.
+- **void Reverse()** : Inverse l’ordre des éléments dans la liste.
 
 
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 listePersonnes.Reverse();
 
@@ -196,9 +197,9 @@ Premier élément de liste : Jean-Philippe
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 for(int i = 0; i < listePersonne.Count; i ++>){
     Console.WriteLine(listePersonne[i].Nom);
@@ -217,10 +218,10 @@ Jean-Philippe
 ```c#
 List<Personne> listePersonnes = new List<Personne>();
 
-Personne[] vectPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
+Personne[] tabPersonnes = new Personne[]{new Personne("Martin"), new Personne("Jean-Philippe")};
 
 
-listePersonnes.AddRange(vectPersonnes);
+listePersonnes.AddRange(tabPersonnes);
 
 foreach(Peronne p in listePersonnes){
     Console.WriteLine(p.Nom);
@@ -230,11 +231,11 @@ foreach(Peronne p in listePersonnes){
 
 ## for vs. foreach
 
-Lorsqu'il s'agit de parcourir une générique en C#, le choix entre foreach et for dépend de plusieurs facteurs, notamment de vos besoins spécifiques et du contexte de votre application. Voici quelques points à considérer :
+Lorsqu'il s'agit de parcourir une liste générique en C#, le choix entre foreach et for dépend de plusieurs facteurs, notamment de vos besoins spécifiques et du contexte de votre application. Voici quelques points à considérer :
 
 **Simplicité et Lisibilité**
 
-foreach est généralement plus simple à lire et à écrire, surtout si vous avez simplement besoin d'accéder à chaque élément de la liste sans vous soucier de son index.
+foreach est généralement plus simple à lire et à écrire, surtout si vous avez simplement besoin d'**accéder à chaque élément de la liste** sans vous soucier de son indice.
 
 
 **Performance**
@@ -243,18 +244,18 @@ Pour les listes très grandes, for peut être légèrement plus rapide, car il n
 
 **Modification pendant l'itération**
 
-Si vous devez modifier la liste (ajouter, supprimer des éléments) pendant que vous la parcourez, for est souvent un meilleur choix. Avec foreach, modifier la collection pendant son itération peut provoquer une `InvalidOperationException`.
-for vous permet de gérer l'index actuel et d'ajuster la boucle en conséquence.
+Si vous devez **modifier la liste** (ajouter, supprimer des éléments) pendant que vous la parcourez, for est souvent un meilleur choix. Avec foreach, modifier la collection pendant son itération peut provoquer une `InvalidOperationException`.
+for vous permet de gérer l'indice actuel et d'ajuster la boucle en conséquence.
 
 **Accès aux Indices**
 
-Si vous avez besoin de l'index de l'élément pendant l'itération, for est la voie à suivre.
-foreach ne fournit pas directement l'index de l'élément en cours.
+Si vous avez besoin de l'**indice de l'élément** pendant l'itération, for est la voie à suivre.
+foreach ne fournit pas directement l'indice de l'élément en cours.
 
 
 #### Démonstration
 
-Télécharger la démonstration commplète : [DemoListeGenerique](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2013/DemoListeGenerique.zip?ref_type=heads)
+Télécharger la démonstration commplète : [DemoListeGenerique](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2013/DemoListeGenerique%20-%20D%C3%A9part.zip)
 
 
 

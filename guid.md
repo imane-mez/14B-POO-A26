@@ -12,14 +12,14 @@ Nous pouvons ainsi stocker des données (ex. : utilisateurs, produits, etc.) dan
 
 ## Où sont utilisés les GUID ?
 
-Considérez un système distribué où de nombreux programmeurs travaillent indépendamment et génèrent un ID. Dans ce scénario, il est possible que deux programmeurs génèrent un ID commun et au moment de la fusion, cela créera un problème, nous devons donc utiliser GUID lorsque nous avons plusieurs systèmes ou utilisateurs indépendants qui sont génèrent un ID qui doit être unique. 
+Considérez un système distribué où de nombreux programmeurs travaillent indépendamment et génèrent un ID. Dans ce scénario, il est possible que deux programmeurs génèrent un ID commun et au moment de la fusion, cela créera un problème, nous devons donc utiliser GUID lorsque nous avons plusieurs systèmes ou utilisateurs indépendants qui génèrent un ID qui doit être unique. 
 
 En programmation, chaque fois que nous créons une interface ou une méthode, on lui attribue un identifiant unique qui sera utilisé pour les invoquer. Cet identifiant unique est GUID. Le GUID produit par l'application Windows peut être utilisé pour identifier un fichier particulier, une application, un composant, une entrée de base de données.
 
 ## Avantage du GUID
 
-- Ils aident vraiment à prévenir les collisions de données.
-- Il facilite la fusion des fichiers ou des bases de données entre différentes machines, car cela évite les collisions de données.
+- Il aide à prévenir les collisions de données.
+- Il facilite la fusion des fichiers ou des bases de données entre différentes machines.
 - Il vous permet de connaître votre clé primaire avant l'insertion d'un enregistrement.
 - Il ne peut pas être facilement deviné.
 

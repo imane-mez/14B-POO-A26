@@ -12,7 +12,6 @@ dist
 
 #poo_intro.md
 #encapsulation.md
-#surcharge_operateurs.md
 #enum.md
 #relations.md
 #vecteur_objets.md
@@ -36,6 +35,9 @@ dist
 
 #commentaires.md
 
+#guid.md
+#listes_generiques.md
+
 
 algo_tri.md
 api-examples.md
@@ -48,7 +50,7 @@ composition_objets.md
 controles_dynamiques.md
 
 
-
+surcharge_operateurs.md
 
 exercices_bloc2.md
 exercices_bloc3.md
@@ -57,10 +59,9 @@ file_dialog.md
 formulaire_secondaire.md
 gestion_exceptions.md
 
-guid.md
+
 
 indexeur.md
-listes_generiques.md
 listview.md
 markdown-examples.md
 

@@ -55,15 +55,15 @@ export default defineConfig({
               { text: 'Rétroaction utilsateur', link: '/retroaction' }
             ]
           },
-          { text: 'Documentation du code ✨', link: '/commentaires' },
+          { text: 'Documentation du code ', link: '/commentaires' },
           {text: 'Exercices', link: '/exercices_bloc1' },
         ]
       },
-    //   { text: 'Bloc 2', 
-    //     collapsed: true,
-    //     items : [
-    //       {text: 'Type Guid', link: '/guid' },
-    //       {text: 'Listes génériques (List)', link: '/listes_generiques' },
+      { text: 'Bloc 2', 
+        collapsed: true,
+        items : [
+          {text: 'Type Guid ✨', link: '/guid' },
+          {text: 'Listes génériques (List) ✨', link: '/listes_generiques' },
     //       {text: 'Application multi-fenêtres', link: '/formulaire_secondaire' },
     //       {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
     //       {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
@@ -71,10 +71,10 @@ export default defineConfig({
     //       {text: 'Expressions régulières', link: '/exp_reg' },
     //       {text: 'Algorithmes de tri', link: '/algo_tri' },
     //       {text: 'Tests unitaires', link: '/tests_unitaires' },
-    //       {text: 'Exercices', link: '/exercices_bloc2' },
+          {text: 'Exercices', link: '/exercices_bloc2' },
 
-    //     ]
-    //   },
+        ]
+      },
     //  {
     //     text : 'Bloc 3',
     //     items : [

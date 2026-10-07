@@ -27,7 +27,7 @@ Pour être en mesure d'écrire une instruction comme ci-dessus, il est nécessai
 
 ## Syntaxe
 
-Pour surcharger un opératueeur, il faut définir une **méthode statique** retournant une entité correspondant à ce que devrait normalement retourner l'opération demandée.  Cette méthode statique doit utiliser le mot-clé « **operator** » suivi de l'opérateur devant être surchargé.  Par exemple, il faudrait écrire :
+Pour surcharger un opératueur, il faut définir une **méthode statique** retournant une entité correspondant à ce que devrait normalement retourner l'opération demandée.  Cette méthode statique doit utiliser le mot-clé « **operator** » suivi de l'opérateur devant être surchargé.  Par exemple, il faudrait écrire :
 
 ```c#
 
