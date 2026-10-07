@@ -2,19 +2,18 @@
 
 ## Qu'est-ce que le GUID
 
-GUID signifie "Globally Unique Identifier". Il a une très faible probabilité d'être dupliqué, car il s'agit d'un entier de 128 bits (16 octets) qui permet d'être utilisé sur toutes les bases de données et ordinateurs sans collision de données.
+GUID signifie "Globally Unique Identifier". C'est un identifiant ayant une très faible probabilité d'être dupliqué, car il s'agit d'un entier de 128 bits (16 octets) qui permet d'être utilisé sur toutes les bases de données et ordinateurs sans collision de données.
 
 ## Pourquoi utilisons-nous GUID ?
 
-Nous utilisons le GUID pour créer un identifiant unique. Un GUID constitue une excellente clé unique. Bien qu'il ne soit pas garanti que chaque GUID généré soit unique, le nombre total de clés uniques (3,40282366 × 1038) est si grand que la probabilité que le même nombre soit généré deux fois est très faible. Pour une application utilisant 10 milliards de GUID aléatoires, la probabilité d'une coïncidence est d'environ 1 sur un quintillion.
+Nous utilisons le GUID pour créer un identifiant unique. Un GUID constitue une excellente clé unique. Bien qu'il ne soit pas garanti que chaque GUID généré soit unique, le nombre total de clés uniques (3,40282366 × 10<sup>38</sup>) est si grand que la probabilité que le même nombre soit généré deux fois est très faible. 
+Pour mettre cela en perspective, si vous générez 1 milliard de GUID par seconde pendant 85 ans, la probabilité d'avoir une seule collision est d'environ 1 sur 1 milliard!
 
 Nous pouvons ainsi stocker des données (ex. : utilisateurs, produits, etc.) dans un fichier ou une base de données de façon à identifier de manière unique chaque donnée (ligne du fichier ou de la base de données). Une approche courante dans une base de données consiste à créer un entier auto-incrémenté; une autre façon serait de créer un GUID.
 
 ## Où sont utilisés les GUID ?
 
 Considérez un système distribué où de nombreux programmeurs travaillent indépendamment et génèrent un ID. Dans ce scénario, il est possible que deux programmeurs génèrent un ID commun et au moment de la fusion, cela créera un problème, nous devons donc utiliser GUID lorsque nous avons plusieurs systèmes ou utilisateurs indépendants qui génèrent un ID qui doit être unique. 
-
-En programmation, chaque fois que nous créons une interface ou une méthode, on lui attribue un identifiant unique qui sera utilisé pour les invoquer. Cet identifiant unique est GUID. Le GUID produit par l'application Windows peut être utilisé pour identifier un fichier particulier, une application, un composant, une entrée de base de données.
 
 ## Avantage du GUID
 
