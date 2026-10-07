@@ -5,9 +5,9 @@ outline: deep
 
 
 ## Semaine 7
-::: details Liste génériques
+::: details Listes génériques
 
-### Liste génériques
+### Listes génériques
 
 Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste générique.
 
@@ -47,13 +47,13 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - Permettre de fermer le formulaire avec le bouton quitter.
 
 
-#### Solution
+<!-- #### Solution
 
-Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2013/S7E1-ListeGenerique%20-%20Solution.zip?ref_type=heads)
+Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2013/S7E1-ListeGenerique%20-%20Solution.zip?ref_type=heads) -->
 
-:::
+<!-- ::: -->
 
-
+<!-- 
 ::: details Formulaire secondaire
 
 ### Formulaire secondaire
@@ -157,7 +157,7 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 
 8) Créer la méthode ToString() permettant de retourner la représentation sous forme de chaîne de caratères d'une matrice.
 
-9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats.
+9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats. -->
 
 <!--
 ### Solution
