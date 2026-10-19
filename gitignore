@@ -38,6 +38,9 @@ dist
 #guid.md
 #listes_generiques.md
 
+#exercices_bloc2.md
+
+#formulaire_secondaire.md
 
 algo_tri.md
 api-examples.md
@@ -52,11 +55,11 @@ controles_dynamiques.md
 
 surcharge_operateurs.md
 
-exercices_bloc2.md
+
 exercices_bloc3.md
 exp_reg.md
 file_dialog.md
-formulaire_secondaire.md
+
 gestion_exceptions.md
 
 

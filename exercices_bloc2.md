@@ -43,17 +43,17 @@ Mettre en pratique la création d'interfaces en WPF et l'utilisation de la liste
     - D'ajouter un nouveau film valide à la liste des films contenus dans votre attribut **_gestionFilms**. N'oubliez pas de donner une rétroaction à l'utilisateur si l'ajout a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - D'afficher la listes des films contenus dans l'attribut **_gestionFilms**
     - De sélectionner un film dans le ListeBox et d'afficher les informations d'un film dans les champs texte. Lors d'une sélection, le bouton ajouter est désactivé et le bouton supprimé est activé.
-    - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas d<!---->e donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
+    - De supprimer un film sélectionné dans la liste de la liste des films contenue dans l'attribut **_gestionFilm**. Vous devez demander à l'utilisateur de confirmer la suppression avant d'effectuer l'action. N'oubliez pas de donner une rétroaction à l'utilisateur si la suppression a fonctionné ou non. Vous devez mettre à jour le ListBox.
     - Permettre de fermer le formulaire avec le bouton quitter.
 
 
-<!-- #### Solution
+#### Solution
 
-Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2013/S7E1-ListeGenerique%20-%20Solution.zip?ref_type=heads) -->
+Télécharger la solution commplète : [S7E1-ListeGeneriqe-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/exercices/Cours%2013/S7E1-ListeGenerique%20-%20Solution.zip)
 
-<!-- ::: -->
+:::
 
-<!-- 
+
 ::: details Formulaire secondaire
 
 ### Formulaire secondaire
@@ -74,14 +74,14 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
     - **Méthodes** :
         - ToString() : Retourne le titre du film avec l'année entre parenthèses. 
 
-3) Créer une classe nommée GestionFilms permettant la gestion d’une liste de film. (Vous pouvez réutiliser celle créer dans l'exercice précédent)
+3) Créer une classe nommée GestionFilms permettant la gestion d’une liste de films. (Vous pouvez réutiliser celle créée dans l'exercice précédent)
 
     - **Attributs et propriétés** :
         - Liste de films (set privé).
     - **Constructeur**
         - Sans paramètre permettant d’initialiser une liste de films vide.
     - **Méthodes**
-        - bool AjouterFilm(Film pFilm) : Permet l’ajout du film à la liste de film. Un film ne peut pas être ajouté s’il existe déjà un film ayant le même titre et la même année dans la liste. Retourne vraie si le film a été ajouté, faux sinon.
+        - bool AjouterFilm(Film pFilm) : Permet l’ajout du film à la liste de films. Un film ne peut pas être ajouté s’il existe déjà un film ayant le même titre et la même année dans la liste. Retourne vraie si le film a été ajouté, faux sinon.
         - bool SupprimerFilm(Film pFilm) : Permet la suppression du film de la liste de films. Retourne vraie si le film a été trouvé et supprimé, faux sinon.
 4)	Créer l'interface suivante dans le formulaire principal.
 
@@ -93,7 +93,7 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
         - Titre: Spider-man No way hom
         - Année: 2021
         - Acteurs: Tome Holland, Zendaya Colman  
-    - Afficher la liste de film dans le ListBox.
+    - Afficher la liste de films dans le ListBox.
 
 5) Ajouter et créer l'interface d'un nouveau formulaire nommé **FormFilm** à votre projet:
 
@@ -106,12 +106,14 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 6) Écrire le code du bouton « Afficher détails » du formulaire principal permettant d'afficher les détails d'un film sélectionné dans le formulaire FormFilm.
 
 
-#### Solution
 
-Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads)
+<!-- #### Solution
 
-:::
+Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads) 
 
+:::-->
+
+<!-- 
 
 ## Semaine 8
 ::: details S8E1 - Application Windows multiformulaires
