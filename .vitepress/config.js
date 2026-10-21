@@ -105,6 +105,7 @@ export default defineConfig({
           // { text: 'UtilEnum.cs', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/UtilEnum.cs?ref_type=heads&inline=false'},
           {text: 'Classes UtilEnum', link: '/classe_utilenum' },
           { text: 'Configuration GitHub (travail individuel)', link: '/git_github' },
+          { text: 'Travail collaboratif avec Git/GitHub ✨', link: '/git_github_equipe' },
           { text: 'Bloc-note.xml', link: 'https://gitlab.com/420-14b-fx/contenu/-/raw/main/en_vrac/Bloc-notes.xml?ref_type=heads&inline=false' },
           { text: 'Diagrammes', link: '/drawio' },
 

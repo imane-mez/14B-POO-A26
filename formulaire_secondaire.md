@@ -137,7 +137,7 @@ MainWindow.cs
 
 Télécharger la démonstration commplète : [DemoFormSecondaire](https://github.com/imane-mez/14B-POO-A26-Exercices/tree/main/bloc2/d%C3%A9mos/Cours%2014)
 
-<!-- 
+ 
 ## Obtenir les valeurs d’un formulaire
 Il arrive souvent qu’un formulaire secondaire soit utilisé pour obtenir de l’information d’un utilisateur. Par exemple, nous pourrions utiliser le formulaire secondaire suivant afin d’obtenir l’information nécessaire pour créer une personne :
 
@@ -170,7 +170,7 @@ FormAjoutPersonne.cs
   	DialogResult = false;
   }
 ```
-Il est maintenant possible de récupérer cette valeur dans le formulaire principale et déterminer quelle action entreprendre :
+Il est maintenant possible de récupérer cette valeur dans le formulaire principal et déterminer quelle action entreprendre :
 
 ```c#
 private void btnAjouterPersonne_Click(object sender, RoutedEventArgs e)
@@ -186,14 +186,14 @@ private void btnAjouterPersonne_Click(object sender, RoutedEventArgs e)
         ListePersonnes.Add(frmAjouterPersonne.Personne);
     }
 
-}
+} 
 
 ```
 
 
 ## Démonstration
 
- Télécharger le projet de départ de la démonstration : [S8C1-DemoCRUD - Départ.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20D%C3%A9part.zip)
+ Télécharger le projet de départ de la démonstration : [S8C1-DemoCRUD - Départ.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2015/S8C1-DemoCRUD%20-%20D%C3%A9part.zip)
 
-Télécharger la démonstration complétée pour la création d'un employé : [S8C1-DemoCRUD - Create.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20Create.zip?ref_type=heads)
- -->
+<!-- Télécharger la démonstration complétée pour la création d'un employé : [S8C1-DemoCRUD - Create.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20Create.zip?ref_type=heads) -->
+ 

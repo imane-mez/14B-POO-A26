@@ -107,13 +107,12 @@ Mettre en pratique la création d'interfaces en WPF avec plusieurs formulaires e
 
 
 
-<!-- #### Solution
+#### Solution
 
-Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2014/S7E2-FormulaireSecondaire.zip?ref_type=heads) 
+Télécharger la solution commplète : [S7E2-FormulaireSecondaire-Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/exercices/Cours%2014/S7E2-FormulaireSecondaire.zip) 
 
-:::-->
+:::
 
-<!-- 
 
 ## Semaine 8
 ::: details S8E1 - Application Windows multiformulaires
@@ -123,7 +122,7 @@ Mettre en pratique la construction d'une application Windows multiformulaires pe
 
 ### Problème
 
-Télécharger la démonstration présentée en classe :   [S8C1-DemoCRUD](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20Create.zip?ref_type=heads) 
+Télécharger la démonstration présentée en classe :   [S8C1-DemoCRUD](A venir) 
 
 Implémentant la **modification** et la **suppression** d'un employé.  
 - Pour la modification, vous devez **modifier le formulaire existant** afin qu'il affiche les informations d'un employé sélectionné et permette la modification.  Assurez-vous de bien modifier le titre de du formulaire ainsi que le libellé des boutons.
@@ -132,6 +131,8 @@ Implémentant la **modification** et la **suppression** d'un employé.
 À la suite d'une de ces opérations, faites-en sorte que la liste des employés soit modifiée ainsi que le ListBox présentant les employés. 
 
 :::
+
+<!-- 
 
 
 ## Semaine 9
