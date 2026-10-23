@@ -191,9 +191,172 @@ private void btnAjouterPersonne_Click(object sender, RoutedEventArgs e)
 ```
 
 
+## Utiliser un même formulaire pour plusieurs actions (ajouter, modifier, supprimer)
+
+Les formulaires d'ajout, de modification et de suppression se ressemblent beaucoup : ils affichent les mêmes champs. Plutôt que de créer trois formulaires, il est possible d'en utiliser **un seul** et d'adapter son comportement selon l'action demandée.
+
+### 1. Définir les actions possibles
+
+Une énumération permet d'indiquer l'action à effectuer :
+
+```c#
+public enum ActionFormulaire
+{
+    Ajouter,
+    Modifier,
+    Supprimer
+}
+```
+
+### 2. Passer l'action (et l'objet) au constructeur
+
+Le formulaire reçoit l'action ainsi que, pour la modification et la suppression, l'objet concerné. Pour un ajout, aucun objet n'existe encore : le paramètre est donc optionnel.
+
+FormPersonne.cs
+
+```c#
+public partial class FormPersonne : Window
+{
+    private ActionFormulaire _action;
+
+    /// <summary>
+    /// Obtient ou définit la personne ajoutée, modifiée ou supprimée
+    /// </summary>
+    public Personne Personne
+    {
+        get
+        {
+            return _personne
+        }
+
+        private set
+        {
+            _personne = value;
+        }
+
+    public FormPersonne(ActionFormulaire action, Personne? personne = null)
+    {
+        InitializeComponent();
+
+        _action = action;
+        Personne = personne;
+    }
+
+    private void Window_Loaded(object sender, RoutedEventArgs e)
+    {
+        InitialiserFormulaire();
+    }
+
+    private void InitialiserFormulaire()
+    {
+        //Remplit les champs si une personne est fournie (modifier et supprimer)
+        if (Personne != null)
+        {
+            txtPrenom.Text = Personne.Prenom;
+            txtNom.Text = Personne.Nom;
+        }
+
+        //Adapte l'interface selon l'action
+        switch (_action)
+        {
+            case ActionFormulaire.Ajouter:
+                Title = "Ajouter une personne";
+                btnConfirmer.Content = "Ajouter";
+                break;
+            case ActionFormulaire.Modifier:
+                Title = "Modifier une personne";
+                btnConfirmer.Content = "Modifier";
+                break;
+            case ActionFormulaire.Supprimer:
+                Title = "Supprimer une personne";
+                btnConfirmer.Content = "Supprimer";
+                //Les champs sont affichés, mais ne peuvent pas être modifiés
+                txtPrenom.IsReadOnly = true;
+                txtNom.IsReadOnly = true;
+                break;
+        }
+    }
+
+    private void btnConfirmer_Click(object sender, RoutedEventArgs e)
+    {
+        switch (_action)
+        {
+            case ActionFormulaire.Ajouter:
+                //Création d'une nouvelle personne
+
+                break;
+            case ActionFormulaire.Modifier:
+                //Modification de la personne reçue
+
+                break;
+            case ActionFormulaire.Supprimer:
+                //Rien à modifier : le formulaire principal supprimera la personne. Seulement demander confirmation à l'utilisateur.
+                break;
+        }
+
+        DialogResult = true;
+    }
+
+    private void btnAnnuler_Click(object sender, RoutedEventArgs e)
+    {
+        DialogResult = false;
+    }
+}
+```
+
+::: tip Astuce
+Il est possible de faire la validation des champs uniquement pour les actions **Ajouter** et **Modifier**, puisqu'il n'est pas nécessaire de valider des données qui ne sont pas modifiables lors d'une suppression.
+:::
+
+### 3. Utiliser le formulaire dans la fenêtre principale
+
+Le formulaire principal choisit l'action en passant la valeur correspondante au constructeur, puis réagit selon le `DialogResult`.
+
+```c#
+private void btnAjouter_Click(object sender, RoutedEventArgs e)
+{
+    FormPersonne frm = new FormPersonne(ActionFormulaire.Ajouter);
+
+    //...
+}
+
+private void btnModifier_Click(object sender, RoutedEventArgs e)
+{
+    Personne personne = lstPersonnes.SelectedItem as Personne;
+
+    if (personne != null)
+    {
+        FormPersonne frm = new FormPersonne(ActionFormulaire.Modifier, personne);
+
+        //...
+    }
+}
+
+private void btnSupprimer_Click(object sender, RoutedEventArgs e)
+{
+    Personne personne = lstPersonnes.SelectedItem as Personne;
+
+    if (personne != null)
+    {
+        FormPersonne frm = new FormPersonne(ActionFormulaire.Supprimer, personne);
+
+        //...
+    }
+}
+```
+
+### Résumé
+
+| Action    | Objet passé au constructeur | Champs        | Résultat si `DialogResult == true` |
+| --------- | --------------------------- | ------------- | ---------------------------------- |
+| Ajouter   | Aucun                       | Vides         | Ajouter la personne à la liste     |
+| Modifier  | La personne sélectionnée    | Pré-remplis   | Rafraîchir l'affichage             |
+| Supprimer | La personne sélectionnée    | Lecture seule | Retirer la personne de la liste    |
+
+
 ## Démonstration
 
  Télécharger le projet de départ de la démonstration : [S8C1-DemoCRUD - Départ.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2015/S8C1-DemoCRUD%20-%20D%C3%A9part.zip)
 
-<!-- Télécharger la démonstration complétée pour la création d'un employé : [S8C1-DemoCRUD - Create.zip](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2015/S8C1-DemoCRUD%20-%20Create.zip?ref_type=heads) -->
+Télécharger la démonstration complétée pour la création d'un employé : [S8C1-DemoCRUD - Create.zip](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2015/S8C1-DemoCRUD%20-%20Create.zip)
  
