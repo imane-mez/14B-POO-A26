@@ -1,20 +1,21 @@
 
-# Les exceptions
+# La gestion des exceptions
 
 Il arrive parfois qu'une application cesse brutalement de fonctionner à la suite d'une erreur grave qui n'avait pas été prévue par le programmeur. Des exemples très simples d'erreurs pouvant survenir sont par exemple :
 - une division par zéro, 
 - la tentative d'ouvrir un fichier inexistant
 - la manipulation de données non conformes aux attentes. 
 
-Ce type d'erreur s'appelle une **exception**. Il est du devoir du programmeur de prévoir ces cas graves d'erreur qui peuvent survenir et d'éviter que l'application ne cesse de fonctionner brutalement; 
+Ce type d'erreur s'appelle une **exception**. Il est du devoir du programmeur de prévoir et de gérer ces cas graves d'erreur qui peuvent survenir et d'éviter que l'application ne cesse de fonctionner brutalement.
 
-ceci évitera plusieurs désagréments à l'utilisateur : 
-    - perte de donnée, 
-    - perte de l'état de l'application, 
-    - redémarrage de l'application, 
-    - perte de temps, 
-    - frustration, 
-    - etc. 
+Ceci évitera plusieurs désagréments à l'utilisateur : 
+- perte de donnée, 
+- perte de l'état de l'application, 
+- redémarrage de l'application, 
+- perte de temps, 
+- frustration, 
+- mauvaise expérience,
+- etc. 
     
 Pour gérer des erreurs de ce type, un procédé très efficace consiste à utiliser ce qui est connu sous le nom d'exceptions dans le langage C#. Ceci se fera en utilisant judicieusement les instructions suivantes :
 
@@ -26,7 +27,8 @@ Pour gérer des erreurs de ce type, un procédé très efficace consiste à util
 
 ## try - catch - finally
 
-Utilisez des blocs **try- catch** autour du code susceptible de générer une exception et assurez-vous que votre code peut continuer son exécution à la suite à cette exception. Dans les blocs **catch**, veillez à toujours classer les exceptions de la plus dérivée à la moins dérivée. Les exceptions dérivées ne seront pas attrapées si elles sont précédées d’un bloc catch du type Exception.
+- Utilisez des blocs **try- catch** autour du code susceptible de générer une exception et assurez-vous que votre code peut continuer son exécution à la suite de cette exception. 
+- Dans les blocs **catch**, veillez à toujours classer les exceptions de la plus dérivée à la moins dérivée. Les exceptions dérivées ne seront pas attrapées si elles sont précédées d’un bloc catch du type Exception.
 
 ```c#
 try
@@ -77,8 +79,11 @@ catch (DivideByZeroException dbze)
 
 ## throw
 
-L'instruction **throw** permet de **lancer une exception** lorsqu'une situation imprévue survient ou bien lorsqu'une information reçue en paramètre dans une classe (par un constructeur, un accesseur en écriture ou une méthode) est invalide. Si l'exception lancée n'est pas attrapée, le programme cessera de fonctionner brutalement.
+L'instruction **throw** permet de **lancer manuellement une exception** lorsqu'une situation imprévue survient ou bien lorsqu'une information reçue en paramètre dans une classe (par un constructeur, un accesseur en écriture ou une méthode) est invalide. Si l'exception lancée n'est pas attrapée, le programme cessera de fonctionner brutalement. 
 
+Cette gestion manuelle des exceptions est généralement utilisée pour prendre en charge les exceptions liées à la **logique métier** qui ne seraient pas automatiquement déclenchées par le système.
+
+Le mot-clé **throw** permet à une fonction de signaler qu'elle a rencontré un problème qu'elle ne sait pas résoudre elle-même. L'erreur remonte alors la pile d'appels jusqu'à ce qu'un composant de plus haut niveau (qui possède le contexte nécessaire, comme l'interface graphique) l'intercepte via un catch pour décider de la suite.
 
 **throw new TypeException(message);**
 
@@ -129,7 +134,7 @@ public string Titre
 
 
 ## Démonstration
-Télécharger le fichier suivant pour la démonstration : [S8C2 - GestionException](https://gitlab.com/420-14b-fx/contenu/-/raw/main/bloc2/cours%2016/S9C2-GestionExceptions.zip?ref_type=heads)
+Télécharger le fichier suivant pour la démonstration : [S8C2 - GestionException](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2016/S8C2-GestionExceptions.zip)
 
 
 <!--

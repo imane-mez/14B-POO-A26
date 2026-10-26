@@ -60,12 +60,12 @@ export default defineConfig({
         ]
       },
       { text: 'Bloc 2', 
-        collapsed: true,
+        collapsed: false,
         items : [
           {text: 'Type Guid', link: '/guid' },
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
-          {text: 'Application multi-fenêtres ✨', link: '/formulaire_secondaire' },
-    //       {text: 'La gestion des exceptions', link: '/gestion_exceptions' },
+          {text: 'Application multi-fenêtres', link: '/formulaire_secondaire' },
+          {text: 'La gestion des exceptions ✨', link: '/gestion_exceptions' },
           // {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
     //       {text: 'Classes et membres statiques', link: '/classe_statique' },
     //       {text: 'Expressions régulières', link: '/exp_reg' },
