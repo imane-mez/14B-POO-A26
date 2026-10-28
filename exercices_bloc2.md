@@ -167,7 +167,7 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 
 Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-SurchargeOperateurs.zip?ref_type=heads)
 -->
-:::
+<!-- :::
 
 ## Semaine 9
 
@@ -232,7 +232,7 @@ Les validations doivent être implémentées dans des méthodes statiques et app
 Vous devez lancer le bon type d'exception selon le type d'erreur.
 
 2) Vous devez également modifier votre code dans les formulaires d'ajout et de modification pour ajouter la validation des données saisies par l'utilisateur selon les contraintes de la classes employés et également gérer les cas où des exceptions non prévues pourraient se produire en utilisant l'instruction **try..cath**.
-Important : la validation doit se faire en appelant les méthodes statiques ajoutées à la classe Employe afin d'éviter la duplication de code.
+Important : la validation doit se faire en appelant les méthodes statiques ajoutées à la classe Employe afin d'éviter la duplication de code. -->
 
 
 <!-- ### Solution
