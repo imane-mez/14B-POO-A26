@@ -90,8 +90,8 @@ Regex.IsMatch(code, @"^\d{3}-\d{3}-\d{4}$");
 | `+` | 1 ou plusieurs fois | `\d+` | nombre |
 | `*` | 0 ou plusieurs fois | `\w*` | mot optionnel |
 | `?` | 0 ou 1 fois | `-?\d+` | nombre optionnellement négatif |
-| `|` | OU logique | `chat|chien` | “chat” ou “chien” |
-| `()` | Groupe capturant | `(EMP|ADM)-\d+` | `EMP-123` ou `ADM-456` |
+| `\|` | OU logique | `chat\|chien` | "chat" ou "chien" |
+| `()` | Groupe capturant | `(EMP\|ADM)-\d+` | `EMP-123` ou `ADM-456` |
 | `[]` | Ensemble de caractères | `[A-Z]` | lettre majuscule |
 
 ## Créer et réutiliser un objet Regex statique
