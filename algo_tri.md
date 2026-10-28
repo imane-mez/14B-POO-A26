@@ -61,7 +61,7 @@ int nombre2 = 20;
 int resultat = nombre1.CompareTo(nombre2);
 
 ```
-Dans cet exemple, resultat sera un nombre négatif parce que nombre1 (10) est moins que nombre2 (20).
+Dans cet exemple, le resultat sera un nombre négatif parce que nombre1 (10) est moins grand que nombre2 (20).
 
 **Utilisation avec des chaînes de caractères:**
 

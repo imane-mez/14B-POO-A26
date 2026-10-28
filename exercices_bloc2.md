@@ -130,7 +130,7 @@ Implémentant la **modification** et la **suppression** d'un employé.
 
 À la suite d'une de ces opérations, faites-en sorte que la liste des employés soit modifiée ainsi que le ListBox présentant les employés. 
 
-:::
+<!-- ::: -->
 
 <!-- 
 
@@ -169,7 +169,7 @@ Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14
 -->
 :::
 
-<!--
+## Semaine 9
 
 ::: details Classe statiques
 ### Classe statique
@@ -179,7 +179,7 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
 
 #### Problème
 
-1) À partir de Visual Studio, créer une "Nouvelle solution" vide nommée "S9E2-ClasseStatique"
+1) À partir de Visual Studio, créer une "Nouvelle solution" vide nommée "S9E1-ClasseStatique"
 
 2)	Ajouter un projet de type "Application console" nommé "S9E2-Calculatrice" à votre solution.
 
@@ -201,7 +201,7 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
 
 #### Problème
 
-1)	Ajouter un projet de type "Application console" nommé "S9E2-Inventaire" à votre solution.
+1)	Ajouter un projet de type "Application console" nommé "S9E1-Inventaire" à votre solution.
 
 2)	Créer la classe nommée "Produit" avec les membres suivants :
     - Propriété **Nom**
@@ -215,14 +215,35 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
 
 3)	Écrire le code du programme permettant de tester les différentes méthodes de votre classe.
 
+:::
 
-### Solution
+::: details Méthodes statiques pour la validation
+### Validation en utilisant des méthodes statiques
+Mettre en pratique l'implémentation de la validation à l'intérieur des classes et des formulaires en utilisant des membres statiques réutilisables à l'extérieur des classes.
+
+### Problème 
+
+1) À partir de l'exercice **S8C1-DemoMultiFormulaireCRUD**, vous devez modifier le code de la classe **Employe.cs** afin d'ajouter les validations aux propriétés suivantes :
+- Nom : Ne peut pas être nul ou vide et doit contenir au moins 3 caractères.
+- La date de naissance doit être antérieure ou égale à la date du jour.
+- Le salaire hebdomadaire doit être supérieur à 0.
+
+Les validations doivent être implémentées dans des méthodes statiques et appelées à partir des setters des propriétés.
+Vous devez lancer le bon type d'exception selon le type d'erreur.
+
+2) Vous devez également modifier votre code dans les formulaires d'ajout et de modification pour ajouter la validation des données saisies par l'utilisateur selon les contraintes de la classes employés et également gérer les cas où des exceptions non prévues pourraient se produire en utilisant l'instruction **try..cath**.
+Important : la validation doit se faire en appelant les méthodes statiques ajoutées à la classe Employe afin d'éviter la duplication de code.
 
 
-Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-ClasseStatique-Solution.zip?ref_type=heads)
+<!-- ### Solution
+
+
+Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-ClasseStatique-Solution.zip?ref_type=heads) -->
 
 
 :::
+
+<!--
 
 ## Semaine 10
 ::: details Algorithmes de tri
@@ -242,6 +263,6 @@ Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui re
 2) Si deux employés ont le même salaire, alors ceux-ci sont triés en ordre croissant de nom.
 
 Pour ce faire, vous devez implémenter la méthode CompareTo de l’interface **IComparable**.
-Testez votre méthode appelant la méthode **Sort** de la liste d’employé avant son affichage dans le **listbox**. 
+Testez votre méthode appelant la méthode **Sort** de la liste d’employés avant son affichage dans le **listbox**. 
 
 -->

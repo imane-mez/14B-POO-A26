@@ -1,18 +1,18 @@
 
-# Classes statiques et membres de classe statique 
+# Classe statique et membres de classe statiques 
 
 ## Classe statique (static)
 
-Une classe statique est identique à une classe non statique, à une différence près : **une classe statique ne peut pas être instanciée**. En d’autres termes, vous ne pouvez pas utiliser l’opérateur **new** pour créer une variable du type de la classe. Étant donné qu’il n’y a aucune variable d’instance, vous accédez aux membres d’une classe statique en utilisant **le nom de classe**.
+Une classe statique est identique à une classe ordinaire, à une différence près : **une classe statique ne peut pas être instanciée**. En d’autres termes, vous ne pouvez pas utiliser l’opérateur **new** pour créer une variable du type de la classe. Étant donné qu’il n’y a aucune variable d’instance, vous accédez aux membres d’une classe statique en utilisant **le nom de classe**.
 
-Par exemple, si vous avez une classe statique nommée ConvertisseurUnites qui a une méthode publique nommée :
+Par exemple, si vous avez une classe statique nommée `ConvertisseurUnites` qui a une méthode publique nommée `CentimetresEnPources` :
 
 ```c#
 public static class ConvertisseurUnites{
 
     public static float CentimetresEnPources(float pCentimetres)
     {
-        ///Code de la méthjode
+        ///Code de la méthode
 
     }
 }
@@ -31,7 +31,7 @@ Une classe statique permet d'utiliser un ensemble de méthodes utilisant seuleme
 Voici quelques spécifications sur les classes statiques :
 - Elle contient uniquement des membres statiques.
 - Elle ne peut pas être instanciée.
-- Elle ne peut pas être héritée et ne peut pas hériter d'aucune classe.
+- Elle ne peut pas être héritée et ne peut hériter d'aucune classe.
 - Elle ne peut pas contenir de constructeurs d’instances.
 
 
@@ -85,11 +85,11 @@ static void Main(string[] args)
 ## Membres statiques
 **Une classe non statique peut contenir des méthodes, des attributs, des propriétés ou des événements statiques**. Le membre statique peut être appelé sur une classe même quand aucune instance de la classe n’a été créée. Le membre statique est toujours accessible par le nom de la classe, et non par le nom de l’instance.
 
-**Une seule copie d’un membre statique existe, quel que soit le nombre d’instances de la classe qui ont été créées.**
+**Une seule copie d’un membre statique existe, quel que soit le nombre d’instances de la classe non statique qui ont été créées.**
 
 **Les méthodes et les propriétés statiques ne peuvent pas accéder aux attributs, méthodes et événements non statiques** 
 
-Il est plus courant de déclarer une classe non statique avec certains membres statiques que de déclarer une classe entière comme statique. 
+> **Remarque :** Il est plus courant de déclarer une classe non statique avec certains membres statiques que de déclarer une classe entière comme statique. 
 
 Deux utilisations courantes des champs statiques consistent à :
  - Conserver un décompte du nombre d’objets qui ont été instanciés
@@ -209,13 +209,12 @@ public class Employe
 ```
 ## Fonctions statiques pour la validation
 
-Les **méthodes statiques** sont souvent utilisées pour **valider des valeurs** à l’extérieur d’une classe.
-Elles permettent de centraliser la logique de validation afin d’éviter la duplication dans les formulaires.
+Les **méthodes statiques** sont souvent utilisées pour pouvoir **valider des valeurs** à l’extérieur d’une classe.
+Elles permettent de centraliser la logique de validation afin d’éviter la duplication de code dans les formulaires.
 
 ### Exemple : validation d’une adresse courriel
-
-```c#
 Utilisation à l’**intérieur de la classe** :
+```c#
 public class Employe
 {
 
@@ -258,7 +257,7 @@ if (!Employe.CourrielEstValide(txtCourriel.Text))
 
 ## Constructeur statique
 
-Un constructeur peut également être statique. Il est utilisé pour initialiser des membres statiques de la classe, des valeurs par défaut, ou effectuer d'autres tâches liées à la classe elle-même plutôt qu'à une instance particulière de la classe. 
+Un constructeur peut également être statique. Il est utilisé pour **initialiser des membres statiques de la classe**, des valeurs par défaut, ou effectuer d'autres tâches liées à la classe elle-même plutôt qu'à une instance particulière de la classe. 
 
 Celui-ci est **toujours privé de manière implicite**, même si vous ne spécifiez pas explicitement le modificateur d'accès. Il n’est pas nécessaire (ni possible) de définir un constructeur statique comme `private` car le compilateur le rend automatiquement privé.
 
@@ -308,3 +307,5 @@ class Chat
 }
 ```
 
+## Démonstration
+Télécharger le fichier suivant pour la démonstration : [S9C1 - Classes et membres statiques](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2017/S7C2-ClasseStatique-Demo-Depart.zip)

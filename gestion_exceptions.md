@@ -136,6 +136,8 @@ public string Titre
 ## Démonstration
 Télécharger le fichier suivant pour la démonstration : [S8C2 - GestionException](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2016/S8C2-GestionExceptions.zip)
 
+Télécharger la version finale : [S8C2 - GestionException-Finale](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc2/d%C3%A9mos/Cours%2016/S8C2-GestionExceptions-finale.zip)
+
 
 <!--
 ## Exercice 1
