@@ -169,7 +169,7 @@ public class Employe
     /// Cette valeur est fixée dynamiquement au chargement de la classe
     /// et partagée entre tous les employés.
     /// </summary>
-    public static readonly DateTime DateCourante;
+    public static readonly DateOnly DateCourante;
 
     // Constructeur statique exécuté une seule fois au chargement de la classe
     static Employe()
@@ -177,7 +177,7 @@ public class Employe
         DateCourante = DateTime.Now.Date;
     }
 
-    private DateTime _dateNaissance;
+    private DateOnly _dateNaissance;
 
     /// <summary>
     /// Date de naissance de l’employé.
@@ -185,7 +185,7 @@ public class Employe
     /// <exception cref="ArgumentOutOfRangeException">
     /// Lancée lorsque la date de naissance est ultérieure à la date courante.
     /// </exception>
-    public DateTime DateNaissance
+    public DateOnly DateNaissance
     {
         get => _dateNaissance;
         set
@@ -200,7 +200,7 @@ public class Employe
         }
     }
 
-    public Employe(DateTime dateNaissance)
+    public Employe(DateOnly dateNaissance)
     {
         DateNaissance = dateNaissance;
     }
