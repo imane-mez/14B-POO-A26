@@ -226,7 +226,7 @@ public class Employe
         set
         {
             if (!CourrielEstValide(value))
-                throw new ArgumentException("Le courriel est invalide.");
+                throw new FormatException("Le courriel est invalide.");
             _courriel = value;
         }
     }
