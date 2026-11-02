@@ -90,7 +90,7 @@ import{_ as i,c as a,o as n,ag as t}from"./chunks/framework.BtwP-r-R.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // Constructeur statique exécuté une seule fois au chargement de la classe</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    static</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Employe</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        DateCourante </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> DateTime.Now.Date;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        DateCourante </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> DateOnly.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">FromDateTime</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(DateTime.Now.Date);</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> DateOnly</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> _dateNaissance</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
