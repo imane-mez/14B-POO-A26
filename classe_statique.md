@@ -174,7 +174,7 @@ public class Employe
     // Constructeur statique exécuté une seule fois au chargement de la classe
     static Employe()
     {
-        DateCourante = DateTime.Now.Date;
+        DateCourante = DateOnly.FromDateTime(DateTime.Now.Date);
     }
 
     private DateOnly _dateNaissance;

@@ -47,3 +47,48 @@ Code
  }
 
 ```
+
+
+## Utiliser un DateOnly avec un DatePicker
+
+Le contrôle `DatePicker` de WPF utilise une propriété de type `DateTime?` (`Nullable<DateTime>`). Il n'est donc pas possible de lui associer directement un objet `DateOnly`.
+
+Il faut effectuer une conversion entre `DateOnly` et `DateTime`.
+
+### Afficher un DateOnly dans un DatePicker
+
+Supposons que l'on possède une propriété de type `DateOnly`.
+
+```csharp
+DateOnly dateNaissance = new(2000, 5, 15);
+```
+
+Pour l'afficher dans un `DatePicker`, il faut le convertir en `DateTime`.
+
+```csharp
+dpDateNaissance.SelectedDate =
+    dateNaissance.ToDateTime(TimeOnly.MinValue);
+```
+
+Le contrôle affichera alors la date correspondante.
+
+### Récupérer un DateOnly à partir d'un DatePicker
+
+La propriété `SelectedDate` retourne un objet `DateTime?`.
+
+```csharp
+DateTime? dateSelectionnee = dpDateNaissance.SelectedDate;
+```
+
+Pour obtenir un objet `DateOnly`, il suffit d'utiliser la méthode `FromDateTime`.
+
+```csharp
+if (dateSelectionnee.HasValue)
+{
+    DateOnly dateNaissance =
+        DateOnly.FromDateTime(dateSelectionnee.Value);
+
+    Console.WriteLine(dateNaissance);
+}
+```
+

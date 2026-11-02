@@ -91,6 +91,8 @@ Regex.IsMatch(code, @"^\d{3}-\d{3}-\d{4}$");
 | `*` | 0 ou plusieurs fois | `\w*` | mot optionnel |
 | `?` | 0 ou 1 fois | `-?\d+` | nombre optionnellement négatif |
 | `\|` | OU logique | `chat\|chien` | "chat" ou "chien" |
+| `{n}` | Exactement n fois | `\d{4}` | 4 chiffres (ex: `2026`) |
+| `{n,}` | Au moins n fois | `\d{3,}` | 3 chiffres ou plus |
 | `()` | Groupe capturant | `(EMP\|ADM)-\d+` | `EMP-123` ou `ADM-456` |
 | `[]` | Ensemble de caractères | `[A-Z]` | lettre majuscule |
 

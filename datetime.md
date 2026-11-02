@@ -77,3 +77,65 @@ Console.WriteLine($"Nombre de jours entre {moisProchain.ToShortDateString()} et 
 
 ```
 
+
+## Créer un DateTime à partir d'un DateOnly
+
+Un objet `DateOnly` contient uniquement une date (année, mois, jour). Pour obtenir un objet `DateTime`, il faut lui associer une heure.
+
+### À minuit
+
+La méthode `ToDateTime` permet de créer un `DateTime` en fournissant un objet `TimeOnly`.
+
+```csharp
+DateOnly date = new(2026, 10, 30);
+
+DateTime dateTime = date.ToDateTime(TimeOnly.MinValue);
+
+Console.WriteLine(dateTime);
+```
+
+**Résultat**
+
+```text
+2026-10-30 00:00:00
+```
+
+`TimeOnly.MinValue` représente l'heure `00:00:00`.
+
+### Avec une heure précise
+
+```csharp
+DateOnly date = new(2026, 10, 30);
+
+DateTime dateTime = date.ToDateTime(new TimeOnly(14, 30));
+
+Console.WriteLine(dateTime);
+```
+
+**Résultat**
+
+```text
+2026-10-30 14:30:00
+```
+
+Dans cet exemple, le `DateTime` obtenu représente le **30 octobre 2026 à 14 h 30**.
+
+### Exemple pratique
+
+```csharp
+DateOnly dateNaissance = new(2000, 5, 15);
+
+DateTime dateNaissanceDateTime =
+    dateNaissance.ToDateTime(TimeOnly.MinValue);
+
+Console.WriteLine(
+    $"Date de naissance : {dateNaissanceDateTime:yyyy-MM-dd HH:mm:ss}");
+```
+
+**Résultat**
+
+```text
+Date de naissance : 2000-05-15 00:00:00
+```
+
+La conversion d'un `DateOnly` vers un `DateTime` nécessite toujours de spécifier une heure, car un objet `DateTime` représente à la fois une date et une heure.
