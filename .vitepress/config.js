@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/14B-POO-A26/',
+  base: '/14B-POO-A26/',  // '/' pour générer la version offline
   title: "Techniques de l'informatique",
   description: "Introduction à la programmation orientée objet en C#",
   themeConfig: {
@@ -68,9 +68,9 @@ export default defineConfig({
           {text: 'La gestion des exceptions ', link: '/gestion_exceptions' },
           {text: 'Classes et membres statiques', link: '/classe_statique' },
           {text: 'Expressions régulières', link: '/exp_reg' },          
-          {text: 'Surcharge d\'opérateur ✨', link: '/surcharge_operateurs' },
-          {text: 'Algorithmes de tri ✨', link: '/algo_tri' },
-          // {text: 'Tests unitaires', link: '/tests_unitaires' },
+          {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
+          {text: 'Algorithmes de tri', link: '/algo_tri' },
+          {text: 'Tests unitaires ✨', link: '/tests_unitaires' },
           {text: 'Exercices', link: '/exercices_bloc2' },
 
         ]
