@@ -207,6 +207,7 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
     - Variable statique privée **_nbProduits** qui contiendra le nombre d'instances de produits créés.
     - Variable statique privée **_valeurInventaire** qui contiendra la valeur totale des actifs en inventaire selon le nombre d'instances de produits créés.
     - Constructeur paramétré avec toutes les propriétés.
+    - Méthode **ToString()**.
     - Méthode statique public **NombreDeProduits** permettant d'obtenir le nombre de produits instancié.
     - Méthode statique public **ValeurEnInventaire** permettant d'obtenir la valeur totale en inventaire.
 
@@ -262,5 +263,4 @@ Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui re
 2) Si deux produits ont le même prix, alors ceux-ci sont triés en ordre croissant de nom.
 
 Pour ce faire, vous devez implémenter la méthode CompareTo de l’interface **IComparable**.
-Testez votre méthode appelant la méthode **Sort** de la liste des produits avant son affichage dans le **listbox**. 
-
+Testez votre méthode appelant la méthode **Sort** de la liste des produits avant son affichage dans la console. 
