@@ -130,12 +130,9 @@ Implémentant la **modification** et la **suppression** d'un employé.
 
 À la suite d'une de ces opérations, faites-en sorte que la liste des employés soit modifiée ainsi que le ListBox présentant les employés. 
 
-<!-- ::: -->
+:::  
 
-<!-- 
-
-
-## Semaine 9
+## Révision
 ::: details Surcharge d'opérateurs
 
 ### Surcharge d'opérateurs
@@ -160,16 +157,16 @@ Vous devez créer une classe Matrice qui représente une matrice bidimensionnell
 
 8) Créer la méthode ToString() permettant de retourner la représentation sous forme de chaîne de caratères d'une matrice.
 
-9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats. -->
+9) Écrivez un programme principal (Main) pour tester votre classe Matrix et les opérations de surcharge d'opérateurs. Créez quelques matrices, effectuez des opérations d'addition, de soustraction et de multiplication par un scalaire, puis affichez les résultats. 
 
 <!--
 ### Solution
 
 Téléchargez la solution : [S8E1-SurchargeOperateurs](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc2/cours%2016/S8E2-SurchargeOperateurs.zip?ref_type=heads)
 -->
-<!-- :::
+ :::
 
-## Semaine 9
+<!-- ## Semaine 9 -->
 
 ::: details Classe statiques
 ### Classe statique
@@ -214,12 +211,14 @@ Utiliser les classes et les membres statiques à l'intérieur d'un programme.
     - Méthode statique public **ValeurEnInventaire** permettant d'obtenir la valeur totale en inventaire.
 
 3)	Écrire le code du programme permettant de tester les différentes méthodes de votre classe.
-
+<!--
 :::
 
 ::: details Méthodes statiques pour la validation
 ### Validation en utilisant des méthodes statiques
 Mettre en pratique l'implémentation de la validation à l'intérieur des classes et des formulaires en utilisant des membres statiques réutilisables à l'extérieur des classes.
+
+
 
 ### Problème 
 
@@ -245,24 +244,23 @@ Téléchargez la solution : [S8E1-ClassesStatiques](https://gitlab.com/420-14b-f
 
 <!--
 
-## Semaine 10
+## Semaine 10 -->
 ::: details Algorithmes de tri
 ### Algorithmes de tri
 ### Objectif 
 
 Mettre en pratique la surcharge des opérateurs et les différentes méthodes de tri.
 
-### Problème 1
-Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui reçoit en paramètre un tableau d’entier et le tri en ordre croissant (voir : https://www.youtube.com/watch?v=EdUWyka7kpI pour l’algorithme).
+<!-- ### Problème 1
+Implémenter une méthode nommée **int[] TriSelection(int[] pVecteur)**  qui reçoit en paramètre un tableau d’entier et le tri en ordre croissant (voir : https://www.youtube.com/watch?v=EdUWyka7kpI pour l’algorithme). -->
 
-###  Problème 2
+###  Problème
 
-À partir de l'exercice S9E1, vous devez maintenant modifier le code de la classe Employe.cs afin de permettre le tri d’une liste d’employés selon les critères suivant :
+À partir de l'exercice précédent, vous devez maintenant modifier le code de la classe Produit.cs afin de permettre le tri d’une liste de produits selon les critères suivant :
 
-1) Les employés sont triés en ordre de salaire décroissant.
-2) Si deux employés ont le même salaire, alors ceux-ci sont triés en ordre croissant de nom.
+1) Les produits sont triés en ordre de prix décroissant.
+2) Si deux produits ont le même prix, alors ceux-ci sont triés en ordre croissant de nom.
 
 Pour ce faire, vous devez implémenter la méthode CompareTo de l’interface **IComparable**.
-Testez votre méthode appelant la méthode **Sort** de la liste d’employés avant son affichage dans le **listbox**. 
+Testez votre méthode appelant la méthode **Sort** de la liste des produits avant son affichage dans le **listbox**. 
 
--->
