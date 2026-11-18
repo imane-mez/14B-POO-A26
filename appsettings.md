@@ -41,7 +41,7 @@ Voici un exemple contenant à la fois une chaîne de connexion et un chemin d'ac
 ```c#
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;port=3306;Database=demo_db;Uid=root;Pwd=;"
+    "DefaultConnection": "Server=localhost;port=3306;Database=demo_db;Uid=garneau;Pwd=qwerty123;"
   },
 
   "Chemins": {

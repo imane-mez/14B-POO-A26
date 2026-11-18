@@ -69,7 +69,7 @@ Une base de données possède un nombre maximal de connexions simultanées. C'es
 
 ```c#
 //Chaîne de connexion
-string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=admin;Pwd=qwerty123;"
+string connectionString = "Server=localhost;port=3306;Database=demo_db;Uid=garneau;Pwd=qwerty123;"
 
 //Déclaration et instanciation de la connexion
 MySqlConnection cn = new MySqlConnection(connectionString);
