@@ -68,17 +68,14 @@ Une fois l'objet instancié, nous pouvons ouvrir la connexion à notre base de d
 Une base de données possède un nombre maximal de connexions simultanées. C'est pourquoi il est essentiel de toujours s'assurer de bien fermer notre connexion lorsque nous n'en avons plus besoin. Pour cette raison, il est recommandé de **mettre la fermeture de la connexion dans le bloque finally d'un try..catch** :
 
 ```c#
-//Déclaration de la connexion
-MySqlConnection cn = null;
+//Chaîne de connexion
+string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=admin;Pwd=qwerty123;"
+
+//Déclaration et instanciation de la connexion
+MySqlConnection cn = new MySqlConnection(connectionString);
 
 try
 {
-    //Chaîne de connexion
-    string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=admin;Pwd=qwerty123;"
-
-    //Instanciation de la connexion
-    cn = new MySqlConnection(connectionString);
-
     //Ouverture de la connexion
     cn.Open();
    
