@@ -8,25 +8,25 @@ Nous avons vu qu'il était possible d'utiliser des fichiers pour la gestion de n
 
 Ainsi, toute la gestion des données se faisait par l'application. La rapidité du traitement des données était donc dépendante de la puissance de votre ordinateur. Cela va bien lorsqu'il n'y a pas beaucoup de données à traiter. Que se passerait-il si vous deviez traiter des millions d'enregistrements? De plus, l'utilisation de vos applications ne se fait que par un seul utilisateur. Que se passerait-il si plusieurs personnes devaient utiliser une application en même temps et manipuler les mêmes données en même temps? 
 
-C'est en autre pour ces raisons que les systèmes utilisent des bases de données. Celles-ci se trouvent normalement sur des serveurs très puissants qui peuvent donc effectuer facilement et rapidement est manipulation sur des millions d'enregistrements. Celles-ci facilitent également la centralisation de l'information et l'accès simultané aux données.
+C'est entre autre pour ces raisons que les systèmes utilisent des bases de données. Celles-ci se trouvent normalement sur des serveurs très puissants qui peuvent donc effectuer facilement et rapidement des manipulations sur des millions d'enregistrements. Celles-ci facilitent également la centralisation de l'information et l'accès simultané aux données.
 
 L'accès aux données à partir d'une base de données est donc l'un des aspects importants de tout langage de programmation. C'est une nécessité absolue pour tout langage de programmation d'avoir la capacité de travailler avec des bases de données. 
 
-C# offre la possibilité de travailler avec différents types de bases de données. Il peut fonctionner avec les bases de données les plus courantes telles qu'Oracle, Microsoft SQL Server et MySQL et bien d'autres. Peu importe le type de base de données utilisée, la logique de fonctionnement est pratiquement la même.
+C# offre la possibilité de travailler avec différents types de bases de données. Il peut fonctionner avec les bases de données les plus courantes telles qu'Oracle, Microsoft SQL Server, MySQL, MariaDB et bien d'autres. Peu importe le type de base de données utilisée, la logique de fonctionnement est pratiquement la même.
 
 En travaillant avec des bases de données, les concepts suivants sont communs à toutes les bases de données :
 1) **Connexion** : Pour travailler avec les données d'une base de données, la première étape évidente est la connexion. La connexion à une base de données se compose normalement des paramètres mentionnés ci-dessous.
-    - **Nom de la base de données ou source de données** : Le premier paramètre important est le nom de la base de données à laquelle la connexion doit être établie. Chaque connexion ne peut fonctionner qu'avec une seule base de données à la fois.
-    - **Informations d'identification** : Le prochain aspect important est le nom d'utilisateur et le mot de passe qui doivent être utilisés pour établir une connexion à la base de données. Il garantit que le nom d'utilisateur et le mot de passe disposent des privilèges nécessaires pour se connecter à la base de données.
+    - **Nom de la base de données ou source de données** : Le premier paramètre important est le **nom de la base de données** à laquelle la connexion doit être établie. Chaque connexion ne peut fonctionner qu'avec une seule base de données à la fois.
+    - **Informations d'identification** : Le prochain aspect important est le **nom d'utilisateur** et le **mot de passe** qui doivent être utilisés pour établir une connexion à la base de données. Il garantit que le nom d'utilisateur et le mot de passe disposent des privilèges nécessaires pour se connecter à la base de données.
     - **Paramètres facultatifs** : Pour chaque type de base de données, vous pouvez spécifier des paramètres facultatifs pour fournir plus d'informations sur la manière dont .Net doit gérer la connexion à la base de données. Par exemple, on peut spécifier un paramètre indiquant combien de temps la connexion doit rester active. Si aucune opération n'est effectuée pendant une période de temps spécifique, alors le paramètre déterminera si la connexion doit être fermée.
 
-2) **Sélection, insertion, modificaiton et suppression des données de la base de données** : Une fois la connexion établie, le prochain aspect important sélectionner, insérer, modifier ou supprimer des données de la base de données. Pour cela, C# utilise la **commande** permetant d'exécueer une requête 'SQL' sur la base de données.
+2) **Sélection, insertion, modificaiton et suppression des données de la base de données** : Une fois la connexion établie, le prochain aspect important consiste à sélectionner, insérer, modifier ou supprimer des données de la base de données. Pour cela, C# utilise la **commande** permettant d'exécueer une requête 'SQL' sur la base de données.
 
 
-Étant donné que C# permet l'utilisation de différent type de base de données. La première chose à faire est d'installer les outils nécessaires selon le type de la base de données choisie. Dans notre cas, nous utiliserons une base de données MySQL. 
+Étant donné que C# permet l'utilisation de différent type de base de données. La première chose à faire est d'installer les outils nécessaires selon le type de la base de données choisie. Dans notre cas, nous utiliserons une base de données **MariaDB**. 
 
 ## Importation des librairies
-Afin de faciliter l'utilisation de librairies externe dans notre projet, .Net offre un outil nommé **" gestionnaire de package NuGet"**. Cet outil permet l'installation de librairie. Dans notre cas, nous aurons besoin de la libraire `MySQlConnector` pour utiliser une base de données `MariaDB`.
+Afin de faciliter l'utilisation de librairies externes dans notre projet, .Net offre un outil nommé **" gestionnaire de package NuGet"**. Cet outil permet l'installation de librairie. Dans notre cas, nous aurons besoin de la libraire `MySQlConnector` pour utiliser une base de données `MariaDB`.
 
 1) Ouvrir le gestionnaire de package NuGet en sélectionnant le menu **Projet -> Gérer les packages NuGet ...**.
 2) Cliquer sur le lien **Parcourir** et inscrire **MySqlConnector** dans le champ de recherche. 
@@ -46,11 +46,11 @@ Voyons maintenant comment utiliser les différents objets C# nécessaires pour e
 
 ## Établir une connexion (MySqlConnection)
 
-L'objet MySqlConnection permet de se connecter à la base de données. Pour se connecter, il faut tout d'abord définir la chaîne de connexion spécifiant **le nom ou l'adresse IP du serveur** où se trouve la base de données, **port** de connection (MySQl=3307, MariaDB=3307),  **le nom de la base de données**, le nom de l'**utilisateur** et le **mot de passe**.  
+L'objet MySqlConnection permet de se connecter à la base de données. Pour se connecter, il faut tout d'abord définir la chaîne de connexion spécifiant **le nom ou l'adresse IP du serveur** où se trouve la base de données, **port** de connection (Pour MySQL et MariaDB port=3307),  **le nom de la base de données**, le nom de l'**utilisateur** et le **mot de passe**.  
 
 
 ```c#
-string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=admin;Pwd=Qwerty123;"
+string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=garneau;Pwd=qwerty123;"
 ```
 
 Par la suite, nous pourrons instancier l'objet en lui passant en paramètre la chaîne de connexion :
@@ -59,7 +59,7 @@ Par la suite, nous pourrons instancier l'objet en lui passant en paramètre la c
 MySqlConnection cn  = new MySqlConnection(connectionString);
 ```
 
-Une fois l'objet instancié, nous pouvons ouvrir la connexion à notre page de données :
+Une fois l'objet instancié, nous pouvons ouvrir la connexion à notre base de données :
 
 ```c#
  cn.Open();
@@ -121,7 +121,7 @@ Par la suite, il faut spécifier la connexion utilisée pour exécuter la comman
 cmd.Connection = cn;
 ```
 
-C'est deux opérations peuvent être également exécutées lors de l'instanciation de l'objet MySqlCommand comme suit :
+Ces deux opérations peuvent être également exécutées lors de l'instanciation de l'objet MySqlCommand comme suit :
 
 ```c#
  MySqlCommand cmd = new MySqlCommand(requete, cn);
@@ -157,9 +157,9 @@ cmd.ExecuteNonQuery();
 
 ```
 
-## Préparer une des instruction SQL 
+## Préparer une instruction SQL 
 
-La plus par des SGBD relationnelles permettent la prise en charge de la préparation des instructions SQL avant leur exécution. Les instructions préparées peuvent améliorer considérablement les performances des requêtes exécutées plusieurs fois. **L'exécution préparée est plus rapide que l'exécution directe pour les instructions exécutées plusieurs fois**, principalement parce que la requête n'est analysée qu'une seule fois. Dans le cas d'une exécution directe, la requête est analysée à chaque exécution. **De plus, l'exécution préparée peut permettre une réduction du trafic réseau**, car pour chaque exécution de l'instruction préparée, il suffit d'envoyer les données pour les paramètres.
+La plupart des SGBD relationnels permet la prise en charge de la préparation des instructions SQL avant leur exécution. Les instructions préparées peuvent améliorer considérablement les performances des requêtes exécutées plusieurs fois. **L'exécution préparée est plus rapide que l'exécution directe pour les instructions exécutées plusieurs fois**, principalement parce que la requête n'est analysée qu'une seule fois. Dans le cas d'une exécution directe, la requête est analysée à chaque exécution. **De plus, l'exécution préparée peut permettre une réduction du trafic réseau**, car pour chaque exécution de l'instruction préparée, il suffit d'envoyer les données pour les paramètres.
 
 Un autre avantage des instructions préparées est que, lorsque les instructions préparées côté serveur sont activées, **elles utilisent un protocole binaire qui rend le transfert de données entre le client et le serveur plus efficace.**
 
@@ -270,17 +270,17 @@ Int id = (uint)cmd.LastInsertedId;
 
 ```
 ## Démonstration
-Télécharger le projet de départ pour la démonstration : [S12C1-DemoBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2023/S12C1-DemoBD.zip?ref_type=heads)
+Télécharger le projet de départ pour la démonstration : [S12C1-DemoBD](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2023/S12C1-DemoBD.zip)
 
 
 ## Configurer la chaîne de connexion
 
-Pour faciliter la modification d'une chaîne de connexion, il est recommandé de ne pas la mettre directement dans notre code, mais plutôt de la mettre d'un fichier de configuration. Ainsi, il sera facile de la modifier si notre base de données change de serveur ou que le nom d'utilisateur et le mode de passe sont modifiés sans devoir modifier le code de l'application. 
+Pour faciliter la modification d'une chaîne de connexion, il est recommandé de ne pas la mettre directement dans notre code, mais plutôt de la mettre dans un fichier de configuration. Ainsi, il sera facile de la modifier si notre base de données change de serveur ou que le nom d'utilisateur et le mot de passe sont modifiés sans devoir modifier le code de l'application. 
 
 C'est là qu'intervient le fichier **appsettings.json**. Il s'agit d'un fichier JSON qui contient la configuration de notre application. C'est donc à cet endroit que nous définirons la chaîne de connexion à une base de données.
 
 Voir section : [Fichier de configuration (appsettings.json)](/appsettings)
 
-## Démonstration - composition d'objets
-Télécharger le projet de départ pour la démonstration : [S12C2-CompositionObjetsBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-CompositionObjetsBD.zip?ref_type=heads)
+<!-- ## Démonstration - composition d'objets
+Télécharger le projet de départ pour la démonstration : [S12C2-CompositionObjetsBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-CompositionObjetsBD.zip?ref_type=heads) -->
 

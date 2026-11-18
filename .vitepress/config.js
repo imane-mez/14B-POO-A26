@@ -60,7 +60,7 @@ export default defineConfig({
         ]
       },
       { text: 'Bloc 2', 
-        collapsed: false,
+        collapsed: true,
         items : [
           {text: 'Type Guid', link: '/guid' },
           {text: 'Listes génériques (List)', link: '/listes_generiques' },
@@ -70,16 +70,16 @@ export default defineConfig({
           {text: 'Expressions régulières', link: '/exp_reg' },          
           {text: 'Surcharge d\'opérateur', link: '/surcharge_operateurs' },
           {text: 'Algorithmes de tri', link: '/algo_tri' },
-          {text: 'Tests unitaires ✨', link: '/tests_unitaires' },
+          {text: 'Tests unitaires', link: '/tests_unitaires' },
           {text: 'Exercices', link: '/exercices_bloc2' },
 
         ]
       },
-    //  {
-    //     text : 'Bloc 3',
-    //     items : [
-    //       { text: 'Utilisation d\'une base de données', link: '/base_donnees' },
-    //       { text: 'Fichier de configuration', link: '/appsettings' },
+     {
+        text : 'Bloc 3',
+        items : [
+          { text: 'Utilisation d\'une base de données ✨', link: '/base_donnees' },
+          { text: 'Fichier de configuration ✨', link: '/appsettings' },
     //       { text: 'Indexeur', link: '/indexeur' },
     //       { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
     //       { text: 'WPF', 
@@ -93,10 +93,10 @@ export default defineConfig({
     //       },
         
     //      /*{ text: 'Scénarios de test', link: '/tests_fonctionnels' },
-    //        */{ text: 'Exercices', link: '/exercices_bloc3' },
+           { text: 'Exercices', link: '/exercices_bloc3' },
 
-    //     ]
-    //   },
+        ]
+      },
        {
         text: 'En vrac',
         items: [
