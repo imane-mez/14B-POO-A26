@@ -79,7 +79,7 @@ export default defineConfig({
         text : 'Bloc 3',
         items : [
           { text: 'Utilisation d\'une base de données ✨', link: '/base_donnees' },
-          { text: 'Fichier de configuration ✨', link: '/appsettings' },
+          { text: 'Fichier de configuration', link: '/appsettings' },
     //       { text: 'Indexeur', link: '/indexeur' },
     //       { text: 'Recherche dichotomique', link: '/recherche_dichotomique' },
     //       { text: 'WPF', 

@@ -4,50 +4,51 @@ outline: deep
 
 # Utilisation d'une base de données en C#
 
-Nous avons vu qu'il était possible d'utiliser des fichiers pour la gestion de nos données. Cette gestion impliquait la lecture d'un fichier pour le chargement des données lors de l'ouverture de l'application, l'ajout, la modification et la suppression des données par l'application et finalement le remplacement des données lors de l'enregistrement. 
+Nous avons vu qu'il était possible d'utiliser des fichiers pour la gestion de nos données. Cette gestion impliquait la lecture d'un fichier pour le chargement des données lors de l'ouverture de l'application, l'ajout, la modification et la suppression des données par l'application et finalement le remplacement des données lors de l'enregistrement.
 
-Ainsi, toute la gestion des données se faisait par l'application. La rapidité du traitement des données était donc dépendante de la puissance de votre ordinateur. Cela va bien lorsqu'il n'y a pas beaucoup de données à traiter. Que se passerait-il si vous deviez traiter des millions d'enregistrements? De plus, l'utilisation de vos applications ne se fait que par un seul utilisateur. Que se passerait-il si plusieurs personnes devaient utiliser une application en même temps et manipuler les mêmes données en même temps? 
+Ainsi, toute la gestion des données se faisait par l'application. La rapidité du traitement des données était donc dépendante de la puissance de votre ordinateur. Cela va bien lorsqu'il n'y a pas beaucoup de données à traiter. Que se passerait-il si vous deviez traiter des millions d'enregistrements? De plus, l'utilisation de vos applications ne se fait que par un seul utilisateur. Que se passerait-il si plusieurs personnes devaient utiliser une application en même temps et manipuler les mêmes données en même temps?
 
 C'est entre autre pour ces raisons que les systèmes utilisent des bases de données. Celles-ci se trouvent normalement sur des serveurs très puissants qui peuvent donc effectuer facilement et rapidement des manipulations sur des millions d'enregistrements. Celles-ci facilitent également la centralisation de l'information et l'accès simultané aux données.
 
-L'accès aux données à partir d'une base de données est donc l'un des aspects importants de tout langage de programmation. C'est une nécessité absolue pour tout langage de programmation d'avoir la capacité de travailler avec des bases de données. 
+L'accès aux données à partir d'une base de données est donc l'un des aspects importants de tout langage de programmation. C'est une nécessité absolue pour tout langage de programmation d'avoir la capacité de travailler avec des bases de données.
 
 C# offre la possibilité de travailler avec différents types de bases de données. Il peut fonctionner avec les bases de données les plus courantes telles qu'Oracle, Microsoft SQL Server, MySQL, MariaDB et bien d'autres. Peu importe le type de base de données utilisée, la logique de fonctionnement est pratiquement la même.
 
 En travaillant avec des bases de données, les concepts suivants sont communs à toutes les bases de données :
-1) **Connexion** : Pour travailler avec les données d'une base de données, la première étape évidente est la connexion. La connexion à une base de données se compose normalement des paramètres mentionnés ci-dessous.
-    - **Nom de la base de données ou source de données** : Le premier paramètre important est le **nom de la base de données** à laquelle la connexion doit être établie. Chaque connexion ne peut fonctionner qu'avec une seule base de données à la fois.
-    - **Informations d'identification** : Le prochain aspect important est le **nom d'utilisateur** et le **mot de passe** qui doivent être utilisés pour établir une connexion à la base de données. Il garantit que le nom d'utilisateur et le mot de passe disposent des privilèges nécessaires pour se connecter à la base de données.
-    - **Paramètres facultatifs** : Pour chaque type de base de données, vous pouvez spécifier des paramètres facultatifs pour fournir plus d'informations sur la manière dont .Net doit gérer la connexion à la base de données. Par exemple, on peut spécifier un paramètre indiquant combien de temps la connexion doit rester active. Si aucune opération n'est effectuée pendant une période de temps spécifique, alors le paramètre déterminera si la connexion doit être fermée.
 
-2) **Sélection, insertion, modificaiton et suppression des données de la base de données** : Une fois la connexion établie, le prochain aspect important consiste à sélectionner, insérer, modifier ou supprimer des données de la base de données. Pour cela, C# utilise la **commande** permettant d'exécueer une requête 'SQL' sur la base de données.
+1. **Connexion** : Pour travailler avec les données d'une base de données, la première étape évidente est la connexion. La connexion à une base de données se compose normalement des paramètres mentionnés ci-dessous.
+   - **Nom de la base de données ou source de données** : Le premier paramètre important est le **nom de la base de données** à laquelle la connexion doit être établie. Chaque connexion ne peut fonctionner qu'avec une seule base de données à la fois.
+   - **Informations d'identification** : Le prochain aspect important est le **nom d'utilisateur** et le **mot de passe** qui doivent être utilisés pour établir une connexion à la base de données. Il garantit que le nom d'utilisateur et le mot de passe disposent des privilèges nécessaires pour se connecter à la base de données.
+   - **Paramètres facultatifs** : Pour chaque type de base de données, vous pouvez spécifier des paramètres facultatifs pour fournir plus d'informations sur la manière dont .Net doit gérer la connexion à la base de données. Par exemple, on peut spécifier un paramètre indiquant combien de temps la connexion doit rester active. Si aucune opération n'est effectuée pendant une période de temps spécifique, alors le paramètre déterminera si la connexion doit être fermée.
 
+2. **Sélection, insertion, modificaiton et suppression des données de la base de données** : Une fois la connexion établie, le prochain aspect important consiste à sélectionner, insérer, modifier ou supprimer des données de la base de données. Pour cela, C# utilise la **commande** permettant d'exécueer une requête 'SQL' sur la base de données.
 
-Étant donné que C# permet l'utilisation de différent type de base de données. La première chose à faire est d'installer les outils nécessaires selon le type de la base de données choisie. Dans notre cas, nous utiliserons une base de données **MariaDB**. 
+Étant donné que C# permet l'utilisation de différent type de base de données. La première chose à faire est d'installer les outils nécessaires selon le type de la base de données choisie. Dans notre cas, nous utiliserons une base de données **MariaDB**.
 
 ## Importation des librairies
+
 Afin de faciliter l'utilisation de librairies externes dans notre projet, .Net offre un outil nommé **" gestionnaire de package NuGet"**. Cet outil permet l'installation de librairie. Dans notre cas, nous aurons besoin de la libraire `MySQlConnector` pour utiliser une base de données `MariaDB`.
 
-1) Ouvrir le gestionnaire de package NuGet en sélectionnant le menu **Projet -> Gérer les packages NuGet ...**.
-2) Cliquer sur le lien **Parcourir** et inscrire **MySqlConnector** dans le champ de recherche. 
-3) Sélectionner `MySqlConnector`. 
-4) Cliquer sur le bouton `Installer`.
+1. Ouvrir le gestionnaire de package NuGet en sélectionnant le menu **Projet -> Gérer les packages NuGet ...**.
+2. Cliquer sur le lien **Parcourir** et inscrire **MySqlConnector** dans le champ de recherche.
+3. Sélectionner `MySqlConnector`.
+4. Cliquer sur le bouton `Installer`.
 
 ![Installation du package MySQlConnectgor](/images/base_donnees2.png)
 
 <!--
 1) Ouvrir le gestionnaire de package NuGet en sélectionnant le menu **Outils->Gestionnaire de package NuGet -> Gérer les packages NuGet pour la solution**.
-2) Cliquer sur le lien **Parcourir** et inscrire **MySql.Data** dans le champ de recherche. 
+2) Cliquer sur le lien **Parcourir** et inscrire **MySql.Data** dans le champ de recherche.
 3) Sélectionner **MySql.Data**, sélectionner le projet sur lequel vous désirez faire l'installation et cliquer sur le bouton Installer.
 
 ![Installation du package MySQL.Data](/images/base_donnees1.png)
 -->
+
 Voyons maintenant comment utiliser les différents objets C# nécessaires pour effectuer ces opérations.
 
 ## Établir une connexion (MySqlConnection)
 
-L'objet MySqlConnection permet de se connecter à la base de données. Pour se connecter, il faut tout d'abord définir la chaîne de connexion spécifiant **le nom ou l'adresse IP du serveur** où se trouve la base de données, **port** de connection (Pour MySQL et MariaDB port=3307),  **le nom de la base de données**, le nom de l'**utilisateur** et le **mot de passe**.  
-
+L'objet MySqlConnection permet de se connecter à la base de données. Pour se connecter, il faut tout d'abord définir la chaîne de connexion spécifiant **le nom ou l'adresse IP du serveur** où se trouve la base de données, **port** de connection (Pour MySQL et MariaDB port=3307), **le nom de la base de données**, le nom de l'**utilisateur** et le **mot de passe**.
 
 ```c#
 string connectionString = "Server=localhost;port=3307;Database=demo_db;Uid=garneau;Pwd=qwerty123;"
@@ -78,9 +79,9 @@ try
 {
     //Ouverture de la connexion
     cn.Open();
-   
+
     //Code pour la manipulation des données ici.
- 
+
 }
 catch (Exception)
 {
@@ -99,13 +100,13 @@ finally
 
 ## Définition de la requête
 
-L'objet **MySqlCommand** permet d'exécuter des commandes SQL sur une connexion ouverte. 
+L'objet **MySqlCommand** permet d'exécuter des commandes SQL sur une connexion ouverte.
 
 ```c#
  MySqlCommand cmd = new MySqlCommand();
 ```
 
-Pour exécuter une commande, il faut d'abord définir la requête à exécuter : 
+Pour exécuter une commande, il faut d'abord définir la requête à exécuter :
 
 ```c#
 string requete = "SELECT Id, Nom, Prenom FROM Employes Order by Nom, Prenom";
@@ -122,13 +123,13 @@ Ces deux opérations peuvent être également exécutées lors de l'instanciatio
 
 ```c#
  MySqlCommand cmd = new MySqlCommand(requete, cn);
- ```
+```
 
- Il est toujours possible de modifier la requête d'une commande pour exécuter différentes requêtes sur ume même connexion.
+Il est toujours possible de modifier la requête d'une commande pour exécuter différentes requêtes sur ume même connexion.
 
- ### Utilisation de paramètres
+### Utilisation de paramètres
 
- Il est également possible de spécifier des paramètres contenant des valeurs qui seront passés dans la requête lors de son exécution permettant une vérification et une validation de type. 
+Il est également possible de spécifier des paramètres contenant des valeurs qui seront passés dans la requête lors de son exécution permettant une vérification et une validation de type.
 
 Contrairement au **CommandText**, l'entrée de paramètre est traitée comme une valeur littérale, et non comme un code exécutable. **Cela permet de se prémunir contre les attaques par « injection SQL »**, dans lesquelles un attaquant insère une commande qui compromet la sécurité sur le serveur dans une instruction SQL.
 
@@ -154,40 +155,6 @@ cmd.ExecuteNonQuery();
 
 ```
 
-## Préparer une instruction SQL 
-
-La plupart des SGBD relationnels permet la prise en charge de la préparation des instructions SQL avant leur exécution. Les instructions préparées peuvent améliorer considérablement les performances des requêtes exécutées plusieurs fois. **L'exécution préparée est plus rapide que l'exécution directe pour les instructions exécutées plusieurs fois**, principalement parce que la requête n'est analysée qu'une seule fois. Dans le cas d'une exécution directe, la requête est analysée à chaque exécution. **De plus, l'exécution préparée peut permettre une réduction du trafic réseau**, car pour chaque exécution de l'instruction préparée, il suffit d'envoyer les données pour les paramètres.
-
-Un autre avantage des instructions préparées est que, lorsque les instructions préparées côté serveur sont activées, **elles utilisent un protocole binaire qui rend le transfert de données entre le client et le serveur plus efficace.**
-
-Avant d’appeler **Prepare**, spécifiez le type de données de chaque paramètre dans l’instruction à préparer.
-
-```c#
-//Ouverture de la connexion
-cn.Open();
-
-//Preparation de la commande
-string requete = "INSERT INTO uneTable VALUES(NULL, @nombre, @texte)";
-MySqlCommand cmd = new MySqlCommand(requete, cn);
-
-//Définition des paramètres avec leur type
-cmd.Parameters.Add("@nombre ", MySqlDbType.Int32);
-cmd.Parameters.Add("@texte ", MySqlDbType.String);
-
-//Preparation de la requête
-cmd.Prepare();
-
-for (int i=1; i <= 1000; i++)
-{
-    //Affection des valeurs aux paramètres
-    cmd.Parameters["@nombre"].Value = i;
-    cmd.Parameters["@texte"].Value = "Une chaîne de caractères";
-
-    //Exécution de la requête
-    cmd.ExecuteNonQuery();
-    
-}
-```
 ## Exécution de la requête
 
 Finalement, nous sommes prêts à exécuter la commande. Selon le besoin, il existe différentes méthodes pour l'exécution d'une commande. Les plus courantes sont les suivantes :
@@ -209,14 +176,16 @@ int nbModifications = cmd.ExecuteNonQuery();
 - **ExecuteScalar()** : Cette méthode est utilisé lorsqu'une seule valeur est retournée par la requête.
 
 ```c#
-cmd.CommandText = "SELECT COUNT(*) FROM Employes";  
-int count = cmd.ExecuteScalar();  
+cmd.CommandText = "SELECT COUNT(*) FROM Employes";
+int count = cmd.ExecuteScalar();
 ```
+
 ## Parcourir les données (MySqlDataReader)
 
 L'objet **MySqlDataReader** permet de parcourir les données reçues lors de l'exécution d'une commande de type **ExecuteReader()**. Voici quelques-unes des propriétés et méthodes de cet objet :
 
 **Propriétés** :
+
 - **FieldCount** : Retourne le nombre de colonnes dans la ligne courante
 - **HasRows** : Booléen indiquant si le MySqlDataReader contient une ou plusieurs lignes
 
@@ -225,10 +194,9 @@ Méthode :
 - **Read()** : Permet de lire la ligne suivante contenue dans le MySqlDataReader
 - **GetName(i)** : Permet d'obtenir le nom de la colonne à la position i.
 - **GetOrdinal(nom)** : Permet d'obtenir la position d'une colonne à partir de son nom.
-- **Get{Type}(i)** : Permet d'obtenir la valeur à la position i de la ligne courante selon le type de la colonne. {Type} représente différent type. Exemple :  GetString(0), GetInt32(0), GetBoolean(0), etc.
+- **Get{Type}(i)** : Permet d'obtenir la valeur à la position i de la ligne courante selon le type de la colonne. {Type} représente différent type. Exemple : GetString(0), GetInt32(0), GetBoolean(0), etc.
 
 Voici un exemple permettant de créer une liste d'employés à partir des données de la table Employes :
-
 
 ```c#
 //Requête pour obtenir la liste des employés triée en ordre croissant de nom
@@ -254,30 +222,243 @@ while (dr.Read())
     lstEmployes .Add(employe);
 }
 ```
+
 ## Obtenir le dernier identifiant unique ajouté à une table.
 
-Il est commun dans une de donnée que l'identifiant unique d'un enregistrement soit une valeur auto-générée par la base de données. Dans ce cas, il arrive souvent que nous ayons besoin d'obtenir cette valeur à la suite de l'ajout d'un enregistrement dans la base de données. Pour ce faire, vous pouvez utiliser la propriété LastInsertedId d'une commande : 
+Il est commun dans une de donnée que l'identifiant unique d'un enregistrement soit une valeur auto-générée par la base de données. Dans ce cas, il arrive souvent que nous ayons besoin d'obtenir cette valeur à la suite de l'ajout d'un enregistrement dans la base de données. Pour ce faire, vous pouvez utiliser la propriété LastInsertedId d'une commande :
 
 ```c#
 //Exécution de la commande
 cmd.ExecuteNonQuery();
 
-//On obtient l'identifiant créé 
+//On obtient l'identifiant créé
 Int id = (uint)cmd.LastInsertedId;
 
 ```
-## Démonstration
-Télécharger le projet de départ pour la démonstration : [S12C1-DemoBD](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2023/S12C1-DemoBD.zip)
 
+## Démonstration
+
+Télécharger le projet de départ pour la démonstration : [S12C1-DemoBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours23/S12C1-DemoBD.zip?ref_type=heads)
+
+
+Télécharger la démonstration finale : [S12C1-DemoBD Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2023/S12C1-DemoBD%20-%20Solution.zip)
 
 ## Configurer la chaîne de connexion
 
-Pour faciliter la modification d'une chaîne de connexion, il est recommandé de ne pas la mettre directement dans notre code, mais plutôt de la mettre dans un fichier de configuration. Ainsi, il sera facile de la modifier si notre base de données change de serveur ou que le nom d'utilisateur et le mot de passe sont modifiés sans devoir modifier le code de l'application. 
+Pour faciliter la modification d'une chaîne de connexion, il est recommandé de ne pas la mettre directement dans notre code, mais plutôt de la mettre dans un fichier de configuration. Ainsi, il sera facile de la modifier si notre base de données change de serveur ou que le nom d'utilisateur et le mot de passe sont modifiés sans devoir modifier le code de l'application.
 
 C'est là qu'intervient le fichier **appsettings.json**. Il s'agit d'un fichier JSON qui contient la configuration de notre application. C'est donc à cet endroit que nous définirons la chaîne de connexion à une base de données.
 
 Voir section : [Fichier de configuration (appsettings.json)](/appsettings)
 
-<!-- ## Démonstration - composition d'objets
-Télécharger le projet de départ pour la démonstration : [S12C2-CompositionObjetsBD](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2024/S12C2-CompositionObjetsBD.zip?ref_type=heads) -->
+## Composition d'objets à partir d'une jointure
 
+Jusqu'à maintenant, nous avons créé des objets à partir d'une seule table. Dans bien des cas, un objet est toutefois **composé** d'autres objets. Par exemple, une **équipe** est composée de plusieurs **joueurs**. Pour reconstruire ce type d'objet à partir de la base de données, nous devons lire les données provenant de **plusieurs tables liées** à l'aide d'une **jointure**.
+
+Prenons les deux tables suivantes :
+
+- **Equipes** (Id, Nom, Ville)
+- **Joueurs** (Id, Nom, Prenom, Numero, IdEquipe)
+
+La colonne `IdEquipe` de la table **Joueurs** est une clé étrangère qui pointe vers la table **Equipes**. Un joueur appartient donc à une seule équipe, mais une équipe peut contenir plusieurs joueurs (relation **un-à-plusieurs**).
+
+### Comprendre le résultat d'une jointure
+
+Pour obtenir une équipe avec ses joueurs, nous joignons les deux tables :
+
+```sql
+SELECT e.Id, e.Nom, e.Ville,
+       j.Id, j.Nom, j.Prenom, j.Numero
+FROM Equipes e
+INNER JOIN Joueurs j ON j.IdEquipe = e.Id
+ORDER BY e.Nom, j.Numero;
+```
+
+Il est important de bien comprendre **ce que retourne une jointure**. La base de données ne retourne pas un objet « équipe » contenant une liste de joueurs. Elle retourne un **tableau à plat** où **les informations de l'équipe sont répétées sur chaque ligne**, une fois par joueur :
+
+| Equipe.Id | Equipe.Nom | Equipe.Ville | Joueur.Id | Joueur.Nom | Joueur.Prenom | Numero |
+| --------- | ---------- | ------------ | --------- | ---------- | ------------- | ------ |
+| 1         | Canadiens  | Montréal     | 10        | Suzuki     | Nick          | 14     |
+| 1         | Canadiens  | Montréal     | 11        | Caufield   | Cole          | 22     |
+| 1         | Canadiens  | Montréal     | 12        | Hutson     | Lane          | 48     |
+| 2         | Sénateurs  | Ottawa       | 20        | Tkachuk    | Brady         | 7      |
+| 2         | Sénateurs  | Ottawa       | 21        | Stützle    | Tim           | 18     |
+
+C'est à **nous**, dans le code, de transformer ce tableau à plat en objets liés : une `Equipe` contenant une liste de `Joueur`.
+
+### La logique à appliquer
+
+La règle est la suivante :
+
+- **À la lecture de la première ligne**, aucune équipe n'existe encore. Il faut donc **créer l'objet parent (l'équipe)** ainsi que **le premier enfant (le joueur)** de cette ligne.
+- **Aux lignes suivantes**, tant que l'identifiant de l'équipe est **le même** que celui de la ligne précédente, l'équipe existe déjà : il faut seulement **créer l'objet enfant (le joueur)** et l'ajouter à l'équipe courante.
+- Lorsque l'identifiant de l'équipe **change**, c'est que nous passons à une **nouvelle équipe** : il faut alors **créer une nouvelle équipe** (et son premier joueur), puis continuer.
+
+La clé consiste donc à **détecter le changement d'identifiant du parent** pour savoir s'il faut créer un nouveau parent ou simplement ajouter un enfant au parent courant.
+
+### Cas 1 : un seul parent
+
+Si la requête ne concerne qu'**une seule équipe** (par exemple, les détails d'une équipe sélectionnée à partir de son `Id`), la logique est simplifiée : on crée l'équipe **à la première ligne seulement**, puis on ajoute un joueur à **chaque ligne**.
+
+```c#
+string requete = @"SELECT e.Id, e.Nom, e.Ville,
+                          j.Id, j.Nom, j.Prenom, j.Numero
+                   FROM Equipes e
+                   INNER JOIN Joueurs j ON j.IdEquipe = e.Id
+                   WHERE e.Id = @idEquipe
+                   ORDER BY j.Numero";
+
+MySqlCommand cmd = new MySqlCommand(requete, cn);
+cmd.Parameters.AddWithValue("@idEquipe", idEquipe);
+
+MySqlDataReader dr = cmd.ExecuteReader();
+
+Equipe? equipe = null;
+
+while (dr.Read())
+{
+    // On crée l'équipe (le parent) uniquement à la première ligne.
+    if (equipe == null)
+    {
+        equipe = new Equipe(dr.GetInt32(0), dr.GetString(1), dr.GetString(2));
+    }
+
+    // On crée le joueur (l'enfant) à chaque ligne et on l'ajoute à l'équipe.
+    Joueur joueur = new Joueur(dr.GetInt32(3), dr.GetString(4), dr.GetString(5), dr.GetInt32(6));
+    equipe.AjouterJoueur(joueur);
+}
+```
+
+### Cas 2 : plusieurs parents
+
+Si la requête retourne **plusieurs équipes**, nous devons détecter le **changement d'identifiant d'équipe** pour savoir quand créer un nouveau parent.
+
+```c#
+string requete = @"SELECT e.Id, e.Nom, e.Ville,
+                          j.Id, j.Nom, j.Prenom, j.Numero
+                   FROM Equipes e
+                   INNER JOIN Joueurs j ON j.IdEquipe = e.Id
+                   ORDER BY e.Id, j.Numero";
+
+MySqlCommand cmd = new MySqlCommand(requete, cn);
+MySqlDataReader dr = cmd.ExecuteReader();
+
+// La liste des équipes à retourner.
+List<Equipe> lesEquipes = new List<Equipe>();
+
+// Référence vers l'équipe en cours de construction.
+Equipe? equipeCourante = null;
+
+while (dr.Read())
+{
+    int idEquipe = dr.GetInt32(0);
+
+    // Si l'équipe courante est nulle (première ligne) OU que l'identifiant
+    // de l'équipe a changé, c'est qu'on commence une nouvelle équipe.
+    if (equipeCourante == null || equipeCourante.Id != idEquipe)
+    {
+        // Création du nouveau parent (l'équipe).
+        equipeCourante = new Equipe(idEquipe, dr.GetString(1), dr.GetString(2));
+
+        // On ajoute immédiatement cette équipe à la liste.
+        lesEquipes.Add(equipeCourante);
+    }
+
+    // Peu importe le cas, chaque ligne contient un joueur à créer
+    // et à ajouter à l'équipe courante.
+    Joueur joueur = new Joueur(dr.GetInt32(3), dr.GetString(4), dr.GetString(5), dr.GetInt32(6));
+    equipeCourante.AjouterJoueur(joueur);
+}
+```
+
+::: tip Important
+Pour que la détection du changement de parent fonctionne, les lignes retournées par la requête **doivent être triées par l'identifiant du parent** (ici `ORDER BY e.Id`). Sans ce tri, les joueurs d'une même équipe pourraient être dispersés dans le résultat, et une même équipe serait créée plusieurs fois.
+:::
+
+### Jointure externe (LEFT JOIN)
+
+Une jointure interne (`INNER JOIN`) ne retourne que les équipes **qui possèdent au moins un joueur**. Si nous voulons également obtenir les équipes **sans joueur**, nous utilisons une jointure externe (`LEFT JOIN`) :
+
+```sql
+SELECT e.Id, e.Nom, e.Ville,
+       j.Id, j.Nom, j.Prenom, j.Numero
+FROM Equipes e
+LEFT JOIN Joueurs j ON j.IdEquipe = e.Id
+ORDER BY e.Id, j.Numero;
+```
+
+Dans ce cas, pour une équipe sans joueur, les colonnes provenant de la table **Joueurs seront nulles**. Il faut donc **vérifier si la valeur est nulle avant de créer l'enfant**, à l'aide de la méthode `IsDBNull` :
+
+```c#
+    // On crée le joueur seulement si la ligne contient réellement un joueur.
+    if (!dr.IsDBNull(3))
+    {
+        Joueur joueur = new Joueur(dr.GetInt32(3), dr.GetString(4), dr.GetString(5), dr.GetInt32(6));
+        equipeCourante.AjouterJoueur(joueur);
+    }
+```
+
+## Insertion d'un objet composé
+
+Insérer un objet composé dans la base de données demande un peu plus de travail que d'insérer un objet simple, car les données doivent être réparties dans **plusieurs tables liées**. Pour insérer une **équipe** avec ses **joueurs**, la logique est la suivante :
+
+1. **Insérer d'abord le parent** (l'équipe) dans la table `Equipes`.
+2. **Récupérer l'identifiant auto-généré** de l'équipe à l'aide de `LastInsertedId`. Cet identifiant est nécessaire, car il sera utilisé comme **clé étrangère** (`IdEquipe`) pour chacun des joueurs.
+3. **Insérer ensuite chaque joueur** dans la table `Joueurs`, en lui associant l'identifiant de l'équipe.
+
+Comme nous insérons **plusieurs joueurs** dans une boucle, c'est l'occasion idéale d'utiliser une **instruction préparée**.
+
+### Préparer une instruction SQL
+
+La plupart des SGBD relationnels permet la prise en charge de la préparation des instructions SQL avant leur exécution. Les instructions préparées peuvent améliorer considérablement les performances des requêtes exécutées plusieurs fois. **L'exécution préparée est plus rapide que l'exécution directe pour les instructions exécutées plusieurs fois**, principalement parce que la requête n'est analysée qu'une seule fois. Dans le cas d'une exécution directe, la requête est analysée à chaque exécution. **De plus, l'exécution préparée peut permettre une réduction du trafic réseau**, car pour chaque exécution de l'instruction préparée, il suffit d'envoyer les données pour les paramètres.
+
+Un autre avantage des instructions préparées est que, lorsque les instructions préparées côté serveur sont activées, **elles utilisent un protocole binaire qui rend le transfert de données entre le client et le serveur plus efficace.**
+
+Avant d’appeler **Prepare**, spécifiez le type de données de chaque paramètre dans l’instruction à préparer. Ensuite, pour chaque exécution, il suffit d'affecter de nouvelles valeurs aux paramètres et d'appeler `ExecuteNonQuery()`.
+
+### Exemple : insérer une équipe et ses joueurs
+
+```c#
+//Insertion du parent (l'équipe) dans la table Equipes.
+string requeteEquipe = "INSERT INTO Equipes (Nom, Ville) VALUES (@nom, @ville)";
+MySqlCommand cmdEquipe = new MySqlCommand(requeteEquipe, cn);
+cmdEquipe.Parameters.AddWithValue("@nom", equipe.Nom);
+cmdEquipe.Parameters.AddWithValue("@ville", equipe.Ville);
+cmdEquipe.ExecuteNonQuery();
+
+//Récupération de l'identifiant auto-généré de l'équipe.
+//Cet identifiant servira de clé étrangère pour chacun des joueurs.
+int idEquipe = (int)cmdEquipe.LastInsertedId;
+
+//Préparation de la commande d'insertion d'un joueur.
+//Comme on insère plusieurs joueurs, on prépare la requête une seule fois.
+string requeteJoueur = "INSERT INTO Joueurs (Nom, Prenom, Numero, IdEquipe) VALUES (@nom, @prenom, @numero, @idEquipe)";
+MySqlCommand cmdJoueur = new MySqlCommand(requeteJoueur, cn);
+
+//Définition des paramètres avec leur type.
+cmdJoueur.Parameters.Add("@nom", MySqlDbType.String);
+cmdJoueur.Parameters.Add("@prenom", MySqlDbType.String);
+cmdJoueur.Parameters.Add("@numero", MySqlDbType.Int32);
+cmdJoueur.Parameters.Add("@idEquipe", MySqlDbType.Int32);
+
+// [Optionnel] Préparation de la requête.
+// N'est utile que s'il y a des milliers de lignes à ajouter.
+cmdJoueur.Prepare();
+
+//Insertion de chaque joueur de l'équipe.
+foreach (Joueur joueur in equipe.LesJoueurs)
+{
+    //Affectation des valeurs aux paramètres pour ce joueur.
+    cmdJoueur.Parameters["@nom"].Value = joueur.Nom;
+    cmdJoueur.Parameters["@prenom"].Value = joueur.Prenom;
+    cmdJoueur.Parameters["@numero"].Value = joueur.Numero;
+    cmdJoueur.Parameters["@idEquipe"].Value = idEquipe;
+
+    //Exécution de la requête préparée.
+    cmdJoueur.ExecuteNonQuery();
+}
+```
+
+## Démonstration - composition d'objets
+
+Télécharger le projet de départ pour la démonstration : [S12C2-CompositionObjetsBD](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2024/S12C2-CompositionObjetsBD.zip)
