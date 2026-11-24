@@ -462,3 +462,6 @@ foreach (Joueur joueur in equipe.LesJoueurs)
 ## Démonstration - composition d'objets
 
 Télécharger le projet de départ pour la démonstration : [S12C2-CompositionObjetsBD](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2024/S12C2-CompositionObjetsBD.zip)
+
+Télécharger la solution de la démonstration : [S12C2-CompositionObjetsBD - Solution](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2024/S12C2-CompositionObjetsBD%20-%20Solution.zip)
+
