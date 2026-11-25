@@ -57,9 +57,9 @@ openFileDialog1.Filter =  "fichiers txt (*.txt)|*.txt|Tous les fichiers (*.*)|*.
 Voici quelques classes statiques utiles pour la gestion de fichier en C# :
 
 ## Classe File
-Fournis des méthodes statiques pour copier, supprimer et déplacer un ficher :
+Fournis des méthodes statiques pour copier, supprimer et déplacer un fichier :
 
-- **void Copy (string fichierSource, string fichierDestination, bool remplacer)** : Permets de copier un fichier source vers une destination.
+- **void Copy (string fichierSource, string fichierDestination, bool remplacer)** : Permet de copier un fichier source vers une destination.
     - fichierSource : Fichier à copier.
     - fichierDestination :  nom du fichier. Ne peut pas être un répertoire.
     - Remplacer : true si le fichier de destination peut être remplacé ; sinon, false.
@@ -89,5 +89,5 @@ Effectue des opérations sur des instances de String qui contiennent des informa
 
 ## Démonstration
 
-Téléchez la démonstration :  [S13C1-DemoBindingImage](https://gitlab.com/420-14b-fx/contenu/-/blob/main/bloc3/cours%2025/S1C1%20-%20DemoImageBinding.zip?ref_type=heads)
+Téléchez la démonstration :  [S13C1-DemoBindingImage](https://github.com/imane-mez/14B-POO-A26-Exercices/blob/main/bloc3/D%C3%A9mo/Cours%2025/S1C1%20-%20DemoImageBinding.zip)
 
